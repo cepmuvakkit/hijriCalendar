@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Hicri Takvim Pro</string>
+    <string name="about_text"><u>Hicri Gün Çevirici</u>		\n
+		Bu program Hicri Takvim değerlerini Beynelmilel ay rasat kriterlerine göre hesaplamaktadır.
+		Verilen değerler sadece bilgi amaçlıdır bütün sorumluluklar kullanıcıya aittir.</string>
+    <string name="loc_info">4Konum Bilgisi</string>
+    <string name="widget_name">Hicri Takvim</string>
+    <string name="widget_name_compact">Hicri Takvim Ufak</string>
+    <string name="conversion">Miladiden Hicri Takvime Çevirici</string>
+    <string name="widget_moon">Ay Bilgisi</string>
+    <string name="mooninfo">Ay Bilgisi</string>
+    <string name="calendar">15 Ramazan 1431 </string>
+    <string name="NEWYEAR">Hicri Yeni Yıl</string>
+    <string name="ASHURA">Aşure Günü</string>
+    <string name="MAWLID">Mevlit Kandili</string>
+    <string name="HOLYMONTHS">3 Aylar Başlangıç</string>
+    <string name="RAGHAIB">Regaip Kandili</string>
+    <string name="MERAC">Miraç Kandili</string>
+    <string name="BARAAT">Berat Kandili</string>
+    <string name="QADR">Kadir Gecesi</string>
+    <string name="DAYOFEIDFITR">Ramazan Bayramı</string>
+    <string name="DAYOFEIDAHDA">Kurban Bayramı</string>
+    <string name="AREFE">Arefe Günü</string>
+    <string name="tonight">Bu gece </string>
+    <string name="MUHARRAM">MUHARREM</string>
+    <string name="SAFAR">Safer</string>
+    <string name="REBIULAVVAL">Rebiülevvel</string>
+    <string name="REBIULAHIR">Rebiülahir</string>
+    <string name="JAMIZIALAVVAL">Cemaziyel-1</string>
+    <string name="JAMIZIALAHIR">Cemaziyel-2</string>
+    <string name="RAJAB">Recep</string>
+    <string name="SHABAN">Şaban</string>
+    <string name="RAMADHAN">Ramazan</string>
+    <string name="SHAVVAL">Şevval</string>
+    <string name="ZILKADE">Zilkade</string>
+    <string name="ZILHICCE">Zilhicce</string>
+    <string name="MONDAY">Pazartesi</string>
+    <string name="SUNDAY">Pazar</string>
+    <string name="TUESDAY">Salı</string>
+    <string name="THURSDAY">Perşembe</string>
+    <string name="FRIDAY">Cuma</string>
+    <string name="SATURDAY">Cumartesi</string>
+    <string name="WEDNESDAY">Çarşamba</string>
+    <string name="after_magrib">Akşamdan Sonra</string>
+    <string name="hicriconversion">Çevirme</string>
+    <string name="moonposition">Ay Konumu</string>
+    <string name="eclipses">Tutulma</string>
+    <string name="settings">Ayarlar</string>
+    <string name="cardinal_north">K</string>
+    <string name="cardinal_east">D</string>
+    <string name="cardinal_south">G</string>
+    <string name="cardinal_west">B</string>
+    <string name="moon_rise">Ay Doğma</string>
+    <string name="moon_transit">Tepe</string>
+    <string name="moon_set">Ay Batma</string>
+    <string name="moon_age">Yaş</string>
+    <string name="illuminated">Işık</string>
+    <string name="distance">Uzaklık</string>
+    <string name="azimuth">Azimut</string>
+    <string name="height">İrtifa</string>
+    <string name="sunrise">G.Doğma</string>
+    <string name="sunset">G.Batma</string>
+    <string name="elevation">Yükselme</string>
+    <string name="ra">Right Ascension</string>
+    <string name="declination">Sapma</string>
+    <string name="lunation">Lunation*</string>
+    <string name="ecliptic_latitude">Ecliptic latitude</string>
+    <string name="ecliptic_longitude">Ecliptic longitude</string>
+    <string name="julian_day">Julyan Günü</string>
+    <string name="delta_t">ΔT</string>
+    <string name="new_moon">Yeni Ay</string>
+    <string name="new_crescent">Yeni Hilal</string>
+    <string name="first_quarter">İlk Dördün</string>
+    <string name="full_moon">Dolunay</string>
+    <string name="last_quarter">Son Dördün</string>
+    <string name="more_applications">Diğer Uygulamalar</string>
+    <string name="mooncalendar_settings">Hicri Takvim Ayarlar</string>
+    <string name="lat_title">Enlem Bilgisi Girin</string>
+    <string name="lat_summary">Derece olarak Enlem Girin</string>
+    <string name="long_title">Boylam Bilgisi Girin</string>
+    <string name="long_summary">Derece biriminde Boylam girin</string>
+    <string name="is_manual_input">Hususi olarak Konum Bilgisi Girme</string>
+    <string name="is_manual_input_hint">		İşaret kutusu seçili olduğu zaman kişiye ait özel değerler hesaplamalarda  kullanacaktır.</string>
+    <string name="help">Yardım</string>
+    <string name="prev">Önce</string>
+    <string name="next">Sonra</string>
+    <string name="refresh">Yenile</string>
+    <string name="moon_elongation_summary">Earth Moon and Sun Elongation
+		Angle angle to
+		determine New Crescent time at the Lunar Cycles</string>
+    <string name="moon_elongation">NewCrescent Phase angle</string>
+    <string name="prefs_elongation">moonElongation</string>
+    <string name="advanced_settings">İleri Ayarlar</string>
+    <string name="prefs_temperature">prefTemperature</string>
+    <string name="temperature">Hava Sıcaklığı</string>
+    <string name="temperature_summary">Derece cinsinden Hava Sıcaklığı girin</string>
+    <string name="pressure_summary">hPA biriminden Hava Basıncı</string>
+    <string name="pressure">Hava Basıncı</string>
+    <string name="prefs_pressure">savedPressure</string>
+    <string name="altitude">İrtifa</string>
+    <string name="altitude_summary">m biriminden deniz Seviyesinden yükseklik</string>
+    <string name="prefs_altitude">savedAltitude</string>
+    <string name="help_text">		\n - Hicri Takvim:
+		\n Hicri Takvim Beynelmilel ay rasat kriterlerini öğrenmek için:
+		http://www.cepmuvakkit.com/en/ruyetihilal\n
+		\n-<u> Lunation</u>		:
+		\n Lunation sayısı
+	
+		   Sıfır Hicri takvimin başlangıç günü olarak 24/07/621 15:05:00 AM UTC kullanılmıştır.
+
+		\n -<u> Işık </u>		:
+		\n 	Ayın yüzde kaçının güneş tarafında aydınlatıldığını belirtir.
+		
+		\n -<u> Yaş</u>		:
+		\n Son içtimadan itibaren geçen gün sayısı.
+		
+		
+		</string>
+    <string name="julian_date">Julyan Günü</string>
+    <string name="buy_pro">Pro Sürüm Al</string>
+    <string name="timezone_summary">Saat Dilimi Girin[-11,+13]</string>
+    <string name="timezone_title">Saat Dilimi</string>
+    <string name="custom_city_summary">Özel Şehir İsmi</string>
+    <string name="custom_city_title">Özel Şehir</string>
+    <string name="use_GPS">Konumumu Bul</string>
+    <string name="central_eclipse">Kesin olan Merkezi Güneş Tutulması</string>
+    <string name="possible_eclipse">Muhtemel, Merkezi Güneş Tutulması</string>
+    <string name="partial_eclipse">Kesin, Parçalı Güneş Tutulması</string>
+    <string name="possible_partial_eclipse">Muhtemel, Parçalı Güneş Tutulması</string>
+    <string name="lunar_eclipse">Kesin olan Ay Tutulması</string>
+    <string name="possible_lunar_eclipse">Muhtemel Ay Tutulması</string>
+    <string name="partial_lunar_eclipse">Kesin olan Parçalı Ay Tutulması</string>
+    <string name="possible_partial_lunar_eclipse">Muhtemel Parçalı Ay Tutulması</string>
+    <string name="penumbral_eclipse">Maskeli Kesin olan Ay tutulması </string>
+    <string name="possible_penumbral_eclipse">Maskeli Muhtemel Ay tutulması</string>
+    <string name="blank"></string>
+    <string name="SetLocation">Konum Gir</string>
+    <string name="dayLabel">Gün</string>
+    <string name="monthLabel">Ay</string>
+    <string name="yearLabel">Yıl</string>
+    <string name="convertButton">Çevir</string>
+    <string name="afterMagrib">Akşamdan Sonra</string>
+    <string name="description">Bu hicri Takvim çevirici M.Ö. 4712 ile Milattan sonra 2149 yılları arasında çalışmaktadır. 
+       Hicri günlerin akşam namazı ile değiştiğini lütfen unutmayınız.</string>
+    <!-- license related dialog messages -->
+    <string name="check_license">Check license</string>
+    <string name="checking_license">Checking license...</string>
+    <string name="dont_allow">Don\'t allow the user access</string>
+    <string name="allow">Allow the user access</string>
+    <string name="application_error">Application error: %1$s</string>
+    <!-- Unlicensed dialog messages -->
+    <string name="unlicensed_dialog_title">Application not licensed</string>
+    <string name="unlicensed_dialog_body">This application is not licensed. Please purchase it from Android Market.</string>
+    <string name="buy_button">Buy app</string>
+    <string name="quit_button">Exit</string>
+    <string name="real_time">Gerçek Zaman</string>
+    <string name="sun_elevation">Güneş İrtifası</string>
+
+</resources>

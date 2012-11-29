@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="MoonCalendar_Settings"
+    android:title="@string/mooncalendar_settings" >
+
+    <PreferenceCategory android:title="@string/loc_info" >
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="prefs_is_manual_input"
+            android:summaryOff="@string/is_manual_input_hint"
+            android:summaryOn="@string/is_manual_input_hint"
+            android:title="@string/is_manual_input" >
+        </CheckBoxPreference>
+
+        <EditTextPreference
+            android:defaultValue="CustomCity"
+            android:dependency="prefs_is_manual_input"
+            android:key="prefs_custom_city"
+            android:summary="@string/custom_city_summary"
+            android:title="@string/custom_city_title" />
+        <EditTextPreference
+            android:name="Latitude"
+            android:defaultValue="0"
+            android:dependency="prefs_is_manual_input"
+            android:key="prefs_lat"
+            android:numeric="decimal|signed"
+            android:summary="@string/lat_summary"
+            android:title="@string/lat_title" />
+        <EditTextPreference
+            android:name="Longitude"
+            android:defaultValue="0"
+            android:dependency="prefs_is_manual_input"
+            android:key="prefs_long"
+            android:numeric="decimal|signed"
+            android:summary="@string/long_summary"
+            android:title="@string/long_title" />
+        <EditTextPreference
+            android:name="TimeZone"
+            android:defaultValue="3"
+            android:dependency="prefs_is_manual_input"
+            android:key="prefs_timezone"
+            android:numeric="decimal|signed"
+            android:summary="@string/timezone_summary"
+            android:title="@string/timezone_title" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/advanced_settings" >
+        <EditTextPreference
+            android:name="Moon Elongation"
+            android:defaultValue="8"
+            android:enabled="false"
+            android:key="prefs_elongation"
+            android:numeric="integer"
+            android:summary="@string/moon_elongation_summary"
+            android:title="@string/moon_elongation" />
+        <EditTextPreference
+            android:name="Temperature"
+            android:defaultValue="10"
+            android:key="prefs_temperature"
+            android:numeric="integer|signed"
+            android:summary="@string/temperature_summary"
+            android:title="@string/temperature" />
+        <EditTextPreference
+            android:name="Pressure"
+            android:defaultValue="1010"
+            android:key="prefs_pressure"
+            android:numeric="integer"
+            android:summary="@string/pressure_summary"
+            android:title="@string/pressure" />
+        <EditTextPreference
+            android:name="Altitude"
+            android:defaultValue="0"
+            android:key="prefs_altitude"
+            android:numeric="integer|signed"
+            android:summary="@string/altitude_summary"
+            android:title="@string/altitude" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

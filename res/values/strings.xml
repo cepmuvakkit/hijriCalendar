@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Hicri Calendar Pro</string>
+    <string name="about_text"><u>Hijri Date Conversion and Lunar Calendar</u>		\n
+		This program calculates Hijri dates according to the global
+		moonsighting criteria.
+		All data, information and examples provided
+		for
+		informational purposes only.
+		Your use of any information is entirely
+		at
+		your own risk.</string>
+    <string name="widget_name">Hijri Date</string>
+    <string name="widget_name_compact">Hijri Date Compact</string>
+    <string name="conversion">Gregorian to Hijri Calendar Converter</string>
+    <string name="widget_moon">Moon Info</string>
+    <string name="mooninfo">Moon Info</string>
+    <string name="calendar">15 Ramadan 1431 </string>
+    <string name="NEWYEAR">Hijri New Year</string>
+    <string name="ASHURA">Day of Ashura</string>
+    <string name="MAWLID">Mawlid al-Nabi</string>
+    <string name="HOLYMONTHS">Start of Holy Months</string>
+    <string name="RAGHAIB">Lailatul Raghaib</string>
+    <string name="MERAC">Lailatul Merac</string>
+    <string name="BARAAT">Lailatul Baraat</string>
+    <string name="QADR">Lailatul Qadr</string>
+    <string name="DAYOFEIDFITR">Eid-al-Fitr</string>
+    <string name="DAYOFEIDAHDA">Eid-al-Adha</string>
+    <string name="AREFE">Day of Arafat</string>
+    <string name="tonight">Tonight is </string>
+    <string name="MUHARRAM">MUHARRAM</string>
+    <string name="SAFAR">Safar</string>
+    <string name="REBIULAVVAL">Rabi`Avval</string>
+    <string name="REBIULAHIR">Rabi`Akhir</string>
+    <string name="JAMIZIALAVVAL">JamaziAvval</string>
+    <string name="JAMIZIALAHIR">JamaziAkhir</string>
+    <string name="RAJAB">RAJAB</string>
+    <string name="SHABAN">Sha`ban</string>
+    <string name="RAMADHAN">Ramadan</string>
+    <string name="SHAVVAL">Shavval</string>
+    <string name="ZILKADE">DHUL-QI`DAH</string>
+    <string name="ZILHICCE">DHUL-HIJJAH</string>
+    <string name="MONDAY">Monday</string>
+    <string name="SUNDAY">Sunday</string>
+    <string name="TUESDAY">Tuesday</string>
+    <string name="THURSDAY">Thursday</string>
+    <string name="FRIDAY">Friday</string>
+    <string name="SATURDAY">Saturday</string>
+    <string name="WEDNESDAY">Wednesday</string>
+    <string name="after_magrib">After Magrib</string>
+    <string name="hicriconversion">Conversion</string>
+    <string name="moonposition">Moon Position</string>
+    <string name="eclipses">Eclipses</string>
+    <string name="settings">Settings</string>
+    <string name="cardinal_north">N</string>
+    <string name="cardinal_east">E</string>
+    <string name="cardinal_south">S</string>
+    <string name="cardinal_west">W</string>
+    <string name="moon_rise">Moon Rise</string>
+    <string name="moon_transit">Transit</string>
+    <string name="moon_set">Moon Set</string>
+    <string name="moon_age">Age</string>
+    <string name="illuminated">Lit</string>
+    <string name="distance">Distance</string>
+    <string name="azimuth">Azimuth:</string>
+    <string name="height">Height</string>
+    <string name="sunrise">Sunrise:</string>
+    <string name="sunset">Sunset</string>
+    <string name="elevation">Elevation</string>
+    <string name="ra">Right Ascension</string>
+    <string name="declination">declination</string>
+    <string name="lunation">Lunation*:</string>
+    <string name="ecliptic_latitude">Ecliptic latitude</string>
+    <string name="ecliptic_longitude">Ecliptic longitude</string>
+    <string name="julian_day">Julian Day</string>
+    <string name="delta_t">ΔT</string>
+    <string name="new_moon">New Moon</string>
+    <string name="new_crescent">New Crescent</string>
+    <string name="first_quarter">First Quarter</string>
+    <string name="full_moon">Full Moon</string>
+    <string name="last_quarter">Last Quarter</string>
+    <string name="more_applications">More Applications</string>
+    <string name="mooncalendar_settings">Moon Calendar Settings</string>
+    <string name="lat_title">Enter Latitude Values</string>
+    <string name="lat_summary">Enter Latitude Values in Degrees [+]East [-180°,180°]</string>
+    <string name="long_title">Enter Longitude Value</string>
+    <string name="long_summary">Enter Longitude Value in Degrees [+]Northern Hemisphere [-90°,90°]</string>
+    <string name="is_manual_input">Manually Input the Position</string>
+    <string name="is_manual_input_hint">If this CheckBox is enabled, manual entries of
+		location will be used and
+		input values will be overwritten to current
+		GPS position.</string>
+    <string name="help">Help</string>
+    <string name="prev">Prev</string>
+    <string name="next">Next</string>
+    <string name="refresh">Refresh</string>
+    <string name="moon_elongation_summary">Earth Moon and Sun Elongation
+		Angle angle to
+		determine New Crescent time at the Lunar Cycles</string>
+    <string name="moon_elongation">NewCrescent Phase angle</string>
+    <string name="prefs_elongation">moonElongation</string>
+    <string name="advanced_settings">Advanced Settings</string>
+    <string name="loc_info">Location Information</string>
+    <string name="prefs_temperature">prefTemperature</string>
+    <string name="temperature">Air Temperature</string>
+    <string name="temperature_summary">Air Temperature in Celcius</string>
+    <string name="pressure_summary">Air Pressure of Location in hPA</string>
+    <string name="pressure">Air Pressure</string>
+    <string name="prefs_pressure">savedPressure</string>
+    <string name="altitude">Altitude</string>
+    <string name="altitude_summary">Altitude values above the Sea Level in meters</string>
+    <string name="prefs_altitude">savedAltitude</string>
+    <string name="help_text">		\n - Hijri Date :
+		\n Hijri dates according to the global moon sighting
+		criteria visit:
+		http://www.cepmuvakkit.com/en/ruyetihilal\n
+		\n-<u> Lunation</u>		:
+		\n Lunation Number is the count of lunations since the beginning of
+		the 0 (Zero) Hegira Year Islamic Calendar which is the date 24/07/621 15:05:00 AM UTC  
+
+		\n -<u> Lit </u>		:
+		\n Illumated percent of the moons visible surface lit by the sun.
+		\n -<u> Age</u>		:
+		\n The number of days passed since the last moon conjuction.</string>
+    <string name="julian_date">Julian Date</string>
+    <string name="buy_pro">Buy Pro version</string>
+    <string name="timezone_summary">Set Time Zone [-11,+13]</string>
+    <string name="timezone_title">Time Zone</string>
+    <string name="custom_city_summary">Custom City Name</string>
+    <string name="custom_city_title">City Name</string>
+    <string name="use_GPS">Get Location</string>
+    <string name="central_eclipse">Central Solar eclipse certain</string>
+    <string name="possible_eclipse">Possible central  solar eclipse</string>
+    <string name="partial_eclipse">Partial solar eclipse certain</string>
+    <string name="possible_partial_eclipse">Possible partial solar eclipse</string>
+    <string name="lunar_eclipse">Total lunar eclipse certain</string>
+    <string name="possible_lunar_eclipse">Possible Total Lunar eclipse</string>
+    <string name="partial_lunar_eclipse">Partial Lunar eclipse certain</string>
+    <string name="possible_partial_lunar_eclipse">Possible Partial Lunar eclipse</string>
+    <string name="penumbral_eclipse">Penumbral Lunar eclipse certain</string>
+    <string name="possible_penumbral_eclipse">Possible penumbral lunar eclipse</string>
+    <string name="blank"></string>
+    <string name="central_eclipse_abr">c</string>
+    <string name="possible_eclipse_abr">c?</string>
+    <string name="partial_eclipse_abr">p</string>
+    <string name="possible_partial_eclipse_abr">p?</string>
+    <string name="lunar_eclipse_abr">t</string>
+    <string name="possible_lunar_eclipse_abr">t?</string>
+    <string name="partial_lunar_eclipse_abr">p</string>
+    <string name="possible_partial_lunar_eclipse_abr">p?</string>
+    <string name="penumbral_eclipse_abr">P</string>
+    <string name="possible_penumbral_eclipse_abr">P?</string>
+    <string name="SetLocation">Set Location</string>
+    <string name="dayLabel">Day</string>
+    <string name="monthLabel">Month</string>
+    <string name="yearLabel">Year</string>
+    <string name="convertButton">Convert</string>
+    <string name="afterMagrib">After Magrib</string>
+    <string name="description">This Gregorian to Hijri Calendar converter can be used between years -4712 B.C and 2149. 
+        Please keep  in mind hicri day turns over new day after magrib.</string>
+
+    <!-- License checking status messages -->
+    <string name="check_license">Check license</string>
+    <string name="checking_license">Checking license...</string>
+    <string name="dont_allow">Don\'t allow the user access</string>
+    <string name="allow">Allow the user access</string>
+    <string name="application_error">Application error: %1$s</string>
+
+    <!-- Unlicensed dialog messages -->
+    <string name="unlicensed_dialog_title">Application not licensed</string>
+    <string name="unlicensed_dialog_body">This application is not licensed. Please purchase it from Android Market.</string>
+    <string name="buy_button">Buy app</string>
+    <string name="quit_button">Exit</string>
+    <string name="pos_angle_axis">Pos.Angel Axis</string>
+    <string name="real_time">Real Time</string>
+    <string name="sun_elevation">Sun Elevation</string>
+
+</resources>

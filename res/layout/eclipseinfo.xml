@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:weightSum="1" android:layout_height="fill_parent" android:orientation="vertical">
+    <FrameLayout android:id="@+id/FrameLayout1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/PrevButton" android:text="@string/prev"></Button>
+        <Button android:layout_height="wrap_content" android:text="@string/next" android:layout_width="wrap_content" android:layout_gravity="right" android:id="@+id/nextButton"></Button>
+        <LinearLayout android:id="@+id/linearLayout2" android:layout_gravity="center" android:baselineAligned="false" android:layout_height="wrap_content" android:layout_width="wrap_content">
+            <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_width="fill_parent" android:textColor="@color/mavi_color" android:text="Lunation: 17192" android:id="@+id/LunationTextView"></TextView>
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout android:layout_width="fill_parent" android:id="@+id/FrameLayout07" android:layout_gravity="center_vertical" android:layout_height="wrap_content">
+        <LinearLayout android:id="@+id/LinearLayout11" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:background="@android:color/transparent" android:layout_width="fill_parent">
+            <LinearLayout android:id="@+id/LinearLayout01" android:orientation="vertical" android:layout_gravity="center_horizontal" android:layout_height="wrap_content" android:layout_width="wrap_content">
+                <TextView android:id="@+id/TextView02" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_height="wrap_content"></TextView>
+                <ImageView android:layout_width="wrap_content" android:id="@+id/ImageView07" android:src="@drawable/moon_1" android:layout_height="wrap_content"></ImageView>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/LinearLayout12" android:orientation="vertical" android:layout_gravity="center_horizontal" android:layout_height="wrap_content" android:background="@android:color/transparent" android:layout_width="fill_parent">
+                <TextView android:id="@+id/TextView16" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_height="wrap_content" android:text="@string/new_moon" android:textColor="@color/mavi_color"></TextView>
+                <TextView android:layout_width="wrap_content" android:layout_gravity="center_horizontal" android:textAppearance="?android:attr/textAppearanceMedium" android:text=" 01/07/2011 08:53:19p?" android:layout_height="wrap_content" android:id="@+id/NewMoonTextView"></TextView>
+                <TextView android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:id="@+id/SolarEclipseTextView" android:textColor="@color/red_color" android:text="@string/possible_penumbral_eclipse"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout android:layout_width="fill_parent" android:id="@+id/FrameLayout06" android:layout_gravity="center_vertical" android:layout_height="wrap_content" android:visibility="visible">
+        <LinearLayout android:id="@+id/LinearLayout09" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:baselineAligned="false" android:layout_width="fill_parent">
+            <ImageView android:layout_width="wrap_content" android:id="@+id/ImageView06" android:src="@drawable/moon_5" android:layout_height="wrap_content"></ImageView>
+            <LinearLayout android:id="@+id/LinearLayout10" android:orientation="vertical" android:layout_gravity="center_horizontal" android:layout_height="wrap_content" android:layout_width="fill_parent">
+                <TextView android:id="@+id/TextView14" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_height="wrap_content" android:text="@string/new_crescent" android:textColor="@color/mavi_color"></TextView>
+                <TextView android:layout_width="wrap_content" android:layout_gravity="center_horizontal" android:textAppearance="?android:attr/textAppearanceMedium" android:text=" 01/07/2011 08:53:19p?" android:layout_height="wrap_content" android:id="@+id/NewCrescentTextView"></TextView>
+                <TextView android:text=" " android:textAppearance="?android:attr/textAppearanceSmall" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/textView1"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout android:layout_width="fill_parent" android:id="@+id/FrameLayout05" android:layout_gravity="center_vertical" android:layout_height="wrap_content">
+        <LinearLayout android:id="@+id/LinearLayout07" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:layout_width="fill_parent">
+            <ImageView android:layout_width="wrap_content" android:id="@+id/ImageView04" android:src="@drawable/moon_3" android:layout_height="wrap_content"></ImageView>
+            <LinearLayout android:id="@+id/LinearLayout08" android:orientation="vertical" android:layout_gravity="center_horizontal" android:layout_height="wrap_content" android:layout_width="fill_parent">
+                <TextView android:id="@+id/TextView12" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_height="wrap_content" android:text="@string/first_quarter" android:textColor="@color/mavi_color"></TextView>
+                <TextView android:layout_width="wrap_content" android:layout_gravity="center_horizontal" android:textAppearance="?android:attr/textAppearanceMedium" android:text=" 01/07/2011 08:53:19p?" android:layout_height="wrap_content" android:id="@+id/FirstQuarterTextView"></TextView>
+                <TextView android:text=" " android:textAppearance="?android:attr/textAppearanceSmall" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/TextView01"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout android:layout_width="fill_parent" android:id="@+id/FrameLayout04" android:layout_gravity="center_vertical" android:layout_height="wrap_content">
+        <LinearLayout android:id="@+id/LinearLayout04" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:layout_width="fill_parent">
+            <ImageView android:layout_width="wrap_content" android:id="@+id/ImageView03" android:src="@drawable/moon_2" android:layout_height="wrap_content"></ImageView>
+            <LinearLayout android:id="@+id/LinearLayout06" android:orientation="vertical" android:layout_gravity="center_horizontal" android:layout_height="wrap_content" android:layout_width="fill_parent">
+                <TextView android:id="@+id/TextView09" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_height="wrap_content" android:text="@string/full_moon" android:textColor="@color/mavi_color"></TextView>
+                <TextView android:layout_width="wrap_content" android:layout_gravity="center_horizontal" android:textAppearance="?android:attr/textAppearanceMedium" android:text=" 01/07/2011 08:53:19p?" android:layout_height="wrap_content" android:id="@+id/FullMoonTextView"></TextView>
+                <TextView android:layout_width="wrap_content" android:layout_gravity="center_horizontal" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_height="wrap_content" android:text="@string/lunar_eclipse" android:textColor="@color/red_color" android:id="@+id/LunarEclipseTextView"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout android:id="@+id/frameLayout2" android:layout_height="wrap_content" android:layout_gravity="center_vertical" android:layout_width="fill_parent">
+        <LinearLayout android:id="@+id/linearLayout3" android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:layout_width="fill_parent">
+            <ImageView android:layout_height="wrap_content" android:id="@+id/imageView1" android:layout_width="wrap_content" android:src="@drawable/moon_4"></ImageView>
+            <LinearLayout android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:orientation="vertical" android:layout_gravity="center_horizontal" android:layout_width="fill_parent">
+                <TextView android:id="@+id/textView2" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_height="wrap_content" android:text="@string/last_quarter" android:textColor="@color/mavi_color"></TextView>
+                <TextView android:layout_width="wrap_content" android:layout_gravity="center_horizontal" android:textAppearance="?android:attr/textAppearanceMedium" android:text=" 01/07/2011 08:53:19p?" android:layout_height="wrap_content" android:id="@+id/LastQaurterTextView"></TextView>
+                <TextView android:text=" " android:textAppearance="?android:attr/textAppearanceSmall" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/TextView03"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

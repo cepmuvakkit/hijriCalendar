@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cepmuvakkit.conversion"
+    android:versionCode="21"
+    android:versionName="6" >
+
+    <uses-sdk
+        android:minSdkVersion="4"
+        android:targetSdkVersion="4" />
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.cepmuvakkit.conversion.HijriCalendarTab"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.cepmuvakkit.conversion.HijriCalendar"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.cepmuvakkit.conversion.settings.MoonCalendarPreferenceActivity" >
+        </activity>
+        <activity android:name="com.cepmuvakkit.conversion.HijriConversion" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cepmuvakkit.conversion.HijriCalendarTab" />
+        </activity>
+
+        <receiver
+            android:name="HijriCalendarWidgetRL"
+            android:label="@string/widget_name" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" >
+                </action>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_hijri_pref" >
+            </meta-data>
+        </receiver>
+        <receiver
+            android:name="MoonInfoWidget"
+            android:label="@string/widget_moon" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" >
+                </action>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_moon_pref" >
+            </meta-data>
+        </receiver>
+        <receiver
+            android:name="HijriCalendarWidgetGreen"
+            android:label="@string/widget_name_compact" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" >
+                </action>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_hijri_pref_green" >
+            </meta-data>
+        </receiver>
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+</manifest>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/settings"
+        android:alphabeticShortcut="S"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:numericShortcut="4"
+        android:title="@string/settings">
+    </item>
+    <item
+        android:id="@+id/use_GPS"
+        android:icon="@android:drawable/ic_menu_mylocation"
+        android:title="@string/use_GPS">
+    </item>
+    <item
+        android:id="@+id/refresh"
+        android:alphabeticShortcut="R"
+        android:icon="@android:drawable/ic_popup_sync"
+        android:numericShortcut="8"
+        android:title="@string/refresh">
+    </item>
+    <item
+        android:id="@+id/more_applications"
+        android:alphabeticShortcut="M"
+        android:icon="@android:drawable/ic_menu_search"
+        android:numericShortcut="4"
+        android:title="@string/more_applications">
+    </item>
+    <item
+        android:id="@+id/menu_help"
+        android:alphabeticShortcut="H"
+        android:icon="@android:drawable/ic_menu_help"
+        android:numericShortcut="2"
+        android:title="@string/help">
+    </item>
+    <item
+        android:id="@+id/about_item"
+        android:alphabeticShortcut="a"
+        android:title="About"/>
+
+</menu>

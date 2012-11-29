@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">التقويم الهجري</string>
+    <string name="about_text"><u>تحويل التاريخ الهجري والتقويم القمرى</u>		\n
+		هذا البرنامج يحسب التواريخ الهجرية وفقا للمعايير العالمية رؤية القمر
+		جميع البيانات والمعلومات والأمثلة المقدمة لأغراض إعلامية فقط.
+		استخدامك لأية معلومات تماما على مسؤوليتك الخاصة.</string>
+    <string name="widget_name">التقويم الهجري</string>
+    <string name="widget_name_compact">التقويم الهجري الاتفاق</string>
+    <string name="widget_moon">معلومات القمر</string>
+    <string name="mooninfo">معلومات القمر</string>
+    <string name="calendar">14 رمضان 1431</string>
+    <string name="NEWYEAR">رأس السنة الهجرية</string>
+    <string name="ASHURA">يوم عاشوراء</string>
+    <string name="MAWLID">المولد النبي</string>
+    <string name="HOLYMONTHS">بداية شهر مقدس</string>
+
+    <string name="RAGHAIB">لیلة الرغائب</string>
+    <string name="MERAC">لیلة المعراج</string>
+    <string name="BARAAT">ليلة البارات</string>
+    <string name="QADR">بليلة القدر</string>
+    <string name="DAYOFEIDFITR">عيد الفطر</string>
+    <string name="DAYOFEIDAHDA">عيد الأضحى</string>
+    <string name="AREFE">يوم عرفة</string>
+    <string name="tonight">هذه الليلة</string>
+    <string name="MUHARRAM">المحرّم</string>
+    <string name="SAFAR">صفر</string>
+    <string name="REBIULAVVAL">ربيع الأوّل</string>
+    <string name="REBIULAHIR">ربيع الآخر</string>
+    <string name="JAMIZIALAVVAL">جمادى الأولى,</string>
+    <string name="JAMIZIALAHIR">جمادى الآخرة</string>
+    <string name="RAJAB">رجب</string>
+    <string name="SHABAN">شعبان</string>
+    <string name="RAMADHAN">رمضان</string>
+    <string name="SHAVVAL">شوّال</string>
+    <string name="ZILKADE">ذو القعدة</string>
+    <string name="ZILHICCE">ذو الحجّة</string>
+    <string name="MONDAY">الاثنين</string>
+    <string name="SUNDAY">الأحد</string>
+    <string name="TUESDAY">الأحد</string>
+    <string name="THURSDAY">الخميس</string>
+    <string name="FRIDAY">الجمعة</string>
+    <string name="SATURDAY">السبت</string>
+    <string name="WEDNESDAY">الأربعاء</string>
+    <string name="after_magrib">بعد المغرب</string>
+    <string name="hicriconversion">تحويل</string>
+    <string name="moonposition">المركز القمر</string>
+    <string name="eclipses">الكسوف</string>
+    <string name="settings">إعدادات</string>
+    <string name="cardinal_north">N</string>
+    <string name="cardinal_east">E</string>
+    <string name="cardinal_south">S</string>
+    <string name="cardinal_west">W</string>
+    <string name="moon_rise">طلوع القمر</string>
+    <string name="moon_transit">القمر أوج</string>
+    <string name="moon_set"> غروب القمر</string>
+    <string name="moon_age">عمر</string>
+    <string name="illuminated">أنار</string>
+    <string name="distance">مسافة</string>
+    <string name="azimuth"> السمت</string>
+    <string name="height">ارتفاع</string>
+    <string name="sunrise">الشروق</string>
+    <string name="sunset">غروب</string>
+    <string name="elevation">ارتفاع</string>
+    <string name="ra">مطلع مستقيم</string>
+    <string name="declination">میل</string>
+    <string name="lunation">عدد الأشهر*</string>
+    <string name="ecliptic_latitude">مسار الشمس خط العرض</string>
+    <string name="ecliptic_longitude">مسار الشمس  خط الطول</string>
+    <string name="julian_day">جوليان اليوم</string>
+    <string name="delta_t">ΔT</string>
+    <string name="new_moon">محاق</string>
+    <string name="new_crescent">الهلال الجديد</string>
+    <string name="first_quarter">تربيع أول</string>
+    <string name="full_moon">بدر</string>
+    <string name="last_quarter">تربيع ثاني</string>
+    <string name="more_applications">المزيد من التطبيقات</string>
+    <string name="mooncalendar_settings">القمر إعدادات التقويم</string>
+    <string name="lat_title">دخل خط العرض القيم</string>
+    <string name="lat_summary">إدخال القيم في درجات خط العرض</string>
+    <string name="long_title">أدخل قيمة خط الطول</string>
+    <string name="long_summary">أدخل قيمة خط الطول في الدرجات</string>
+    <string name="is_manual_input">إدخال يدويا الموقف</string>
+    <string name="is_manual_input_hint">		إذا تم تمكين هذا الاختيار، سيتم استخدام إدخالات اليدوي للموقع  وسوف تكون الكتابة قيم الإدخال لوضع نظام تحديد المواقع الحالية.</string>
+    <string name="help">مساعدة</string>
+    <string name="prev">السابق</string>
+    <string name="next">التالي</string>
+    <string name="refresh">التحديث</string>
+    <string name="moon_elongation_summary">الأرض القمر والشمس زاوية زاوية الاستطالة جديدة لتحديد الوقت في دورات الهلال القمري</string>
+    <string name="moon_elongation">المرحلة الجديدة زاوية الهلال</string>
+    <string name="prefs_elongation">moonElongation</string>
+    <string name="advanced_settings">إعدادات متقدمة</string>
+    <string name="prefs_temperature">prefTemperature</string>
+    <string name="temperature">درجة حرارة الهواء</string>
+    <string name="temperature_summary">درجة الحرارة في الهواء مئوية</string>
+    <string name="pressure_summary">hPA ضغط جوي من الموقع  في </string>
+    <string name="pressure">ضغط جوي</string>
+    <string name="prefs_pressure">savedPressure</string>
+    <string name="altitude">ارتفاع</string>
+    <string name="altitude_summary">قيم الارتفاع فوق مستوى سطح البحر في متر</string>
+    <string name="prefs_altitude">savedAltitude</string>
+    <string name="help_text">		\n - هجرية التاريخ :
+		\n التواريخ الهجرية وفقا لمعايير عالمية زيارة القمر رؤية :
+		http://www.cepmuvakkit.com/en/ruyetihilal\n
+		\n-<u>عدد الأشهر</u>		:
+		\n عدد الشهر القمري هو عدد الأشهر منذ بداية 0 (صفر)
+		 التقويم الهجري السنة الهجرية والذي هو تاريخ 24/07/621 15:05:00 AM بالتوقيت العالمي.
+		\n -<u> أنار </u>		:
+		\n مضاءة في المئة مضيئة من سطح القمر وضوحا من الشمس.
+		\n -<u> Age</u>		:
+		\n مرت عدة أيام منذ الاقتران القمر الماضي.</string>
+    <string name="loc_info">موقع المعلومات</string>
+    <string name="julian_date">جوليان تاريخ</string>
+    <string name="buy_pro">اشتر النسخة المهنية</string>
+    <string name="timezone_summary">[-11,+13] إدخال منطقة زمنية </string>
+    <string name="timezone_title"> منطقة زمنية</string>
+    <string name="custom_city_summary">مخصص اسم المدينة</string>
+    <string name="custom_city_title"> اسم المدينة</string>
+    <string name="use_GPS">احصل على موقعي</string>
+    <string name="central_eclipse">كسوف الشمس وسط معينة</string>
+    <string name="possible_eclipse">ممكن المركزية كسوف للشمس</string>
+    <string name="partial_eclipse">كسوف جزئي معينة</string>
+    <string name="possible_partial_eclipse">كسوف الشمس الجزئي ممكن</string>
+    <string name="lunar_eclipse">خسوف القمر الكلي معينة</string>
+    <string name="possible_lunar_eclipse">ممكن إجمالي خسوف القمر</string>
+    <string name="partial_lunar_eclipse">خسوف القمر الجزئي معينة</string>
+    <string name="possible_partial_lunar_eclipse">خسوف القمر الجزئي ممكن</string>
+    <string name="penumbral_eclipse">ملثمون خسوف القمر معينة</string>
+    <string name="possible_penumbral_eclipse">ممكن ملثمون خسوف القمر</string>
+    <string name="blank"></string>
+    <string name="SetLocation">تعيين المكان</string>
+    <!-- license related dialog messages -->
+    <string name="check_license">التحقق من الترخيص</string>
+    <string name="checking_license">...التحقق من الترخيص</string>
+    <string name="dont_allow">لا تسمح للمستخدم بالوصول</string>
+    <string name="allow">تسمح للمستخدم بالوصول</string>
+    <string name="application_error">Application error: %1$s</string>
+    <!-- Unlicensed dialog messages -->
+    <string name="unlicensed_dialog_title">تطبيق غير مرخص</string>
+    <string name="unlicensed_dialog_body">غير مرخص هذا التطبيق. يرجى شرائه من سوق أندرويد.</string>
+    <string name="buy_button">شراء التطبيق</string>
+    <string name="quit_button">خروج</string>
+    <string name="dayLabel">يوم</string>
+    <string name="monthLabel">شهر</string>
+    <string name="yearLabel">سنة</string>
+    <string name="afterMagrib">بعد الغروب</string>
+    <string name="description">This Gregorian to Hijri Calendar converter can be used between years -4712 B.C and 2149. 
+        Please keep  in mind hicri day turns over new day after magrib.</string>
+    <string name="convertButton">تبدل</string>
+    <string name="conversion">التقويم الهجري الميلادي لتحويل</string>
+          <string name="real_time">في الوقت الحقيقي</string>
+    <string name="sun_elevation">ارتفاع الشمس</string>
+
+</resources>

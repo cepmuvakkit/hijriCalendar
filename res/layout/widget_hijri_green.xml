@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_hijri_green_layout"
+    android:layout_width="72.0dip"
+    android:layout_height="72.0dip"
+    android:layout_gravity="center"
+    android:background="@drawable/appwidget_bg_wide"
+    android:gravity="center" >
+
+    <TextView
+        android:id="@+id/Month"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5.0dip"
+        android:gravity="center_horizontal"
+        android:text="MONTH"
+        android:textSize="9.0dip"
+        android:textStyle="bold" android:textColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/monthGreg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Month"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="7.0dip"
+        android:layout_marginTop="1.0dip"
+        android:text="MMM"
+        android:textColor="@color/widget_gray"
+        android:textSize="9.0dip"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/DayNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Month"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="3.0dip"
+        android:gravity="top|center"
+        android:height="33.0dip"
+        android:text="00"
+        android:textSize="30.0dip"
+        android:textStyle="bold" android:textColor="@color/colorNotifyTaskTitle"/>
+
+    <TextView
+        android:id="@+id/dayGreg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/Month"
+        android:layout_marginRight="7.0dip"
+        android:layout_marginTop="1.0dip"
+        android:text="DDD"
+        android:textColor="@color/widget_gray"
+        android:textSize="9.0dip"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Dayname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/DayNumber"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="DAY"
+        android:textColor="@color/widget_gray"
+        android:textSize="8.0dip" />
+
+</RelativeLayout>

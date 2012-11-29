@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_hijri_relativelayout"
+    android:layout_width="100dip"
+    android:layout_height="105dip"
+    android:layout_gravity="center"
+    android:background="@drawable/appwidget_background" >
+
+    <TextView
+        android:id="@+id/Month"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5.0dip"
+        android:gravity="center_horizontal"
+        android:text="Jamazi al-Avval"
+        android:textColor="@color/white"
+        android:textSize="11dip"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/DayName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/Month"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="0dip"
+        android:layout_marginTop="10.0dip"
+        android:text="WEDNESDAY"
+        android:textColor="#ff000000"
+        android:textSize="9.0dip"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/hijriYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Month"
+       android:layout_alignParentRight="true"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginRight="0dip"
+        android:gravity="top|center"
+        android:text="1432"
+        android:textColor="#ff000000"
+        android:textSize="9.0dip"
+  />
+
+
+    <TextView
+        android:id="@+id/DayNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Month"
+        android:layout_centerInParent="true"
+        android:gravity="top|center"
+        android:height="33.0dip"
+        android:layout_marginRight="25.0dip"
+        android:layout_marginTop="17.0dip"
+        android:text="00"
+        android:textColor="#ff000000"
+        android:textSize="29dip"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/LocAlertTxtVvw"
+          android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/DayNumber"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="Please Set Location"
+        android:textColor="#ff0000cd"
+        android:textSize="8sp" />
+
+    <TextView
+        android:id="@+id/IsHolyDay"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/DayNumber"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="Start of Holy Months"
+        android:textColor="#ff2ab064"
+        android:textSize="9sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

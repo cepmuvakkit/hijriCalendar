@@ -1,0 +1,680 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.cepmuvakkit.conversion"
+    android:id="@+id/MainLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/ScrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/black" >
+
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" >
+
+                <FrameLayout
+                    android:id="@+id/FrameLayout01"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/posLatLongTxtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="32.3434, 33.5454"
+                        android:textSize="11.0dp" 
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/MoonStatTxtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="New Crescent"
+                        android:textColor="@color/red_color"
+                         android:textSize="12.0dp"  />
+
+                    <TextView
+                        android:id="@+id/citynameTxtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:text="İstanbul"
+                         android:textSize="11.0dp" 
+                        android:textColor="@color/mavi_color" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayoutDate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/PrevButton"
+                    style="@style/ButtonText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/btn_selector"
+                    android:text="&lt;"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/dateButton"
+                    style="@style/ButtonText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.45"
+                    android:background="@drawable/btn_selector"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="16/10/2012" />
+
+                <Button
+                    android:id="@+id/timeButton"
+                    style="@style/ButtonText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.45"
+                    android:background="@drawable/btn_selector"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="21:34" />
+
+                <Button
+                    android:id="@+id/nextButton"
+                    style="@style/ButtonText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.6"
+                    android:background="@drawable/btn_selector"
+                    android:text=">"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/hicriDisplayTxtView"
+                    style="@style/ButtonText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_selector"
+                    android:gravity="center"
+                    android:onClick="openConversion"
+                    android:text="@string/calendar"
+                    android:textColor="@color/red_color"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/FrameLayout02"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2" >
+
+                <LinearLayout
+                    android:id="@+id/LinearLayoutRise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|left|center"
+                    android:orientation="vertical"
+                    android:weightSum="100.0" >
+
+                    <TextView
+                        android:id="@+id/moonRiseTxtViewLbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/moon_rise"
+                        android:textColor="@color/mavi_color" />
+
+                    <TextView
+                        android:id="@+id/moonRiseTxtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8:45"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LLMoonSet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:clickable="true"
+                    android:onClick="setTimetoMoonSet"
+                    android:focusable="true" 
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/moon_set"
+                        android:textColor="@color/mavi_color" />
+
+                    <TextView
+                        android:id="@+id/moonSetTxtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="21:45"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageViewMoon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:minHeight="100.0dp"
+                    android:minWidth="100.0dp" />
+
+                <LinearLayout
+                    android:id="@+id/LinearLayoutLit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|right"
+                    android:gravity="right"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/illuminated"
+                        android:textColor="@color/mavi_color" />
+
+                    <TextView
+                        android:id="@+id/litTxtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="%99.5"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LinearLayoutPercLit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/transitTxtViewLbl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/moon_transit"
+                        android:textColor="@color/mavi_color" />
+
+                    <TextView
+                        android:id="@+id/transitTxtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8:45"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LinearLayoutTransit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|left|center"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LLAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center"
+                    android:gravity="right"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/moon_age"
+                        android:textColor="@color/mavi_color" />
+
+                    <TextView
+                        android:id="@+id/ageTxtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="17.5d"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LLSunset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|bottom"
+                    android:gravity="right"
+                    android:clickable="true"
+                    android:onClick="setTimetoSunSet"
+                    android:focusable="true" 
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/TextView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sunset"
+                        android:textColor="@color/mavi_color" />
+
+                    <TextView
+                        android:id="@+id/sunsetTxtView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="19:34"
+                        android:textColor="@color/yellow_color" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout06"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:orientation="horizontal"
+                android:weightSum="1.0" >
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout05"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/TextView06"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="@string/azimuth"
+                        android:textColor="@color/mavi_color" />
+
+                    <TextView
+                        android:id="@+id/azimuthTxtView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:paddingLeft="2.0dp"
+                        android:text="48.23 °"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5" >
+
+                    <TextView
+                        android:id="@+id/TextView03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lunation"
+                        android:textColor="@color/mavi_color" />
+
+                    <TextView
+                        android:id="@+id/lunationTxtView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="324234"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout03"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="horizontal"
+                android:weightSum="1.0" >
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout04"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/TextView07"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="@string/elevation"
+                        android:textColor="@color/mavi_color" />
+
+                    <TextView
+                        android:id="@+id/altitudeTxtView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:paddingLeft="2.0dp"
+                        android:text="45.65 °"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5" >
+
+                    <TextView
+                        android:id="@+id/TextView02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/julian_date"
+                        android:textColor="@color/mavi_color" />
+
+                    <TextView
+                        android:id="@+id/julianDateTxtView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="2455767.94"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout02"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="horizontal"
+                android:weightSum="1.0" >
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout01"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/TextView08"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="@string/distance"
+                        android:textColor="@color/mavi_color" />
+
+                    <TextView
+                        android:id="@+id/distanceTxtView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:paddingLeft="2.0dp"
+                        android:text="300000km"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5" >
+
+                    <TextView
+                        android:id="@+id/TextView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sun_elevation"
+                        android:textColor="@color/mavi_color" />
+
+                    <TextView
+                        android:id="@+id/sunElevation"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="18.7 °"
+                          android:textColor="@color/yellow_color" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout10"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1.0" >
+
+                <LinearLayout
+                    android:id="@+id/LLNewMoon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/btn_selector"
+                    android:clickable="true"
+                    android:onClick="setTimetoNewMoon"
+                    android:focusable="true" >
+
+                    <com.cepmuvakkit.conversion.views.LunarPhaseIcons
+                        android:id="@+id/LunarPhaseIcons"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginBottom="1.0dp"
+                        android:layout_marginLeft="2.0dp"
+                        android:layout_marginRight="3dp"
+                        app:phase="newMoon" />
+
+                    <TextView
+                        android:id="@+id/NewMoonTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="3.0dp"
+                        android:text="01/07/2011 08:53"
+                        android:textColor="@color/white"
+                         android:textSize="12.0dp"  />
+
+                    <TextView
+                        android:id="@+id/SolarEclipseTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="3.0dp"
+                        android:text="c?"
+                        android:textColor="@color/red_color"
+                         android:textSize="12.0dp"  />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LLNewCrescent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/btn_selector"
+                    android:onClick="setTimetoNewCrescent"
+                    android:clickable="true"
+                    android:focusable="true" >
+
+                    <com.cepmuvakkit.conversion.views.LunarPhaseIcons
+                        android:id="@+id/LunarPhaseIcons"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginBottom="1.0dp"
+                        android:layout_marginLeft="2.0dp"
+                        android:layout_marginRight="3dp"
+                        app:phase="newCrescent" />
+
+                    <TextView
+                        android:id="@+id/NewCrescentTextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="3dp"
+                        android:text="01/07/2011 08:53"
+                        android:textColor="@color/white"
+                        android:textSize="12.0dp"  />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout10"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1.0" >
+
+                <LinearLayout
+                    android:id="@+id/LLFirstQuarter"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/btn_selector"
+                    android:clickable="true"
+                    android:onClick="setTimetoFirstQuarter"
+                    android:focusable="true" >
+
+                    <com.cepmuvakkit.conversion.views.LunarPhaseIcons
+                        android:id="@+id/LunarPhaseIcons"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginBottom="1.0dp"
+                        android:layout_marginLeft="2.0dp"
+                        android:layout_marginRight="3dp"
+                        app:phase="firstQuarter" />
+
+                    <TextView
+                        android:id="@+id/FirstQuarterTextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="3.0dp"
+                        android:text="01/07/2011 08:53"
+                        android:textColor="@color/white"
+                        android:textSize="12.0dp"  />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LLFullMoon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/btn_selector"
+                    android:clickable="true"
+                    android:onClick="setTimetoFullMoon"
+                    android:focusable="true" >
+
+                    <com.cepmuvakkit.conversion.views.LunarPhaseIcons
+                        android:id="@+id/LunarPhaseIcons"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginBottom="1.0dp"
+                        android:layout_marginLeft="2.0dp"
+                        android:layout_marginRight="3dp"
+                        app:phase="fullMoon" />
+
+                    <TextView
+                        android:id="@+id/FullMoonTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="3.0dp"
+                        android:text="01/07/2011 08:53"
+                        android:textColor="@color/white"
+                      android:textSize="12.0dp" />
+
+                    <TextView
+                        android:id="@+id/LunarEclipseTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="3.0dp"
+                        android:text="t?"
+                        android:textColor="@color/red_color"
+                         android:textSize="12.0dp"  />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout09"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:weightSum="1.0" >
+
+                <LinearLayout
+                    android:id="@+id/LLLastQuarter"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/btn_selector"
+                     android:onClick="setTimetoLastQuarter"
+                    android:clickable="true"
+                    android:focusable="true" >
+
+                    <com.cepmuvakkit.conversion.views.LunarPhaseIcons
+                        android:id="@+id/LunarPhaseIcons"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginBottom="1.0dp"
+                        android:layout_marginLeft="2.0dp"
+                        android:layout_marginRight="3dp"
+                        app:phase="lastQuarter" />
+
+                    <TextView
+                        android:id="@+id/LastQaurterTextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="3.0dp"
+                        android:text="01/07/2011 08:53"
+                        android:textColor="@color/white"
+                        android:textSize="12.0dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout12"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                     android:onClick="setTimetoReal"
+                    android:background="@drawable/btn_selector"
+                    android:clickable="true"
+                    android:focusable="true" >
+
+                    <TextView
+                        android:id="@+id/RealTimeTextView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="3.0dp"
+                        android:drawableLeft="@drawable/ic_menu_home"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:text="@string/real_time"
+                        android:textColor="@color/white"
+                     android:textSize="12.0dp"  />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,104 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_moon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/appwidgetmoon_background"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:weightSum="1" >
+
+    <LinearLayout
+        android:layout_width="146dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@+id/frameLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/litTxtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="%99.5"
+                android:textAppearance="?android:attr/textAppearanceMedium" >
+            </TextView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/moonPhaseImage"
+                android:layout_width="fill_parent"
+                android:layout_height="114dp"
+                android:src="@drawable/moon20" >
+            </ImageView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" >
+
+            <TextView
+                android:id="@+id/ageTxtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="17.5d"
+                android:textAppearance="?android:attr/textAppearanceMedium" >
+            </TextView>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:baselineAligned="false" >
+
+            <FrameLayout
+                android:id="@+id/frameLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/moonRiseTxtView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="8:45"
+                    android:textAppearance="?android:attr/textAppearanceSmall" >
+                </TextView>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frameLayout5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/moonSetTxtView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="21:45"
+                    android:textAppearance="?android:attr/textAppearanceSmall" >
+                </TextView>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

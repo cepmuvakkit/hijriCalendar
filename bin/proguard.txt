@@ -1,0 +1,55 @@
+# view AndroidManifest.xml #generated:17
+-keep class com.cepmuvakkit.conversion.HijriCalendar { <init>(...); }
+
+# view AndroidManifest.xml #generated:14
+-keep class com.cepmuvakkit.conversion.HijriCalendarTab { <init>(...); }
+
+# view AndroidManifest.xml #generated:61
+-keep class com.cepmuvakkit.conversion.HijriCalendarWidgetGreen { <init>(...); }
+
+# view AndroidManifest.xml #generated:35
+-keep class com.cepmuvakkit.conversion.HijriCalendarWidgetRL { <init>(...); }
+
+# view AndroidManifest.xml #generated:29
+-keep class com.cepmuvakkit.conversion.HijriConversion { <init>(...); }
+
+# view AndroidManifest.xml #generated:48
+-keep class com.cepmuvakkit.conversion.MoonInfoWidget { <init>(...); }
+
+# view AndroidManifest.xml #generated:27
+-keep class com.cepmuvakkit.conversion.settings.MoonCalendarPreferenceActivity { <init>(...); }
+
+# view res/layout/activity_android_draw.xml #generated:476
+# view res/layout/activity_android_draw.xml #generated:517
+# view res/layout/activity_android_draw.xml #generated:554
+# view res/layout/activity_android_draw.xml #generated:584
+# view res/layout/activity_android_draw.xml #generated:633
+-keep class com.cepmuvakkit.conversion.views.LunarPhaseIcons { <init>(...); }
+
+# onClick res/layout/activity_android_draw.xml #generated:114
+-keepclassmembers class * { *** openConversion(...); }
+
+# onClick res/layout/activity_android_draw.xml #generated:544
+-keepclassmembers class * { *** setTimetoFirstQuarter(...); }
+
+# onClick res/layout/activity_android_draw.xml #generated:574
+-keepclassmembers class * { *** setTimetoFullMoon(...); }
+
+# onClick res/layout/activity_android_draw.xml #generated:623
+-keepclassmembers class * { *** setTimetoLastQuarter(...); }
+
+# onClick res/layout/activity_android_draw.xml #generated:157
+-keepclassmembers class * { *** setTimetoMoonSet(...); }
+
+# onClick res/layout/activity_android_draw.xml #generated:507
+-keepclassmembers class * { *** setTimetoNewCrescent(...); }
+
+# onClick res/layout/activity_android_draw.xml #generated:466
+-keepclassmembers class * { *** setTimetoNewMoon(...); }
+
+# onClick res/layout/activity_android_draw.xml #generated:653
+-keepclassmembers class * { *** setTimetoReal(...); }
+
+# onClick res/layout/activity_android_draw.xml #generated:267
+-keepclassmembers class * { *** setTimetoSunSet(...); }
+

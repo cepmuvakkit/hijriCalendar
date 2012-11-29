@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/solarmoonFrameLayout"
+    android:layout_width="160.0dip"
+    android:layout_height="100.0dip"
+    android:background="@drawable/appwidget_bg" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout011"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:id="@+id/FrameLayout012"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5" >
+
+            <TextView
+                android:id="@+id/ViewWidget2Perc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|right|center"
+                android:layout_marginRight="1.0dip"
+                android:layout_marginTop="1.0dip"
+                android:shadowColor="#ff000000"
+                android:shadowDx="1.0"
+                android:shadowDy="1.0"
+                android:shadowRadius="1.0"
+                android:text="98.5"
+                android:textColor="#ffffffff"
+                android:textSize="9.0dip" />
+
+            <ImageView
+                android:id="@+id/ImageViewMoonCanvas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="8.0dip" />
+
+            <TextView
+                android:id="@+id/MoonRiseTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|left|center"
+                android:layout_marginLeft="1.0dip"
+                android:layout_marginTop="1.0dip"
+                android:gravity="center_horizontal"
+                android:shadowColor="#ff000000"
+                android:shadowDx="1.0"
+                android:shadowDy="1.0"
+                android:shadowRadius="1.0"
+                android:text="8:21"
+                android:textColor="#ffffffff"
+                android:textSize="9.0dip" />
+
+            <TextView
+                android:id="@+id/MoonSetTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left|center"
+                android:layout_marginBottom="1.0dip"
+                android:layout_marginLeft="1.0dip"
+                android:gravity="center_horizontal"
+                android:shadowColor="#ff000000"
+                android:shadowDx="1.0"
+                android:shadowDy="1.0"
+                android:shadowRadius="1.0"
+                android:text="16:34"
+                android:textColor="#ffffffff"
+                android:textSize="9.0dip" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/FrameLayoutSun"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5" >
+
+            <ImageView
+                android:id="@+id/ImageViewSun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="5.0dip"
+                android:src="@drawable/solar" />
+
+            <TextView
+                android:id="@+id/SunRiseTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|right|center"
+                android:layout_marginRight="1.0dip"
+                android:layout_marginTop="1.0dip"
+                android:gravity="center_horizontal"
+                android:shadowColor="#ff000000"
+                android:shadowDx="1.0"
+                android:shadowDy="1.0"
+                android:shadowRadius="1.0"
+                android:text="8:21"
+                android:textColor="#ffffffff"
+                android:textSize="9.0dip" />
+
+            <TextView
+                android:id="@+id/SunSetTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right|center"
+                android:layout_marginBottom="1.0dip"
+                android:layout_marginRight="1.0dip"
+                android:gravity="center_horizontal"
+                android:shadowColor="#ff000000"
+                android:shadowDx="1.0"
+                android:shadowDy="1.0"
+                android:shadowRadius="1.0"
+                android:text="16:34"
+                android:textColor="#ffffffff"
+                android:textSize="9.0dip" />
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>
