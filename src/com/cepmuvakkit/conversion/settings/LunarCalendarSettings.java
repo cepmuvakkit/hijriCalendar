@@ -9,6 +9,7 @@ public class LunarCalendarSettings {
 	private static LunarCalendarSettings instance = new LunarCalendarSettings();
 	private boolean isManualInput;
 	private boolean isDataFromGPS;
+	//private boolean isLastGoodKnownLocation;
 	private String customCity;
 	private double longitude,latitude,timezone,julianDay;
 	private int temperature,elongation,pressure,altitude;
@@ -116,7 +117,7 @@ public class LunarCalendarSettings {
 	
 	public static void load(SharedPreferences preferences) {
 		
-		instance.isDataFromGPS=preferences.getBoolean(ApplicationConstants.PREF_IS_GPS_DATA, false);
+		//instance.isDataFromGPS=preferences.getBoolean(ApplicationConstants.PREF_IS_GPS_DATA, false);
 		instance.isManualInput=preferences.getBoolean(ApplicationConstants.PREF_IS_MANUAL_INPUT, false);
 		instance.customCity=preferences.getString(ApplicationConstants.PREF_CUSTOM_CITY,"DefCustomCity");
 		instance.latitude= Double.parseDouble(preferences.getString(ApplicationConstants.PREF_LATITUDE,"0"));
@@ -126,7 +127,9 @@ public class LunarCalendarSettings {
 		instance.temperature=Integer.parseInt(preferences.getString(ApplicationConstants.PREF_TEMPERATURE, "10"));
 		instance.pressure=Integer.parseInt(preferences.getString(ApplicationConstants.PREF_PRESSURE,"1010"));
 		instance.altitude=Integer.parseInt(preferences.getString(ApplicationConstants.PREF_ALTITUDE,"0"));
-	}
+		instance.isDataFromGPS=preferences.getBoolean(ApplicationConstants.PREF_IS_GPS_DATA, instance.customCity.equals("DefCustomCity")?false:true);
+
+		}
 
 	public static void save(SharedPreferences preferences) {
 		
@@ -141,7 +144,8 @@ public class LunarCalendarSettings {
 		editor.putString(ApplicationConstants.PREF_TEMPERATURE, instance.temperature+"");
 		editor.putString(ApplicationConstants.PREF_PRESSURE, instance.pressure+"");
 		editor.putString(ApplicationConstants.PREF_ALTITUDE, instance.altitude+"");
-		
+		instance.isDataFromGPS=instance.customCity.equals("DefCustomCity")?false:true;
+		editor.putBoolean(ApplicationConstants.PREF_IS_GPS_DATA,instance.isDataFromGPS);
 		editor.commit();
 	}
 

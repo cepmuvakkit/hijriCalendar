@@ -50,6 +50,8 @@ com.android.vending.licensing.LicenseCheckerCallback$ApplicationErrorCode: com.a
 com.android.vending.licensing.LicenseCheckerCallback$ApplicationErrorCode: com.android.vending.licensing.LicenseCheckerCallback$ApplicationErrorCode valueOf(java.lang.String)
 com.android.vending.licensing.Policy$LicenseResponse: com.android.vending.licensing.Policy$LicenseResponse[] values()
 com.android.vending.licensing.Policy$LicenseResponse: com.android.vending.licensing.Policy$LicenseResponse valueOf(java.lang.String)
+com.cepmuvakkit.conversion.HijriCalendar
+com.cepmuvakkit.conversion.HijriCalendar: HijriCalendar()
 com.cepmuvakkit.conversion.HijriCalendarTab
 com.cepmuvakkit.conversion.HijriCalendarTab: HijriCalendarTab()
 com.cepmuvakkit.conversion.HijriCalendarTab: void openConversion(android.view.View)
@@ -373,6 +375,7 @@ com.cepmuvakkit.conversion.R$string: int TUESDAY
 com.cepmuvakkit.conversion.R$string: int WEDNESDAY
 com.cepmuvakkit.conversion.R$string: int ZILHICCE
 com.cepmuvakkit.conversion.R$string: int ZILKADE
+com.cepmuvakkit.conversion.R$string: int about
 com.cepmuvakkit.conversion.R$string: int about_text
 com.cepmuvakkit.conversion.R$string: int advanced_settings
 com.cepmuvakkit.conversion.R$string: int afterMagrib
@@ -420,6 +423,7 @@ com.cepmuvakkit.conversion.R$string: int is_manual_input
 com.cepmuvakkit.conversion.R$string: int is_manual_input_hint
 com.cepmuvakkit.conversion.R$string: int julian_date
 com.cepmuvakkit.conversion.R$string: int julian_day
+com.cepmuvakkit.conversion.R$string: int last_good_known
 com.cepmuvakkit.conversion.R$string: int last_quarter
 com.cepmuvakkit.conversion.R$string: int lat_summary
 com.cepmuvakkit.conversion.R$string: int lat_title
@@ -443,6 +447,7 @@ com.cepmuvakkit.conversion.R$string: int more_applications
 com.cepmuvakkit.conversion.R$string: int new_crescent
 com.cepmuvakkit.conversion.R$string: int new_moon
 com.cepmuvakkit.conversion.R$string: int next
+com.cepmuvakkit.conversion.R$string: int no_location
 com.cepmuvakkit.conversion.R$string: int partial_eclipse
 com.cepmuvakkit.conversion.R$string: int partial_eclipse_abr
 com.cepmuvakkit.conversion.R$string: int partial_lunar_eclipse

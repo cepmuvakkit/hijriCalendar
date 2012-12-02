@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">التقويم الهجري</string>
+     <string name="about">حول</string>
     <string name="about_text"><u>تحويل التاريخ الهجري والتقويم القمرى</u>		\n
 		هذا البرنامج يحسب التواريخ الهجرية وفقا للمعايير العالمية رؤية القمر
 		جميع البيانات والمعلومات والأمثلة المقدمة لأغراض إعلامية فقط.
@@ -151,5 +152,9 @@
     <string name="conversion">التقويم الهجري الميلادي لتحويل</string>
           <string name="real_time">في الوقت الحقيقي</string>
     <string name="sun_elevation">ارتفاع الشمس</string>
+    
+      <string name="last_good_known">باستخدام آخر موقع معروف جيدا أو القيم الافتراضية</string>
+    <string name="no_location">
+لا توجد بيانات تم جمعها من الموقع GPS، يجب عليك إدخال موقع من قائمة إعدادات</string>
 
 </resources>

@@ -164,6 +164,7 @@ public class GPSTracker extends Service implements LocationListener {
 					1);
 			if (addresses.size() > 0) {
 				Address address = addresses.get(0);
+			
 				locationName = address.getLocality();
 			}
 		} catch (IOException e) {

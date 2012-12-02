@@ -861,7 +861,171 @@ android.support.v4.widget.EdgeEffectCompatIcs -> android.support.v4.d.e:
     boolean onPull(java.lang.Object,float) -> a
     boolean onRelease(java.lang.Object) -> c
     boolean draw(java.lang.Object,android.graphics.Canvas) -> a
+com.android.vending.licensing.AESObfuscator -> com.android.vending.licensing.a:
+    byte[] IV -> a
+    javax.crypto.Cipher mEncryptor -> b
+    javax.crypto.Cipher mDecryptor -> c
+    java.lang.String obfuscate(java.lang.String) -> a
+    java.lang.String unobfuscate(java.lang.String) -> b
+com.android.vending.licensing.DeviceLimiter -> com.android.vending.licensing.b:
+    com.android.vending.licensing.Policy$LicenseResponse isDeviceAllowed(java.lang.String) -> a
+com.android.vending.licensing.ILicenseResultListener -> com.android.vending.licensing.c:
+    void verifyLicense(int,java.lang.String,java.lang.String) -> a
+com.android.vending.licensing.ILicenseResultListener$Stub -> com.android.vending.licensing.d:
+    com.android.vending.licensing.ILicenseResultListener asInterface(android.os.IBinder) -> a
+    android.os.IBinder asBinder() -> asBinder
+    boolean onTransact(int,android.os.Parcel,android.os.Parcel,int) -> onTransact
+com.android.vending.licensing.ILicenseResultListener$Stub$Proxy -> com.android.vending.licensing.e:
+    android.os.IBinder mRemote -> a
+    android.os.IBinder asBinder() -> asBinder
+    void verifyLicense(int,java.lang.String,java.lang.String) -> a
 com.android.vending.licensing.ILicensingService -> com.android.vending.licensing.ILicensingService:
+    void checkLicense(long,java.lang.String,com.android.vending.licensing.ILicenseResultListener) -> a
+com.android.vending.licensing.ILicensingService$Stub -> com.android.vending.licensing.f:
+    com.android.vending.licensing.ILicensingService asInterface(android.os.IBinder) -> a
+    boolean onTransact(int,android.os.Parcel,android.os.Parcel,int) -> onTransact
+com.android.vending.licensing.ILicensingService$Stub$Proxy -> com.android.vending.licensing.g:
+    android.os.IBinder mRemote -> a
+    android.os.IBinder asBinder() -> asBinder
+    void checkLicense(long,java.lang.String,com.android.vending.licensing.ILicenseResultListener) -> a
+com.android.vending.licensing.LicenseChecker -> com.android.vending.licensing.h:
+    java.security.SecureRandom RANDOM -> a
+    com.android.vending.licensing.ILicensingService mService -> b
+    java.security.PublicKey mPublicKey -> c
+    android.content.Context mContext -> d
+    com.android.vending.licensing.Policy mPolicy -> e
+    android.os.Handler mHandler -> f
+    java.lang.String mPackageName -> g
+    java.lang.String mVersionCode -> h
+    java.util.Set mChecksInProgress -> i
+    java.util.Queue mPendingChecks -> j
+    java.security.PublicKey generatePublicKey(java.lang.String) -> a
+    void checkAccess(com.android.vending.licensing.LicenseCheckerCallback) -> a
+    void runChecks() -> b
+    void finishCheck(com.android.vending.licensing.LicenseValidator) -> a
+    void onServiceConnected(android.content.ComponentName,android.os.IBinder) -> onServiceConnected
+    void onServiceDisconnected(android.content.ComponentName) -> onServiceDisconnected
+    void handleServiceConnectionError(com.android.vending.licensing.LicenseValidator) -> b
+    void cleanupService() -> c
+    void onDestroy() -> a
+    int generateNonce() -> d
+    java.lang.String getVersionCode(android.content.Context,java.lang.String) -> a
+    void access$0(com.android.vending.licensing.LicenseChecker,com.android.vending.licensing.LicenseValidator) -> a
+    void access$1(com.android.vending.licensing.LicenseChecker,com.android.vending.licensing.LicenseValidator) -> b
+    android.os.Handler access$2(com.android.vending.licensing.LicenseChecker) -> a
+    java.util.Set access$3(com.android.vending.licensing.LicenseChecker) -> b
+    java.security.PublicKey access$4(com.android.vending.licensing.LicenseChecker) -> c
+com.android.vending.licensing.LicenseChecker$ResultListener -> com.android.vending.licensing.i:
+    com.android.vending.licensing.LicenseValidator mValidator -> b
+    java.lang.Runnable mOnTimeout -> c
+    com.android.vending.licensing.LicenseChecker this$0 -> a
+    void verifyLicense(int,java.lang.String,java.lang.String) -> a
+    void startTimeout() -> a
+    void clearTimeout() -> b
+    com.android.vending.licensing.LicenseValidator access$0(com.android.vending.licensing.LicenseChecker$ResultListener) -> a
+    void access$1(com.android.vending.licensing.LicenseChecker$ResultListener) -> b
+    com.android.vending.licensing.LicenseChecker access$2(com.android.vending.licensing.LicenseChecker$ResultListener) -> c
+com.android.vending.licensing.LicenseChecker$ResultListener$1 -> com.android.vending.licensing.j:
+    com.android.vending.licensing.LicenseChecker$ResultListener this$1 -> a
+    void run() -> run
+com.android.vending.licensing.LicenseChecker$ResultListener$2 -> com.android.vending.licensing.k:
+    com.android.vending.licensing.LicenseChecker$ResultListener this$1 -> a
+    int val$responseCode -> b
+    java.lang.String val$signedData -> c
+    java.lang.String val$signature -> d
+    void run() -> run
+com.android.vending.licensing.LicenseCheckerCallback -> com.android.vending.licensing.l:
+    void allow() -> a
+    void dontAllow() -> b
+    void applicationError(com.android.vending.licensing.LicenseCheckerCallback$ApplicationErrorCode) -> a
+com.android.vending.licensing.LicenseCheckerCallback$ApplicationErrorCode -> com.android.vending.licensing.m:
+    com.android.vending.licensing.LicenseCheckerCallback$ApplicationErrorCode INVALID_PACKAGE_NAME -> a
+    com.android.vending.licensing.LicenseCheckerCallback$ApplicationErrorCode NON_MATCHING_UID -> b
+    com.android.vending.licensing.LicenseCheckerCallback$ApplicationErrorCode NOT_MARKET_MANAGED -> c
+    com.android.vending.licensing.LicenseCheckerCallback$ApplicationErrorCode CHECK_IN_PROGRESS -> d
+    com.android.vending.licensing.LicenseCheckerCallback$ApplicationErrorCode INVALID_PUBLIC_KEY -> e
+    com.android.vending.licensing.LicenseCheckerCallback$ApplicationErrorCode MISSING_PERMISSION -> f
+    com.android.vending.licensing.LicenseCheckerCallback$ApplicationErrorCode[] ENUM$VALUES -> g
+    com.android.vending.licensing.LicenseCheckerCallback$ApplicationErrorCode[] values() -> values
+    com.android.vending.licensing.LicenseCheckerCallback$ApplicationErrorCode valueOf(java.lang.String) -> valueOf
+com.android.vending.licensing.LicenseValidator -> com.android.vending.licensing.n:
+    com.android.vending.licensing.Policy mPolicy -> a
+    com.android.vending.licensing.LicenseCheckerCallback mCallback -> b
+    int mNonce -> c
+    java.lang.String mPackageName -> d
+    java.lang.String mVersionCode -> e
+    com.android.vending.licensing.DeviceLimiter mDeviceLimiter -> f
+    com.android.vending.licensing.LicenseCheckerCallback getCallback() -> a
+    int getNonce() -> b
+    java.lang.String getPackageName() -> c
+    void verify(java.security.PublicKey,int,java.lang.String,java.lang.String) -> a
+    void handleResponse(com.android.vending.licensing.Policy$LicenseResponse,com.android.vending.licensing.ResponseData) -> a
+    void handleApplicationError(com.android.vending.licensing.LicenseCheckerCallback$ApplicationErrorCode) -> a
+    void handleInvalidResponse() -> d
+com.android.vending.licensing.NullDeviceLimiter -> com.android.vending.licensing.o:
+    com.android.vending.licensing.Policy$LicenseResponse isDeviceAllowed(java.lang.String) -> a
+com.android.vending.licensing.Obfuscator -> com.android.vending.licensing.p:
+    java.lang.String obfuscate(java.lang.String) -> a
+    java.lang.String unobfuscate(java.lang.String) -> b
+com.android.vending.licensing.Policy -> com.android.vending.licensing.q:
+    void processServerResponse(com.android.vending.licensing.Policy$LicenseResponse,com.android.vending.licensing.ResponseData) -> a
+    boolean allowAccess() -> a
+com.android.vending.licensing.Policy$LicenseResponse -> com.android.vending.licensing.r:
+    com.android.vending.licensing.Policy$LicenseResponse LICENSED -> a
+    com.android.vending.licensing.Policy$LicenseResponse NOT_LICENSED -> b
+    com.android.vending.licensing.Policy$LicenseResponse RETRY -> c
+    com.android.vending.licensing.Policy$LicenseResponse[] ENUM$VALUES -> d
+    com.android.vending.licensing.Policy$LicenseResponse[] values() -> values
+    com.android.vending.licensing.Policy$LicenseResponse valueOf(java.lang.String) -> valueOf
+com.android.vending.licensing.PreferenceObfuscator -> com.android.vending.licensing.s:
+    android.content.SharedPreferences mPreferences -> a
+    com.android.vending.licensing.Obfuscator mObfuscator -> b
+    android.content.SharedPreferences$Editor mEditor -> c
+    void putString(java.lang.String,java.lang.String) -> a
+    java.lang.String getString(java.lang.String,java.lang.String) -> b
+    void commit() -> a
+com.android.vending.licensing.ResponseData -> com.android.vending.licensing.t:
+    int responseCode -> a
+    int nonce -> b
+    java.lang.String packageName -> c
+    java.lang.String versionCode -> d
+    java.lang.String userId -> e
+    long timestamp -> f
+    java.lang.String extra -> g
+    com.android.vending.licensing.ResponseData parse(java.lang.String) -> a
+    java.lang.String toString() -> toString
+com.android.vending.licensing.ServerManagedPolicy -> com.android.vending.licensing.u:
+    long mValidityTimestamp -> a
+    long mRetryUntil -> b
+    long mMaxRetries -> c
+    long mRetryCount -> d
+    long mLastResponseTime -> e
+    com.android.vending.licensing.Policy$LicenseResponse mLastResponse -> f
+    com.android.vending.licensing.PreferenceObfuscator mPreferences -> g
+    void processServerResponse(com.android.vending.licensing.Policy$LicenseResponse,com.android.vending.licensing.ResponseData) -> a
+    void setLastResponse(com.android.vending.licensing.Policy$LicenseResponse) -> a
+    void setRetryCount(long) -> a
+    void setValidityTimestamp(java.lang.String) -> a
+    void setRetryUntil(java.lang.String) -> b
+    void setMaxRetries(java.lang.String) -> c
+    boolean allowAccess() -> a
+    java.util.Map decodeExtras(java.lang.String) -> d
+com.android.vending.licensing.ValidationException -> com.android.vending.licensing.v:
+com.android.vending.licensing.util.Base64 -> com.android.vending.licensing.a.a:
+    byte[] ALPHABET -> b
+    byte[] WEBSAFE_ALPHABET -> c
+    byte[] DECODABET -> d
+    byte[] WEBSAFE_DECODABET -> e
+    boolean $assertionsDisabled -> a
+    byte[] encode3to4(byte[],int,int,byte[],int,byte[]) -> a
+    java.lang.String encode(byte[]) -> a
+    java.lang.String encode(byte[],int,int,byte[],boolean) -> a
+    byte[] encode(byte[],int,int,byte[],int) -> a
+    int decode4to3(byte[],int,byte[],int,byte[]) -> a
+    byte[] decode(java.lang.String) -> a
+    byte[] decode(byte[],int,int) -> a
+    byte[] decode(byte[],int,int,byte[]) -> a
+com.android.vending.licensing.util.Base64DecoderException -> com.android.vending.licensing.a.b:
 com.cepmuvakkit.conversion.GPSTracker -> com.cepmuvakkit.conversion.a:
     android.content.Context mContext -> i
     boolean isGPSEnabled -> a
@@ -892,6 +1056,28 @@ com.cepmuvakkit.conversion.GPSTracker$1 -> com.cepmuvakkit.conversion.b:
 com.cepmuvakkit.conversion.GPSTracker$2 -> com.cepmuvakkit.conversion.c:
     com.cepmuvakkit.conversion.GPSTracker this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
+com.cepmuvakkit.conversion.HijriCalendar -> com.cepmuvakkit.conversion.HijriCalendar:
+    byte[] SALT -> a
+    com.android.vending.licensing.LicenseChecker mChecker -> b
+    com.android.vending.licensing.LicenseCheckerCallback mLicenseCheckerCallback -> c
+    void doCheck() -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    android.app.Dialog onCreateDialog(int) -> onCreateDialog
+    void onDestroy() -> onDestroy
+    void startMainActivity() -> b
+    void toast(java.lang.String) -> a
+    void access$0(com.cepmuvakkit.conversion.HijriCalendar) -> a
+com.cepmuvakkit.conversion.HijriCalendar$1 -> com.cepmuvakkit.conversion.d:
+    com.cepmuvakkit.conversion.HijriCalendar this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.cepmuvakkit.conversion.HijriCalendar$2 -> com.cepmuvakkit.conversion.e:
+    com.cepmuvakkit.conversion.HijriCalendar this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+com.cepmuvakkit.conversion.HijriCalendar$MyLicenseCheckerCallback -> com.cepmuvakkit.conversion.f:
+    com.cepmuvakkit.conversion.HijriCalendar this$0 -> a
+    void allow() -> a
+    void applicationError(com.android.vending.licensing.LicenseCheckerCallback$ApplicationErrorCode) -> a
+    void dontAllow() -> b
 com.cepmuvakkit.conversion.HijriCalendarTab -> com.cepmuvakkit.conversion.HijriCalendarTab:
     com.cepmuvakkit.conversion.views.MoonCanvasView moonCanvasView -> a
     int temperature -> b
@@ -959,12 +1145,14 @@ com.cepmuvakkit.conversion.HijriCalendarTab -> com.cepmuvakkit.conversion.HijriC
     void returnCurrentJulianDay() -> e
     void updateLocationInfo() -> a
     void updateMoonInformation() -> f
-    void runLocation() -> g
+    void getLocation() -> g
     void onStart() -> onStart
     void onResume() -> onResume
     void onPause() -> onPause
+    void onRestart() -> onRestart
     void onDestroy() -> onDestroy
     boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    void onStop() -> onStop
     boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
     void openConversion(android.view.View) -> openConversion
     void setTimetoNewMoon(android.view.View) -> setTimetoNewMoon
@@ -982,22 +1170,22 @@ com.cepmuvakkit.conversion.HijriCalendarTab -> com.cepmuvakkit.conversion.HijriC
     double[] access$5(com.cepmuvakkit.conversion.HijriCalendarTab) -> e
     void access$6(com.cepmuvakkit.conversion.HijriCalendarTab) -> f
     void access$7(com.cepmuvakkit.conversion.HijriCalendarTab) -> g
-com.cepmuvakkit.conversion.HijriCalendarTab$1 -> com.cepmuvakkit.conversion.d:
+com.cepmuvakkit.conversion.HijriCalendarTab$1 -> com.cepmuvakkit.conversion.g:
     com.cepmuvakkit.conversion.HijriCalendarTab this$0 -> a
     void onDateSet(android.widget.DatePicker,int,int,int) -> onDateSet
-com.cepmuvakkit.conversion.HijriCalendarTab$2 -> com.cepmuvakkit.conversion.e:
+com.cepmuvakkit.conversion.HijriCalendarTab$2 -> com.cepmuvakkit.conversion.h:
     com.cepmuvakkit.conversion.HijriCalendarTab this$0 -> a
     void onTimeSet(android.widget.TimePicker,int,int) -> onTimeSet
-com.cepmuvakkit.conversion.HijriCalendarTab$3 -> com.cepmuvakkit.conversion.f:
+com.cepmuvakkit.conversion.HijriCalendarTab$3 -> com.cepmuvakkit.conversion.i:
     com.cepmuvakkit.conversion.HijriCalendarTab this$0 -> a
     void onClick(android.view.View) -> onClick
-com.cepmuvakkit.conversion.HijriCalendarTab$4 -> com.cepmuvakkit.conversion.g:
+com.cepmuvakkit.conversion.HijriCalendarTab$4 -> com.cepmuvakkit.conversion.j:
     com.cepmuvakkit.conversion.HijriCalendarTab this$0 -> a
     void onClick(android.view.View) -> onClick
-com.cepmuvakkit.conversion.HijriCalendarTab$5 -> com.cepmuvakkit.conversion.h:
+com.cepmuvakkit.conversion.HijriCalendarTab$5 -> com.cepmuvakkit.conversion.k:
     com.cepmuvakkit.conversion.HijriCalendarTab this$0 -> a
     void onClick(android.view.View) -> onClick
-com.cepmuvakkit.conversion.HijriCalendarTab$6 -> com.cepmuvakkit.conversion.i:
+com.cepmuvakkit.conversion.HijriCalendarTab$6 -> com.cepmuvakkit.conversion.l:
     com.cepmuvakkit.conversion.HijriCalendarTab this$0 -> a
     void onClick(android.view.View) -> onClick
 com.cepmuvakkit.conversion.HijriCalendarWidgetGreen -> com.cepmuvakkit.conversion.HijriCalendarWidgetGreen:
@@ -1062,20 +1250,20 @@ com.cepmuvakkit.conversion.HijriConversion -> com.cepmuvakkit.conversion.HijriCo
     android.widget.EditText access$8(com.cepmuvakkit.conversion.HijriConversion) -> c
     android.widget.Spinner access$9(com.cepmuvakkit.conversion.HijriConversion) -> d
     android.widget.EditText access$10(com.cepmuvakkit.conversion.HijriConversion) -> e
-com.cepmuvakkit.conversion.HijriConversion$1 -> com.cepmuvakkit.conversion.j:
+com.cepmuvakkit.conversion.HijriConversion$1 -> com.cepmuvakkit.conversion.m:
     com.cepmuvakkit.conversion.HijriConversion this$0 -> a
     void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
-com.cepmuvakkit.conversion.HijriConversion$2 -> com.cepmuvakkit.conversion.k:
+com.cepmuvakkit.conversion.HijriConversion$2 -> com.cepmuvakkit.conversion.n:
     com.cepmuvakkit.conversion.HijriConversion this$0 -> a
     android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
     android.view.View getDropDownView(int,android.view.View,android.view.ViewGroup) -> getDropDownView
-com.cepmuvakkit.conversion.HijriConversion$3 -> com.cepmuvakkit.conversion.l:
+com.cepmuvakkit.conversion.HijriConversion$3 -> com.cepmuvakkit.conversion.o:
     com.cepmuvakkit.conversion.HijriConversion this$0 -> a
     void onClick(android.view.View) -> onClick
-com.cepmuvakkit.conversion.HijriConversion$4 -> com.cepmuvakkit.conversion.m:
+com.cepmuvakkit.conversion.HijriConversion$4 -> com.cepmuvakkit.conversion.p:
     com.cepmuvakkit.conversion.HijriConversion this$0 -> a
     void onClick(android.view.View) -> onClick
-com.cepmuvakkit.conversion.HijriConversion$5 -> com.cepmuvakkit.conversion.n:
+com.cepmuvakkit.conversion.HijriConversion$5 -> com.cepmuvakkit.conversion.q:
     com.cepmuvakkit.conversion.HijriConversion this$0 -> a
     void onClick(android.view.View) -> onClick
 com.cepmuvakkit.conversion.MoonInfoWidget -> com.cepmuvakkit.conversion.MoonInfoWidget:
@@ -1099,8 +1287,8 @@ com.cepmuvakkit.conversion.MoonInfoWidget -> com.cepmuvakkit.conversion.MoonInfo
     void onUpdate(android.content.Context,android.appwidget.AppWidgetManager,int[]) -> onUpdate
     void returnCurrentJulianDay() -> a
     java.lang.String pad(int) -> a
-com.cepmuvakkit.conversion.R -> com.cepmuvakkit.conversion.o:
-com.cepmuvakkit.conversion.R$styleable -> com.cepmuvakkit.conversion.p:
+com.cepmuvakkit.conversion.R -> com.cepmuvakkit.conversion.r:
+com.cepmuvakkit.conversion.R$styleable -> com.cepmuvakkit.conversion.s:
     int[] LunarPhaseIcons -> LunarPhaseIcons
     int LunarPhaseIcons_phase -> LunarPhaseIcons_phase
 com.cepmuvakkit.conversion.hicricalendar.HicriCalendar -> com.cepmuvakkit.conversion.a.a:
@@ -1213,18 +1401,21 @@ com.cepmuvakkit.conversion.settings.LunarCalendarSettings -> com.cepmuvakkit.con
     int pressure -> k
     int altitude -> l
     void setJulianDay(double) -> a
-    com.cepmuvakkit.conversion.settings.LunarCalendarSettings getInstance() -> a
-    java.lang.String getCustomCity() -> b
+    boolean isDataFromGPS() -> a
+    void setDataFromGPS(boolean) -> a
+    void setManualInput(boolean) -> b
+    com.cepmuvakkit.conversion.settings.LunarCalendarSettings getInstance() -> b
+    java.lang.String getCustomCity() -> c
     void setCustomCity(java.lang.String) -> a
-    double getTimezone() -> c
+    double getTimezone() -> d
     void setTimezone(double) -> b
-    int getTemperature() -> d
-    int getPressure() -> e
-    int getAltitude() -> f
+    int getTemperature() -> e
+    int getPressure() -> f
+    int getAltitude() -> g
     void setAltitude(int) -> a
-    boolean isManualInput() -> g
-    double getLatitude() -> h
-    double getLongitude() -> i
+    boolean isManualInput() -> h
+    double getLatitude() -> i
+    double getLongitude() -> j
     void setLongitude(double) -> c
     void setLatitude(double) -> d
     void load(android.content.SharedPreferences) -> a

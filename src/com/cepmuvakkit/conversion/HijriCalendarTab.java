@@ -3,7 +3,6 @@ package com.cepmuvakkit.conversion;
 import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.util.Calendar;
-
 import com.cepmuvakkit.conversion.hicricalendar.HicriCalendar;
 import com.cepmuvakkit.conversion.phaseEvents.MonthPhases;
 import com.cepmuvakkit.conversion.settings.ApplicationConstants;
@@ -87,11 +86,7 @@ public class HijriCalendarTab extends Activity {
 				.getDefaultSharedPreferences(getApplicationContext());
 		LunarCalendarSettings.load(preferences);
 		returnCurrentJulianDay();
-		if (LunarCalendarSettings.getInstance().isManualInput() == false) {
-			runLocation();
-			LunarCalendarSettings.getInstance().setTimezone(mTimeZone);
-		}
-
+		getLocation();
 		setContentView(R.layout.activity_android_draw);
 
 		mPickDate = (Button) findViewById(R.id.dateButton);
@@ -287,8 +282,11 @@ public class HijriCalendarTab extends Activity {
 		jd = AstroLib.calculateJulianDay(c);
 		mTimeZone = c.getTimeZone().getOffset(c.getTimeInMillis()) / 3600000;
 		timezoneinDay = mTimeZone / 24.0;
-		LunarCalendarSettings.getInstance().setJulianDay(jd);
-		// LunarCalendarSettings.getInstance().setTimezone(mTimeZone);
+		LunarCalendarSettings.getInstance().setJulianDay(jd);	
+		if (LunarCalendarSettings.getInstance().isManualInput() == false) {
+			LunarCalendarSettings.getInstance().setTimezone(mTimeZone);
+		}
+		 LunarCalendarSettings.save(preferences);
 	}
 
 	protected void updateLocationInfo() {
@@ -299,10 +297,7 @@ public class HijriCalendarTab extends Activity {
 		temperature = LunarCalendarSettings.getInstance().getTemperature();
 		pressure = LunarCalendarSettings.getInstance().getPressure();
 		altitude = LunarCalendarSettings.getInstance().getAltitude();
-
-		if (LunarCalendarSettings.getInstance().isManualInput() == true) {
-			mTimeZone = LunarCalendarSettings.getInstance().getTimezone();
-		}
+		mTimeZone = LunarCalendarSettings.getInstance().getTimezone();
 		mCityName.setText(mLocationName);
 		mPositionValues.setText(twoDigitFormat.format(mLatitude) + ", "
 				+ twoDigitFormat.format(mLongitude));
@@ -343,40 +338,60 @@ public class HijriCalendarTab extends Activity {
 
 	}
 
-	private void runLocation() {
+	private void getLocation() {
 		gps = new GPSTracker(HijriCalendarTab.this);
-		String locationName = "Unknown";
 
-		if (gps.canGetLocation()) {
-
-			mLongitude = gps.getLongitude();
-			mLatitude = gps.getLatitude();
-			locationName = gps.getLocationName(mLatitude, mLongitude);
-			altitude = (int) gps.getAltitude();
-
-			LunarCalendarSettings.getInstance().setLatitude(mLatitude);
-			LunarCalendarSettings.getInstance().setLongitude(mLongitude);
-			LunarCalendarSettings.getInstance().setAltitude(altitude);
-			LunarCalendarSettings.getInstance().setCustomCity(locationName);
-			// LunarCalendarSettings.getInstance().setTimezone(mTimezone);
-			LunarCalendarSettings.save(preferences);
-
-			Toast.makeText(
-					this,
-					"Your Position: " + twoDigitFormat.format(mLatitude)
-							+ twoDigitFormat.format(mLongitude) + " ",
-					Toast.LENGTH_SHORT).show();
-
+		if (LunarCalendarSettings.getInstance().isManualInput() == true) {
+			mLongitude = LunarCalendarSettings.getInstance().getLongitude();
+			mLatitude = LunarCalendarSettings.getInstance().getLatitude();
+			altitude = LunarCalendarSettings.getInstance().getAltitude();
+			mLocationName = LunarCalendarSettings.getInstance().getCustomCity();
+			mTimeZone = LunarCalendarSettings.getInstance().getTimezone();
 		} else {
+			if (LunarCalendarSettings.getInstance().isDataFromGPS() == true) {
+				mLongitude = LunarCalendarSettings.getInstance().getLongitude();
+				mLatitude = LunarCalendarSettings.getInstance().getLatitude();
+				altitude = LunarCalendarSettings.getInstance().getAltitude();
+				mLocationName = LunarCalendarSettings.getInstance()
+						.getCustomCity();
+				mTimeZone = LunarCalendarSettings.getInstance().getTimezone();
+				Toast.makeText(
+						this,
+						getText(R.string.last_good_known),
+						Toast.LENGTH_LONG).show();
+			} else {
+				if (gps.canGetLocation()) {
 
-			Toast.makeText(
-					this,
-					"No location data gathered from GPS, You should input location from Settings Menu",
+					mLongitude = gps.getLongitude();
+					mLatitude = gps.getLatitude();
+					mLocationName = gps.getLocationName(mLatitude, mLongitude);
+					altitude = (int) gps.getAltitude();
+
+					LunarCalendarSettings.getInstance().setLatitude(mLatitude);
+					LunarCalendarSettings.getInstance()
+							.setLongitude(mLongitude);
+					LunarCalendarSettings.getInstance().setAltitude(altitude);
+					LunarCalendarSettings.getInstance().setCustomCity(
+							mLocationName);
+					// LunarCalendarSettings.getInstance().setTimezone(mTimezone);
+					LunarCalendarSettings.save(preferences);
+//
+//					Toast.makeText(
+//							this,
+//							"Your Position: "
+//									+ twoDigitFormat.format(mLatitude)
+//									+ twoDigitFormat.format(mLongitude) + " ",
+//							Toast.LENGTH_SHORT).show();
+
+				} else {
+
+					Toast.makeText(
+							this,getText(R.string.no_location),
 					Toast.LENGTH_LONG).show();
-			Toast.makeText(this,
-					"Using the Last good known location or default values",
-					Toast.LENGTH_LONG).show();
-			gps.showSettingsAlert();
+					
+					gps.showSettingsAlert();
+				}
+			}
 		}
 
 	}
@@ -384,24 +399,41 @@ public class HijriCalendarTab extends Activity {
 	@Override
 	protected void onStart() {
 		super.onStart();
+		//Toast.makeText(this, "onStart()", Toast.LENGTH_SHORT).show();
 		updateLocationInfo();
+		
 
 	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
+		//	Toast.makeText(this, "onResume()", Toast.LENGTH_SHORT).show();
 		updateLocationInfo();
-		gps = new GPSTracker(HijriCalendarTab.this);
+	
 	}
 
 	@Override
 	protected void onPause() {
+		
 		super.onPause();
+		//Toast.makeText(this, "onPause", Toast.LENGTH_SHORT).show();
 	}
 
 	@Override
+	protected void onRestart() {
+		
+		super.onPause();
+		getLocation();
+		updateLocationInfo();
+		updateMoonInformation();
+		//Toast.makeText(this, " onRestart()", Toast.LENGTH_SHORT).show();
+	}
+	
+	@Override
 	protected void onDestroy() {
+		//Toast.makeText(this, "onDestroy()", Toast.LENGTH_SHORT).show();
+
 		super.onDestroy();
 		gps.stopUsingGPS();
 	}
@@ -411,6 +443,11 @@ public class HijriCalendarTab extends Activity {
 		MenuInflater inflater = new MenuInflater(this);
 		inflater.inflate(R.menu.menu, menu);
 		return super.onCreateOptionsMenu(menu);
+	}
+	
+	protected void onStop() {
+	//	Toast.makeText(this, "onStop()", Toast.LENGTH_SHORT).show();
+		super.onStop();
 	}
 
 	public boolean onOptionsItemSelected(MenuItem item) {
@@ -424,7 +461,9 @@ public class HijriCalendarTab extends Activity {
 			updateDisplayTime();
 			updatePhaseAndEclipses();
 		} else if (itemId == R.id.use_GPS) {
-			runLocation();
+			LunarCalendarSettings.getInstance().setDataFromGPS(false);
+			LunarCalendarSettings.getInstance().setManualInput(false);
+			getLocation();
 			updateLocationInfo();
 			updateMoonInformation();
 			updateDisplayDate();
@@ -463,7 +502,7 @@ public class HijriCalendarTab extends Activity {
 			TextView message2 = (TextView) about.findViewById(R.id.help);
 			message2.setText(s2);
 			message2.setMovementMethod(LinkMovementMethod.getInstance());
-			new AlertDialog.Builder(this).setTitle(R.string.about_text)
+			new AlertDialog.Builder(this).setTitle(R.string.about)
 					.setView(about)
 					.setPositiveButton(android.R.string.ok, null).create()
 					.show();

@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">Hicri Takvim Pro</string>
+     <string name="about">Hakkında</string>
     <string name="about_text"><u>Hicri Gün Çevirici</u>		\n
 		Bu program Hicri Takvim değerlerini Beynelmilel ay rasat kriterlerine göre hesaplamaktadır.
 		Verilen değerler sadece bilgi amaçlıdır bütün sorumluluklar kullanıcıya aittir.</string>
@@ -157,5 +158,7 @@
     <string name="quit_button">Exit</string>
     <string name="real_time">Gerçek Zaman</string>
     <string name="sun_elevation">Güneş İrtifası</string>
+      <string name="last_good_known">En son atanan değerleri yada varsayılan değerleri kullanmaktadır</string>
+    <string name="no_location">GPS sisteminden  bir konum bilgisi alınamadı, o yüzden Menu kısmından Ayarlayınız</string>
 
 </resources>
