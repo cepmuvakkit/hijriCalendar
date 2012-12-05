@@ -44176,7 +44176,7 @@ _____________________________________________________________________
 Interfaces (count = 1):
   + Class [android/location/LocationListener]
 
-Constant Pool (count = 205):
+Constant Pool (count = 208):
   + Float [1000.0]
   + String [Can not get Geo coder]
   + String [Cancel]
@@ -44229,6 +44229,7 @@ Constant Pool (count = 205):
   + Methodref [android/location/Address.getLocality ()Ljava/lang/String;]
   + Methodref [android/location/Geocoder.<init> (Landroid/content/Context;Ljava/util/Locale;)V]
   + Methodref [android/location/Geocoder.getFromLocation (DDI)Ljava/util/List;]
+  + Methodref [android/location/Geocoder.isPresent ()Z]
   + Methodref [android/location/Location.getAltitude ()D]
   + Methodref [android/location/Location.getLatitude ()D]
   + Methodref [android/location/Location.getLongitude ()D]
@@ -44269,6 +44270,7 @@ Constant Pool (count = 205):
   + NameAndType [getSystemService (Ljava/lang/String;)Ljava/lang/Object;]
   + NameAndType [h Landroid/location/LocationManager;]
   + NameAndType [i Landroid/content/Context;]
+  + NameAndType [isPresent ()Z]
   + NameAndType [isProviderEnabled (Ljava/lang/String;)Z]
   + NameAndType [makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
   + NameAndType [printStackTrace ()V]
@@ -44357,6 +44359,7 @@ Constant Pool (count = 205):
   + Utf8 [gps]
   + Utf8 [h]
   + Utf8 [i]
+  + Utf8 [isPresent]
   + Utf8 [isProviderEnabled]
   + Utf8 [java/io/IOException]
   + Utf8 [java/lang/Exception]
@@ -44436,7 +44439,7 @@ Methods (count = 15):
       [21] putfield #41
         + Fieldref [com/cepmuvakkit/conversion/a.i Landroid/content/Context;]
       [24] aload_0 v0
-      [25] invokevirtual #64
+      [25] invokevirtual #65
         + Methodref [com/cepmuvakkit/conversion/a.a ()Landroid/location/Location;]
       [28] pop
       [29] return
@@ -44465,7 +44468,7 @@ Methods (count = 15):
         + Fieldref [com/cepmuvakkit/conversion/a.h Landroid/location/LocationManager;]
       [21] ldc #10
         + String [gps]
-      [23] invokevirtual #58
+      [23] invokevirtual #59
         + Methodref [android/location/LocationManager.isProviderEnabled (Ljava/lang/String;)Z]
       [26] putfield #33
         + Fieldref [com/cepmuvakkit/conversion/a.a Z]
@@ -44475,7 +44478,7 @@ Methods (count = 15):
         + Fieldref [com/cepmuvakkit/conversion/a.h Landroid/location/LocationManager;]
       [34] ldc #12
         + String [network]
-      [36] invokevirtual #58
+      [36] invokevirtual #59
         + Methodref [android/location/LocationManager.isProviderEnabled (Ljava/lang/String;)Z]
       [39] putfield #34
         + Fieldref [com/cepmuvakkit/conversion/a.b Z]
@@ -44505,13 +44508,13 @@ Methods (count = 15):
       [77] ldc #1
         + Float [1000.0]
       [79] aload_0 v0
-      [80] invokevirtual #60
+      [80] invokevirtual #61
         + Methodref [android/location/LocationManager.requestLocationUpdates (Ljava/lang/String;JFLandroid/location/LocationListener;)V]
       [83] ldc #7
         + String [Network]
       [85] ldc #7
         + String [Network]
-      [87] invokestatic #61
+      [87] invokestatic #62
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [90] pop
       [91] aload_0 v0
@@ -44524,7 +44527,7 @@ Methods (count = 15):
         + Fieldref [com/cepmuvakkit/conversion/a.h Landroid/location/LocationManager;]
       [103] ldc #12
         + String [network]
-      [105] invokevirtual #57
+      [105] invokevirtual #58
         + Methodref [android/location/LocationManager.getLastKnownLocation (Ljava/lang/String;)Landroid/location/Location;]
       [108] putfield #36
         + Fieldref [com/cepmuvakkit/conversion/a.d Landroid/location/Location;]
@@ -44536,7 +44539,7 @@ Methods (count = 15):
       [119] aload_0 v0
       [120] getfield #36
         + Fieldref [com/cepmuvakkit/conversion/a.d Landroid/location/Location;]
-      [123] invokevirtual #55
+      [123] invokevirtual #56
         + Methodref [android/location/Location.getLatitude ()D]
       [126] putfield #37
         + Fieldref [com/cepmuvakkit/conversion/a.e D]
@@ -44544,7 +44547,7 @@ Methods (count = 15):
       [130] aload_0 v0
       [131] getfield #36
         + Fieldref [com/cepmuvakkit/conversion/a.d Landroid/location/Location;]
-      [134] invokevirtual #56
+      [134] invokevirtual #57
         + Methodref [android/location/Location.getLongitude ()D]
       [137] putfield #38
         + Fieldref [com/cepmuvakkit/conversion/a.f D]
@@ -44552,7 +44555,7 @@ Methods (count = 15):
       [141] aload_0 v0
       [142] getfield #36
         + Fieldref [com/cepmuvakkit/conversion/a.d Landroid/location/Location;]
-      [145] invokevirtual #54
+      [145] invokevirtual #55
         + Methodref [android/location/Location.getAltitude ()D]
       [148] putfield #39
         + Fieldref [com/cepmuvakkit/conversion/a.g D]
@@ -44574,13 +44577,13 @@ Methods (count = 15):
       [174] ldc #1
         + Float [1000.0]
       [176] aload_0 v0
-      [177] invokevirtual #60
+      [177] invokevirtual #61
         + Methodref [android/location/LocationManager.requestLocationUpdates (Ljava/lang/String;JFLandroid/location/LocationListener;)V]
       [180] ldc #4
         + String [GPS Enabled]
       [182] ldc #4
         + String [GPS Enabled]
-      [184] invokestatic #61
+      [184] invokestatic #62
         + Methodref [android/util/Log.d (Ljava/lang/String;Ljava/lang/String;)I]
       [187] pop
       [188] aload_0 v0
@@ -44593,7 +44596,7 @@ Methods (count = 15):
         + Fieldref [com/cepmuvakkit/conversion/a.h Landroid/location/LocationManager;]
       [200] ldc #10
         + String [gps]
-      [202] invokevirtual #57
+      [202] invokevirtual #58
         + Methodref [android/location/LocationManager.getLastKnownLocation (Ljava/lang/String;)Landroid/location/Location;]
       [205] putfield #36
         + Fieldref [com/cepmuvakkit/conversion/a.d Landroid/location/Location;]
@@ -44605,7 +44608,7 @@ Methods (count = 15):
       [216] aload_0 v0
       [217] getfield #36
         + Fieldref [com/cepmuvakkit/conversion/a.d Landroid/location/Location;]
-      [220] invokevirtual #55
+      [220] invokevirtual #56
         + Methodref [android/location/Location.getLatitude ()D]
       [223] putfield #37
         + Fieldref [com/cepmuvakkit/conversion/a.e D]
@@ -44613,7 +44616,7 @@ Methods (count = 15):
       [227] aload_0 v0
       [228] getfield #36
         + Fieldref [com/cepmuvakkit/conversion/a.d Landroid/location/Location;]
-      [231] invokevirtual #56
+      [231] invokevirtual #57
         + Methodref [android/location/Location.getLongitude ()D]
       [234] putfield #38
         + Fieldref [com/cepmuvakkit/conversion/a.f D]
@@ -44621,14 +44624,14 @@ Methods (count = 15):
       [238] aload_0 v0
       [239] getfield #36
         + Fieldref [com/cepmuvakkit/conversion/a.d Landroid/location/Location;]
-      [242] invokevirtual #54
+      [242] invokevirtual #55
         + Methodref [android/location/Location.getAltitude ()D]
       [245] putfield #39
         + Fieldref [com/cepmuvakkit/conversion/a.g D]
       [248] goto +8 (target=256)
       [251] astore_1 v1
       [252] aload_1 v1
-      [253] invokevirtual #67
+      [253] invokevirtual #68
         + Methodref [java/lang/Exception.printStackTrace ()V]
       [256] aload_0 v0
       [257] getfield #36
@@ -44657,7 +44660,7 @@ Methods (count = 15):
       [8] getfield #40
         + Fieldref [com/cepmuvakkit/conversion/a.h Landroid/location/LocationManager;]
       [11] aload_0 v0
-      [12] invokevirtual #59
+      [12] invokevirtual #60
         + Methodref [android/location/LocationManager.removeUpdates (Landroid/location/LocationListener;)V]
       [15] return
       Code attribute exceptions (count = 0):
@@ -44677,7 +44680,7 @@ Methods (count = 15):
       [8] aload_0 v0
       [9] getfield #36
         + Fieldref [com/cepmuvakkit/conversion/a.d Landroid/location/Location;]
-      [12] invokevirtual #55
+      [12] invokevirtual #56
         + Methodref [android/location/Location.getLatitude ()D]
       [15] putfield #37
         + Fieldref [com/cepmuvakkit/conversion/a.e D]
@@ -44702,7 +44705,7 @@ Methods (count = 15):
       [8] aload_0 v0
       [9] getfield #36
         + Fieldref [com/cepmuvakkit/conversion/a.d Landroid/location/Location;]
-      [12] invokevirtual #54
+      [12] invokevirtual #55
         + Methodref [android/location/Location.getAltitude ()D]
       [15] putfield #39
         + Fieldref [com/cepmuvakkit/conversion/a.g D]
@@ -44727,7 +44730,7 @@ Methods (count = 15):
       [8] aload_0 v0
       [9] getfield #36
         + Fieldref [com/cepmuvakkit/conversion/a.d Landroid/location/Location;]
-      [12] invokevirtual #56
+      [12] invokevirtual #57
         + Methodref [android/location/Location.getLongitude ()D]
       [15] putfield #38
         + Fieldref [com/cepmuvakkit/conversion/a.f D]
@@ -44743,61 +44746,64 @@ Methods (count = 15):
     Access flags: 0x1
       = public java.lang.String a(double,double)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 75, locals = 9, stack = 6):
+    + Code attribute instructions (code length = 81, locals = 9, stack = 6):
       [0] ldc #9
         + String [Unknown]
       [2] astore v5
-      [4] new #17
+      [4] invokestatic #54
+        + Methodref [android/location/Geocoder.isPresent ()Z]
+      [7] ifeq +71 (target=78)
+      [10] new #17
         + Class [android/location/Geocoder]
-      [7] dup
-      [8] aload_0 v0
-      [9] getstatic #42
+      [13] dup
+      [14] aload_0 v0
+      [15] getstatic #42
         + Fieldref [java/util/Locale.ENGLISH Ljava/util/Locale;]
-      [12] invokespecial #52
+      [18] invokespecial #52
         + Methodref [android/location/Geocoder.<init> (Landroid/content/Context;Ljava/util/Locale;)V]
-      [15] astore v6
-      [17] aload v6
-      [19] dload_1 v1
-      [20] dload_3 v3
-      [21] iconst_1
-      [22] invokevirtual #53
+      [21] astore v6
+      [23] aload v6
+      [25] dload_1 v1
+      [26] dload_3 v3
+      [27] iconst_1
+      [28] invokevirtual #53
         + Methodref [android/location/Geocoder.getFromLocation (DDI)Ljava/util/List;]
-      [25] astore v7
-      [27] aload v7
-      [29] invokeinterface #69
+      [31] astore v7
+      [33] aload v7
+      [35] invokeinterface #70
         + InterfaceMethodref [java/util/List.size ()I]
-      [34] ifle +38 (target=72)
-      [37] aload v7
-      [39] iconst_0
-      [40] invokeinterface #68
+      [40] ifle +38 (target=78)
+      [43] aload v7
+      [45] iconst_0
+      [46] invokeinterface #69
         + InterfaceMethodref [java/util/List.get (I)Ljava/lang/Object;]
-      [45] checkcast #16
+      [51] checkcast #16
         + Class [android/location/Address]
-      [48] astore v8
-      [50] aload v8
-      [52] invokevirtual #51
+      [54] astore v8
+      [56] aload v8
+      [58] invokevirtual #51
         + Methodref [android/location/Address.getLocality ()Ljava/lang/String;]
-      [55] astore v5
-      [57] goto +15 (target=72)
-      [60] astore v7
-      [62] aload_0 v0
-      [63] ldc #2
+      [61] astore v5
+      [63] goto +15 (target=78)
+      [66] astore v7
+      [68] aload_0 v0
+      [69] ldc #2
         + String [Can not get Geo coder]
-      [65] iconst_1
-      [66] invokestatic #62
+      [71] iconst_1
+      [72] invokestatic #63
         + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
-      [69] invokevirtual #63
+      [75] invokevirtual #64
         + Methodref [android/widget/Toast.show ()V]
-      [72] aload v5
-      [74] areturn
+      [78] aload v5
+      [80] areturn
       Code attribute exceptions (count = 1):
-      - ExceptionInfo (17 -> 57: 60):
+      - ExceptionInfo (23 -> 63: 66):
       + Class [java/io/IOException]
       Code attribute attributes (attribute count = 1):
       + Stack map table attribute (count = 3):
-        - [57] Var: ...[a:java/lang/String][a:android/location/Geocoder], Stack: (empty)
-        - [60] Var: ..., Stack: [a:java/io/IOException]
-        - [72] Var: ..., Stack: (empty)
+        - [63] Var: ...[a:java/lang/String][a:android/location/Geocoder], Stack: (empty)
+        - [66] Var: ..., Stack: [a:java/io/IOException]
+        - [78] Var: -1, Stack: (empty)
   + Method:       f()Z
     Access flags: 0x1
       = public boolean f()
@@ -44842,7 +44848,7 @@ Methods (count = 15):
         + Class [com/cepmuvakkit/conversion/b]
       [32] dup
       [33] aload_0 v0
-      [34] invokespecial #65
+      [34] invokespecial #66
         + Methodref [com/cepmuvakkit/conversion/b.<init> (Lcom/cepmuvakkit/conversion/a;)V]
       [37] invokevirtual #46
         + Methodref [android/app/AlertDialog$Builder.setPositiveButton (Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
@@ -44854,7 +44860,7 @@ Methods (count = 15):
         + Class [com/cepmuvakkit/conversion/c]
       [47] dup
       [48] aload_0 v0
-      [49] invokespecial #66
+      [49] invokespecial #67
         + Methodref [com/cepmuvakkit/conversion/c.<init> (Lcom/cepmuvakkit/conversion/a;)V]
       [52] invokevirtual #45
         + Methodref [android/app/AlertDialog$Builder.setNegativeButton (Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;]
@@ -45972,15 +45978,15 @@ Constant Pool (count = 768):
   + Integer [2130903041]
   + Integer [2130903045]
   + Integer [2131099649]
-  + Integer [2131099650]
-  + Integer [2131099707]
+  + Integer [2131099706]
+  + Integer [2131099715]
   + Integer [2131099716]
   + Integer [2131099717]
   + Integer [2131099718]
   + Integer [2131099719]
-  + Integer [2131099720]
-  + Integer [2131099729]
-  + Integer [2131099746]
+  + Integer [2131099728]
+  + Integer [2131099745]
+  + Integer [2131099782]
   + Integer [2131099783]
   + Integer [2131099784]
   + Integer [2131230720]
@@ -48445,8 +48451,8 @@ Methods (count = 35):
         + Fieldref [com/cepmuvakkit/conversion/HijriCalendarTab.g D]
       [133] aload_0 v0
       [134] aload_0 v0
-      [135] ldc #16
-        + Integer [2131099783]
+      [135] ldc #15
+        + Integer [2131099782]
       [137] invokevirtual #248
         + Methodref [com/cepmuvakkit/conversion/HijriCalendarTab.getText (I)Ljava/lang/CharSequence;]
       [140] iconst_1
@@ -48536,8 +48542,8 @@ Methods (count = 35):
       [260] goto +24 (target=284)
       [263] aload_0 v0
       [264] aload_0 v0
-      [265] ldc #17
-        + Integer [2131099784]
+      [265] ldc #16
+        + Integer [2131099783]
       [267] invokevirtual #248
         + Methodref [com/cepmuvakkit/conversion/HijriCalendarTab.getText (I)Ljava/lang/CharSequence;]
       [270] iconst_1
@@ -48791,8 +48797,8 @@ Methods (count = 35):
         + Class [android/text/SpannableString]
       [164] dup
       [165] aload_0 v0
-      [166] ldc #15
-        + Integer [2131099746]
+      [166] ldc #14
+        + Integer [2131099745]
       [168] invokevirtual #248
         + Methodref [com/cepmuvakkit/conversion/HijriCalendarTab.getText (I)Ljava/lang/CharSequence;]
       [171] invokespecial #201
@@ -48848,8 +48854,8 @@ Methods (count = 35):
       [244] aload_0 v0
       [245] invokespecial #189
         + Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
-      [248] ldc #14
-        + Integer [2131099729]
+      [248] ldc #13
+        + Integer [2131099728]
       [250] invokevirtual #192
         + Methodref [android/app/AlertDialog$Builder.setTitle (I)Landroid/app/AlertDialog$Builder;]
       [253] aload v5
@@ -48873,8 +48879,8 @@ Methods (count = 35):
         + Class [android/text/SpannableString]
       [282] dup
       [283] aload_0 v0
-      [284] ldc #7
-        + Integer [2131099650]
+      [284] ldc #6
+        + Integer [2131099649]
       [286] invokevirtual #248
         + Methodref [com/cepmuvakkit/conversion/HijriCalendarTab.getText (I)Ljava/lang/CharSequence;]
       [289] invokespecial #201
@@ -48930,8 +48936,8 @@ Methods (count = 35):
       [362] aload_0 v0
       [363] invokespecial #189
         + Methodref [android/app/AlertDialog$Builder.<init> (Landroid/content/Context;)V]
-      [366] ldc #6
-        + Integer [2131099649]
+      [366] ldc #17
+        + Integer [2131099784]
       [368] invokevirtual #192
         + Methodref [android/app/AlertDialog$Builder.setTitle (I)Landroid/app/AlertDialog$Builder;]
       [371] aload v5
@@ -49070,8 +49076,8 @@ Methods (count = 35):
       [84] aload_0 v0
       [85] getfield #132
         + Fieldref [com/cepmuvakkit/conversion/HijriCalendarTab.K Landroid/widget/TextView;]
-      [88] ldc #9
-        + Integer [2131099716]
+      [88] ldc #8
+        + Integer [2131099715]
       [90] invokevirtual #214
         + Methodref [android/widget/TextView.setText (I)V]
       [93] return
@@ -49117,8 +49123,8 @@ Methods (count = 35):
       [40] aload_0 v0
       [41] getfield #132
         + Fieldref [com/cepmuvakkit/conversion/HijriCalendarTab.K Landroid/widget/TextView;]
-      [44] ldc #10
-        + Integer [2131099717]
+      [44] ldc #9
+        + Integer [2131099716]
       [46] invokevirtual #214
         + Methodref [android/widget/TextView.setText (I)V]
       [49] return
@@ -49162,8 +49168,8 @@ Methods (count = 35):
       [40] aload_0 v0
       [41] getfield #132
         + Fieldref [com/cepmuvakkit/conversion/HijriCalendarTab.K Landroid/widget/TextView;]
-      [44] ldc #11
-        + Integer [2131099718]
+      [44] ldc #10
+        + Integer [2131099717]
       [46] invokevirtual #214
         + Methodref [android/widget/TextView.setText (I)V]
       [49] return
@@ -49240,8 +49246,8 @@ Methods (count = 35):
       [84] aload_0 v0
       [85] getfield #132
         + Fieldref [com/cepmuvakkit/conversion/HijriCalendarTab.K Landroid/widget/TextView;]
-      [88] ldc #12
-        + Integer [2131099719]
+      [88] ldc #11
+        + Integer [2131099718]
       [90] invokevirtual #214
         + Methodref [android/widget/TextView.setText (I)V]
       [93] return
@@ -49287,8 +49293,8 @@ Methods (count = 35):
       [40] aload_0 v0
       [41] getfield #132
         + Fieldref [com/cepmuvakkit/conversion/HijriCalendarTab.K Landroid/widget/TextView;]
-      [44] ldc #13
-        + Integer [2131099720]
+      [44] ldc #12
+        + Integer [2131099719]
       [46] invokevirtual #214
         + Methodref [android/widget/TextView.setText (I)V]
       [49] return
@@ -49398,8 +49404,8 @@ Methods (count = 35):
       [74] aload_0 v0
       [75] getfield #132
         + Fieldref [com/cepmuvakkit/conversion/HijriCalendarTab.K Landroid/widget/TextView;]
-      [78] ldc #8
-        + Integer [2131099707]
+      [78] ldc #7
+        + Integer [2131099706]
       [80] invokevirtual #214
         + Methodref [android/widget/TextView.setText (I)V]
       [83] return
@@ -51031,7 +51037,7 @@ Interfaces (count = 0):
 Constant Pool (count = 209):
   + Integer [3600000]
   + Integer [2130903051]
-  + Integer [2131099765]
+  + Integer [2131099764]
   + Integer [2131296404]
   + Integer [2131296406]
   + Integer [2131296409]
@@ -51478,7 +51484,7 @@ Methods (count = 3):
         + Integer [2131296412]
       [252] aload_1 v1
       [253] ldc #3
-        + Integer [2131099765]
+        + Integer [2131099764]
       [255] invokevirtual #49
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [258] invokevirtual #54
@@ -51640,7 +51646,7 @@ Constant Pool (count = 337):
   + Integer [2130903040]
   + Integer [2130903043]
   + Integer [2130903048]
-  + Integer [2131099650]
+  + Integer [2131099649]
   + Integer [2131230720]
   + Integer [2131296256]
   + Integer [2131296329]
@@ -52442,7 +52448,7 @@ Methods (count = 18):
       [31] dup
       [32] aload_0 v0
       [33] ldc #5
-        + Integer [2131099650]
+        + Integer [2131099649]
       [35] invokevirtual #105
         + Methodref [com/cepmuvakkit/conversion/HijriConversion.getText (I)Ljava/lang/CharSequence;]
       [38] invokespecial #83
@@ -54372,6 +54378,7 @@ _____________________________________________________________________
 Interfaces (count = 0):
 
 Constant Pool (count = 199):
+  + Integer [2131099657]
   + Integer [2131099658]
   + Integer [2131099659]
   + Integer [2131099660]
@@ -54402,7 +54409,6 @@ Constant Pool (count = 199):
   + Integer [2131099685]
   + Integer [2131099686]
   + Integer [2131099687]
-  + Integer [2131099688]
   + String []
   + String [ ]
   + String [JAMIZIALAHIR]
@@ -55077,7 +55083,7 @@ Methods (count = 9):
       [6] iconst_0
       [7] aload_1 v1
       [8] ldc #13
-        + Integer [2131099670]
+        + Integer [2131099669]
       [10] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [13] aastore
@@ -55085,7 +55091,7 @@ Methods (count = 9):
       [15] iconst_1
       [16] aload_1 v1
       [17] ldc #14
-        + Integer [2131099671]
+        + Integer [2131099670]
       [19] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [22] aastore
@@ -55093,7 +55099,7 @@ Methods (count = 9):
       [24] iconst_2
       [25] aload_1 v1
       [26] ldc #15
-        + Integer [2131099672]
+        + Integer [2131099671]
       [28] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [31] aastore
@@ -55101,7 +55107,7 @@ Methods (count = 9):
       [33] iconst_3
       [34] aload_1 v1
       [35] ldc #16
-        + Integer [2131099673]
+        + Integer [2131099672]
       [37] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [40] aastore
@@ -55109,7 +55115,7 @@ Methods (count = 9):
       [42] iconst_4
       [43] aload_1 v1
       [44] ldc #17
-        + Integer [2131099674]
+        + Integer [2131099673]
       [46] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [49] aastore
@@ -55117,7 +55123,7 @@ Methods (count = 9):
       [51] iconst_5
       [52] aload_1 v1
       [53] ldc #18
-        + Integer [2131099675]
+        + Integer [2131099674]
       [55] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [58] aastore
@@ -55125,7 +55131,7 @@ Methods (count = 9):
       [60] bipush 6
       [62] aload_1 v1
       [63] ldc #19
-        + Integer [2131099676]
+        + Integer [2131099675]
       [65] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [68] aastore
@@ -55133,7 +55139,7 @@ Methods (count = 9):
       [70] bipush 7
       [72] aload_1 v1
       [73] ldc #20
-        + Integer [2131099677]
+        + Integer [2131099676]
       [75] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [78] aastore
@@ -55141,7 +55147,7 @@ Methods (count = 9):
       [80] bipush 8
       [82] aload_1 v1
       [83] ldc #21
-        + Integer [2131099678]
+        + Integer [2131099677]
       [85] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [88] aastore
@@ -55149,7 +55155,7 @@ Methods (count = 9):
       [90] bipush 9
       [92] aload_1 v1
       [93] ldc #22
-        + Integer [2131099679]
+        + Integer [2131099678]
       [95] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [98] aastore
@@ -55157,7 +55163,7 @@ Methods (count = 9):
       [100] bipush 10
       [102] aload_1 v1
       [103] ldc #23
-        + Integer [2131099680]
+        + Integer [2131099679]
       [105] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [108] aastore
@@ -55165,7 +55171,7 @@ Methods (count = 9):
       [110] bipush 11
       [112] aload_1 v1
       [113] ldc #24
-        + Integer [2131099681]
+        + Integer [2131099680]
       [115] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [118] aastore
@@ -55229,7 +55235,7 @@ Methods (count = 9):
       [85] ificmpne +13 (target=98)
       [88] aload_1 v1
       [89] ldc #1
-        + Integer [2131099658]
+        + Integer [2131099657]
       [91] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [94] astore_3 v3
@@ -55241,7 +55247,7 @@ Methods (count = 9):
       [104] ificmpne +526 (target=630)
       [107] aload_1 v1
       [108] ldc #2
-        + Integer [2131099659]
+        + Integer [2131099658]
       [110] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [113] astore_3 v3
@@ -55258,7 +55264,7 @@ Methods (count = 9):
       [133] dup
       [134] aload_1 v1
       [135] ldc #12
-        + Integer [2131099669]
+        + Integer [2131099668]
       [137] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [140] invokestatic #96
@@ -55271,7 +55277,7 @@ Methods (count = 9):
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [151] aload_1 v1
       [152] ldc #3
-        + Integer [2131099660]
+        + Integer [2131099659]
       [154] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [157] invokevirtual #99
@@ -55286,7 +55292,7 @@ Methods (count = 9):
       [170] ificmpne +460 (target=630)
       [173] aload_1 v1
       [174] ldc #3
-        + Integer [2131099660]
+        + Integer [2131099659]
       [176] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [179] astore_3 v3
@@ -55303,7 +55309,7 @@ Methods (count = 9):
       [197] ificmpne +10 (target=207)
       [200] aload_1 v1
       [201] ldc #4
-        + Integer [2131099661]
+        + Integer [2131099660]
       [203] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [206] astore_3 v3
@@ -55324,7 +55330,7 @@ Methods (count = 9):
       [231] dup
       [232] aload_1 v1
       [233] ldc #12
-        + Integer [2131099669]
+        + Integer [2131099668]
       [235] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [238] invokestatic #96
@@ -55337,7 +55343,7 @@ Methods (count = 9):
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [249] aload_1 v1
       [250] ldc #5
-        + Integer [2131099662]
+        + Integer [2131099661]
       [252] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [255] invokevirtual #99
@@ -55357,7 +55363,7 @@ Methods (count = 9):
       [276] ificmpge +10 (target=286)
       [279] aload_1 v1
       [280] ldc #5
-        + Integer [2131099662]
+        + Integer [2131099661]
       [282] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [285] astore_3 v3
@@ -55373,7 +55379,7 @@ Methods (count = 9):
       [302] dup
       [303] aload_1 v1
       [304] ldc #12
-        + Integer [2131099669]
+        + Integer [2131099668]
       [306] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [309] invokestatic #96
@@ -55386,7 +55392,7 @@ Methods (count = 9):
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [320] aload_1 v1
       [321] ldc #6
-        + Integer [2131099663]
+        + Integer [2131099662]
       [323] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [326] invokevirtual #99
@@ -55401,7 +55407,7 @@ Methods (count = 9):
       [339] ificmpne +291 (target=630)
       [342] aload_1 v1
       [343] ldc #6
-        + Integer [2131099663]
+        + Integer [2131099662]
       [345] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [348] astore_3 v3
@@ -55418,7 +55424,7 @@ Methods (count = 9):
       [368] dup
       [369] aload_1 v1
       [370] ldc #12
-        + Integer [2131099669]
+        + Integer [2131099668]
       [372] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [375] invokestatic #96
@@ -55431,7 +55437,7 @@ Methods (count = 9):
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [386] aload_1 v1
       [387] ldc #7
-        + Integer [2131099664]
+        + Integer [2131099663]
       [389] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [392] invokevirtual #99
@@ -55446,7 +55452,7 @@ Methods (count = 9):
       [405] ificmpne +225 (target=630)
       [408] aload_1 v1
       [409] ldc #7
-        + Integer [2131099664]
+        + Integer [2131099663]
       [411] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [414] astore_3 v3
@@ -55463,7 +55469,7 @@ Methods (count = 9):
       [434] dup
       [435] aload_1 v1
       [436] ldc #12
-        + Integer [2131099669]
+        + Integer [2131099668]
       [438] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [441] invokestatic #96
@@ -55476,7 +55482,7 @@ Methods (count = 9):
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [452] aload_1 v1
       [453] ldc #8
-        + Integer [2131099665]
+        + Integer [2131099664]
       [455] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [458] invokevirtual #99
@@ -55491,7 +55497,7 @@ Methods (count = 9):
       [471] ificmpne +159 (target=630)
       [474] aload_1 v1
       [475] ldc #8
-        + Integer [2131099665]
+        + Integer [2131099664]
       [477] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [480] astore_3 v3
@@ -55527,7 +55533,7 @@ Methods (count = 9):
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [527] aload_1 v1
       [528] ldc #9
-        + Integer [2131099666]
+        + Integer [2131099665]
       [530] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [533] invokevirtual #99
@@ -55543,7 +55549,7 @@ Methods (count = 9):
       [549] ificmpne +10 (target=559)
       [552] aload_1 v1
       [553] ldc #11
-        + Integer [2131099668]
+        + Integer [2131099667]
       [555] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [558] astore_3 v3
@@ -55585,7 +55591,7 @@ Methods (count = 9):
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [617] aload_1 v1
       [618] ldc #10
-        + Integer [2131099667]
+        + Integer [2131099666]
       [620] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [623] invokevirtual #99
@@ -55637,7 +55643,7 @@ Methods (count = 9):
       [6] iconst_0
       [7] aload_1 v1
       [8] ldc #25
-        + Integer [2131099682]
+        + Integer [2131099681]
       [10] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [13] aastore
@@ -55645,7 +55651,7 @@ Methods (count = 9):
       [15] iconst_1
       [16] aload_1 v1
       [17] ldc #27
-        + Integer [2131099684]
+        + Integer [2131099683]
       [19] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [22] aastore
@@ -55653,7 +55659,7 @@ Methods (count = 9):
       [24] iconst_2
       [25] aload_1 v1
       [26] ldc #31
-        + Integer [2131099688]
+        + Integer [2131099687]
       [28] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [31] aastore
@@ -55661,7 +55667,7 @@ Methods (count = 9):
       [33] iconst_3
       [34] aload_1 v1
       [35] ldc #28
-        + Integer [2131099685]
+        + Integer [2131099684]
       [37] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [40] aastore
@@ -55669,7 +55675,7 @@ Methods (count = 9):
       [42] iconst_4
       [43] aload_1 v1
       [44] ldc #29
-        + Integer [2131099686]
+        + Integer [2131099685]
       [46] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [49] aastore
@@ -55677,7 +55683,7 @@ Methods (count = 9):
       [51] iconst_5
       [52] aload_1 v1
       [53] ldc #30
-        + Integer [2131099687]
+        + Integer [2131099686]
       [55] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [58] aastore
@@ -55685,7 +55691,7 @@ Methods (count = 9):
       [60] bipush 6
       [62] aload_1 v1
       [63] ldc #26
-        + Integer [2131099683]
+        + Integer [2131099682]
       [65] invokevirtual #85
         + Methodref [android/content/Context.getString (I)Ljava/lang/String;]
       [68] aastore
@@ -59040,6 +59046,7 @@ _____________________________________________________________________
 Interfaces (count = 0):
 
 Constant Pool (count = 144):
+  + Integer [2131099753]
   + Integer [2131099754]
   + Integer [2131099755]
   + Integer [2131099756]
@@ -59050,7 +59057,6 @@ Constant Pool (count = 144):
   + Integer [2131099761]
   + Integer [2131099762]
   + Integer [2131099763]
-  + Integer [2131099764]
   + Integer [2131099785]
   + Integer [2131099786]
   + Integer [2131099787]
@@ -59521,7 +59527,7 @@ Methods (count = 5):
       [36] dcmpl
       [37] ifle +6 (target=43)
       [40] ldc #11
-        + Integer [2131099764]
+        + Integer [2131099763]
       [42] ireturn
       [43] dload v8
       [45] ldc2_w #37
@@ -59534,7 +59540,7 @@ Methods (count = 5):
         + Integer [2131099785]
       [59] goto +5 (target=64)
       [62] ldc #1
-        + Integer [2131099754]
+        + Integer [2131099753]
       [64] ireturn
       [65] dload v8
       [67] ldc2_w #41
@@ -59547,7 +59553,7 @@ Methods (count = 5):
         + Integer [2131099786]
       [81] goto +5 (target=86)
       [84] ldc #2
-        + Integer [2131099755]
+        + Integer [2131099754]
       [86] ireturn
       [87] dload v8
       [89] ldc2_w #45
@@ -59560,7 +59566,7 @@ Methods (count = 5):
         + Integer [2131099787]
       [103] goto +5 (target=108)
       [106] ldc #3
-        + Integer [2131099756]
+        + Integer [2131099755]
       [108] ireturn
       [109] iload v5
       [111] ifeq +8 (target=119)
@@ -59568,7 +59574,7 @@ Methods (count = 5):
         + Integer [2131099788]
       [116] goto +5 (target=121)
       [119] ldc #4
-        + Integer [2131099757]
+        + Integer [2131099756]
       [121] ireturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
@@ -59616,7 +59622,7 @@ Methods (count = 5):
       [36] dcmpl
       [37] ifle +6 (target=43)
       [40] ldc #11
-        + Integer [2131099764]
+        + Integer [2131099763]
       [42] ireturn
       [43] dload v8
       [45] ldc2_w #33
@@ -59629,7 +59635,7 @@ Methods (count = 5):
         + Integer [2131099789]
       [59] goto +5 (target=64)
       [62] ldc #5
-        + Integer [2131099758]
+        + Integer [2131099757]
       [64] ireturn
       [65] dload v8
       [67] ldc2_w #35
@@ -59642,7 +59648,7 @@ Methods (count = 5):
         + Integer [2131099790]
       [81] goto +5 (target=86)
       [84] ldc #6
-        + Integer [2131099759]
+        + Integer [2131099758]
       [86] ireturn
       [87] dload v8
       [89] ldc2_w #39
@@ -59655,7 +59661,7 @@ Methods (count = 5):
         + Integer [2131099791]
       [103] goto +5 (target=108)
       [106] ldc #7
-        + Integer [2131099760]
+        + Integer [2131099759]
       [108] ireturn
       [109] dload v8
       [111] ldc2_w #43
@@ -59668,7 +59674,7 @@ Methods (count = 5):
         + Integer [2131099792]
       [125] goto +5 (target=130)
       [128] ldc #8
-        + Integer [2131099761]
+        + Integer [2131099760]
       [130] ireturn
       [131] dload v8
       [133] ldc2_w #47
@@ -59681,7 +59687,7 @@ Methods (count = 5):
         + Integer [2131099793]
       [147] goto +5 (target=152)
       [150] ldc #9
-        + Integer [2131099762]
+        + Integer [2131099761]
       [152] ireturn
       [153] iload v5
       [155] ifeq +8 (target=163)
@@ -59689,7 +59695,7 @@ Methods (count = 5):
         + Integer [2131099794]
       [160] goto +5 (target=165)
       [163] ldc #10
-        + Integer [2131099763]
+        + Integer [2131099762]
       [165] ireturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):

@@ -158,24 +158,25 @@ public class GPSTracker extends Service implements LocationListener {
 	
 	public String getLocationName(double latitude, double longitude){
 		String locationName = "Unknown";
+		if (Geocoder.isPresent()==true){
 		Geocoder gc = new Geocoder(this, Locale.ENGLISH);
+		
+	 
 		try {
 			List<Address> addresses = gc.getFromLocation(latitude, longitude,
 					1);
 			if (addresses.size() > 0) {
 				Address address = addresses.get(0);
-			
 				locationName = address.getLocality();
 			}
 		} catch (IOException e) {
 			Toast.makeText(this, "Can not get Geo coder", Toast.LENGTH_LONG)
 					.show();
 
-		}
+		}}
 		
 		return locationName;
 	}
-	
 	
 	/**
 	 * Function to check GPS/wifi enabled

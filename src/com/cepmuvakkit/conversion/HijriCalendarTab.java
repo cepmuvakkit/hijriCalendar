@@ -280,6 +280,7 @@ public class HijriCalendarTab extends Activity {
 	private void returnCurrentJulianDay() {
 		final Calendar c = Calendar.getInstance();
 		jd = AstroLib.calculateJulianDay(c);
+	
 		mTimeZone = c.getTimeZone().getOffset(c.getTimeInMillis()) / 3600000;
 		timezoneinDay = mTimeZone / 24.0;
 		LunarCalendarSettings.getInstance().setJulianDay(jd);	

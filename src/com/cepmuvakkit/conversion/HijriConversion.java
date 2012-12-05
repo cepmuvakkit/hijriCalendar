@@ -42,6 +42,7 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.CompoundButton.OnCheckedChangeListener;
+import com.cepmuvakkit.conversion.settings.LunarCalendarSettings;
 
 public class HijriConversion extends Activity {
 	private EditText dayText, yearText;
@@ -67,9 +68,10 @@ public class HijriConversion extends Activity {
 
 		setContentView(R.layout.conversionabs);
 		// Get the message from the intent
-		/*Intent intent = getIntent();
-		String julianDayTxt = intent
-				.getStringExtra(HijriCalendarTab.EXTRA_MESSAGE);*/
+		/*
+		 * Intent intent = getIntent(); String julianDayTxt = intent
+		 * .getStringExtra(HijriCalendarTab.EXTRA_MESSAGE);
+		 */
 		dayText = (EditText) findViewById(R.id.day);
 		// monthText= (EditText) findViewById(R.id.month);
 		yearText = (EditText) findViewById(R.id.year);
@@ -77,7 +79,6 @@ public class HijriConversion extends Activity {
 		mPreviousButton = (Button) findViewById(R.id.previousDay);
 		mNextButton = (Button) findViewById(R.id.nextDay);
 		mDateDisplay = (TextView) findViewById(R.id.hicriDisplay);
-
 		isAfterMagribChkBx = (CheckBox) findViewById(R.id.after_magrib);
 		isAfterMagribChkBx
 				.setOnCheckedChangeListener(new OnCheckedChangeListener() {
@@ -97,43 +98,31 @@ public class HijriConversion extends Activity {
 		String[] monthStrings = getMonthStrings(); // get month names
 		s1 = (Spinner) findViewById(R.id.monthSpinner);
 
-		
-		 ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-				 this, R.layout.my_spinner_style,monthStrings) {
-
-             public View getView(int position, View convertView,
-                     ViewGroup parent) {
-                 View v = super.getView(position, convertView, parent);
-
-                 ((TextView) v).setTextSize(16);
-                 ((TextView) v).setTextColor(
-                         getResources()
-                         .getColorStateList(R.color.white));
-                 return v;
-             }
-
-             public View getDropDownView(int position, View convertView,
-                     ViewGroup parent) {
-                 View v = super.getDropDownView(position, convertView,
-                         parent);
-                 v.setBackgroundResource(R.drawable.btn_selector);
-
-                 ((TextView) v).setTextColor(getResources().getColorStateList(
-                                 R.color.white));
-                
-                 ((TextView) v).setGravity(Gravity.CENTER);
-
-                 return v;
-             }
-         };
-		
-        
-		
-		/*
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-				android.R.layout.simple_spinner_item, monthStrings);
-		 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-*/
+				R.layout.my_spinner_style, monthStrings) {
+
+			public View getView(int position, View convertView, ViewGroup parent) {
+				View v = super.getView(position, convertView, parent);
+
+				((TextView) v).setTextSize(16);
+				((TextView) v).setTextColor(getResources().getColorStateList(
+						R.color.white));
+				return v;
+			}
+
+			public View getDropDownView(int position, View convertView,
+					ViewGroup parent) {
+				View v = super.getDropDownView(position, convertView, parent);
+				v.setBackgroundResource(R.drawable.btn_selector);
+
+				((TextView) v).setTextColor(getResources().getColorStateList(
+						R.color.white));
+
+				((TextView) v).setGravity(Gravity.CENTER);
+
+				return v;
+			}
+		};
 		s1.setAdapter(adapter);
 		updateGregorianDisplay();
 		updateHijriDisplay(getBaseContext());
