@@ -35,7 +35,7 @@ public class MoonCanvasView extends View {
 
 	private Context context;
 	//private int w = 476, h = 516, diameter;
-	private int w, h, diameter;
+	private int w=100, h=100, diameter;
 	public MoonCanvasView(Context context) {
 		super(context);
 		this.context = context;

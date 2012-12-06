@@ -44746,13 +44746,13 @@ Methods (count = 15):
     Access flags: 0x1
       = public java.lang.String a(double,double)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 81, locals = 9, stack = 6):
+    + Code attribute instructions (code length = 84, locals = 9, stack = 6):
       [0] ldc #9
         + String [Unknown]
       [2] astore v5
       [4] invokestatic #54
         + Methodref [android/location/Geocoder.isPresent ()Z]
-      [7] ifeq +71 (target=78)
+      [7] ifeq +74 (target=81)
       [10] new #17
         + Class [android/location/Geocoder]
       [13] dup
@@ -44772,7 +44772,7 @@ Methods (count = 15):
       [33] aload v7
       [35] invokeinterface #70
         + InterfaceMethodref [java/util/List.size ()I]
-      [40] ifle +38 (target=78)
+      [40] ifle +41 (target=81)
       [43] aload v7
       [45] iconst_0
       [46] invokeinterface #69
@@ -44784,18 +44784,20 @@ Methods (count = 15):
       [58] invokevirtual #51
         + Methodref [android/location/Address.getLocality ()Ljava/lang/String;]
       [61] astore v5
-      [63] goto +15 (target=78)
+      [63] goto +18 (target=81)
       [66] astore v7
       [68] aload_0 v0
-      [69] ldc #2
+      [69] getfield #41
+        + Fieldref [com/cepmuvakkit/conversion/a.i Landroid/content/Context;]
+      [72] ldc #2
         + String [Can not get Geo coder]
-      [71] iconst_1
-      [72] invokestatic #63
+      [74] iconst_1
+      [75] invokestatic #63
         + Methodref [android/widget/Toast.makeText (Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;]
-      [75] invokevirtual #64
+      [78] invokevirtual #64
         + Methodref [android/widget/Toast.show ()V]
-      [78] aload v5
-      [80] areturn
+      [81] aload v5
+      [83] areturn
       Code attribute exceptions (count = 1):
       - ExceptionInfo (23 -> 63: 66):
       + Class [java/io/IOException]
@@ -44803,7 +44805,7 @@ Methods (count = 15):
       + Stack map table attribute (count = 3):
         - [63] Var: ...[a:java/lang/String][a:android/location/Geocoder], Stack: (empty)
         - [66] Var: ..., Stack: [a:java/io/IOException]
-        - [78] Var: -1, Stack: (empty)
+        - [81] Var: -1, Stack: (empty)
   + Method:       f()Z
     Access flags: 0x1
       = public boolean f()
@@ -62040,20 +62042,28 @@ Methods (count = 8):
     Access flags: 0x1
       = public a(android.content.Context)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 16, locals = 2, stack = 2):
+    + Code attribute instructions (code length = 28, locals = 2, stack = 2):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] invokespecial #69
         + Methodref [android/view/View.<init> (Landroid/content/Context;)V]
       [5] aload_0 v0
-      [6] aload_1 v1
-      [7] putfield #47
+      [6] bipush 100
+      [8] putfield #48
+        + Fieldref [com/cepmuvakkit/conversion/views/a.r I]
+      [11] aload_0 v0
+      [12] bipush 100
+      [14] putfield #49
+        + Fieldref [com/cepmuvakkit/conversion/views/a.s I]
+      [17] aload_0 v0
+      [18] aload_1 v1
+      [19] putfield #47
         + Fieldref [com/cepmuvakkit/conversion/views/a.q Landroid/content/Context;]
-      [10] aload_0 v0
-      [11] aload_1 v1
-      [12] invokespecial #75
+      [22] aload_0 v0
+      [23] aload_1 v1
+      [24] invokespecial #75
         + Methodref [com/cepmuvakkit/conversion/views/a.a (Landroid/content/Context;)V]
-      [15] return
+      [27] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       a(Landroid/content/Context;)V

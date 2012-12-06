@@ -170,7 +170,7 @@ public class GPSTracker extends Service implements LocationListener {
 				locationName = address.getLocality();
 			}
 		} catch (IOException e) {
-			Toast.makeText(this, "Can not get Geo coder", Toast.LENGTH_LONG)
+			Toast.makeText(mContext, "Can not get Geo coder", Toast.LENGTH_LONG)
 					.show();
 
 		}}
