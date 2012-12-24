@@ -34,8 +34,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="right"
                         android:text="32.3434, 33.5454"
-                        android:textSize="11.0dp" 
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        android:textSize="11.0dp" />
 
                     <TextView
                         android:id="@+id/MoonStatTxtView"
@@ -44,7 +44,7 @@
                         android:layout_gravity="center"
                         android:text="New Crescent"
                         android:textColor="@color/red_color"
-                         android:textSize="12.0dp"  />
+                        android:textSize="12.0dp" />
 
                     <TextView
                         android:id="@+id/citynameTxtView"
@@ -52,9 +52,8 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
                         android:text="İstanbul"
-                         android:textSize="11.0dp" 
-                        android:textColor="@color/mavi_color" />
-
+                        android:textColor="@color/mavi_color"
+                        android:textSize="11.0dp" />
                 </FrameLayout>
             </LinearLayout>
 
@@ -160,7 +159,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom"
                     android:clickable="true"
-                    android:focusable="true" 
+                    android:focusable="true"
                     android:orientation="vertical" >
 
                     <TextView
@@ -268,10 +267,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right|bottom"
-                    android:gravity="right"
                     android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="right"
                     android:onClick="setTimetoSunSet"
-                    android:focusable="true" 
                     android:orientation="vertical" >
 
                     <TextView
@@ -452,9 +451,67 @@
                         android:layout_height="wrap_content"
                         android:gravity="right"
                         android:text="18.7 °"
-                          android:textColor="@color/yellow_color" />
+                        android:textColor="@color/yellow_color" />
                 </LinearLayout>
             </LinearLayout>
+
+            <!--
+            <LinearLayout
+                android:id="@+id/LinearLayout07"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="horizontal"
+                android:weightSum="1.0" >
+
+                <LinearLayout
+                    android:id="@+id/LinearLayout08"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/TextView10"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"
+                        android:text="@string/pos_angle_axis"
+                        android:textColor="@color/mavi_color" />
+
+                    <TextView
+                        android:id="@+id/posAngleAxis"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:paddingLeft="2.0dp"
+                        android:text="300000km"
+                        android:textColor="@color/white" />
+
+                </LinearLayout> 
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5" >
+
+                    <TextView
+                        android:id="@+id/TextView01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sun_elevation"
+                        android:textColor="@color/mavi_color" />
+
+                    <TextView
+                        android:id="@+id/TextView05"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="18.7 °"
+                        android:textColor="@color/yellow_color" />
+                </LinearLayout>
+            </LinearLayout>
+            -->
 
             <LinearLayout
                 android:id="@+id/LinearLayout10"
@@ -469,8 +526,8 @@
                     android:layout_weight="0.5"
                     android:background="@drawable/btn_selector"
                     android:clickable="true"
-                    android:onClick="setTimetoNewMoon"
-                    android:focusable="true" >
+                    android:focusable="true"
+                    android:onClick="setTimetoNewMoon" >
 
                     <com.cepmuvakkit.conversion.views.LunarPhaseIcons
                         android:id="@+id/LunarPhaseIcons"
@@ -489,7 +546,7 @@
                         android:layout_marginRight="3.0dp"
                         android:text="01/07/2011 08:53"
                         android:textColor="@color/white"
-                         android:textSize="12.0dp"  />
+                        android:textSize="12.0dp" />
 
                     <TextView
                         android:id="@+id/SolarEclipseTextView"
@@ -499,8 +556,7 @@
                         android:layout_marginRight="3.0dp"
                         android:text="c?"
                         android:textColor="@color/red_color"
-                         android:textSize="12.0dp"  />
-
+                        android:textSize="12.0dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -509,9 +565,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
                     android:background="@drawable/btn_selector"
-                    android:onClick="setTimetoNewCrescent"
                     android:clickable="true"
-                    android:focusable="true" >
+                    android:focusable="true"
+                    android:onClick="setTimetoNewCrescent" >
 
                     <com.cepmuvakkit.conversion.views.LunarPhaseIcons
                         android:id="@+id/LunarPhaseIcons"
@@ -530,7 +586,7 @@
                         android:layout_marginRight="3dp"
                         android:text="01/07/2011 08:53"
                         android:textColor="@color/white"
-                        android:textSize="12.0dp"  />
+                        android:textSize="12.0dp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -547,8 +603,8 @@
                     android:layout_weight="0.5"
                     android:background="@drawable/btn_selector"
                     android:clickable="true"
-                    android:onClick="setTimetoFirstQuarter"
-                    android:focusable="true" >
+                    android:focusable="true"
+                    android:onClick="setTimetoFirstQuarter" >
 
                     <com.cepmuvakkit.conversion.views.LunarPhaseIcons
                         android:id="@+id/LunarPhaseIcons"
@@ -567,7 +623,7 @@
                         android:layout_marginRight="3.0dp"
                         android:text="01/07/2011 08:53"
                         android:textColor="@color/white"
-                        android:textSize="12.0dp"  />
+                        android:textSize="12.0dp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -577,8 +633,8 @@
                     android:layout_weight="0.5"
                     android:background="@drawable/btn_selector"
                     android:clickable="true"
-                    android:onClick="setTimetoFullMoon"
-                    android:focusable="true" >
+                    android:focusable="true"
+                    android:onClick="setTimetoFullMoon" >
 
                     <com.cepmuvakkit.conversion.views.LunarPhaseIcons
                         android:id="@+id/LunarPhaseIcons"
@@ -597,7 +653,7 @@
                         android:layout_marginRight="3.0dp"
                         android:text="01/07/2011 08:53"
                         android:textColor="@color/white"
-                      android:textSize="12.0dp" />
+                        android:textSize="12.0dp" />
 
                     <TextView
                         android:id="@+id/LunarEclipseTextView"
@@ -607,8 +663,7 @@
                         android:layout_marginRight="3.0dp"
                         android:text="t?"
                         android:textColor="@color/red_color"
-                         android:textSize="12.0dp"  />
-
+                        android:textSize="12.0dp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -625,9 +680,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
                     android:background="@drawable/btn_selector"
-                     android:onClick="setTimetoLastQuarter"
                     android:clickable="true"
-                    android:focusable="true" >
+                    android:focusable="true"
+                    android:onClick="setTimetoLastQuarter" >
 
                     <com.cepmuvakkit.conversion.views.LunarPhaseIcons
                         android:id="@+id/LunarPhaseIcons"
@@ -654,10 +709,10 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                     android:onClick="setTimetoReal"
                     android:background="@drawable/btn_selector"
                     android:clickable="true"
-                    android:focusable="true" >
+                    android:focusable="true"
+                    android:onClick="setTimetoReal" >
 
                     <TextView
                         android:id="@+id/RealTimeTextView"
@@ -670,10 +725,11 @@
                         android:gravity="center_vertical"
                         android:text="@string/real_time"
                         android:textColor="@color/white"
-                     android:textSize="12.0dp"  />
+                        android:textSize="12.0dp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
 
 </LinearLayout>

@@ -62,6 +62,7 @@ com.cepmuvakkit.conversion.HijriCalendarTab: void setTimetoFullMoon(android.view
 com.cepmuvakkit.conversion.HijriCalendarTab: void setTimetoLastQuarter(android.view.View)
 com.cepmuvakkit.conversion.HijriCalendarTab: void setTimetoReal(android.view.View)
 com.cepmuvakkit.conversion.HijriCalendarTab: void setTimetoSunSet(android.view.View)
+com.cepmuvakkit.conversion.HijriCalendarTab: void setTimetoMoonSet(android.view.View)
 com.cepmuvakkit.conversion.HijriCalendarWidgetGreen
 com.cepmuvakkit.conversion.HijriCalendarWidgetGreen: HijriCalendarWidgetGreen()
 com.cepmuvakkit.conversion.HijriCalendarWidgetRL

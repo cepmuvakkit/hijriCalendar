@@ -1041,6 +1041,7 @@ com.cepmuvakkit.conversion.GPSTracker -> com.cepmuvakkit.conversion.a:
     double getLatitude() -> c
     double getAltitude() -> d
     double getLongitude() -> e
+    java.lang.String getLocationName(double,double) -> a
     boolean canGetLocation() -> f
     void showSettingsAlert() -> g
     void onLocationChanged(android.location.Location) -> onLocationChanged
@@ -1117,25 +1118,24 @@ com.cepmuvakkit.conversion.HijriCalendarTab -> com.cepmuvakkit.conversion.HijriC
     android.widget.TextView mMoonStatus -> K
     android.widget.ImageView mImageViewMoon -> L
     com.cepmuvakkit.times.posAlgo.SunMoonPosition sunMoonPosition -> M
-    double moonAgeConjuction -> N
+    double moonAge -> N
     double jd -> O
     double mSunsetHour -> P
-    double moonSetTime -> Q
-    double ?T -> R
-    java.text.DecimalFormat twoDigitFormat -> S
-    java.text.DecimalFormat oneDigit -> T
-    java.text.DecimalFormat twoDigit -> U
-    java.text.DateFormat dfTr -> V
-    java.text.DateFormat dfTime -> W
-    java.text.DateFormat dfDate -> X
-    android.content.SharedPreferences preferences -> Y
-    int w -> Z
-    int h -> aa
-    double[] moonPhasesJd -> ab
-    int[] eclipses -> ac
-    com.cepmuvakkit.conversion.GPSTracker gps -> ad
-    android.app.DatePickerDialog$OnDateSetListener mDateSetListener -> ae
-    android.app.TimePickerDialog$OnTimeSetListener mTimeSetListener -> af
+    double ?T -> Q
+    java.text.DecimalFormat twoDigitFormat -> R
+    java.text.DecimalFormat oneDigit -> S
+    java.text.DecimalFormat twoDigit -> T
+    java.text.DateFormat dfTr -> U
+    java.text.DateFormat dfTime -> V
+    java.text.DateFormat dfDate -> W
+    android.content.SharedPreferences preferences -> X
+    int w -> Y
+    int h -> Z
+    double[] moonPhasesJd -> aa
+    int[] eclipses -> ab
+    com.cepmuvakkit.conversion.GPSTracker gps -> ac
+    android.app.DatePickerDialog$OnDateSetListener mDateSetListener -> ad
+    android.app.TimePickerDialog$OnTimeSetListener mTimeSetListener -> ae
     void onCreate(android.os.Bundle) -> onCreate
     void updateDisplayDate() -> b
     void updateHijriDisplay(android.content.Context) -> a
@@ -1144,10 +1144,8 @@ com.cepmuvakkit.conversion.HijriCalendarTab -> com.cepmuvakkit.conversion.HijriC
     android.app.Dialog onCreateDialog(int) -> onCreateDialog
     void returnCurrentJulianDay() -> e
     void updateLocationInfo() -> a
-    void moonAgeConjuction() -> f
-    void updateMoonInformation() -> g
-    void getLocation() -> h
-    java.lang.String getLocationName(double,double) -> a
+    void updateMoonInformation() -> f
+    void getLocation() -> g
     void onStart() -> onStart
     void onResume() -> onResume
     void onPause() -> onPause
@@ -1164,7 +1162,6 @@ com.cepmuvakkit.conversion.HijriCalendarTab -> com.cepmuvakkit.conversion.HijriC
     void setTimetoLastQuarter(android.view.View) -> setTimetoLastQuarter
     void setTimetoReal(android.view.View) -> setTimetoReal
     void setTimetoSunSet(android.view.View) -> setTimetoSunSet
-    void setTimetoMoonSet(android.view.View) -> setTimetoMoonSet
     double access$0(com.cepmuvakkit.conversion.HijriCalendarTab) -> a
     double access$1(com.cepmuvakkit.conversion.HijriCalendarTab) -> b
     void access$2(com.cepmuvakkit.conversion.HijriCalendarTab,double) -> a

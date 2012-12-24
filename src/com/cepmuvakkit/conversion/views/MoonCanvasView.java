@@ -12,10 +12,9 @@ import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.FrameLayout;
 
 import com.cepmuvakkit.conversion.R;
-import com.cepmuvakkit.conversion.R.drawable;
+
 import com.cepmuvakkit.conversion.libration.MoonPositionAngle;
 import com.cepmuvakkit.times.posAlgo.SunMoonPosition;
 
@@ -167,6 +166,7 @@ public class MoonCanvasView extends View {
 		this.jd = jd;
 		this.ΔT = ΔT;
 		this.w=screenWidth-20*12;
+		if (this.w<=0) w=100;
 		this.h=screenHeight;
 		h=w;
 		initMoonCanvasView(context);

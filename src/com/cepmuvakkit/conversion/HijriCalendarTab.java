@@ -1,10 +1,15 @@
 package com.cepmuvakkit.conversion;
 
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.util.Calendar;
+import java.util.List;
+import java.util.Locale;
+
 import com.cepmuvakkit.conversion.hicricalendar.HicriCalendar;
 import com.cepmuvakkit.conversion.phaseEvents.MonthPhases;
+import com.cepmuvakkit.conversion.phaseEvents.MoonPhases;
 import com.cepmuvakkit.conversion.settings.ApplicationConstants;
 import com.cepmuvakkit.conversion.settings.LunarCalendarSettings;
 import com.cepmuvakkit.conversion.settings.MoonCalendarPreferenceActivity;
@@ -23,6 +28,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
+import android.location.Address;
+import android.location.Geocoder;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -53,10 +60,12 @@ public class HijriCalendarTab extends Activity {
 			mLunation, mSunSet, mJulianDate, mMoonDistance, mNewMoon,
 			mNewCrescent, mFirstQuarter, mFullMoon, mLastQuarter,
 			mSolarEclipse, mLunarEclipse, mSunElevation, mMoonStatus;
-	// private TextView mPosAngleAxis;
+	//private TextView mPosAngleAxis;
 	private ImageView mImageViewMoon;
 	private SunMoonPosition sunMoonPosition;
-	private double moonAge, jd, mSunsetHour, ΔT; // Julian Day
+	private double moonAgeConjuction, jd, mSunsetHour, moonSetTime, ΔT; // Julian
+																		// Day
+
 	private DecimalFormat twoDigitFormat, oneDigit, twoDigit;
 	private DateFormat dfTr, dfTime, dfDate;
 	private SharedPreferences preferences;
@@ -108,7 +117,7 @@ public class HijriCalendarTab extends Activity {
 		mJulianDate = (TextView) findViewById(R.id.julianDateTxtView);
 		mSunElevation = (TextView) findViewById(R.id.sunElevation);
 		mMoonStatus = (TextView) findViewById(R.id.MoonStatTxtView);
-		// mPosAngleAxis = (TextView) findViewById(R.id.posAngleAxis);
+		//mPosAngleAxis = (TextView) findViewById(R.id.posAngleAxis);
 		mMoonDistance = (TextView) findViewById(R.id.distanceTxtView);
 		mImageViewMoon = (ImageView) this.findViewById(R.id.imageViewMoon);
 		moonCanvasView = new MoonCanvasView(this);
@@ -190,8 +199,8 @@ public class HijriCalendarTab extends Activity {
 				+ hicriCalendar.getDay(context) + " "
 				+ hicriCalendar.checkIfHolyDay(context, false);
 		mDateHijri.setText(hijriDate);
-		moonAge = hicriCalendar.getMoonAge();
-		mMoonAge.setText(oneDigit.format(moonAge) + "d");
+		moonAgeConjuction = hicriCalendar.getMoonAge();
+		mMoonAge.setText(oneDigit.format(moonAgeConjuction) + "d");
 		mLunation.setText(hicriCalendar.getLunation() + "");
 
 	}
@@ -280,14 +289,14 @@ public class HijriCalendarTab extends Activity {
 	private void returnCurrentJulianDay() {
 		final Calendar c = Calendar.getInstance();
 		jd = AstroLib.calculateJulianDay(c);
-	
+
 		mTimeZone = c.getTimeZone().getOffset(c.getTimeInMillis()) / 3600000;
 		timezoneinDay = mTimeZone / 24.0;
-		LunarCalendarSettings.getInstance().setJulianDay(jd);	
+		LunarCalendarSettings.getInstance().setJulianDay(jd);
 		if (LunarCalendarSettings.getInstance().isManualInput() == false) {
 			LunarCalendarSettings.getInstance().setTimezone(mTimeZone);
 		}
-		 LunarCalendarSettings.save(preferences);
+		LunarCalendarSettings.save(preferences);
 	}
 
 	protected void updateLocationInfo() {
@@ -305,8 +314,36 @@ public class HijriCalendarTab extends Activity {
 
 	}
 
+	private void moonAgeConjuction() {
+		final double dt = 7.0; // Step (1 week)
+		final double acc = (0.5 / 1440.0); // Desired Accuracy (0.5 min)
+		boolean[] isFound;
+		double tnow, t0, t1;
+		double D0, D1;
+		tnow = jd;
+		t1 = tnow;
+		t0 = t1 - dt; // decrease 1 week
+		isFound = new boolean[1];
+		isFound[0] = false;
+		// Search for phases bracket desired phase event
+		MoonPhases phases = new MoonPhases();
+		D0 = phases.searchPhaseEvent(t0, ΔT, 0);
+		D1 = phases.searchPhaseEvent(t1, ΔT, 0);
+		while ((D0 * D1 > 0.0) || (D1 < D0)) {
+			t1 = t0;
+			D1 = D0;
+			t0 -= dt;
+			D0 = phases.searchPhaseEvent(t0, ΔT, 0);// Finds correct week for
+													// iteration
+		}
+		// Iterate NewMoon time
+		double tNewMoon = AstroLib.Pegasus(phases, t0, t1, ΔT, acc, isFound, 0);
+		moonAgeConjuction = jd - tNewMoon;
+	}
+
 	private void updateMoonInformation() {
 
+		moonAgeConjuction();
 		ΔT = AstroLib.calculateTimeDifference(jd);
 		LunarPosition lunar = new LunarPosition();
 		SolarPosition solar = new SolarPosition();
@@ -324,19 +361,24 @@ public class HijriCalendarTab extends Activity {
 				mLongitude, mTimeZone, ΔT);
 		mMoonRise.setText(AstroLib.getStringHHMM(moonRiseSet[0]));
 		mMoonTransit.setText(AstroLib.getStringHHMM(moonRiseSet[1]));
+		moonSetTime = moonRiseSet[2];
 		mMoonSet.setText(AstroLib.getStringHHMM(moonRiseSet[2]));
 		mSunsetHour = sunRiseSet[2];
 		mSunSet.setText(AstroLib.getStringHHMM(mSunsetHour));
 		mJulianDate.setText(twoDigit.format(jd));
 		moonCanvasView.setParameters(mLatitude, mLongitude, jd, ΔT, moonPhase,
-				moonAge > ApplicationConstants.synmonth / 2, w, h);
+				moonAgeConjuction > ApplicationConstants.synmonth / 2, w, h);
 		mImageViewMoon.setImageBitmap(moonCanvasView.getBitmapImage());
 		mSunElevation.setText(twoDigitFormat.format(sunMoonPosition
 				.getTopocentricSunAltitude()) + "");
 		mMoonDistance.setText(oneDigit.format(sunMoonPosition.getDistance())
 				+ "km");
-		mMoonStatus.setText(null);
+		mMoonDistance.setText(getText(R.string.buy_pro));
 
+		mMoonStatus.setText(null);
+		/*mPosAngleAxis.setText(twoDigitFormat.format(moonCanvasView
+				.getPosAngleAxis()) + "");
+*/
 	}
 
 	private void getLocation() {
@@ -356,16 +398,14 @@ public class HijriCalendarTab extends Activity {
 				mLocationName = LunarCalendarSettings.getInstance()
 						.getCustomCity();
 				mTimeZone = LunarCalendarSettings.getInstance().getTimezone();
-				Toast.makeText(
-						this,
-						getText(R.string.last_good_known),
-						Toast.LENGTH_LONG).show();
+//				Toast.makeText(this, getText(R.string.last_good_known),
+//						Toast.LENGTH_LONG).show();
 			} else {
 				if (gps.canGetLocation()) {
 
 					mLongitude = gps.getLongitude();
 					mLatitude = gps.getLatitude();
-					mLocationName = gps.getLocationName(mLatitude, mLongitude);
+					mLocationName = getLocationName(mLatitude, mLongitude);
 					altitude = (int) gps.getAltitude();
 
 					LunarCalendarSettings.getInstance().setLatitude(mLatitude);
@@ -376,64 +416,84 @@ public class HijriCalendarTab extends Activity {
 							mLocationName);
 					// LunarCalendarSettings.getInstance().setTimezone(mTimezone);
 					LunarCalendarSettings.save(preferences);
-//
+
 //					Toast.makeText(
 //							this,
-//							"Your Position: "
+//							"Your Position:"
 //									+ twoDigitFormat.format(mLatitude)
 //									+ twoDigitFormat.format(mLongitude) + " ",
 //							Toast.LENGTH_SHORT).show();
 
 				} else {
 
-					Toast.makeText(
-							this,getText(R.string.no_location),
-					Toast.LENGTH_LONG).show();
-					
+					Toast.makeText(this, getText(R.string.no_location),
+							Toast.LENGTH_SHORT).show();
+
 					gps.showSettingsAlert();
 				}
 			}
 		}
 
 	}
+	
+	public String getLocationName(double latitude, double longitude){
+		String locationName = "Unknown";
+		if (Geocoder.isPresent()==true){
+		Geocoder gc = new Geocoder(this, Locale.ENGLISH);
+		
+	 
+		try {
+			List<Address> addresses = gc.getFromLocation(latitude, longitude,
+					1);
+			if (addresses.size() > 0) {
+				Address address = addresses.get(0);
+				locationName = address.getLocality();
+			}
+		} catch (IOException e) {
+			Toast.makeText(this, "Can not get Geo coder", Toast.LENGTH_LONG)
+					.show();
+
+		}}
+		
+		return locationName;
+	}
 
 	@Override
 	protected void onStart() {
 		super.onStart();
-		//Toast.makeText(this, "onStart()", Toast.LENGTH_SHORT).show();
+		// Toast.makeText(this, "onStart()", Toast.LENGTH_SHORT).show();
 		updateLocationInfo();
-		
 
 	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
-		//	Toast.makeText(this, "onResume()", Toast.LENGTH_SHORT).show();
+		// Toast.makeText(this, "onResume()", Toast.LENGTH_SHORT).show();
 		updateLocationInfo();
-	
+
 	}
 
 	@Override
 	protected void onPause() {
-		
+
 		super.onPause();
-		//Toast.makeText(this, "onPause", Toast.LENGTH_SHORT).show();
+		// Toast.makeText(this, "onPause", Toast.LENGTH_SHORT).show();
 	}
 
 	@Override
 	protected void onRestart() {
-		
+
 		super.onPause();
 		getLocation();
 		updateLocationInfo();
 		updateMoonInformation();
-		//Toast.makeText(this, " onRestart()", Toast.LENGTH_SHORT).show();
+		// Toast.makeText(this, " onRestart()", Toast.LENGTH_SHORT).show();
 	}
-	
+
 	@Override
 	protected void onDestroy() {
-		//Toast.makeText(this, "onDestroy()", Toast.LENGTH_SHORT).show();
+		// Toast.makeText(this, "onDestroy()", Toast.LENGTH_SHORT).show();
 
 		super.onDestroy();
 		gps.stopUsingGPS();
@@ -445,9 +505,9 @@ public class HijriCalendarTab extends Activity {
 		inflater.inflate(R.menu.menu, menu);
 		return super.onCreateOptionsMenu(menu);
 	}
-	
+
 	protected void onStop() {
-	//	Toast.makeText(this, "onStop()", Toast.LENGTH_SHORT).show();
+		// Toast.makeText(this, "onStop()", Toast.LENGTH_SHORT).show();
 		super.onStop();
 	}
 
@@ -617,6 +677,19 @@ public class HijriCalendarTab extends Activity {
 		updateMoonInformation();
 		updateHijriDisplay(getBaseContext());
 		mMoonStatus.setText(R.string.sunset);
+	}
+
+	public void setTimetoMoonSet(@SuppressWarnings("unused") View view) {
+
+		int[] HHMM = AstroLib.convertHour2HHMM(moonSetTime);
+		int[] julian = AstroLib.getYMDHMSfromJulian(jd + mTimeZone / 24);
+		jd = AstroLib.calculateJulianDay(julian[0], julian[1], julian[2],
+				HHMM[0], HHMM[1], julian[5], mTimeZone);
+		updateMoonInformation();
+		updateDisplayTime();
+		updateMoonInformation();
+		updateHijriDisplay(getBaseContext());
+		mMoonStatus.setText(R.string.moon_set);
 	}
 
 }

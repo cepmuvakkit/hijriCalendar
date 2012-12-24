@@ -786,7 +786,9 @@ com.cepmuvakkit.conversion.libration.compute:
     150:151:public double azimuth(double,double,double,double,double)
     156:164:public double JD(int,int,int,double)
 com.cepmuvakkit.conversion.phaseEvents.MonthPhases:
+    private double jd
     205:207:public int getLunation()
+    210:210:public double getMoonAgeConjuction()
 com.cepmuvakkit.conversion.phaseEvents.PhaseMoment
 com.cepmuvakkit.conversion.phaseEvents.PhaseMoment$Phases
 com.cepmuvakkit.conversion.settings.ApplicationConstants

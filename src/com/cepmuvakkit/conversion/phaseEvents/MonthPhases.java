@@ -13,7 +13,7 @@ import com.cepmuvakkit.times.posAlgo.LunarPosition;
 
 public class MonthPhases {
 
-	//private double jd;
+	private double jd;
 	private boolean[] isFound;
 	
 	private double[] moonPhasesJd;
@@ -205,6 +205,9 @@ public class MonthPhases {
 		final double LunatBase = 1948083.1284733997;
 		int Lunation = (int) Math.floor((moonPhasesJd[0] + 7 - LunatBase) / ApplicationConstants.synmonth);
 		return Lunation;
+	}
+	public double getMoonAgeConjuction() {
+		return jd -moonPhasesJd[0];
 	}
 	
 	}
