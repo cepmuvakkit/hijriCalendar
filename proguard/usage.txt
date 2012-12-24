@@ -801,8 +801,8 @@ com.cepmuvakkit.conversion.settings.LunarCalendarSettings:
     78:79:public void setElongation(int)
     86:87:public void setPressure(int)
 com.cepmuvakkit.conversion.views.MoonCanvasView:
-    46:49:public MoonCanvasView(android.content.Context,android.util.AttributeSet)
-    52:55:public MoonCanvasView(android.content.Context,android.util.AttributeSet,int)
+    45:48:public MoonCanvasView(android.content.Context,android.util.AttributeSet)
+    51:54:public MoonCanvasView(android.content.Context,android.util.AttributeSet,int)
 com.cepmuvakkit.test.AstronomicalInfoTest
 com.cepmuvakkit.test.AstronomicalInfoTestDetail
 com.cepmuvakkit.test.AstronomicalInfoTestDetailAlp
