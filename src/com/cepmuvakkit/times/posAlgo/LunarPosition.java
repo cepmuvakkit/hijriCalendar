@@ -1,6 +1,8 @@
 /*
- * To change this template,choose Tools | Templates
- * and open the template in the editor.
+ * To compile and run this source code you have to select text file encoding UTF-8
+ * otherwise you can see so many "Invalid Character"  errors at the source code.
+ * In Eclipse IDE right click on the Project --> Properties--> Resource--> 
+ * Text File Encoding--> Other-->UTF-8 
  */
 package com.cepmuvakkit.times.posAlgo;
 
@@ -494,7 +496,7 @@ public class LunarPosition {
 		// private final int MOONRADIUS=15;
 		double h0Prime = getLunarRiseSetAltitude(dayOfInterest.Δ, temperature,
 				pressure, altitude);
-
+		//h0Prime=0.125;
 		ν = SolarPosition.calculateGreenwichSiderealTime(jd, ΔT);
 		m_trs[0] = solar.approxSunTransitTime(dayOfInterest.α, longitude, ν);
 		H0 = solar.getHourAngleAtRiseSet(latitude, dayOfInterest.δ, h0Prime);
@@ -533,9 +535,9 @@ public class LunarPosition {
 					HPrime, h0Prime, 1);
 			double S = solar.sunRiseAndSet(m_trs, h_rts, δPrime, latitude,
 					HPrime, h0Prime, 2);
-			moonRiseSet[1] = solar.dayFracToLocalHour(T, timezone);
-			moonRiseSet[0] = solar.dayFracToLocalHour(R, timezone);
-			moonRiseSet[2] = solar.dayFracToLocalHour(S, timezone);
+			moonRiseSet[1] = AstroLib.dayFracToLocalHour(T, timezone);
+			moonRiseSet[0] = AstroLib.dayFracToLocalHour(R, timezone);
+			moonRiseSet[2] = AstroLib.dayFracToLocalHour(S, timezone);
 
 		}
 
@@ -543,6 +545,84 @@ public class LunarPosition {
 
 	}
 
+	public  double[]  calculateMoonRiseTransitSetJulian(double jd, double latitude,
+			double longitude,int temperature, int pressure,
+			int altitude) {
+		double[] m_trs, h_rts, νRts, αPrime, δPrime, HPrime , moonRiseSet;
+		m_trs = new double[3];
+		h_rts = new double[3];
+		νRts = new double[3];
+		αPrime = new double[3];
+		δPrime = new double[3];
+		HPrime = new double[3];
+		moonRiseSet= new double[3];
+		double ν, H0, n,T,R,S;
+		SolarPosition solar = new SolarPosition();
+		Equatorial dayBefore, dayOfInterest, dayAfter;
+		jd = Math.floor(jd + 0.5) - 0.5;
+
+		double ΔT = AstroLib.calculateTimeDifference(jd);
+		dayBefore = calculateMoonEquatorialCoordinates(jd - 1, ΔT);
+		dayOfInterest = calculateMoonEquatorialCoordinates(jd, ΔT);
+		dayAfter = calculateMoonEquatorialCoordinates(jd + 1, ΔT);
+		// private final int MOONRADIUS=15;
+		double h0Prime = getLunarRiseSetAltitude(dayOfInterest.Δ, temperature,
+				pressure, altitude);
+		h0Prime=0.125;
+		ν = SolarPosition.calculateGreenwichSiderealTime(jd, ΔT);
+		m_trs[0] = solar.approxSunTransitTime(dayOfInterest.α, longitude, ν);
+		H0 = solar.getHourAngleAtRiseSet(latitude, dayOfInterest.δ, h0Prime);
+
+		double[] δ = { dayBefore.δ, dayOfInterest.δ, dayAfter.δ };
+
+		if ((dayOfInterest.α - dayBefore.α) > 180.0) {
+			dayBefore.α += 360;
+		} else if ((dayOfInterest.α - dayBefore.α) < -180.0) {
+			dayOfInterest.α += 360;
+		}
+		if ((dayAfter.α - dayOfInterest.α) > 180.0) {
+			dayOfInterest.α += 360;
+		} else if ((dayAfter.α - dayOfInterest.α) < -180.0) {
+			dayAfter.α += 360;
+		}
+
+		double[] α = { dayBefore.α, dayOfInterest.α, dayAfter.α };
+		if (H0 >= 0) {
+
+			solar.approxSunRiseAndSet(m_trs, H0);
+
+			for (int i = 0; i < 3; i++) {
+
+				νRts[i] = ν + 360.985647 * m_trs[i];
+				n = m_trs[i] + ΔT / 86400.0;
+				αPrime[i] = solar.Interpolate(n, α);
+				δPrime[i] = solar.Interpolate(n, δ);
+				HPrime[i] = solar.limitDegrees180pm(νRts[i] + longitude
+						- αPrime[i]);
+
+				h_rts[i] = solar.rtsSunAltitude(latitude, δPrime[i], HPrime[i]);
+			}
+			T= m_trs[0] - HPrime[0] / 360.0;
+			 R = solar.sunRiseAndSet(m_trs, h_rts, δPrime, latitude,
+					HPrime, h0Prime, 1);
+			S = solar.sunRiseAndSet(m_trs, h_rts, δPrime, latitude,
+					HPrime, h0Prime, 2);
+					
+			 moonRiseSet[0]=R;
+
+			 moonRiseSet[1]=T;
+
+			 moonRiseSet[2]=S;
+
+
+		}
+		
+	
+		
+		return moonRiseSet ;
+
+	}
+	
 	double getHorizontalParallax(double RadiusVector) {
 		return Math.toDegrees(MATH.asin(6378.14 / RadiusVector));
 	}
@@ -559,5 +639,5 @@ public class LunarPosition {
 				- AstroLib.getAltitudeCorrection(altitude);
 		return ho;
 	}
-
+	
 }

@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">Hicri Calendar Pro</string>
-
     <string name="about_text"><u>Hijri Date Conversion and Lunar Calendar</u>		\n
 		This program calculates Hijri dates according to the global
 		moonsighting criteria.
@@ -60,22 +59,40 @@
     <string name="cardinal_west">W</string>
     <string name="moon_rise">Moon Rise</string>
     <string name="moon_transit">Transit</string>
+    <string name="moon_transit_2">Moon Transit</string>
     <string name="moon_set">Moon Set</string>
     <string name="moon_age">Age</string>
+    <string name="moon_age_2">Age (in days)</string>
     <string name="illuminated">Lit</string>
     <string name="distance">Distance</string>
-    <string name="azimuth">Azimuth:</string>
+    <string name="azimuth">Azimuth</string>
+    <string name="topo_azimuth">Topocentric Pos. Azimuth</string>
     <string name="height">Height</string>
-    <string name="sunrise">Sunrise:</string>
+    <string name="sunrise">Sunrise</string>
     <string name="sunset">Sunset</string>
+    <string name="zenith">Zenith (SunTransit)</string>
     <string name="elevation">Elevation</string>
+    <string name="topo_elevation">Topocentric Pos. Elevation</string>
+    <string name="topo_elevation_athmosphere">Elevation wth Atmospheric Corr</string>
     <string name="ra">Right Ascension</string>
-    <string name="declination">declination</string>
-    <string name="lunation">Lunation*:</string>
-    <string name="ecliptic_latitude">Ecliptic latitude</string>
-    <string name="ecliptic_longitude">Ecliptic longitude</string>
+    <string name="eq_ra">Equatorial Right Ascension α</string>
+    <string name="declination_2">Declination δ</string>
+    <string name="eq_declination">Equatorial Declination δ</string>
+    <string name="lunation">Lunation*</string>
+    <string name="islamic_lunation">Islamic Lunation Number ¶</string>
+    <string name="islamic_lunation_0">Islamic Lunation Number (-12)</string>
+    <string name="brown_lunation_number">Brown\'s Lunation Number</string>
+    <string name="ecliptic_latitude">Ecliptic Latitude β</string>
+    <string name="ecliptic_longitude">Ecliptic Longitude λ</string>
+    <string name="ecliptic_distance">Ecliptic Distance Δ</string>
+    <string name="right_ascension">Right Ascension α</string>
+    <string name="topocentric_azimuth">Topocentric Pos. Azimuth</string>
+    <string name="centric_elevation">Topocentric Elevation</string>
+    <string name="moon_illuminated">Moon Illumination</string>
     <string name="julian_day">Julian Day</string>
-    <string name="delta_t">ΔT</string>
+    <string name="date">Date (in UTC)</string>
+    <string name="astro_info">Astronomical Information</string>
+    <string name="delta_t">Time Difference ΔT</string>
     <string name="new_moon">New Moon</string>
     <string name="new_crescent">New Crescent</string>
     <string name="first_quarter">First Quarter</string>
@@ -123,7 +140,11 @@
 		\n -<u> Lit </u>		:
 		\n Illumated percent of the moons visible surface lit by the sun.
 		\n -<u> Age</u>		:
-		\n The number of days passed since the last moon conjuction.</string>
+		\n The number of days passed since the last moon conjuction.
+		\n -<u> > </u>		:
+		\n > greater symbol means the moon rise, set or transit occurred on the following day.
+		\n -<u> &lt; </u>		:
+		\n &lt; less than symbol means the moon rise, set or transit occurred on the preceeding day.</string>
     <string name="julian_date">Julian Date</string>
     <string name="buy_pro">Buy Pro version</string>
     <string name="timezone_summary">Set Time Zone [-11,+13]</string>
@@ -179,4 +200,5 @@
     <string name="last_good_known">Using the Last good known location or default values</string>
     <string name="no_location">No location data gathered from GPS, You should input location from Settings Menu</string>
     <string name="about">About</string>
+
 </resources>

@@ -58,19 +58,11 @@
     <string name="moon_set"> غروب القمر</string>
     <string name="moon_age">عمر</string>
     <string name="illuminated">أنار</string>
-    <string name="distance">مسافة</string>
-    <string name="azimuth"> السمت</string>
+
     <string name="height">ارتفاع</string>
-    <string name="sunrise">الشروق</string>
-    <string name="sunset">غروب</string>
-    <string name="elevation">ارتفاع</string>
     <string name="ra">مطلع مستقيم</string>
-    <string name="declination">میل</string>
-    <string name="lunation">عدد الأشهر*</string>
-    <string name="ecliptic_latitude">مسار الشمس خط العرض</string>
-    <string name="ecliptic_longitude">مسار الشمس  خط الطول</string>
     <string name="julian_day">جوليان اليوم</string>
-    <string name="delta_t">ΔT</string>
+    <string name="delta_t">ΔT (فارق التوقيت)</string>
     <string name="new_moon">محاق</string>
     <string name="new_crescent">الهلال الجديد</string>
     <string name="first_quarter">تربيع أول</string>
@@ -110,7 +102,47 @@
 		\n -<u> أنار </u>		:
 		\n مضاءة في المئة مضيئة من سطح القمر وضوحا من الشمس.
 		\n -<u> Age</u>		:
-		\n مرت عدة أيام منذ الاقتران القمر الماضي.</string>
+		\n مرت عدة أيام منذ الاقتران القمر الماضي.
+		
+		\n -<u> > </u>		:
+		\n > أكبر رمز يعني ارتفاع القمر، مجموعة أو العبور وقعت في اليوم التالي.
+		\n -<u> &lt; </u>		:
+		\n &lt;أقل من رمز يعني ارتفاع القمر، مجموعة أو العبور وقعت في اليوم السابق.</string>
+		
+    <string name="date">تاريخ (utc) </string>
+    <string name="astro_info">المعلومات الفلكية</string>
+      <string name="eq_ra">مطلع مستقيم α</string>
+    <string name="declination_2">δ ميل (فلك)</string>
+    <string name="eq_declination">الميل الاستوائيةδ</string>
+
+    
+     <string name="lunation">عدد الشهر القمري*</string>
+    <string name="islamic_lunation">لشهر القمري الإسلامي عدد ¶</string>
+    <string name="islamic_lunation_0">(-12) لشهر القمري الإسلامي عدد</string>
+     <string name="brown_lunation_number">عدد الشهر القمري براون</string>
+    <string name="ecliptic_latitude"> مسير الشمس خط العرض β</string>
+    <string name="ecliptic_longitude">سير الشمس خط الطول λ</string>
+    <string name="ecliptic_distance">مسير الشمس المسافة Δ</string>
+   <string name="right_ascension">مطلع مستقيم α</string>
+     <string name="topocentric_azimuth">مقاس من سطح الأرض السمت</string>
+    <string name="centric_elevation">مقاس من سطح الأرض الارتفاع</string>
+    <string name="moon_illuminated">الإضاءة القمر</string>
+        <string name="moon_age_2">عمر (بالأيام)</string>
+    <string name="distance">مسافة</string>
+    <string name="azimuth">السمت</string>
+    <string name="topo_azimuth">مقاس من سطح الأرض الوظيفة السمت</string>
+    <string name="height">Height</string>
+    <string name="sunrise">شروق الشمس</string>
+    <string name="sunset">غروب</string>
+     <string name="zenith">ذروة</string>
+
+    <string name="elevation">ارتفاع</string>
+    <string name="topo_elevation">مقاس من سطح الأرض الارتفاع</string>
+    <string name="topo_elevation_athmosphere">الارتفاع مع تصحيح الغلاف الجوي</string>
+    
+         <string name="moon_transit_2">القمر العابر</string>
+    
+    
     <string name="loc_info">موقع المعلومات</string>
     <string name="julian_date">جوليان تاريخ</string>
     <string name="buy_pro">اشتر النسخة المهنية</string>

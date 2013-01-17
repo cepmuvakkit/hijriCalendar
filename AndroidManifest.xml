@@ -1,32 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cepmuvakkit.conversion"
-    android:versionCode="42"
-    android:versionName="10" >
+    android:versionCode="45"
+    android:versionName="11" >
 
- <uses-sdk
-        android:minSdkVersion="10"
+    <uses-sdk
+        android:minSdkVersion="7"
         android:targetSdkVersion="16" />
 
     <application
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-      <activity
+        <activity
             android:name="com.cepmuvakkit.conversion.HijriCalendarTab"
-            android:label="@string/app_name" /> 
+            android:label="@string/app_name" />
         <activity
             android:name="com.cepmuvakkit.conversion.HijriCalendar"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name="com.cepmuvakkit.conversion.settings.MoonCalendarPreferenceActivity" >
         </activity>
         <activity android:name="com.cepmuvakkit.conversion.HijriConversion" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.cepmuvakkit.conversion.HijriCalendarTab" />
+        </activity>
+        <activity android:name="com.cepmuvakkit.conversion.AstronomicalDetail" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.cepmuvakkit.conversion.HijriCalendarTab" />

@@ -183,6 +183,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                     android:onClick="astronomicalInformation"
                     android:minHeight="100.0dp"
                     android:minWidth="100.0dp" />
 
@@ -304,8 +305,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
                     android:orientation="horizontal" >
-
-                    <TextView
+                    
+                              <TextView
                         android:id="@+id/TextView06"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"

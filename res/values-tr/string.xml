@@ -55,22 +55,16 @@
     <string name="cardinal_west">B</string>
     <string name="moon_rise">Ay Doğma</string>
     <string name="moon_transit">Tepe</string>
-    <string name="moon_set">Ay Batma</string>
-    <string name="moon_age">Yaş</string>
     <string name="illuminated">Işık</string>
     <string name="distance">Uzaklık</string>
     <string name="azimuth">Azimut</string>
     <string name="height">İrtifa</string>
-    <string name="sunrise">G.Doğma</string>
     <string name="sunset">G.Batma</string>
     <string name="elevation">Yükselme</string>
-    <string name="ra">Right Ascension</string>
     <string name="declination">Sapma</string>
-    <string name="lunation">Lunation*</string>
-    <string name="ecliptic_latitude">Ecliptic latitude</string>
-    <string name="ecliptic_longitude">Ecliptic longitude</string>
+    <string name="lunation">Ay sayısı*</string>
+
     <string name="julian_day">Julyan Günü</string>
-    <string name="delta_t">ΔT</string>
     <string name="new_moon">Yeni Ay</string>
     <string name="new_crescent">Yeni Hilal</string>
     <string name="first_quarter">İlk Dördün</string>
@@ -83,7 +77,7 @@
     <string name="long_title">Boylam Bilgisi Girin</string>
     <string name="long_summary">Derece biriminde Boylam girin</string>
     <string name="is_manual_input">Hususi olarak Konum Bilgisi Girme</string>
-    <string name="is_manual_input_hint">		İşaret kutusu seçili olduğu zaman kişiye ait özel değerler hesaplamalarda  kullanacaktır.</string>
+    <string name="is_manual_input_hint">İşaret kutusu seçili olduğu zaman kişiye ait özel değerler hesaplamalarda  kullanacaktır.</string>
     <string name="help">Yardım</string>
     <string name="prev">Önce</string>
     <string name="next">Sonra</string>
@@ -116,9 +110,41 @@
 		
 		\n -<u> Yaş</u>		:
 		\n Son içtimadan itibaren geçen gün sayısı.
-		
-		
-		</string>
+		\n -<u> > </u>		:
+		\n > büyüktür  işareti ayın doğma batma ve zeval vakitlerinin bir sonraki gün olduğunu belirtir.
+		\n -<u> &lt; </u>		:
+		\n &lt; küçüktür  işareti ayın doğma batma ve zeval vakitlerinin bir önceki gün olduğunu belirtir.</string>
+     <string name="moon_transit_2">Ay Tepe Nokta</string>
+    <string name="moon_set">Ay Batma</string>
+    <string name="moon_age">Yaş</string>
+    <string name="moon_age_2">Yaş (Gün olarak)</string>
+  
+    <string name="topo_azimuth">Dünya Yüzeyli Azimut Açı</string>
+    <string name="sunrise">Güneş Doğma</string>
+
+     <string name="zenith">Zenit (Tepe nokta)</string>
+    <string name="topo_elevation">Dünya Yüzeyli İrtifa Açısı</string>
+    <string name="topo_elevation_athmosphere">Atmosferik etkileriyle İrtifa</string>
+    
+    <string name="ra">Sağ Açıklık Açısı</string>
+    <string name="eq_ra">Ekvatoral Sağ Açıklık Açısı α</string>
+    <string name="declination_2">Dik açıklık δ</string>
+    <string name="eq_declination">Ekvatoral Dik açıklık δ</string>
+    <string name="islamic_lunation">İslami Ay Sayısı ¶</string>
+    <string name="islamic_lunation_0">İslami Ay sayısı (-12)</string>
+     <string name="brown_lunation_number">Brown Ay Sayısı</string>
+    <string name="ecliptic_latitude">Tutulum Enlemi β</string>
+    <string name="ecliptic_longitude">Tutulum Boylamı λ</string>
+    <string name="ecliptic_distance">Tutulum Uzaklığı Δ</string>
+   <string name="right_ascension">Right Ascension α</string>
+     <string name="topocentric_azimuth">Topocentric Pos. Azimut</string>
+    <string name="centric_elevation">Topocentric Elevation</string>
+    <string name="moon_illuminated">Ay Parlaklığı</string>
+
+    <string name="date">Tarih (UTC olarak)</string>
+    <string name="astro_info">Astronomik Bilgiler</string>    
+    <string name="delta_t">Zaman Farkı ΔT</string>
+	
     <string name="julian_date">Julyan Günü</string>
     <string name="buy_pro">Pro Sürüm Al</string>
     <string name="timezone_summary">Saat Dilimi Girin[-11,+13]</string>

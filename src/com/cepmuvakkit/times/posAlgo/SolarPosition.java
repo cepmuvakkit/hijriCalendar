@@ -1179,8 +1179,10 @@ public class SolarPosition {
 			if (H0[i] >= 0) {
 				νRts[i] = ν + 360.985647 * mRts[i];
 				n = mRts[i] + ΔT / 86400.0;
-				αPrime[i] = Interpolate(n, α);
-				δPrime[i] = Interpolate(n, δ);
+				//αPrime[i] = Interpolate(n, α);
+				αPrime[i] = rtsAlphaDeltaPrime(α, n);
+				//δPrime[i] = Interpolate(n, δ);
+				δPrime[i] = rtsAlphaDeltaPrime(δ, n);
 				HPrime[i] = limitDegrees180pm(νRts[i] + longitude - αPrime[i]);
 				hRts[i] = rtsSunAltitude(latitude, δPrime[i], HPrime[i]);
 			}

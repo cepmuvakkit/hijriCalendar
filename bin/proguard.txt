@@ -1,5 +1,8 @@
-# view AndroidManifest.xml #generated:34
+# view AndroidManifest.xml #generated:40
 -keep class com.cepmuvakkit.conversion..GPSTracker { <init>(...); }
+
+# view AndroidManifest.xml #generated:35
+-keep class com.cepmuvakkit.conversion.AstronomicalDetail { <init>(...); }
 
 # view AndroidManifest.xml #generated:18
 -keep class com.cepmuvakkit.conversion.HijriCalendar { <init>(...); }
@@ -7,49 +10,52 @@
 # view AndroidManifest.xml #generated:15
 -keep class com.cepmuvakkit.conversion.HijriCalendarTab { <init>(...); }
 
-# view AndroidManifest.xml #generated:63
+# view AndroidManifest.xml #generated:69
 -keep class com.cepmuvakkit.conversion.HijriCalendarWidgetGreen { <init>(...); }
 
-# view AndroidManifest.xml #generated:37
+# view AndroidManifest.xml #generated:43
 -keep class com.cepmuvakkit.conversion.HijriCalendarWidgetRL { <init>(...); }
 
-# view AndroidManifest.xml #generated:29
+# view AndroidManifest.xml #generated:30
 -keep class com.cepmuvakkit.conversion.HijriConversion { <init>(...); }
 
-# view AndroidManifest.xml #generated:50
+# view AndroidManifest.xml #generated:56
 -keep class com.cepmuvakkit.conversion.MoonInfoWidget { <init>(...); }
 
-# view AndroidManifest.xml #generated:27
+# view AndroidManifest.xml #generated:28
 -keep class com.cepmuvakkit.conversion.settings.MoonCalendarPreferenceActivity { <init>(...); }
 
-# view res/layout/activity_android_draw.xml #generated:532
-# view res/layout/activity_android_draw.xml #generated:572
-# view res/layout/activity_android_draw.xml #generated:609
-# view res/layout/activity_android_draw.xml #generated:639
-# view res/layout/activity_android_draw.xml #generated:687
+# view res/layout/activity_android_draw.xml #generated:533
+# view res/layout/activity_android_draw.xml #generated:573
+# view res/layout/activity_android_draw.xml #generated:610
+# view res/layout/activity_android_draw.xml #generated:640
+# view res/layout/activity_android_draw.xml #generated:688
 -keep class com.cepmuvakkit.conversion.views.LunarPhaseIcons { <init>(...); }
+
+# onClick res/layout/activity_android_draw.xml #generated:181
+-keepclassmembers class * { *** astronomicalInformation(...); }
 
 # onClick res/layout/activity_android_draw.xml #generated:113
 -keepclassmembers class * { *** openConversion(...); }
 
-# onClick res/layout/activity_android_draw.xml #generated:599
+# onClick res/layout/activity_android_draw.xml #generated:600
 -keepclassmembers class * { *** setTimetoFirstQuarter(...); }
 
-# onClick res/layout/activity_android_draw.xml #generated:629
+# onClick res/layout/activity_android_draw.xml #generated:630
 -keepclassmembers class * { *** setTimetoFullMoon(...); }
 
-# onClick res/layout/activity_android_draw.xml #generated:677
+# onClick res/layout/activity_android_draw.xml #generated:678
 -keepclassmembers class * { *** setTimetoLastQuarter(...); }
 
-# onClick res/layout/activity_android_draw.xml #generated:562
+# onClick res/layout/activity_android_draw.xml #generated:563
 -keepclassmembers class * { *** setTimetoNewCrescent(...); }
 
-# onClick res/layout/activity_android_draw.xml #generated:522
+# onClick res/layout/activity_android_draw.xml #generated:523
 -keepclassmembers class * { *** setTimetoNewMoon(...); }
 
-# onClick res/layout/activity_android_draw.xml #generated:707
+# onClick res/layout/activity_android_draw.xml #generated:708
 -keepclassmembers class * { *** setTimetoReal(...); }
 
-# onClick res/layout/activity_android_draw.xml #generated:265
+# onClick res/layout/activity_android_draw.xml #generated:266
 -keepclassmembers class * { *** setTimetoSunSet(...); }
 

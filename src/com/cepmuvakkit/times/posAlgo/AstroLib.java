@@ -1,6 +1,8 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * To compile and run this source code you have to select text file encoding UTF-8
+ * otherwise you can see so many "Invalid Character"  errors at the source code.
+ * In Eclipse IDE right click on the Project --> Properties--> Resource--> 
+ * Text File Encoding--> Other-->UTF-8 
  */
 package com.cepmuvakkit.times.posAlgo;
 
@@ -322,6 +324,28 @@ public class AstroLib {
 	}
 
 	/**
+	 * @param realNumber
+	 *            The base-60 notational system for representing real numbers. A
+	 *            base-60 number system measurement of time (hours, minutes,
+	 *            and seconds) and angles (degrees, arc minutes, and arc
+	 *            seconds).
+	 * @return int[] {Hour, Minute,seconds};;
+	 */
+	public static int[] convert2Sexagesimal(double realNumber) {
+		int Seconds = (((int) (realNumber * 3600)) % 3600) % 60;
+		int Minute = ((int) (realNumber * 60)) % 60;
+		int Hour = ((int) (realNumber));
+		int[] HHMMSS = { Hour, Minute, Seconds };
+		return HHMMSS;
+	}
+	
+	public static String getSexagesimalStr(double realNumber) {
+	
+		int[] HHMMSS = convert2Sexagesimal(realNumber);
+		return HHMMSS[0]+"°"+ Math.abs(HHMMSS[1])+"'"+Math.abs(HHMMSS[2])+"''";
+	}
+
+	/**
 	 * @param hour
 	 *            is the hour with double pressicion
 	 * @return HH MM in String
@@ -333,6 +357,89 @@ public class AstroLib {
 
 	public static String intTwoDigit(int i) {
 		return ((i < 10) ? "0" : "") + i;
+	}
+
+	static double limitZero2one(double value) {
+		double limited;
+
+		limited = value - Math.floor(value);
+		if (limited < 0) {
+			limited += 1.0;
+		}
+
+		return limited;
+	}
+
+	static double dayFracToLocalHour(double dayfrac, double timezone) {
+		return 24.0 * limitZero2one(dayfrac + timezone / 24.0);
+	}
+
+	public static String getStringHHMMfromDayFrac(double dayfrac,
+			double timezone) {
+		return getStringHHMM(dayFracToLocalHour(dayfrac, timezone));
+	}
+
+	public static String PORStr(byte isPreceedingOrFollowing) {
+
+		if (isPreceedingOrFollowing == -1)
+			return "<";
+
+		else if (isPreceedingOrFollowing == 1)
+			return ">";
+		else
+			return "";
+	}
+	
+	
+	public static String PrecedOrFollowStr(byte isPreceedingOrFollowing) {
+
+		if (isPreceedingOrFollowing == -1)
+			return " Preceeding Day";
+
+		else if (isPreceedingOrFollowing == 1)
+			return " Following Day";
+		else
+			return "";
+	}
+
+
+	/**
+	 * when returns -1 means preceding day; 0 current day 1 is for the following
+	 * day
+	 * 
+	 * @param moonSetRiseFrac
+	 *            moonrise set or transit time ;
+	 * @return byte[] {-1, 0, 1};
+	 */
+	public static byte isPreceedingOrFollowingDay(double moonSetRiseFrac,
+			double timezone) {
+
+		return (byte) Math.floor(moonSetRiseFrac + timezone / 24.0);
+	}
+
+	public static byte[] isPreceedingOrFollowingDay(double[] moonSetRiseFrac,
+			double timezone) {
+
+		byte[] isPreceedingOrFollowingDay = new byte[3];
+		for (int i = 0; i <= 2; i++) {
+			isPreceedingOrFollowingDay[i] = (byte) Math
+					.floor(moonSetRiseFrac[i] + timezone / 24.0);
+
+		}
+
+		return isPreceedingOrFollowingDay;
+	}
+
+	public static String isPreceedingOrFollowingDayStr(double moonSetRiseFrac,
+			double timezone) {
+
+		if (isPreceedingOrFollowingDay(moonSetRiseFrac, timezone) == -1)
+			return "<";
+
+		else if (isPreceedingOrFollowingDay(moonSetRiseFrac, timezone) == 1)
+			return ">";
+		else
+			return "";
 	}
 
 	/**
@@ -412,7 +519,6 @@ public class AstroLib {
 		return new int[] { year, month, day, hour, minute, seconds };
 	}
 
-		
 	/**
 	 * Converts a Astrolib day to a calendar date ref: Numerical Recipes in C,
 	 * 2nd ed., Cambridge University Press 1992
@@ -465,6 +571,19 @@ public class AstroLib {
 				+ intTwoDigit(julian[4]) + ":" + intTwoDigit(julian[5]);
 	}
 
+	/**
+	 * Converts a julian day to a calendar date
+	 * 
+	 * @param julianday
+	 * @return String DD/MM/YYYY
+	 */
+	public static String fromJulianToDDMMYYYY(double julianDay) {
+		int[] julian = getYMDHMSfromJulian(julianDay);
+		return "  " + intTwoDigit(julian[2]) + "/" + intTwoDigit(julian[1])
+				+ "/" + julian[0];
+
+	}
+
 	public static String getHHMMSSfromGreCal(GregorianCalendar gdate) {
 
 		return gdate.get(Calendar.HOUR_OF_DAY) + ":"
@@ -493,7 +612,6 @@ public class AstroLib {
 				+ "/" + julian[0];
 	}
 
-	
 	static double thirdOrderPolynomial(double a, double b, double c, double d,
 			double x) {
 		return ((a * x + b) * x + c) * x + d;

@@ -69,7 +69,15 @@ public class HijriCalendarTab extends Activity {
 	private DecimalFormat twoDigitFormat, oneDigit, twoDigit;
 	private DateFormat dfTr, dfTime, dfDate;
 	private SharedPreferences preferences;
-	public final static String EXTRA_MESSAGE = "com.cepmuvakkit.conversion.JULIANDAY";
+	public final static String JULIAN_DAY = "com.cepmuvakkit.conversion.JULIANDAY";
+	public final static String LATITUDE = "com.cepmuvakkit.conversion.LATITUDE";
+	public final static String LONGITUDE = "com.cepmuvakkit.conversion.LONGITUDE";
+	public final static String TIMEZONE = "com.cepmuvakkit.conversion.TIMEZONE";
+	public final static String TEMPERATURE = "com.cepmuvakkit.conversion.TEMPERATURE";
+	public final static String PRESSURE = "com.cepmuvakkit.conversion.PRESSURE";
+	public final static String ALTITUDE = "com.cepmuvakkit.conversion.ALTITUDE";
+	
+	
 	private int w, h;
 	private double[] moonPhasesJd;
 	private int[] eclipses;
@@ -359,10 +367,15 @@ public class HijriCalendarTab extends Activity {
 				mLongitude, mTimeZone, temperature, pressure, altitude);
 		double[] sunRiseSet = solar.calculateSunRiseTransitSet(jd, mLatitude,
 				mLongitude, mTimeZone, ΔT);
-		mMoonRise.setText(AstroLib.getStringHHMM(moonRiseSet[0]));
-		mMoonTransit.setText(AstroLib.getStringHHMM(moonRiseSet[1]));
+		
+		double[] monRiseSetJdFrac =lunar.calculateMoonRiseTransitSetJulian(jd, mLatitude, mLongitude,
+			 temperature, pressure, altitude);
+		byte[]isPOR=AstroLib.isPreceedingOrFollowingDay(monRiseSetJdFrac, mTimeZone);
+		
+		mMoonRise.setText(AstroLib.getStringHHMMfromDayFrac(monRiseSetJdFrac[0],mTimeZone)+AstroLib.PORStr(isPOR[0]));
+		mMoonTransit.setText(AstroLib.getStringHHMMfromDayFrac(monRiseSetJdFrac[1],mTimeZone)+AstroLib.PORStr(isPOR[1]));
 		moonSetTime = moonRiseSet[2];
-		mMoonSet.setText(AstroLib.getStringHHMM(moonRiseSet[2]));
+		mMoonSet.setText(AstroLib.getStringHHMMfromDayFrac(monRiseSetJdFrac[2],mTimeZone)+AstroLib.PORStr(isPOR[2]));
 		mSunsetHour = sunRiseSet[2];
 		mSunSet.setText(AstroLib.getStringHHMM(mSunsetHour));
 		mJulianDate.setText(twoDigit.format(jd));
@@ -373,7 +386,7 @@ public class HijriCalendarTab extends Activity {
 				.getTopocentricSunAltitude()) + "");
 		mMoonDistance.setText(oneDigit.format(sunMoonPosition.getDistance())
 				+ "km");
-		mMoonDistance.setText(getText(R.string.buy_pro));
+		//mMoonDistance.setText(getText(R.string.buy_pro));
 
 		mMoonStatus.setText(null);
 		/*mPosAngleAxis.setText(twoDigitFormat.format(moonCanvasView
@@ -573,10 +586,24 @@ public class HijriCalendarTab extends Activity {
 
 	// updates the date we display in the TextView
 
-	/** Called when the user clicks the Send button */
+	/** Called when the user clicks the Hijri date button */
 	public void openConversion(@SuppressWarnings("unused") View view) {
 		Intent intent = new Intent(this, HijriConversion.class);
-		intent.putExtra(EXTRA_MESSAGE, jd + "");
+		intent.putExtra(JULIAN_DAY, jd+"");
+		startActivity(intent);
+	}
+	
+	/** Called when the user clicks the Moon Image */
+	public void astronomicalInformation(@SuppressWarnings("unused") View view) {
+		Intent intent = new Intent(this, AstronomicalDetail.class);
+		intent.putExtra(JULIAN_DAY, jd+"");
+		intent.putExtra(LATITUDE, LunarCalendarSettings.getInstance().getLatitude()+"");
+		intent.putExtra(LONGITUDE, LunarCalendarSettings.getInstance().getLongitude()+"");
+		intent.putExtra(TIMEZONE, LunarCalendarSettings.getInstance().getTimezone()+"");
+		intent.putExtra(TEMPERATURE, LunarCalendarSettings.getInstance().getTemperature()+"");
+		intent.putExtra(PRESSURE, LunarCalendarSettings.getInstance().getPressure()+"");
+		intent.putExtra(ALTITUDE, LunarCalendarSettings.getInstance().getAltitude()+"");
+
 		startActivity(intent);
 	}
 
