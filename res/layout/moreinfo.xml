@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/FrameLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/astro_info"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/white" />
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextView05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/date"
+                    android:textColor="@color/mavi_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/DateTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="01/07/2011 08:53"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextView04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/delta_t"
+                    android:textColor="@color/mavi_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/TimeDifferenceTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="68.07&apos;&apos;"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextView01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/julian_day"
+                    android:textColor="@color/mavi_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/JulianDayTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:layout_gravity="right"
+                    android:background="#ff151b24"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="2456129.5"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextItem2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/ecliptic_longitude"
+                    android:textColor="@color/mavi_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/EclipticLongitudeTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="46°50&apos;30&apos;&apos;"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/EclipticLatitudeTxtFld2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/ecliptic_latitude"
+                    android:textColor="@color/mavi_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/EclipticLatitudeTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="46°50&apos;30&apos;&apos;"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextItem4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/ecliptic_distance"
+                    android:textColor="@color/mavi_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/DistanceTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="385961.6 km"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextItem7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/eq_ra"
+                    android:textColor="@color/mavi_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/RightAscensionTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="46°50&apos;30&apos;&apos;"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextView07"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/eq_declination"
+                    android:textColor="@color/mavi_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/DeclinationTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="29d,18h,9m"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextView09"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/moon_rise"
+                    android:textColor="@color/mavi_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/MoonRiseTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="02:14 Following Day"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextView29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/moon_transit_2"
+                    android:textColor="@color/mavi_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/MoonTransitTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="14:14"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/moon_set"
+                    android:textColor="@color/mavi_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/MoonSetTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="02:14 Preceeding Day"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/moon_age_2"
+                    android:textColor="@color/mavi_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/AgeTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="29d,18h,9m"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextView34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/moon_illuminated"
+                    android:textColor="@color/mavi_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/IlluminatedTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="98.7 %"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextItem8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/topocentric_azimuth"
+                    android:textColor="@color/mavi_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/LunarAzimuthTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="146°50&apos;30&apos;&apos;"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextItem1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/topo_elevation"
+                    android:textColor="@color/mavi_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/LunarElevationTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="46°50&apos;30&apos;&apos;"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextView38"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/topo_elevation_athmosphere"
+                    android:textColor="@color/mavi_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/LunarElevationAtmosphereTxtFld"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:layout_weight="0.62"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="46°50&apos;30&apos;&apos;"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextView39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/islamic_lunation_0"
+                    android:textColor="@color/mavi_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/IslamicLunationTxtFld"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:layout_weight="0.62"
+                    android:background="#ff151b24"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="17210"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextView31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/brown_lunation_number"
+                    android:textColor="@color/mavi_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/BrownLunationTxtFld"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:layout_weight="0.62"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="789"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextItem10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/sunrise"
+                    android:textColor="@color/yellow_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/SunRiseTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="07:20:12"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextItem12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/zenith"
+                    android:textColor="@color/yellow_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/ZenithTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="12:12:00"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextItem11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/sunset"
+                    android:textColor="@color/yellow_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/SunsetTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="18:54:57"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/ecliptic_longitude"
+                    android:textColor="@color/yellow_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/SolarEclipticLongitudeTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="46°50&apos;30&apos;&apos;"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/ecliptic_latitude"
+                    android:textColor="@color/yellow_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/SolarEclipticLatitudeTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="36°50&apos;30&apos;&apos;"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/eq_ra"
+                    android:textColor="@color/yellow_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/SolarRightAscensionTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="16°50&apos;30&apos;&apos;"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/eq_declination"
+                    android:textColor="@color/yellow_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/SolarDeclinationTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="3°50&apos;30&apos;&apos;"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextItem13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/topo_azimuth"
+                    android:textColor="@color/yellow_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/SolarAzimuthTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="146°50&apos;30&apos;&apos;"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/topo_elevation"
+                    android:textColor="@color/yellow_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/SolarElevationTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:background="#ff151b24"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="26°50&apos;30&apos;&apos;"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
