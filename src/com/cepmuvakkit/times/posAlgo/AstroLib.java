@@ -9,6 +9,8 @@ package com.cepmuvakkit.times.posAlgo;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
+import android.content.Context;
+import com.cepmuvakkit.conversion.R;
 import com.cepmuvakkit.conversion.phaseEvents.MoonPhases;
 
 public class AstroLib {
@@ -390,19 +392,25 @@ public class AstroLib {
 			return "";
 	}
 	
+	public static String PrecedOrFollowStr(Context context,byte isPreceedingOrFollowing) {
 	
-	public static String PrecedOrFollowStr(byte isPreceedingOrFollowing) {
-
 		if (isPreceedingOrFollowing == -1)
-			return " Preceeding Day";
-
+			return 	" "+context.getString(R.string.preceed);
 		else if (isPreceedingOrFollowing == 1)
-			return " Following Day";
+			return 	" "+context.getString(R.string.following);
 		else
 			return "";
 	}
+	/*	public static String PrecedOrFollowStr(byte isPreceedingOrFollowing) {
 
+	if (isPreceedingOrFollowing == -1)
+		return " Preceeding Day";
 
+	else if (isPreceedingOrFollowing == 1)
+		return " Following Day";
+	else
+		return "";
+}*/
 	/**
 	 * when returns -1 means preceding day; 0 current day 1 is for the following
 	 * day

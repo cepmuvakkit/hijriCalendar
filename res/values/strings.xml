@@ -76,6 +76,12 @@
     <string name="topo_elevation_athmosphere">Elevation wth Atmospheric Corr</string>
     <string name="ra">Right Ascension</string>
     <string name="eq_ra">Equatorial Right Ascension α</string>
+    
+    <string name="preceed">Preceeding Day</string>
+    <string name="following">Following Day</string>
+    
+
+    
     <string name="declination_2">Declination δ</string>
     <string name="eq_declination">Equatorial Declination δ</string>
     <string name="lunation">Lunation*</string>
@@ -90,7 +96,7 @@
     <string name="centric_elevation">Topocentric Elevation</string>
     <string name="moon_illuminated">Moon Illumination</string>
     <string name="julian_day">Julian Day</string>
-    <string name="date">Date (in UTC)</string>
+   	<string name="date">Date (in UTC)</string>
     <string name="astro_info">Astronomical Information</string>
     <string name="delta_t">Time Difference ΔT</string>
     <string name="new_moon">New Moon</string>
@@ -101,9 +107,9 @@
     <string name="more_applications">More Applications</string>
     <string name="mooncalendar_settings">Moon Calendar Settings</string>
     <string name="lat_title">Enter Latitude Values</string>
-    <string name="lat_summary">Enter Latitude Values in Degrees [+]East [-180°,180°]</string>
+    <string name="lat_summary">Enter Latitude Values in Degrees  [+]Northern Hemisphere [-90°,90°] </string>
     <string name="long_title">Enter Longitude Value</string>
-    <string name="long_summary">Enter Longitude Value in Degrees [+]Northern Hemisphere [-90°,90°]</string>
+    <string name="long_summary">Enter Longitude Value in Degrees [+]East [-180°,180°]</string>
     <string name="is_manual_input">Manually Input the Position</string>
     <string name="is_manual_input_hint">If this CheckBox is enabled, manual entries of
 		location will be used and

@@ -138,9 +138,9 @@ public class AstronomicalDetail extends Activity {
 		double[] monRiseSetJdFrac =lunar.calculateMoonRiseTransitSetJulian(jd, latitude, longitude,
 				 temperature, pressure, altitude);
 		byte[]isPOR=AstroLib.isPreceedingOrFollowingDay(monRiseSetJdFrac, timezone);
-		mMoonRise.setText(AstroLib.getStringHHMMfromDayFrac(monRiseSetJdFrac[0],timezone)+AstroLib.PrecedOrFollowStr(isPOR[0]));
-		mMoonTransit.setText(AstroLib.getStringHHMMfromDayFrac(monRiseSetJdFrac[1],timezone)+AstroLib.PrecedOrFollowStr(isPOR[1]));
-		mMoonSet.setText(AstroLib.getStringHHMMfromDayFrac(monRiseSetJdFrac[2],timezone)+AstroLib.PrecedOrFollowStr(isPOR[2]));
+		mMoonRise.setText(AstroLib.getStringHHMMfromDayFrac(monRiseSetJdFrac[0],timezone)+AstroLib.PrecedOrFollowStr(getBaseContext(),isPOR[0]));
+		mMoonTransit.setText(AstroLib.getStringHHMMfromDayFrac(monRiseSetJdFrac[1],timezone)+AstroLib.PrecedOrFollowStr(getBaseContext(),isPOR[1]));
+		mMoonSet.setText(AstroLib.getStringHHMMfromDayFrac(monRiseSetJdFrac[2],timezone)+AstroLib.PrecedOrFollowStr(getBaseContext(),isPOR[2]));
 
 		
 		mLunarAzimuth.setText(AstroLib.getSexagesimalStr(horizontalMoon.Az));

@@ -124,6 +124,13 @@
     <string name="ecliptic_longitude">سير الشمس خط الطول λ</string>
     <string name="ecliptic_distance">مسير الشمس المسافة Δ</string>
    <string name="right_ascension">مطلع مستقيم α</string>
+   
+       
+    <string name="preceed">التي سبقت يوم</string>
+    <string name="following"> بعد يوم</string>
+    
+   
+   
      <string name="topocentric_azimuth">مقاس من سطح الأرض السمت</string>
     <string name="centric_elevation">مقاس من سطح الأرض الارتفاع</string>
     <string name="moon_illuminated">الإضاءة القمر</string>

@@ -140,8 +140,17 @@
      <string name="topocentric_azimuth">Topocentric Pos. Azimut</string>
     <string name="centric_elevation">Topocentric Elevation</string>
     <string name="moon_illuminated">Ay Parlaklığı</string>
-
+    
+    <string name="preceed"> Önceki Gün</string>
+    <string name="following"> Sonraki Gün</string>
+    
+    
     <string name="date">Tarih (UTC olarak)</string>
+    
+    
+    
+    <string name="delta_t">Time Difference ΔT</string>
+    
     <string name="astro_info">Astronomik Bilgiler</string>    
     <string name="delta_t">Zaman Farkı ΔT</string>
 	

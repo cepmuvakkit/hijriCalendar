@@ -1026,6 +1026,49 @@ com.android.vending.licensing.util.Base64 -> com.android.vending.licensing.a.a:
     byte[] decode(byte[],int,int) -> a
     byte[] decode(byte[],int,int,byte[]) -> a
 com.android.vending.licensing.util.Base64DecoderException -> com.android.vending.licensing.a.b:
+com.cepmuvakkit.conversion.AstronomicalDetail -> com.cepmuvakkit.conversion.AstronomicalDetail:
+    double jd -> a
+    double longitude -> b
+    double latitude -> c
+    double timezone -> d
+    int temperature -> e
+    int pressure -> f
+    int altitude -> g
+    double ?T -> h
+    java.text.DecimalFormat twoDigitFormat -> i
+    java.text.DecimalFormat oneDigit -> j
+    java.text.DecimalFormat twoDigit -> k
+    java.text.DateFormat dfTr -> l
+    java.text.DateFormat dfTime -> m
+    java.text.DateFormat dfDate -> n
+    android.widget.TextView mDate -> o
+    android.widget.TextView mTimeDiff -> p
+    android.widget.TextView mJulianDay -> q
+    android.widget.TextView mEclipticLongitude -> r
+    android.widget.TextView mEclipticLatitude -> s
+    android.widget.TextView mRightAscension -> t
+    android.widget.TextView mDeclination -> u
+    android.widget.TextView mDistance -> v
+    android.widget.TextView mMoonRise -> w
+    android.widget.TextView mMoonTransit -> x
+    android.widget.TextView mMoonSet -> y
+    android.widget.TextView mAge -> z
+    android.widget.TextView mIlluminated -> A
+    android.widget.TextView mLunarAzimuth -> B
+    android.widget.TextView mLunarElevation -> C
+    android.widget.TextView mLunarElevationAtmosphere -> D
+    android.widget.TextView mIslamicLunation -> E
+    android.widget.TextView mBrownLunation -> F
+    android.widget.TextView mSunRise -> G
+    android.widget.TextView mZenith -> H
+    android.widget.TextView mSunset -> I
+    android.widget.TextView mSolarEclipticLongitude -> J
+    android.widget.TextView mSolarEclipticLatitude -> K
+    android.widget.TextView mSolarRightAscension -> L
+    android.widget.TextView mSolarDeclination -> M
+    android.widget.TextView mSolarAzimuth -> N
+    android.widget.TextView mSolarElevation -> O
+    void onCreate(android.os.Bundle) -> onCreate
 com.cepmuvakkit.conversion.GPSTracker -> com.cepmuvakkit.conversion.a:
     android.content.Context mContext -> i
     boolean isGPSEnabled -> a
@@ -1157,6 +1200,7 @@ com.cepmuvakkit.conversion.HijriCalendarTab -> com.cepmuvakkit.conversion.HijriC
     void onStop() -> onStop
     boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
     void openConversion(android.view.View) -> openConversion
+    void astronomicalInformation(android.view.View) -> astronomicalInformation
     void setTimetoNewMoon(android.view.View) -> setTimetoNewMoon
     void setTimetoNewCrescent(android.view.View) -> setTimetoNewCrescent
     void setTimetoFirstQuarter(android.view.View) -> setTimetoFirstQuarter
@@ -1474,18 +1518,29 @@ com.cepmuvakkit.times.posAlgo.AstroLib -> com.cepmuvakkit.a.a.a:
     double getJulianEphemerisCentury(double) -> a
     double getJulianEphemerisMillennium(double) -> b
     double calculateTimeDifference(double) -> c
-    int[] convertHour2HHMM(double) -> d
-    java.lang.String getStringHHMM(double) -> e
+    int[] convertHour2HHMMSS(double) -> d
+    int[] convertHour2HHMM(double) -> e
+    java.lang.String getStringHHMMSSS(double) -> f
+    int[] convert2Sexagesimal(double) -> g
+    java.lang.String getSexagesimalStr(double) -> h
+    java.lang.String getStringHHMM(double) -> i
     java.lang.String intTwoDigit(int) -> a
-    int[] fromJulian(double) -> f
-    int[] getYMDHMSfromJulian(double) -> g
-    java.util.GregorianCalendar convertJulian2Gregorian(double) -> h
+    double limitZero2one(double) -> j
+    double dayFracToLocalHour(double,double) -> b
+    java.lang.String getStringHHMMfromDayFrac(double,double) -> c
+    java.lang.String PORStr(byte) -> a
+    java.lang.String PrecedOrFollowStr(android.content.Context,byte) -> a
+    byte[] isPreceedingOrFollowingDay(double[],double) -> a
+    int[] fromJulian(double) -> k
+    int[] getYMDHMSfromJulian(double) -> l
+    java.util.GregorianCalendar convertJulian2Gregorian(double) -> m
     double thirdOrderPolynomial(double,double,double,double,double) -> a
     double fourthOrderPolynomial(double,double,double,double,double,double) -> a
-    double getApparentAtmosphericRefraction(double) -> i
+    double getApparentAtmosphericRefraction(double) -> n
+    double getAtmosphericRefraction(double) -> o
     double getWeatherCorrectionCoefficent(int,int) -> a
     double getAltitudeCorrection(int) -> b
-    double limitDegrees(double) -> j
+    double limitDegrees(double) -> p
     double Pegasus(com.cepmuvakkit.conversion.phaseEvents.MoonPhases,double,double,double,double,boolean[],int) -> a
 com.cepmuvakkit.times.posAlgo.Ecliptic -> com.cepmuvakkit.a.a.b:
     double ? -> a
@@ -1531,6 +1586,7 @@ com.cepmuvakkit.times.posAlgo.LunarPosition -> com.cepmuvakkit.a.a.e:
     double[] summation?l?r(double,double,double,double,double,double) -> a
     double summation?b(double,double,double,double,double,double) -> b
     double[] calculateMoonRiseTransitSet(double,double,double,double,int,int,int) -> a
+    double[] calculateMoonRiseTransitSetJulian(double,double,double,int,int,int) -> a
     double getHorizontalParallax(double) -> a
     double getLunarRiseSetAltitude(double,int,int,int) -> a
 com.cepmuvakkit.times.posAlgo.MATH -> com.cepmuvakkit.a.a.f:
@@ -1605,6 +1661,7 @@ com.cepmuvakkit.times.posAlgo.SolarPosition -> com.cepmuvakkit.a.a.g:
     double Interpolate(double,double[]) -> c
     double rtsSunAltitude(double,double,double) -> f
     double sunRiseAndSet(double[],double[],double[],double,double[],double,int) -> a
+    void calculateSunRiseTransitSet(double[],double) -> c
     double[] calculateSunRiseTransitSet(double,double,double,double,double) -> a
     com.cepmuvakkit.times.posAlgo.Equatorial calculateSunEquatorialCoordinates(double,double) -> c
     com.cepmuvakkit.times.posAlgo.Equatorial calculateSunEquatorialCoordinates(com.cepmuvakkit.times.posAlgo.Ecliptic,double,double) -> a

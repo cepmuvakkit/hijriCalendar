@@ -741,7 +741,13 @@ com.cepmuvakkit.conversion.GPSTracker:
 com.cepmuvakkit.conversion.HijriCalendar:
     private static final java.lang.String BASE64_PUBLIC_KEY
 com.cepmuvakkit.conversion.HijriCalendarTab:
-    public static final java.lang.String EXTRA_MESSAGE
+    public static final java.lang.String JULIAN_DAY
+    public static final java.lang.String LATITUDE
+    public static final java.lang.String LONGITUDE
+    public static final java.lang.String TIMEZONE
+    public static final java.lang.String TEMPERATURE
+    public static final java.lang.String PRESSURE
+    public static final java.lang.String ALTITUDE
 com.cepmuvakkit.conversion.HijriCalendarWidgetGreen:
     91:91:public static java.lang.String getSharedPreferencesNameForAppWidget(android.content.Context,int)
     96:96:public static android.content.SharedPreferences getSharedPreferencesForAppWidget(android.content.Context,int)
@@ -756,7 +762,7 @@ com.cepmuvakkit.conversion.R$menu
 com.cepmuvakkit.conversion.R$string
 com.cepmuvakkit.conversion.R$style
 com.cepmuvakkit.conversion.R$styleable:
-    486:486:public R$styleable()
+    554:554:public R$styleable()
 com.cepmuvakkit.conversion.R$xml
 com.cepmuvakkit.conversion.hicricalendar.HicriCalendar:
     121:121:public int getHijriMonth()
@@ -814,16 +820,16 @@ com.cepmuvakkit.test.MoonRiseSetTest
 com.cepmuvakkit.test.PrayerTimesTests
 com.cepmuvakkit.test.PrayerTimesTests2
 com.cepmuvakkit.times.posAlgo.AstroLib:
-    12:12:public AstroLib()
-    121:121:public static double getJulianCentury(double)
-    294:298:public static int[] convertHour2HHMMSS(double)
-    319:320:public static java.lang.String getStringHHMMSSS(double)
-    462:463:public static java.lang.String fromJulianToCalendarStr(double)
-    470:470:public static java.lang.String getHHMMSSfromGreCal(java.util.GregorianCalendar)
-    477:477:public static java.lang.String getDDMMHHMMSSfromGreCal(java.util.GregorianCalendar)
-    491:492:public static java.lang.String fromJulianToCalendarDateStr(double)
-    531:533:public static double getAtmosphericRefraction(double)
-    549:569:static double refractionCorrection(double)
+    16:16:public AstroLib()
+    125:125:public static double getJulianCentury(double)
+    425:425:public static byte isPreceedingOrFollowingDay(double,double)
+    444:450:public static java.lang.String isPreceedingOrFollowingDayStr(double,double)
+    576:577:public static java.lang.String fromJulianToCalendarStr(double)
+    589:590:public static java.lang.String fromJulianToDDMMYYYY(double)
+    597:597:public static java.lang.String getHHMMSSfromGreCal(java.util.GregorianCalendar)
+    604:604:public static java.lang.String getDDMMHHMMSSfromGreCal(java.util.GregorianCalendar)
+    618:619:public static java.lang.String fromJulianToCalendarDateStr(double)
+    675:695:static double refractionCorrection(double)
 com.cepmuvakkit.times.posAlgo.Dms
 com.cepmuvakkit.times.posAlgo.EarthHeading
 com.cepmuvakkit.times.posAlgo.EarthPosition
@@ -837,7 +843,7 @@ com.cepmuvakkit.times.posAlgo.Horizontal:
     43:51:public com.cepmuvakkit.times.posAlgo.ScreenPosition toScreenPosition(android.graphics.Canvas,int,boolean)
     56:62:public com.cepmuvakkit.times.posAlgo.ScreenPosition toScreenPosition(int,int)
 com.cepmuvakkit.times.posAlgo.LunarPosition:
-    397:472:void calculateMoonRiseTransitSetStr(double,double,double,double,int,int,int)
+    399:474:void calculateMoonRiseTransitSetStr(double,double,double,double,int,int,int)
 com.cepmuvakkit.times.posAlgo.MATH:
     public static final double SQRT3
     public static final double LOGdiv2
@@ -868,11 +874,10 @@ com.cepmuvakkit.times.posAlgo.SolarPosition:
     908:911:double surfaceIncidenceAngle(double,double,double,double)
     945:955:void approxSalatTimes(double[],double[])
     958:966:void approxKerahatTimes(double[],double[])
-    1011:1062:public void calculateSunRiseTransitSet(double[],double)
-    1126:1224:public double[] calculateSalatTimes(double,double,double,double,int,int,int,double,double)
-    1234:1326:public double[] calculateKerahetTimes(double,double,double,double,int,int,int,double,double)
-    1458:1470:double calculateEclipticTrueObliquity(double,double)
-    1493:1493:double calculateEquationOfTime(double,double,double,double)
+    1126:1226:public double[] calculateSalatTimes(double,double,double,double,int,int,int,double,double)
+    1236:1328:public double[] calculateKerahetTimes(double,double,double,double,int,int,int,double,double)
+    1460:1472:double calculateEclipticTrueObliquity(double,double)
+    1495:1495:double calculateEquationOfTime(double,double,double,double)
 com.cepmuvakkit.times.posAlgo.SunMoonPosition:
     46:46:public com.cepmuvakkit.times.posAlgo.Ecliptic getMoonPosEcliptic()
     54:54:public com.cepmuvakkit.times.posAlgo.Equatorial getMoonPosEquatorial()
