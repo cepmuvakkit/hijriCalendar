@@ -6,7 +6,6 @@
     android:orientation="vertical" >
 
     <FrameLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/FrameLayout1"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" >
@@ -26,13 +25,11 @@
         android:layout_height="wrap_content" >
 
         <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -61,7 +58,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -88,7 +84,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -118,7 +113,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -145,7 +139,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -174,7 +167,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -201,7 +193,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -230,7 +221,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -257,7 +247,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -286,7 +275,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -313,7 +301,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -342,7 +329,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -369,7 +355,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -398,7 +383,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -425,7 +409,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -454,7 +437,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -482,7 +464,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -512,7 +493,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -540,7 +520,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -569,7 +548,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -596,7 +574,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -625,7 +602,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -652,7 +628,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -680,8 +655,9 @@
                     android:textSize="13.0sp" />
             </LinearLayout>
 
+            
+
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -690,6 +666,7 @@
                     android:id="@+id/TextView16"
                     android:layout_width="wrap_content"
                     android:layout_height="21.0dip"
+                 
                     android:gravity="left"
                     android:paddingLeft="5.0dip"
                     android:text="@string/eq_ra"
@@ -700,6 +677,7 @@
                     android:id="@+id/SolarRightAscensionTxtFld"
                     android:layout_width="match_parent"
                     android:layout_height="21.0dip"
+                
                     android:gravity="right"
                     android:paddingRight="5.0dip"
                     android:text="16°50&apos;30&apos;&apos;"
@@ -708,7 +686,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -717,7 +694,7 @@
                     android:id="@+id/TextView15"
                     android:layout_width="wrap_content"
                     android:layout_height="21.0dip"
-                    android:background="#ff151b24"
+                        android:background="#ff151b24"
                     android:gravity="left"
                     android:paddingLeft="5.0dip"
                     android:text="@string/eq_declination"
@@ -728,16 +705,41 @@
                     android:id="@+id/SolarDeclinationTxtFld"
                     android:layout_width="match_parent"
                     android:layout_height="21.0dip"
-                    android:background="#ff151b24"
                     android:gravity="right"
                     android:paddingRight="5.0dip"
+                        android:background="#ff151b24"
                     android:text="3°50&apos;30&apos;&apos;"
+                    android:textColor="@color/white"
+                    android:textSize="13.0sp" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/TextItem124"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21.0dip"
+                    android:gravity="left"
+                    android:paddingLeft="5.0dip"
+                    android:text="@string/equatorial_distance"
+                    android:textColor="@color/yellow_color"
+                    android:textSize="13.0sp" />
+
+                <TextView
+                    android:id="@+id/SunDistanceTxtFld"
+                    android:layout_width="match_parent"
+                    android:layout_height="21.0dip"
+                    android:gravity="right"
+                    android:paddingRight="5.0dip"
+                    android:text="1.00946 AU"
                     android:textColor="@color/white"
                     android:textSize="13.0sp" />
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -746,6 +748,7 @@
                     android:id="@+id/TextItem13"
                     android:layout_width="wrap_content"
                     android:layout_height="21.0dip"
+                    android:background="#ff151b24"
                     android:gravity="left"
                     android:paddingLeft="5.0dip"
                     android:text="@string/topo_azimuth"
@@ -756,6 +759,7 @@
                     android:id="@+id/SolarAzimuthTxtFld"
                     android:layout_width="match_parent"
                     android:layout_height="21.0dip"
+                    android:background="#ff151b24"
                     android:gravity="right"
                     android:paddingRight="5.0dip"
                     android:text="146°50&apos;30&apos;&apos;"
@@ -764,7 +768,6 @@
             </LinearLayout>
 
             <LinearLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
@@ -773,7 +776,6 @@
                     android:id="@+id/TextView14"
                     android:layout_width="wrap_content"
                     android:layout_height="21.0dip"
-                    android:background="#ff151b24"
                     android:gravity="left"
                     android:paddingLeft="5.0dip"
                     android:text="@string/topo_elevation"
@@ -784,7 +786,7 @@
                     android:id="@+id/SolarElevationTxtFld"
                     android:layout_width="match_parent"
                     android:layout_height="21.0dip"
-                    android:background="#ff151b24"
+                
                     android:gravity="right"
                     android:paddingRight="5.0dip"
                     android:text="26°50&apos;30&apos;&apos;"

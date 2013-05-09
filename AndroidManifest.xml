@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cepmuvakkit.conversion"
-    android:versionCode="47"
+    android:versionCode="49"
     android:versionName="11" >
 
     <uses-sdk
@@ -14,11 +14,11 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.cepmuvakkit.conversion.HijriCalendarTab"
-            android:label="@string/app_name" />
-        <activity
+            android:label="@string/app_name" >
+       <!--  <activity
             android:name="com.cepmuvakkit.conversion.HijriCalendar"
             android:label="@string/app_name"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" > -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -66,6 +66,38 @@
                 android:resource="@xml/widget_moon_pref" >
             </meta-data>
         </receiver>
+        
+         <receiver
+            android:name="MoonCanvasInfoWidget"
+            android:label="@string/widget_moon_live" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" >
+                </action>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_moon_live_pref" >
+            </meta-data>
+        </receiver>
+        
+         
+          <receiver
+            android:name="SunMoonInfoWidget"
+            android:label="@string/widget_sun_moon_info" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" >
+                </action>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_sun_moon_pref" >
+            </meta-data>
+        </receiver>
+         
+        
+        
         <receiver
             android:name="HijriCalendarWidgetGreen"
             android:label="@string/widget_name_compact" >

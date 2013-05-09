@@ -762,7 +762,7 @@ com.cepmuvakkit.conversion.R$menu
 com.cepmuvakkit.conversion.R$string
 com.cepmuvakkit.conversion.R$style
 com.cepmuvakkit.conversion.R$styleable:
-    554:554:public R$styleable()
+    557:557:public R$styleable()
 com.cepmuvakkit.conversion.R$xml
 com.cepmuvakkit.conversion.hicricalendar.HicriCalendar:
     121:121:public int getHijriMonth()
@@ -876,8 +876,8 @@ com.cepmuvakkit.times.posAlgo.SolarPosition:
     958:966:void approxKerahatTimes(double[],double[])
     1126:1226:public double[] calculateSalatTimes(double,double,double,double,int,int,int,double,double)
     1236:1328:public double[] calculateKerahetTimes(double,double,double,double,int,int,int,double,double)
-    1460:1472:double calculateEclipticTrueObliquity(double,double)
-    1495:1495:double calculateEquationOfTime(double,double,double,double)
+    1464:1476:double calculateEclipticTrueObliquity(double,double)
+    1499:1499:double calculateEquationOfTime(double,double,double,double)
 com.cepmuvakkit.times.posAlgo.SunMoonPosition:
     46:46:public com.cepmuvakkit.times.posAlgo.Ecliptic getMoonPosEcliptic()
     54:54:public com.cepmuvakkit.times.posAlgo.Equatorial getMoonPosEquatorial()

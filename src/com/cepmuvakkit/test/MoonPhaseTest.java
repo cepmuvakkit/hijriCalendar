@@ -10,7 +10,8 @@ public class MoonPhaseTest {
 
     public static void main(String[] args) {
 //       PhaseMoment phases= new PhaseMoment (622);
-    	PhaseMoment phases= new PhaseMoment (2012);
+    	@SuppressWarnings("unused")
+		PhaseMoment phases= new PhaseMoment (2012);
     	 phases= new PhaseMoment (2013);
     	 phases= new PhaseMoment (2014);
     	 phases= new PhaseMoment (2015);

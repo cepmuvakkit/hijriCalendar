@@ -17,7 +17,8 @@ import com.cepmuvakkit.times.posAlgo.PTimes;
 public class PrayerTimesTests implements Methods, HigherLatitude {
 
     static double[] salat = new double[6];
-    public static void main(String[] args) {
+    @SuppressWarnings("unused")
+	public static void main(String[] args) {
 
          //byte[] offsetSalat = {-1, -6, 7, 5, 5, 9, 2};//default
          //byte[] offsetSalat = {-4, -6, 7, 5, 5, 8, 4};// 8.7.2009

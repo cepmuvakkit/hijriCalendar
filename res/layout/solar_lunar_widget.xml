@@ -18,7 +18,7 @@
             android:layout_weight="0.5" >
 
             <TextView
-                android:id="@+id/ViewWidget2Perc"
+                   android:id="@+id/litTxtView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|right|center"
@@ -33,14 +33,14 @@
                 android:textSize="9.0dip" />
 
             <ImageView
-                android:id="@+id/ImageViewMoonCanvas"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/imageMoonWidgetRevised"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_gravity="center"
-                android:padding="8.0dip" />
+                android:padding="1.0dip" />
 
             <TextView
-                android:id="@+id/MoonRiseTextView"
+                android:id="@+id/moonRiseTxtView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|left|center"
@@ -56,7 +56,7 @@
                 android:textSize="9.0dip" />
 
             <TextView
-                android:id="@+id/MoonSetTextView"
+                 android:id="@+id/moonSetTxtView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|left|center"

@@ -42,7 +42,6 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.CompoundButton.OnCheckedChangeListener;
-import com.cepmuvakkit.conversion.settings.LunarCalendarSettings;
 
 public class HijriConversion extends Activity {
 	private EditText dayText, yearText;

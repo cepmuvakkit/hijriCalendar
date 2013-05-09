@@ -15,7 +15,7 @@
             android:layout_gravity="center"
             android:padding="10dp"
             android:text="About"
-            android:textColor="@color/mavi_color" />
+            android:textColor="@color/text_color" />
     </ScrollView>
 
 </LinearLayout>

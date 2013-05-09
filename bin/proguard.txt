@@ -4,13 +4,10 @@
 # view AndroidManifest.xml #generated:35
 -keep class com.cepmuvakkit.conversion.AstronomicalDetail { <init>(...); }
 
-# view AndroidManifest.xml #generated:18
--keep class com.cepmuvakkit.conversion.HijriCalendar { <init>(...); }
-
 # view AndroidManifest.xml #generated:15
 -keep class com.cepmuvakkit.conversion.HijriCalendarTab { <init>(...); }
 
-# view AndroidManifest.xml #generated:69
+# view AndroidManifest.xml #generated:101
 -keep class com.cepmuvakkit.conversion.HijriCalendarWidgetGreen { <init>(...); }
 
 # view AndroidManifest.xml #generated:43
@@ -19,8 +16,14 @@
 # view AndroidManifest.xml #generated:30
 -keep class com.cepmuvakkit.conversion.HijriConversion { <init>(...); }
 
+# view AndroidManifest.xml #generated:70
+-keep class com.cepmuvakkit.conversion.MoonCanvasInfoWidget { <init>(...); }
+
 # view AndroidManifest.xml #generated:56
 -keep class com.cepmuvakkit.conversion.MoonInfoWidget { <init>(...); }
+
+# view AndroidManifest.xml #generated:85
+-keep class com.cepmuvakkit.conversion.SunMoonInfoWidget { <init>(...); }
 
 # view AndroidManifest.xml #generated:28
 -keep class com.cepmuvakkit.conversion.settings.MoonCalendarPreferenceActivity { <init>(...); }

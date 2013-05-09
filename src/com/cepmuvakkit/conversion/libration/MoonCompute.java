@@ -235,7 +235,7 @@ package com.cepmuvakkit.conversion.libration;
 /*      */ 
 /*      */   double computeR(double jd)
 /*      */   {
-/* 3435 */     double K = 0.0174532925199433D;
+
 /*      */ 
 /* 3437 */     double T = (jd - 2451545.0D) / 36525.0D;
 /* 3438 */     double T3 = Math.pow(T, 3.0D);

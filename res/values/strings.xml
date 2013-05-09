@@ -2,19 +2,17 @@
 <resources>
 
     <string name="app_name">Hicri Calendar Pro</string>
-    <string name="about_text"><u>Hijri Date Conversion and Lunar Calendar</u>		\n
-		This program calculates Hijri dates according to the global
-		moonsighting criteria.
-		All data, information and examples provided
-		for
-		informational purposes only.
-		Your use of any information is entirely
-		at
-		your own risk.</string>
+    <string name="about_text"><b>Hijri Date Conversion and Lunar Calendar</b>
+        \nThis program calculates Hijri dates according to the global
+		moonsighting criteria.All data, information and examples provided
+		for informational purposes only. Your use of any information is entirely
+		atyour own risk.</string>
     <string name="widget_name">Hijri Date</string>
     <string name="widget_name_compact">Hijri Date Compact</string>
     <string name="conversion">Gregorian to Hijri Calendar Converter</string>
     <string name="widget_moon">Moon Info</string>
+     <string name="widget_moon_live">Live Moon Info</string>
+     <string name="widget_sun_moon_info">Sun Moon Info</string>
     <string name="mooninfo">Moon Info</string>
     <string name="calendar">15 Ramadan 1431 </string>
     <string name="NEWYEAR">Hijri New Year</string>
@@ -92,6 +90,7 @@
     <string name="ecliptic_longitude">Ecliptic Longitude λ</string>
     <string name="ecliptic_distance">Ecliptic Distance Δ</string>
     <string name="right_ascension">Right Ascension α</string>
+    <string name="equatorial_distance">Equatorial Distance Δ</string>
     <string name="topocentric_azimuth">Topocentric Pos. Azimuth</string>
     <string name="centric_elevation">Topocentric Elevation</string>
     <string name="moon_illuminated">Moon Illumination</string>
@@ -135,22 +134,35 @@
     <string name="altitude">Altitude</string>
     <string name="altitude_summary">Altitude values above the Sea Level in meters</string>
     <string name="prefs_altitude">savedAltitude</string>
-    <string name="help_text">		\n - Hijri Date :
-		\n Hijri dates according to the global moon sighting
-		criteria visit:
-		http://www.cepmuvakkit.com/en/ruyetihilal\n
-		\n-<u> Lunation</u>		:
-		\n Lunation Number is the count of lunations since the beginning of
+    <string name="help_text">\nHijri dates according to the global moon sighting criteria visit: http://www.cepmuvakkit.com/en/ruyetihilal\n
+		\n<b><u>Lunation</u></b> :
+		\nLunation Number is the count of lunations since the beginning of
 		the 0 (Zero) Hegira Year Islamic Calendar which is the date 24/07/621 15:05:00 AM UTC  
-
-		\n -<u> Lit </u>		:
-		\n Illumated percent of the moons visible surface lit by the sun.
-		\n -<u> Age</u>		:
-		\n The number of days passed since the last moon conjuction.
-		\n -<u> > </u>		:
-		\n > greater symbol means the moon rise, set or transit occurred on the following day.
-		\n -<u> &lt; </u>		:
-		\n &lt; less than symbol means the moon rise, set or transit occurred on the preceeding day.</string>
+		\n<b><u>Lit</u></b>		:
+		\nIllumated percent of the moons visible surface lit by the sun.
+		\n<b><u>Age</u></b>		:
+		\nThe number of days passed since the last moon conjuction.
+		\n<b><u>></u></b>		:
+		\n>greater symbol means the moon rise, set or transit occurred on the following day.
+		\n<b><u>&lt;</u></b>		:
+		\n&lt; less than symbol means the moon rise, set or transit occurred on the preceeding day.
+		
+		\n<i>Lunar Eclipses</i>
+		
+		\n <b>t </b>: Total Lunar Eclipse Certain
+		\n <b>t?</b>: Possible Total Lunar Eclipse
+		\n <b>p </b>: Partial lunar eclipse certain
+		\n <b>p?</b>: Possible partial eclipse
+		\n <b>P </b>: Penumbral lunar eclipse certain
+		\n <b>P?</b>: Possible penumbral lunar eclipse
+		\n <i>Solar Eclipses</i> 
+		\n <b>c </b>: Central Solar  eclipse certain
+		\n <b>c?</b>: Possible Solar central eclipse
+		\n <b>p </b>: Partial solar eclipse certain
+		\n <b>p?</b>: Possible partial solar eclipse
+		</string>   
+		
+       
     <string name="julian_date">Julian Date</string>
     <string name="buy_pro">Buy Pro version</string>
     <string name="timezone_summary">Set Time Zone [-11,+13]</string>

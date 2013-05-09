@@ -90,12 +90,15 @@ public class SunMoonPosition {
 				* Math.cos(δ) * Math.cos(αo - α))));
 		return MapTo0To360Range(ψ);
 	}
+	/**
+	 * @param jd  
+	 */
 	public double getMoonPhaseAngleWithoutDeclination(double jd) {
 		
 		return 360-MapTo0To360Range(Math.toDegrees(E));
 	}
 
-	public EarthHeading getQiblaAngle(double latitude, double longitude) {
+	public EarthHeading getQiblaAngle(@SuppressWarnings("unused") double latitude, @SuppressWarnings("unused") double longitude) {
 		EarthPosition earth = new EarthPosition();
 		return earth.toEarthHeading(new EarthPosition(21.416666667, 39.816666));
 	}
@@ -112,7 +115,7 @@ public class SunMoonPosition {
 		return Value;
 	}
 
-	public double illumunatedFractionofMoon(double jd, double ΔT) {
+	public double illumunatedFractionofMoon(@SuppressWarnings("unused") double jd, @SuppressWarnings("unused") double ΔT) {
 		return moonPhase;
 
 	}

@@ -75,10 +75,10 @@ public class MoonPositionAngle {
 
 	public double computeMoon(double jd, int what) {
 		double T = (jd - 2451545D) / 36525D;
-		double P2 = 6.2831853071795862D;
-		double ARC = 206264.80619999999D;
-		double coseps = 0.91748206200000004D;
-		double sineps = 0.39777715600000002D;
+		//double P2 = 6.2831853071795862D;
+		//double ARC = 206264.80619999999D;
+		//double coseps = 0.91748206200000004D;
+		//double sineps = 0.39777715600000002D;
 		double L0 = frac(0.606433D + 1336.855225D * T);
 		double L = 6.2831853071795862D * frac(0.37489699999999998D + 1325.55241D * T);
 		double LS = 6.2831853071795862D * frac(0.99313300000000004D + 99.997360999999998D * T);
@@ -200,7 +200,7 @@ public class MoonPositionAngle {
 	double ParallacticAngle() {
 		double RA = computeMoon(jd, 2);
 		double LHA = moon_LHA(jd, RA, longitude);
-		double DEC = computeMoon(jd, 1);
+		//double DEC = computeMoon(jd, 1);
 		double PA = Math
 				.asin((Math.cos(0.017453292519943295D * latitude) * Math
 						.sin(0.017453292519943295D * LHA))

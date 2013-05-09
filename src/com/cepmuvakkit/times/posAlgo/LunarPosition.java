@@ -348,7 +348,7 @@ public class LunarPosition {
 
 	}
 
-	double[] summationΣlΣr(double L1, double D, double M, double M1, double F,
+	double[] summationΣlΣr(@SuppressWarnings("unused") double L1, double D, double M, double M1, double F,
 			double E) {
 		double arg, L, R, E2 = E * E;
 		L = 0;
@@ -373,7 +373,7 @@ public class LunarPosition {
 		return ΣlΣr;
 	}
 
-	double summationΣb(double L1, double D, double M, double M1, double F,
+	double summationΣb(@SuppressWarnings("unused") double L1, double D, double M, double M1, double F,
 			double E) {
 		double arg, Σb, E2 = E * E;
 		Σb = 0;

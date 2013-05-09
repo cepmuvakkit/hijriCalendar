@@ -44175,7 +44175,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 368):
+Constant Pool (count = 379):
   + Integer [2130903048]
   + Integer [2131296393]
   + Integer [2131296394]
@@ -44203,9 +44203,11 @@ Constant Pool (count = 368):
   + Integer [2131296432]
   + Integer [2131296434]
   + Integer [2131296436]
-  + Integer [2131296437]
+  + Integer [2131296438]
+  + Integer [2131296439]
   + String [#0.0]
   + String [#0.00]
+  + String [#0.0000000]
   + String [#0.00°]
   + String [%]
   + String ['']
@@ -44236,6 +44238,7 @@ Constant Pool (count = 368):
   + Class [java/text/DateFormat]
   + Class [java/text/DecimalFormat]
   + Class [java/util/GregorianCalendar]
+  + Double [24.0]
   + Double [100.0]
   + Fieldref [com/cepmuvakkit/a/a/b.a D]
   + Fieldref [com/cepmuvakkit/a/a/b.b D]
@@ -44259,6 +44262,8 @@ Constant Pool (count = 368):
   + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.M Landroid/widget/TextView;]
   + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.N Landroid/widget/TextView;]
   + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.O Landroid/widget/TextView;]
+  + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.P Landroid/widget/TextView;]
+  + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.Q Landroid/widget/TextView;]
   + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.a D]
   + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.b D]
   + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.c D]
@@ -44270,10 +44275,10 @@ Constant Pool (count = 368):
   + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.i Ljava/text/DecimalFormat;]
   + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.j Ljava/text/DecimalFormat;]
   + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.k Ljava/text/DecimalFormat;]
-  + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.l Ljava/text/DateFormat;]
+  + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.l Ljava/text/DecimalFormat;]
   + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.m Ljava/text/DateFormat;]
   + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.n Ljava/text/DateFormat;]
-  + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.o Landroid/widget/TextView;]
+  + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.o Ljava/text/DateFormat;]
   + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.p Landroid/widget/TextView;]
   + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.q Landroid/widget/TextView;]
   + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.r Landroid/widget/TextView;]
@@ -44349,6 +44354,8 @@ Constant Pool (count = 368):
   + NameAndType [M Landroid/widget/TextView;]
   + NameAndType [N Landroid/widget/TextView;]
   + NameAndType [O Landroid/widget/TextView;]
+  + NameAndType [P Landroid/widget/TextView;]
+  + NameAndType [Q Landroid/widget/TextView;]
   + NameAndType [a (DD)Lcom/cepmuvakkit/a/a/b;]
   + NameAndType [a (DDDDD)Lcom/cepmuvakkit/a/a/d;]
   + NameAndType [a (DDDIII)[D]
@@ -44387,12 +44394,12 @@ Constant Pool (count = 368):
   + NameAndType [i Ljava/text/DecimalFormat;]
   + NameAndType [j Ljava/text/DecimalFormat;]
   + NameAndType [k Ljava/text/DecimalFormat;]
-  + NameAndType [l Ljava/text/DateFormat;]
+  + NameAndType [l Ljava/text/DecimalFormat;]
   + NameAndType [m (D)Ljava/util/GregorianCalendar;]
   + NameAndType [m Ljava/text/DateFormat;]
   + NameAndType [n Ljava/text/DateFormat;]
   + NameAndType [o (D)D]
-  + NameAndType [o Landroid/widget/TextView;]
+  + NameAndType [o Ljava/text/DateFormat;]
   + NameAndType [onCreate (Landroid/os/Bundle;)V]
   + NameAndType [p Landroid/widget/TextView;]
   + NameAndType [parseDouble (Ljava/lang/String;)D]
@@ -44414,6 +44421,7 @@ Constant Pool (count = 368):
   + NameAndType [z Landroid/widget/TextView;]
   + Utf8 [#0.0]
   + Utf8 [#0.00]
+  + Utf8 [#0.0000000]
   + Utf8 [#0.00°]
   + Utf8 [%]
   + Utf8 ['']
@@ -44472,6 +44480,8 @@ Constant Pool (count = 368):
   + Utf8 [M]
   + Utf8 [N]
   + Utf8 [O]
+  + Utf8 [P]
+  + Utf8 [Q]
   + Utf8 [a]
   + Utf8 [android/app/Activity]
   + Utf8 [android/content/Intent]
@@ -44543,7 +44553,7 @@ Constant Pool (count = 368):
   + Utf8 [y]
   + Utf8 [z]
 
-Fields (count = 41):
+Fields (count = 43):
   + Field:        a D
     Access flags: 0x2
       = private double a
@@ -44577,18 +44587,18 @@ Fields (count = 41):
   + Field:        k Ljava/text/DecimalFormat;
     Access flags: 0x2
       = private java.text.DecimalFormat k
-  + Field:        l Ljava/text/DateFormat;
+  + Field:        l Ljava/text/DecimalFormat;
     Access flags: 0x2
-      = private java.text.DateFormat l
+      = private java.text.DecimalFormat l
   + Field:        m Ljava/text/DateFormat;
     Access flags: 0x2
       = private java.text.DateFormat m
   + Field:        n Ljava/text/DateFormat;
     Access flags: 0x2
       = private java.text.DateFormat n
-  + Field:        o Landroid/widget/TextView;
+  + Field:        o Ljava/text/DateFormat;
     Access flags: 0x2
-      = private android.widget.TextView o
+      = private java.text.DateFormat o
   + Field:        p Landroid/widget/TextView;
     Access flags: 0x2
       = private android.widget.TextView p
@@ -44667,6 +44677,12 @@ Fields (count = 41):
   + Field:        O Landroid/widget/TextView;
     Access flags: 0x2
       = private android.widget.TextView O
+  + Field:        P Landroid/widget/TextView;
+    Access flags: 0x2
+      = private android.widget.TextView P
+  + Field:        Q Landroid/widget/TextView;
+    Access flags: 0x2
+      = private android.widget.TextView Q
 
 Methods (count = 2):
   - Method:       <init>()V
@@ -44675,7 +44691,7 @@ Methods (count = 2):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 5, locals = 1, stack = 1):
       [0] aload_0 v0
-      [1] invokespecial #111
+      [1] invokespecial #117
         + Methodref [android/app/Activity.<init> ()V]
       [4] return
       Code attribute exceptions (count = 0):
@@ -44684,1052 +44700,1101 @@ Methods (count = 2):
     Access flags: 0x1
       = public void onCreate(android.os.Bundle)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 1455, locals = 27, stack = 12):
+    + Code attribute instructions (code length = 1522, locals = 27, stack = 12):
       [0] aload_0 v0
       [1] aload_1 v1
-      [2] invokespecial #112
+      [2] invokespecial #118
         + Methodref [android/app/Activity.onCreate (Landroid/os/Bundle;)V]
       [5] aload_0 v0
-      [6] invokevirtual #137
+      [6] invokevirtual #143
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.getIntent ()Landroid/content/Intent;]
       [9] astore_2 v2
       [10] aload_2 v2
-      [11] ldc #35
+      [11] ldc #37
         + String [com.cepmuvakkit.conversion.JULIANDAY]
-      [13] invokevirtual #113
+      [13] invokevirtual #119
         + Methodref [android/content/Intent.getStringExtra (Ljava/lang/String;)Ljava/lang/String;]
       [16] astore_3 v3
       [17] aload_2 v2
-      [18] ldc #36
+      [18] ldc #38
         + String [com.cepmuvakkit.conversion.LATITUDE]
-      [20] invokevirtual #113
+      [20] invokevirtual #119
         + Methodref [android/content/Intent.getStringExtra (Ljava/lang/String;)Ljava/lang/String;]
       [23] astore v4
       [25] aload_2 v2
-      [26] ldc #37
+      [26] ldc #39
         + String [com.cepmuvakkit.conversion.LONGITUDE]
-      [28] invokevirtual #113
+      [28] invokevirtual #119
         + Methodref [android/content/Intent.getStringExtra (Ljava/lang/String;)Ljava/lang/String;]
       [31] astore v5
       [33] aload_2 v2
-      [34] ldc #40
+      [34] ldc #42
         + String [com.cepmuvakkit.conversion.TIMEZONE]
-      [36] invokevirtual #113
+      [36] invokevirtual #119
         + Methodref [android/content/Intent.getStringExtra (Ljava/lang/String;)Ljava/lang/String;]
       [39] astore v6
       [41] aload_2 v2
-      [42] ldc #39
+      [42] ldc #41
         + String [com.cepmuvakkit.conversion.TEMPERATURE]
-      [44] invokevirtual #113
+      [44] invokevirtual #119
         + Methodref [android/content/Intent.getStringExtra (Ljava/lang/String;)Ljava/lang/String;]
       [47] astore v7
       [49] aload_2 v2
-      [50] ldc #38
+      [50] ldc #40
         + String [com.cepmuvakkit.conversion.PRESSURE]
-      [52] invokevirtual #113
+      [52] invokevirtual #119
         + Methodref [android/content/Intent.getStringExtra (Ljava/lang/String;)Ljava/lang/String;]
       [55] astore v8
       [57] aload_2 v2
-      [58] ldc #34
+      [58] ldc #36
         + String [com.cepmuvakkit.conversion.ALTITUDE]
-      [60] invokevirtual #113
+      [60] invokevirtual #119
         + Methodref [android/content/Intent.getStringExtra (Ljava/lang/String;)Ljava/lang/String;]
       [63] astore v9
       [65] aload_0 v0
-      [66] new #59
+      [66] new #61
         + Class [java/text/DecimalFormat]
       [69] dup
-      [70] ldc #31
+      [70] ldc #33
         + String [#0.00°]
-      [72] invokespecial #153
+      [72] invokespecial #159
         + Methodref [java/text/DecimalFormat.<init> (Ljava/lang/String;)V]
-      [75] putfield #93
+      [75] putfield #99
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.i Ljava/text/DecimalFormat;]
       [78] aload_0 v0
-      [79] new #59
+      [79] new #61
         + Class [java/text/DecimalFormat]
       [82] dup
-      [83] ldc #30
+      [83] ldc #31
         + String [#0.00]
-      [85] invokespecial #153
+      [85] invokespecial #159
         + Methodref [java/text/DecimalFormat.<init> (Ljava/lang/String;)V]
-      [88] putfield #95
+      [88] putfield #101
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.k Ljava/text/DecimalFormat;]
       [91] aload_0 v0
-      [92] new #59
+      [92] new #61
         + Class [java/text/DecimalFormat]
       [95] dup
-      [96] ldc #29
-        + String [#0.0]
-      [98] invokespecial #153
+      [96] ldc #32
+        + String [#0.0000000]
+      [98] invokespecial #159
         + Methodref [java/text/DecimalFormat.<init> (Ljava/lang/String;)V]
-      [101] putfield #94
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.j Ljava/text/DecimalFormat;]
+      [101] putfield #102
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.l Ljava/text/DecimalFormat;]
       [104] aload_0 v0
-      [105] iconst_2
-      [106] iconst_2
-      [107] invokestatic #151
+      [105] new #61
+        + Class [java/text/DecimalFormat]
+      [108] dup
+      [109] ldc #30
+        + String [#0.0]
+      [111] invokespecial #159
+        + Methodref [java/text/DecimalFormat.<init> (Ljava/lang/String;)V]
+      [114] putfield #100
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.j Ljava/text/DecimalFormat;]
+      [117] aload_0 v0
+      [118] iconst_2
+      [119] iconst_2
+      [120] invokestatic #157
         + Methodref [java/text/DateFormat.getDateTimeInstance (II)Ljava/text/DateFormat;]
-      [110] putfield #96
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.l Ljava/text/DateFormat;]
-      [113] aload_0 v0
-      [114] iconst_1
-      [115] invokestatic #152
-        + Methodref [java/text/DateFormat.getTimeInstance (I)Ljava/text/DateFormat;]
-      [118] putfield #97
+      [123] putfield #103
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.m Ljava/text/DateFormat;]
-      [121] aload_0 v0
-      [122] iconst_1
-      [123] invokestatic #150
-        + Methodref [java/text/DateFormat.getDateInstance (I)Ljava/text/DateFormat;]
-      [126] putfield #98
+      [126] aload_0 v0
+      [127] iconst_1
+      [128] invokestatic #158
+        + Methodref [java/text/DateFormat.getTimeInstance (I)Ljava/text/DateFormat;]
+      [131] putfield #104
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.n Ljava/text/DateFormat;]
-      [129] aload_0 v0
-      [130] aload_3 v3
-      [131] invokestatic #142
+      [134] aload_0 v0
+      [135] iconst_1
+      [136] invokestatic #156
+        + Methodref [java/text/DateFormat.getDateInstance (I)Ljava/text/DateFormat;]
+      [139] putfield #105
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.o Ljava/text/DateFormat;]
+      [142] aload_0 v0
+      [143] aload_3 v3
+      [144] invokestatic #148
         + Methodref [java/lang/Double.parseDouble (Ljava/lang/String;)D]
-      [134] putfield #85
+      [147] putfield #91
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.a D]
-      [137] aload_0 v0
-      [138] aload v4
-      [140] invokestatic #142
+      [150] aload_0 v0
+      [151] aload v4
+      [153] invokestatic #148
         + Methodref [java/lang/Double.parseDouble (Ljava/lang/String;)D]
-      [143] putfield #87
+      [156] putfield #93
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.c D]
-      [146] aload_0 v0
-      [147] aload v5
-      [149] invokestatic #142
+      [159] aload_0 v0
+      [160] aload v5
+      [162] invokestatic #148
         + Methodref [java/lang/Double.parseDouble (Ljava/lang/String;)D]
-      [152] putfield #86
+      [165] putfield #92
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.b D]
-      [155] aload_0 v0
-      [156] aload v6
-      [158] invokestatic #142
+      [168] aload_0 v0
+      [169] aload v6
+      [171] invokestatic #148
         + Methodref [java/lang/Double.parseDouble (Ljava/lang/String;)D]
-      [161] putfield #88
+      [174] putfield #94
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.d D]
-      [164] aload_0 v0
-      [165] aload v7
-      [167] invokestatic #143
+      [177] aload_0 v0
+      [178] aload v7
+      [180] invokestatic #149
         + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
-      [170] putfield #89
+      [183] putfield #95
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.e I]
-      [173] aload_0 v0
-      [174] aload v8
-      [176] invokestatic #143
+      [186] aload_0 v0
+      [187] aload v8
+      [189] invokestatic #149
         + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
-      [179] putfield #90
+      [192] putfield #96
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.f I]
-      [182] aload_0 v0
-      [183] aload v9
-      [185] invokestatic #143
+      [195] aload_0 v0
+      [196] aload v9
+      [198] invokestatic #149
         + Methodref [java/lang/Integer.parseInt (Ljava/lang/String;)I]
-      [188] putfield #91
+      [201] putfield #97
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.g I]
-      [191] aload_0 v0
-      [192] aload_0 v0
-      [193] getfield #85
+      [204] aload_0 v0
+      [205] aload_0 v0
+      [206] getfield #91
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.a D]
-      [196] invokestatic #118
+      [209] invokestatic #124
         + Methodref [com/cepmuvakkit/a/a/a.c (D)D]
-      [199] putfield #92
+      [212] putfield #98
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.h D]
-      [202] new #50
+      [215] new #52
         + Class [com/cepmuvakkit/a/a/g]
-      [205] dup
-      [206] invokespecial #129
+      [218] dup
+      [219] invokespecial #135
         + Methodref [com/cepmuvakkit/a/a/g.<init> ()V]
-      [209] astore v10
-      [211] new #49
+      [222] astore v10
+      [224] new #51
         + Class [com/cepmuvakkit/a/a/e]
-      [214] dup
-      [215] invokespecial #125
+      [227] dup
+      [228] invokespecial #131
         + Methodref [com/cepmuvakkit/a/a/e.<init> ()V]
-      [218] astore v11
-      [220] aload v10
-      [222] aload_0 v0
-      [223] getfield #85
+      [231] astore v11
+      [233] aload v10
+      [235] aload_0 v0
+      [236] getfield #91
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.a D]
-      [226] aload_0 v0
-      [227] getfield #92
+      [239] aload_0 v0
+      [240] getfield #98
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.h D]
-      [230] invokevirtual #132
+      [243] invokevirtual #138
         + Methodref [com/cepmuvakkit/a/a/g.d (DD)Lcom/cepmuvakkit/a/a/b;]
-      [233] astore v14
-      [235] aload v10
-      [237] aload_0 v0
-      [238] getfield #85
+      [246] astore v14
+      [248] aload v10
+      [250] aload_0 v0
+      [251] getfield #91
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.a D]
-      [241] aload_0 v0
-      [242] getfield #92
+      [254] aload_0 v0
+      [255] getfield #98
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.h D]
-      [245] invokevirtual #130
+      [258] invokevirtual #136
         + Methodref [com/cepmuvakkit/a/a/g.c (DD)Lcom/cepmuvakkit/a/a/c;]
-      [248] astore v16
-      [250] aload v16
-      [252] aload_0 v0
-      [253] getfield #86
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.b D]
-      [256] aload_0 v0
-      [257] getfield #87
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.c D]
-      [260] aload_0 v0
-      [261] getfield #91
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.g I]
-      [264] i2d
+      [261] astore v16
+      [263] aload v16
       [265] aload_0 v0
-      [266] getfield #85
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.a D]
+      [266] getfield #92
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.b D]
       [269] aload_0 v0
-      [270] getfield #92
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.h D]
-      [273] invokevirtual #124
-        + Methodref [com/cepmuvakkit/a/a/c.a (DDDDD)Lcom/cepmuvakkit/a/a/d;]
-      [276] astore v17
-      [278] aload v11
-      [280] aload_0 v0
-      [281] getfield #85
+      [270] getfield #93
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.c D]
+      [273] aload_0 v0
+      [274] getfield #97
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.g I]
+      [277] i2d
+      [278] aload_0 v0
+      [279] getfield #91
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.a D]
-      [284] aload_0 v0
-      [285] getfield #92
+      [282] aload_0 v0
+      [283] getfield #98
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.h D]
-      [288] invokevirtual #126
+      [286] invokevirtual #130
+        + Methodref [com/cepmuvakkit/a/a/c.a (DDDDD)Lcom/cepmuvakkit/a/a/d;]
+      [289] astore v17
+      [291] aload v11
+      [293] aload_0 v0
+      [294] getfield #91
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.a D]
+      [297] aload_0 v0
+      [298] getfield #98
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.h D]
+      [301] invokevirtual #132
         + Methodref [com/cepmuvakkit/a/a/e.a (DD)Lcom/cepmuvakkit/a/a/b;]
-      [291] astore v13
-      [293] aload v11
-      [295] aload_0 v0
-      [296] getfield #85
+      [304] astore v13
+      [306] aload v11
+      [308] aload_0 v0
+      [309] getfield #91
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.a D]
-      [299] aload_0 v0
-      [300] getfield #92
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.h D]
-      [303] invokevirtual #128
-        + Methodref [com/cepmuvakkit/a/a/e.c (DD)Lcom/cepmuvakkit/a/a/c;]
-      [306] astore v15
-      [308] new #51
-        + Class [com/cepmuvakkit/a/a/h]
-      [311] dup
       [312] aload_0 v0
-      [313] getfield #85
+      [313] getfield #98
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.h D]
+      [316] invokevirtual #134
+        + Methodref [com/cepmuvakkit/a/a/e.c (DD)Lcom/cepmuvakkit/a/a/c;]
+      [319] astore v15
+      [321] new #53
+        + Class [com/cepmuvakkit/a/a/h]
+      [324] dup
+      [325] aload_0 v0
+      [326] getfield #91
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.a D]
-      [316] aload_0 v0
-      [317] getfield #87
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.c D]
-      [320] aload_0 v0
-      [321] getfield #86
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.b D]
-      [324] aload_0 v0
-      [325] getfield #91
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.g I]
-      [328] i2d
       [329] aload_0 v0
-      [330] getfield #92
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.h D]
-      [333] invokespecial #133
-        + Methodref [com/cepmuvakkit/a/a/h.<init> (DDDDD)V]
-      [336] astore v12
-      [338] aload v15
-      [340] aload_0 v0
-      [341] getfield #86
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.b D]
-      [344] aload_0 v0
-      [345] getfield #87
+      [330] getfield #93
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.c D]
-      [348] aload_0 v0
-      [349] getfield #91
+      [333] aload_0 v0
+      [334] getfield #92
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.b D]
+      [337] aload_0 v0
+      [338] getfield #97
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.g I]
-      [352] i2d
-      [353] aload_0 v0
-      [354] getfield #85
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.a D]
-      [357] aload_0 v0
-      [358] getfield #92
+      [341] i2d
+      [342] aload_0 v0
+      [343] getfield #98
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.h D]
-      [361] invokevirtual #124
+      [346] invokespecial #139
+        + Methodref [com/cepmuvakkit/a/a/h.<init> (DDDDD)V]
+      [349] astore v12
+      [351] aload v15
+      [353] aload_0 v0
+      [354] getfield #92
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.b D]
+      [357] aload_0 v0
+      [358] getfield #93
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.c D]
+      [361] aload_0 v0
+      [362] getfield #97
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.g I]
+      [365] i2d
+      [366] aload_0 v0
+      [367] getfield #91
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.a D]
+      [370] aload_0 v0
+      [371] getfield #98
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.h D]
+      [374] invokevirtual #130
         + Methodref [com/cepmuvakkit/a/a/c.a (DDDDD)Lcom/cepmuvakkit/a/a/d;]
-      [364] astore v18
-      [366] aload v18
-      [368] getfield #68
+      [377] astore v18
+      [379] aload v18
+      [381] getfield #72
         + Fieldref [com/cepmuvakkit/a/a/d.a D]
-      [371] aload v18
-      [373] getfield #68
+      [384] aload v18
+      [386] getfield #72
         + Fieldref [com/cepmuvakkit/a/a/d.a D]
-      [376] invokestatic #123
+      [389] invokestatic #129
         + Methodref [com/cepmuvakkit/a/a/a.o (D)D]
-      [379] aload_0 v0
-      [380] getfield #89
+      [392] aload_0 v0
+      [393] getfield #95
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.e I]
-      [383] aload_0 v0
-      [384] getfield #90
+      [396] aload_0 v0
+      [397] getfield #96
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.f I]
-      [387] invokestatic #115
+      [400] invokestatic #121
         + Methodref [com/cepmuvakkit/a/a/a.a (II)D]
-      [390] dmul
-      [391] dadd
-      [392] dstore v19
-      [394] aload_0 v0
-      [395] ldc #1
+      [403] dmul
+      [404] dadd
+      [405] dstore v19
+      [407] aload_0 v0
+      [408] ldc #1
         + Integer [2130903048]
-      [397] invokevirtual #138
+      [410] invokevirtual #144
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.setContentView (I)V]
-      [400] aload_0 v0
-      [401] aload_0 v0
-      [402] ldc #2
-        + Integer [2131296393]
-      [404] invokevirtual #135
-        + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [407] checkcast #44
-        + Class [android/widget/TextView]
-      [410] putfield #99
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.o Landroid/widget/TextView;]
       [413] aload_0 v0
       [414] aload_0 v0
-      [415] ldc #3
-        + Integer [2131296394]
-      [417] invokevirtual #135
+      [415] ldc #2
+        + Integer [2131296393]
+      [417] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [420] checkcast #44
+      [420] checkcast #46
         + Class [android/widget/TextView]
-      [423] putfield #100
+      [423] putfield #106
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.p Landroid/widget/TextView;]
       [426] aload_0 v0
       [427] aload_0 v0
-      [428] ldc #4
-        + Integer [2131296395]
-      [430] invokevirtual #135
+      [428] ldc #3
+        + Integer [2131296394]
+      [430] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [433] checkcast #44
+      [433] checkcast #46
         + Class [android/widget/TextView]
-      [436] putfield #101
+      [436] putfield #107
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.q Landroid/widget/TextView;]
       [439] aload_0 v0
       [440] aload_0 v0
-      [441] ldc #5
-        + Integer [2131296397]
-      [443] invokevirtual #135
+      [441] ldc #4
+        + Integer [2131296395]
+      [443] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [446] checkcast #44
+      [446] checkcast #46
         + Class [android/widget/TextView]
-      [449] putfield #102
+      [449] putfield #108
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.r Landroid/widget/TextView;]
       [452] aload_0 v0
       [453] aload_0 v0
-      [454] ldc #6
-        + Integer [2131296399]
-      [456] invokevirtual #135
+      [454] ldc #5
+        + Integer [2131296397]
+      [456] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [459] checkcast #44
+      [459] checkcast #46
         + Class [android/widget/TextView]
-      [462] putfield #103
+      [462] putfield #109
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.s Landroid/widget/TextView;]
       [465] aload_0 v0
       [466] aload_0 v0
-      [467] ldc #8
-        + Integer [2131296403]
-      [469] invokevirtual #135
+      [467] ldc #6
+        + Integer [2131296399]
+      [469] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [472] checkcast #44
+      [472] checkcast #46
         + Class [android/widget/TextView]
-      [475] putfield #104
+      [475] putfield #110
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.t Landroid/widget/TextView;]
       [478] aload_0 v0
       [479] aload_0 v0
-      [480] ldc #9
-        + Integer [2131296404]
-      [482] invokevirtual #135
+      [480] ldc #8
+        + Integer [2131296403]
+      [482] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [485] checkcast #44
+      [485] checkcast #46
         + Class [android/widget/TextView]
-      [488] putfield #105
+      [488] putfield #111
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.u Landroid/widget/TextView;]
       [491] aload_0 v0
       [492] aload_0 v0
-      [493] ldc #7
-        + Integer [2131296401]
-      [495] invokevirtual #135
+      [493] ldc #9
+        + Integer [2131296404]
+      [495] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [498] checkcast #44
+      [498] checkcast #46
         + Class [android/widget/TextView]
-      [501] putfield #106
+      [501] putfield #112
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.v Landroid/widget/TextView;]
       [504] aload_0 v0
       [505] aload_0 v0
-      [506] ldc #10
-        + Integer [2131296405]
-      [508] invokevirtual #135
+      [506] ldc #7
+        + Integer [2131296401]
+      [508] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [511] checkcast #44
+      [511] checkcast #46
         + Class [android/widget/TextView]
-      [514] putfield #107
+      [514] putfield #113
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.w Landroid/widget/TextView;]
       [517] aload_0 v0
       [518] aload_0 v0
-      [519] ldc #11
-        + Integer [2131296407]
-      [521] invokevirtual #135
+      [519] ldc #10
+        + Integer [2131296405]
+      [521] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [524] checkcast #44
+      [524] checkcast #46
         + Class [android/widget/TextView]
-      [527] putfield #108
+      [527] putfield #114
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.x Landroid/widget/TextView;]
       [530] aload_0 v0
       [531] aload_0 v0
-      [532] ldc #12
-        + Integer [2131296408]
-      [534] invokevirtual #135
+      [532] ldc #11
+        + Integer [2131296407]
+      [534] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [537] checkcast #44
+      [537] checkcast #46
         + Class [android/widget/TextView]
-      [540] putfield #109
+      [540] putfield #115
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.y Landroid/widget/TextView;]
       [543] aload_0 v0
       [544] aload_0 v0
-      [545] ldc #13
-        + Integer [2131296410]
-      [547] invokevirtual #135
+      [545] ldc #12
+        + Integer [2131296408]
+      [547] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [550] checkcast #44
+      [550] checkcast #46
         + Class [android/widget/TextView]
-      [553] putfield #110
+      [553] putfield #116
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.z Landroid/widget/TextView;]
       [556] aload_0 v0
       [557] aload_0 v0
-      [558] ldc #14
-        + Integer [2131296412]
-      [560] invokevirtual #135
+      [558] ldc #13
+        + Integer [2131296410]
+      [560] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [563] checkcast #44
+      [563] checkcast #46
         + Class [android/widget/TextView]
-      [566] putfield #70
+      [566] putfield #74
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.A Landroid/widget/TextView;]
       [569] aload_0 v0
       [570] aload_0 v0
-      [571] ldc #15
-        + Integer [2131296414]
-      [573] invokevirtual #135
+      [571] ldc #14
+        + Integer [2131296412]
+      [573] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [576] checkcast #44
+      [576] checkcast #46
         + Class [android/widget/TextView]
-      [579] putfield #71
+      [579] putfield #75
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.B Landroid/widget/TextView;]
       [582] aload_0 v0
       [583] aload_0 v0
-      [584] ldc #16
-        + Integer [2131296416]
-      [586] invokevirtual #135
+      [584] ldc #15
+        + Integer [2131296414]
+      [586] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [589] checkcast #44
+      [589] checkcast #46
         + Class [android/widget/TextView]
-      [592] putfield #72
+      [592] putfield #76
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.C Landroid/widget/TextView;]
       [595] aload_0 v0
       [596] aload_0 v0
-      [597] ldc #17
-        + Integer [2131296418]
-      [599] invokevirtual #135
+      [597] ldc #16
+        + Integer [2131296416]
+      [599] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [602] checkcast #44
+      [602] checkcast #46
         + Class [android/widget/TextView]
-      [605] putfield #73
+      [605] putfield #77
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.D Landroid/widget/TextView;]
       [608] aload_0 v0
       [609] aload_0 v0
-      [610] ldc #18
-        + Integer [2131296420]
-      [612] invokevirtual #135
+      [610] ldc #17
+        + Integer [2131296418]
+      [612] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [615] checkcast #44
+      [615] checkcast #46
         + Class [android/widget/TextView]
-      [618] putfield #74
+      [618] putfield #78
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.E Landroid/widget/TextView;]
       [621] aload_0 v0
       [622] aload_0 v0
-      [623] ldc #19
-        + Integer [2131296422]
-      [625] invokevirtual #135
+      [623] ldc #18
+        + Integer [2131296420]
+      [625] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [628] checkcast #44
+      [628] checkcast #46
         + Class [android/widget/TextView]
-      [631] putfield #75
+      [631] putfield #79
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.F Landroid/widget/TextView;]
       [634] aload_0 v0
       [635] aload_0 v0
-      [636] ldc #20
-        + Integer [2131296424]
-      [638] invokevirtual #135
+      [636] ldc #19
+        + Integer [2131296422]
+      [638] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [641] checkcast #44
+      [641] checkcast #46
         + Class [android/widget/TextView]
-      [644] putfield #76
+      [644] putfield #80
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.G Landroid/widget/TextView;]
       [647] aload_0 v0
       [648] aload_0 v0
-      [649] ldc #21
-        + Integer [2131296426]
-      [651] invokevirtual #135
+      [649] ldc #20
+        + Integer [2131296424]
+      [651] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [654] checkcast #44
+      [654] checkcast #46
         + Class [android/widget/TextView]
-      [657] putfield #77
+      [657] putfield #81
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.H Landroid/widget/TextView;]
       [660] aload_0 v0
       [661] aload_0 v0
-      [662] ldc #22
-        + Integer [2131296428]
-      [664] invokevirtual #135
+      [662] ldc #21
+        + Integer [2131296426]
+      [664] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [667] checkcast #44
+      [667] checkcast #46
         + Class [android/widget/TextView]
-      [670] putfield #78
+      [670] putfield #82
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.I Landroid/widget/TextView;]
       [673] aload_0 v0
       [674] aload_0 v0
-      [675] ldc #23
-        + Integer [2131296429]
-      [677] invokevirtual #135
+      [675] ldc #22
+        + Integer [2131296428]
+      [677] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [680] checkcast #44
+      [680] checkcast #46
         + Class [android/widget/TextView]
-      [683] putfield #79
+      [683] putfield #83
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.J Landroid/widget/TextView;]
       [686] aload_0 v0
       [687] aload_0 v0
-      [688] ldc #24
-        + Integer [2131296431]
-      [690] invokevirtual #135
+      [688] ldc #23
+        + Integer [2131296429]
+      [690] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [693] checkcast #44
+      [693] checkcast #46
         + Class [android/widget/TextView]
-      [696] putfield #80
+      [696] putfield #84
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.K Landroid/widget/TextView;]
       [699] aload_0 v0
       [700] aload_0 v0
-      [701] ldc #25
-        + Integer [2131296432]
-      [703] invokevirtual #135
+      [701] ldc #24
+        + Integer [2131296431]
+      [703] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [706] checkcast #44
+      [706] checkcast #46
         + Class [android/widget/TextView]
-      [709] putfield #81
+      [709] putfield #85
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.L Landroid/widget/TextView;]
       [712] aload_0 v0
       [713] aload_0 v0
-      [714] ldc #26
-        + Integer [2131296434]
-      [716] invokevirtual #135
+      [714] ldc #25
+        + Integer [2131296432]
+      [716] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [719] checkcast #44
+      [719] checkcast #46
         + Class [android/widget/TextView]
-      [722] putfield #82
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.M Landroid/widget/TextView;]
+      [722] putfield #87
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.N Landroid/widget/TextView;]
       [725] aload_0 v0
       [726] aload_0 v0
-      [727] ldc #27
-        + Integer [2131296436]
-      [729] invokevirtual #135
+      [727] ldc #26
+        + Integer [2131296434]
+      [729] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [732] checkcast #44
+      [732] checkcast #46
         + Class [android/widget/TextView]
-      [735] putfield #83
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.N Landroid/widget/TextView;]
+      [735] putfield #88
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.O Landroid/widget/TextView;]
       [738] aload_0 v0
       [739] aload_0 v0
-      [740] ldc #28
-        + Integer [2131296437]
-      [742] invokevirtual #135
+      [740] ldc #27
+        + Integer [2131296436]
+      [742] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [745] checkcast #44
+      [745] checkcast #46
         + Class [android/widget/TextView]
-      [748] putfield #84
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.O Landroid/widget/TextView;]
+      [748] putfield #86
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.M Landroid/widget/TextView;]
       [751] aload_0 v0
       [752] aload_0 v0
-      [753] ldc #25
-        + Integer [2131296432]
-      [755] invokevirtual #135
+      [753] ldc #28
+        + Integer [2131296438]
+      [755] invokevirtual #141
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
-      [758] checkcast #44
+      [758] checkcast #46
         + Class [android/widget/TextView]
-      [761] putfield #81
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.L Landroid/widget/TextView;]
+      [761] putfield #89
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.P Landroid/widget/TextView;]
       [764] aload_0 v0
-      [765] getfield #99
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.o Landroid/widget/TextView;]
-      [768] aload_0 v0
-      [769] getfield #96
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.l Ljava/text/DateFormat;]
-      [772] aload_0 v0
-      [773] getfield #85
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.a D]
-      [776] aload_0 v0
-      [777] getfield #88
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.d D]
-      [780] dadd
-      [781] invokestatic #122
-        + Methodref [com/cepmuvakkit/a/a/a.m (D)Ljava/util/GregorianCalendar;]
-      [784] invokevirtual #155
-        + Methodref [java/util/GregorianCalendar.getTime ()Ljava/util/Date;]
-      [787] invokevirtual #149
-        + Methodref [java/text/DateFormat.format (Ljava/util/Date;)Ljava/lang/String;]
-      [790] invokevirtual #114
-        + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-      [793] aload_0 v0
-      [794] getfield #100
+      [765] aload_0 v0
+      [766] ldc #29
+        + Integer [2131296439]
+      [768] invokevirtual #141
+        + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
+      [771] checkcast #46
+        + Class [android/widget/TextView]
+      [774] putfield #90
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.Q Landroid/widget/TextView;]
+      [777] aload_0 v0
+      [778] aload_0 v0
+      [779] ldc #25
+        + Integer [2131296432]
+      [781] invokevirtual #141
+        + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.findViewById (I)Landroid/view/View;]
+      [784] checkcast #46
+        + Class [android/widget/TextView]
+      [787] putfield #87
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.N Landroid/widget/TextView;]
+      [790] aload_0 v0
+      [791] getfield #106
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.p Landroid/widget/TextView;]
-      [797] new #57
-        + Class [java/lang/StringBuilder]
-      [800] dup
-      [801] aload_0 v0
-      [802] getfield #95
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.k Ljava/text/DecimalFormat;]
-      [805] aload_0 v0
-      [806] getfield #92
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.h D]
-      [809] invokevirtual #154
-        + Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
-      [812] invokestatic #145
-        + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [815] invokespecial #146
-        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [818] ldc #33
-        + String ['']
-      [820] invokevirtual #147
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [823] invokevirtual #148
-        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [826] invokevirtual #114
-        + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-      [829] aload_0 v0
-      [830] getfield #101
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.q Landroid/widget/TextView;]
-      [833] aload_0 v0
-      [834] getfield #95
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.k Ljava/text/DecimalFormat;]
-      [837] aload_0 v0
-      [838] getfield #85
+      [794] aload_0 v0
+      [795] getfield #103
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.m Ljava/text/DateFormat;]
+      [798] aload_0 v0
+      [799] getfield #91
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.a D]
-      [841] invokevirtual #154
+      [802] aload_0 v0
+      [803] getfield #94
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.d D]
+      [806] ldc2_w #63
+        + Double [24.0]
+      [809] ddiv
+      [810] dadd
+      [811] invokestatic #128
+        + Methodref [com/cepmuvakkit/a/a/a.m (D)Ljava/util/GregorianCalendar;]
+      [814] invokevirtual #161
+        + Methodref [java/util/GregorianCalendar.getTime ()Ljava/util/Date;]
+      [817] invokevirtual #155
+        + Methodref [java/text/DateFormat.format (Ljava/util/Date;)Ljava/lang/String;]
+      [820] invokevirtual #120
+        + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [823] aload_0 v0
+      [824] getfield #107
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.q Landroid/widget/TextView;]
+      [827] new #59
+        + Class [java/lang/StringBuilder]
+      [830] dup
+      [831] aload_0 v0
+      [832] getfield #101
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.k Ljava/text/DecimalFormat;]
+      [835] aload_0 v0
+      [836] getfield #98
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.h D]
+      [839] invokevirtual #160
         + Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
-      [844] invokevirtual #114
+      [842] invokestatic #151
+        + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+      [845] invokespecial #152
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [848] ldc #35
+        + String ['']
+      [850] invokevirtual #153
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [853] invokevirtual #154
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [856] invokevirtual #120
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-      [847] aload_0 v0
-      [848] getfield #102
+      [859] aload_0 v0
+      [860] getfield #108
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.r Landroid/widget/TextView;]
-      [851] aload v13
-      [853] getfield #63
-        + Fieldref [com/cepmuvakkit/a/a/b.a D]
-      [856] invokestatic #121
-        + Methodref [com/cepmuvakkit/a/a/a.h (D)Ljava/lang/String;]
-      [859] invokevirtual #114
-        + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-      [862] aload_0 v0
-      [863] getfield #103
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.s Landroid/widget/TextView;]
-      [866] aload v13
-      [868] getfield #64
-        + Fieldref [com/cepmuvakkit/a/a/b.b D]
-      [871] invokestatic #121
-        + Methodref [com/cepmuvakkit/a/a/a.h (D)Ljava/lang/String;]
-      [874] invokevirtual #114
+      [863] aload_0 v0
+      [864] getfield #101
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.k Ljava/text/DecimalFormat;]
+      [867] aload_0 v0
+      [868] getfield #91
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.a D]
+      [871] invokevirtual #160
+        + Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
+      [874] invokevirtual #120
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
       [877] aload_0 v0
-      [878] getfield #104
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.t Landroid/widget/TextView;]
-      [881] aload v15
-      [883] getfield #65
-        + Fieldref [com/cepmuvakkit/a/a/c.a D]
-      [886] invokestatic #121
+      [878] getfield #109
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.s Landroid/widget/TextView;]
+      [881] aload v13
+      [883] getfield #67
+        + Fieldref [com/cepmuvakkit/a/a/b.a D]
+      [886] invokestatic #127
         + Methodref [com/cepmuvakkit/a/a/a.h (D)Ljava/lang/String;]
-      [889] invokevirtual #114
+      [889] invokevirtual #120
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
       [892] aload_0 v0
-      [893] getfield #105
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.u Landroid/widget/TextView;]
-      [896] aload v15
-      [898] getfield #66
-        + Fieldref [com/cepmuvakkit/a/a/c.b D]
-      [901] invokestatic #121
+      [893] getfield #110
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.t Landroid/widget/TextView;]
+      [896] aload v13
+      [898] getfield #68
+        + Fieldref [com/cepmuvakkit/a/a/b.b D]
+      [901] invokestatic #127
         + Methodref [com/cepmuvakkit/a/a/a.h (D)Ljava/lang/String;]
-      [904] invokevirtual #114
+      [904] invokevirtual #120
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
       [907] aload_0 v0
-      [908] getfield #106
+      [908] getfield #111
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.u Landroid/widget/TextView;]
+      [911] aload v15
+      [913] getfield #69
+        + Fieldref [com/cepmuvakkit/a/a/c.a D]
+      [916] invokestatic #127
+        + Methodref [com/cepmuvakkit/a/a/a.h (D)Ljava/lang/String;]
+      [919] invokevirtual #120
+        + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [922] aload_0 v0
+      [923] getfield #112
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.v Landroid/widget/TextView;]
-      [911] new #57
-        + Class [java/lang/StringBuilder]
-      [914] dup
-      [915] aload_0 v0
-      [916] getfield #95
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.k Ljava/text/DecimalFormat;]
-      [919] aload v15
-      [921] getfield #67
-        + Fieldref [com/cepmuvakkit/a/a/c.c D]
-      [924] invokevirtual #154
-        + Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
-      [927] invokestatic #145
-        + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [930] invokespecial #146
-        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [933] ldc #41
-        + String [km]
-      [935] invokevirtual #147
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [938] invokevirtual #148
-        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [941] invokevirtual #114
+      [926] aload v15
+      [928] getfield #70
+        + Fieldref [com/cepmuvakkit/a/a/c.b D]
+      [931] invokestatic #127
+        + Methodref [com/cepmuvakkit/a/a/a.h (D)Ljava/lang/String;]
+      [934] invokevirtual #120
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-      [944] aload v11
-      [946] aload_0 v0
-      [947] getfield #85
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.a D]
-      [950] aload_0 v0
-      [951] getfield #87
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.c D]
-      [954] aload_0 v0
-      [955] getfield #86
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.b D]
-      [958] aload_0 v0
-      [959] getfield #89
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.e I]
-      [962] aload_0 v0
-      [963] getfield #90
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.f I]
-      [966] aload_0 v0
-      [967] getfield #91
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.g I]
-      [970] invokevirtual #127
-        + Methodref [com/cepmuvakkit/a/a/e.a (DDDIII)[D]
-      [973] astore v21
-      [975] aload v21
-      [977] aload_0 v0
-      [978] getfield #88
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.d D]
-      [981] invokestatic #117
-        + Methodref [com/cepmuvakkit/a/a/a.a ([DD)[B]
-      [984] astore v22
-      [986] aload_0 v0
-      [987] getfield #107
+      [937] aload_0 v0
+      [938] getfield #113
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.w Landroid/widget/TextView;]
-      [990] new #57
+      [941] new #59
         + Class [java/lang/StringBuilder]
-      [993] dup
-      [994] aload v21
-      [996] iconst_0
-      [997] daload
-      [998] aload_0 v0
-      [999] getfield #88
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.d D]
-      [1002] invokestatic #119
-        + Methodref [com/cepmuvakkit/a/a/a.c (DD)Ljava/lang/String;]
-      [1005] invokestatic #145
+      [944] dup
+      [945] aload_0 v0
+      [946] getfield #101
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.k Ljava/text/DecimalFormat;]
+      [949] aload v15
+      [951] getfield #71
+        + Fieldref [com/cepmuvakkit/a/a/c.c D]
+      [954] invokevirtual #160
+        + Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
+      [957] invokestatic #151
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [1008] invokespecial #146
+      [960] invokespecial #152
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [1011] aload_0 v0
-      [1012] invokevirtual #136
-        + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.getBaseContext ()Landroid/content/Context;]
-      [1015] aload v22
-      [1017] iconst_0
-      [1018] baload
-      [1019] invokestatic #116
-        + Methodref [com/cepmuvakkit/a/a/a.a (Landroid/content/Context;B)Ljava/lang/String;]
-      [1022] invokevirtual #147
+      [963] ldc #43
+        + String [km]
+      [965] invokevirtual #153
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [1025] invokevirtual #148
+      [968] invokevirtual #154
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [1028] invokevirtual #114
+      [971] invokevirtual #120
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-      [1031] aload_0 v0
-      [1032] getfield #108
+      [974] aload v11
+      [976] aload_0 v0
+      [977] getfield #91
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.a D]
+      [980] aload_0 v0
+      [981] getfield #93
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.c D]
+      [984] aload_0 v0
+      [985] getfield #92
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.b D]
+      [988] aload_0 v0
+      [989] getfield #95
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.e I]
+      [992] aload_0 v0
+      [993] getfield #96
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.f I]
+      [996] aload_0 v0
+      [997] getfield #97
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.g I]
+      [1000] invokevirtual #133
+        + Methodref [com/cepmuvakkit/a/a/e.a (DDDIII)[D]
+      [1003] astore v21
+      [1005] aload v21
+      [1007] aload_0 v0
+      [1008] getfield #94
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.d D]
+      [1011] invokestatic #123
+        + Methodref [com/cepmuvakkit/a/a/a.a ([DD)[B]
+      [1014] astore v22
+      [1016] aload_0 v0
+      [1017] getfield #114
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.x Landroid/widget/TextView;]
-      [1035] new #57
+      [1020] new #59
         + Class [java/lang/StringBuilder]
-      [1038] dup
-      [1039] aload v21
-      [1041] iconst_1
-      [1042] daload
-      [1043] aload_0 v0
-      [1044] getfield #88
+      [1023] dup
+      [1024] aload v21
+      [1026] iconst_0
+      [1027] daload
+      [1028] aload_0 v0
+      [1029] getfield #94
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.d D]
-      [1047] invokestatic #119
+      [1032] invokestatic #125
         + Methodref [com/cepmuvakkit/a/a/a.c (DD)Ljava/lang/String;]
-      [1050] invokestatic #145
+      [1035] invokestatic #151
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [1053] invokespecial #146
+      [1038] invokespecial #152
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [1056] aload_0 v0
-      [1057] invokevirtual #136
+      [1041] aload_0 v0
+      [1042] invokevirtual #142
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.getBaseContext ()Landroid/content/Context;]
-      [1060] aload v22
-      [1062] iconst_1
-      [1063] baload
-      [1064] invokestatic #116
+      [1045] aload v22
+      [1047] iconst_0
+      [1048] baload
+      [1049] invokestatic #122
         + Methodref [com/cepmuvakkit/a/a/a.a (Landroid/content/Context;B)Ljava/lang/String;]
-      [1067] invokevirtual #147
+      [1052] invokevirtual #153
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [1070] invokevirtual #148
+      [1055] invokevirtual #154
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [1073] invokevirtual #114
+      [1058] invokevirtual #120
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-      [1076] aload_0 v0
-      [1077] getfield #109
+      [1061] aload_0 v0
+      [1062] getfield #115
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.y Landroid/widget/TextView;]
-      [1080] new #57
+      [1065] new #59
         + Class [java/lang/StringBuilder]
-      [1083] dup
-      [1084] aload v21
-      [1086] iconst_2
-      [1087] daload
-      [1088] aload_0 v0
-      [1089] getfield #88
+      [1068] dup
+      [1069] aload v21
+      [1071] iconst_1
+      [1072] daload
+      [1073] aload_0 v0
+      [1074] getfield #94
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.d D]
-      [1092] invokestatic #119
+      [1077] invokestatic #125
         + Methodref [com/cepmuvakkit/a/a/a.c (DD)Ljava/lang/String;]
-      [1095] invokestatic #145
+      [1080] invokestatic #151
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [1098] invokespecial #146
+      [1083] invokespecial #152
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [1101] aload_0 v0
-      [1102] invokevirtual #136
+      [1086] aload_0 v0
+      [1087] invokevirtual #142
         + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.getBaseContext ()Landroid/content/Context;]
-      [1105] aload v22
-      [1107] iconst_2
-      [1108] baload
-      [1109] invokestatic #116
+      [1090] aload v22
+      [1092] iconst_1
+      [1093] baload
+      [1094] invokestatic #122
         + Methodref [com/cepmuvakkit/a/a/a.a (Landroid/content/Context;B)Ljava/lang/String;]
-      [1112] invokevirtual #147
+      [1097] invokevirtual #153
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [1115] invokevirtual #148
+      [1100] invokevirtual #154
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [1118] invokevirtual #114
+      [1103] invokevirtual #120
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-      [1121] aload_0 v0
-      [1122] getfield #71
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.B Landroid/widget/TextView;]
-      [1125] aload v18
-      [1127] getfield #69
-        + Fieldref [com/cepmuvakkit/a/a/d.b D]
-      [1130] invokestatic #121
-        + Methodref [com/cepmuvakkit/a/a/a.h (D)Ljava/lang/String;]
-      [1133] invokevirtual #114
-        + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-      [1136] aload_0 v0
-      [1137] getfield #72
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.C Landroid/widget/TextView;]
-      [1140] aload v18
-      [1142] getfield #68
-        + Fieldref [com/cepmuvakkit/a/a/d.a D]
-      [1145] invokestatic #121
-        + Methodref [com/cepmuvakkit/a/a/a.h (D)Ljava/lang/String;]
-      [1148] invokevirtual #114
+      [1106] aload_0 v0
+      [1107] getfield #116
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.z Landroid/widget/TextView;]
+      [1110] new #59
+        + Class [java/lang/StringBuilder]
+      [1113] dup
+      [1114] aload v21
+      [1116] iconst_2
+      [1117] daload
+      [1118] aload_0 v0
+      [1119] getfield #94
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.d D]
+      [1122] invokestatic #125
+        + Methodref [com/cepmuvakkit/a/a/a.c (DD)Ljava/lang/String;]
+      [1125] invokestatic #151
+        + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+      [1128] invokespecial #152
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [1131] aload_0 v0
+      [1132] invokevirtual #142
+        + Methodref [com/cepmuvakkit/conversion/AstronomicalDetail.getBaseContext ()Landroid/content/Context;]
+      [1135] aload v22
+      [1137] iconst_2
+      [1138] baload
+      [1139] invokestatic #122
+        + Methodref [com/cepmuvakkit/a/a/a.a (Landroid/content/Context;B)Ljava/lang/String;]
+      [1142] invokevirtual #153
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [1145] invokevirtual #154
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [1148] invokevirtual #120
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
       [1151] aload_0 v0
-      [1152] getfield #73
+      [1152] getfield #76
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.C Landroid/widget/TextView;]
+      [1155] aload v18
+      [1157] getfield #73
+        + Fieldref [com/cepmuvakkit/a/a/d.b D]
+      [1160] invokestatic #127
+        + Methodref [com/cepmuvakkit/a/a/a.h (D)Ljava/lang/String;]
+      [1163] invokevirtual #120
+        + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [1166] aload_0 v0
+      [1167] getfield #77
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.D Landroid/widget/TextView;]
-      [1155] dload v19
-      [1157] invokestatic #121
+      [1170] aload v18
+      [1172] getfield #72
+        + Fieldref [com/cepmuvakkit/a/a/d.a D]
+      [1175] invokestatic #127
         + Methodref [com/cepmuvakkit/a/a/a.h (D)Ljava/lang/String;]
-      [1160] invokevirtual #114
+      [1178] invokevirtual #120
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-      [1163] iconst_3
-      [1164] newarray 7
-      [1166] astore v23
-      [1168] aload v10
-      [1170] aload v23
-      [1172] aload_0 v0
-      [1173] getfield #85
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.a D]
-      [1176] invokevirtual #131
-        + Methodref [com/cepmuvakkit/a/a/g.c ([DD)V]
-      [1179] new #53
-        + Class [com/cepmuvakkit/conversion/a/a]
-      [1182] dup
-      [1183] aload_0 v0
-      [1184] getfield #85
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.a D]
-      [1187] aload_0 v0
-      [1188] getfield #88
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.d D]
-      [1191] aload v23
-      [1193] iconst_2
-      [1194] daload
-      [1195] aload_0 v0
-      [1196] getfield #92
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.h D]
-      [1199] invokespecial #139
-        + Methodref [com/cepmuvakkit/conversion/a/a.<init> (DDDD)V]
-      [1202] astore v24
-      [1204] aload v24
-      [1206] invokevirtual #141
-        + Methodref [com/cepmuvakkit/conversion/a/a.d ()D]
-      [1209] dstore v25
-      [1211] aload_0 v0
-      [1212] getfield #110
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.z Landroid/widget/TextView;]
-      [1215] aload_0 v0
-      [1216] getfield #94
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.j Ljava/text/DecimalFormat;]
-      [1219] dload v25
-      [1221] invokevirtual #154
-        + Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
-      [1224] invokevirtual #114
-        + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-      [1227] aload_0 v0
-      [1228] getfield #70
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.A Landroid/widget/TextView;]
-      [1231] new #57
-        + Class [java/lang/StringBuilder]
-      [1234] dup
-      [1235] aload_0 v0
-      [1236] getfield #94
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.j Ljava/text/DecimalFormat;]
-      [1239] aload v12
-      [1241] invokevirtual #134
-        + Methodref [com/cepmuvakkit/a/a/h.c ()D]
-      [1244] ldc2_w #61
-        + Double [100.0]
-      [1247] dmul
-      [1248] invokevirtual #154
-        + Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
-      [1251] invokestatic #145
-        + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [1254] invokespecial #146
-        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [1257] ldc #32
-        + String [%]
-      [1259] invokevirtual #147
-        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [1262] invokevirtual #148
-        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [1265] invokevirtual #114
-        + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-      [1268] aload_0 v0
-      [1269] getfield #74
+      [1181] aload_0 v0
+      [1182] getfield #78
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.E Landroid/widget/TextView;]
-      [1272] new #57
-        + Class [java/lang/StringBuilder]
-      [1275] dup
-      [1276] aload v24
-      [1278] invokevirtual #140
-        + Methodref [com/cepmuvakkit/conversion/a/a.c ()I]
-      [1281] invokestatic #144
-        + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
-      [1284] invokespecial #146
-        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [1287] invokevirtual #148
-        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [1290] invokevirtual #114
+      [1185] dload v19
+      [1187] invokestatic #127
+        + Methodref [com/cepmuvakkit/a/a/a.h (D)Ljava/lang/String;]
+      [1190] invokevirtual #120
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-      [1293] aload_0 v0
-      [1294] getfield #75
+      [1193] iconst_3
+      [1194] newarray 7
+      [1196] astore v23
+      [1198] aload v10
+      [1200] aload v23
+      [1202] aload_0 v0
+      [1203] getfield #91
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.a D]
+      [1206] invokevirtual #137
+        + Methodref [com/cepmuvakkit/a/a/g.c ([DD)V]
+      [1209] new #55
+        + Class [com/cepmuvakkit/conversion/a/a]
+      [1212] dup
+      [1213] aload_0 v0
+      [1214] getfield #91
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.a D]
+      [1217] aload_0 v0
+      [1218] getfield #94
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.d D]
+      [1221] aload v23
+      [1223] iconst_2
+      [1224] daload
+      [1225] aload_0 v0
+      [1226] getfield #98
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.h D]
+      [1229] invokespecial #145
+        + Methodref [com/cepmuvakkit/conversion/a/a.<init> (DDDD)V]
+      [1232] astore v24
+      [1234] aload v24
+      [1236] invokevirtual #147
+        + Methodref [com/cepmuvakkit/conversion/a/a.d ()D]
+      [1239] dstore v25
+      [1241] aload_0 v0
+      [1242] getfield #74
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.A Landroid/widget/TextView;]
+      [1245] aload_0 v0
+      [1246] getfield #100
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.j Ljava/text/DecimalFormat;]
+      [1249] dload v25
+      [1251] invokevirtual #160
+        + Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
+      [1254] invokevirtual #120
+        + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [1257] aload_0 v0
+      [1258] getfield #75
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.B Landroid/widget/TextView;]
+      [1261] new #59
+        + Class [java/lang/StringBuilder]
+      [1264] dup
+      [1265] aload_0 v0
+      [1266] getfield #100
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.j Ljava/text/DecimalFormat;]
+      [1269] aload v12
+      [1271] invokevirtual #140
+        + Methodref [com/cepmuvakkit/a/a/h.c ()D]
+      [1274] ldc2_w #65
+        + Double [100.0]
+      [1277] dmul
+      [1278] invokevirtual #160
+        + Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
+      [1281] invokestatic #151
+        + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+      [1284] invokespecial #152
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [1287] ldc #34
+        + String [%]
+      [1289] invokevirtual #153
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [1292] invokevirtual #154
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [1295] invokevirtual #120
+        + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [1298] aload_0 v0
+      [1299] getfield #79
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.F Landroid/widget/TextView;]
-      [1297] new #57
+      [1302] new #59
         + Class [java/lang/StringBuilder]
-      [1300] dup
-      [1301] aload v24
-      [1303] invokevirtual #140
+      [1305] dup
+      [1306] aload v24
+      [1308] invokevirtual #146
         + Methodref [com/cepmuvakkit/conversion/a/a.c ()I]
-      [1306] sipush 16096
-      [1309] isub
-      [1310] invokestatic #144
+      [1311] invokestatic #150
         + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
-      [1313] invokespecial #146
+      [1314] invokespecial #152
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [1316] invokevirtual #148
+      [1317] invokevirtual #154
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
-      [1319] invokevirtual #114
+      [1320] invokevirtual #120
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-      [1322] aload_0 v0
-      [1323] getfield #76
+      [1323] aload_0 v0
+      [1324] getfield #80
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.G Landroid/widget/TextView;]
-      [1326] aload v23
-      [1328] iconst_1
-      [1329] daload
-      [1330] invokestatic #120
-        + Methodref [com/cepmuvakkit/a/a/a.f (D)Ljava/lang/String;]
-      [1333] invokevirtual #114
+      [1327] new #59
+        + Class [java/lang/StringBuilder]
+      [1330] dup
+      [1331] aload v24
+      [1333] invokevirtual #146
+        + Methodref [com/cepmuvakkit/conversion/a/a.c ()I]
+      [1336] sipush 16096
+      [1339] isub
+      [1340] invokestatic #150
+        + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
+      [1343] invokespecial #152
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [1346] invokevirtual #154
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [1349] invokevirtual #120
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-      [1336] aload_0 v0
-      [1337] getfield #77
+      [1352] aload_0 v0
+      [1353] getfield #81
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.H Landroid/widget/TextView;]
-      [1340] aload v23
-      [1342] iconst_0
-      [1343] daload
-      [1344] invokestatic #120
+      [1356] aload v23
+      [1358] iconst_1
+      [1359] daload
+      [1360] invokestatic #126
         + Methodref [com/cepmuvakkit/a/a/a.f (D)Ljava/lang/String;]
-      [1347] invokevirtual #114
+      [1363] invokevirtual #120
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-      [1350] aload_0 v0
-      [1351] getfield #78
+      [1366] aload_0 v0
+      [1367] getfield #82
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.I Landroid/widget/TextView;]
-      [1354] aload v23
-      [1356] iconst_2
-      [1357] daload
-      [1358] invokestatic #120
+      [1370] aload v23
+      [1372] iconst_0
+      [1373] daload
+      [1374] invokestatic #126
         + Methodref [com/cepmuvakkit/a/a/a.f (D)Ljava/lang/String;]
-      [1361] invokevirtual #114
+      [1377] invokevirtual #120
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-      [1364] aload_0 v0
-      [1365] getfield #79
+      [1380] aload_0 v0
+      [1381] getfield #83
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.J Landroid/widget/TextView;]
-      [1368] aload v14
-      [1370] getfield #63
-        + Fieldref [com/cepmuvakkit/a/a/b.a D]
-      [1373] invokestatic #121
-        + Methodref [com/cepmuvakkit/a/a/a.h (D)Ljava/lang/String;]
-      [1376] invokevirtual #114
-        + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-      [1379] aload_0 v0
-      [1380] getfield #80
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.K Landroid/widget/TextView;]
-      [1383] aload v14
-      [1385] getfield #64
-        + Fieldref [com/cepmuvakkit/a/a/b.b D]
-      [1388] invokestatic #121
-        + Methodref [com/cepmuvakkit/a/a/a.h (D)Ljava/lang/String;]
-      [1391] invokevirtual #114
+      [1384] aload v23
+      [1386] iconst_2
+      [1387] daload
+      [1388] invokestatic #126
+        + Methodref [com/cepmuvakkit/a/a/a.f (D)Ljava/lang/String;]
+      [1391] invokevirtual #120
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
       [1394] aload_0 v0
-      [1395] getfield #81
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.L Landroid/widget/TextView;]
-      [1398] aload v16
-      [1400] getfield #65
-        + Fieldref [com/cepmuvakkit/a/a/c.a D]
-      [1403] invokestatic #121
+      [1395] getfield #84
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.K Landroid/widget/TextView;]
+      [1398] aload v14
+      [1400] getfield #67
+        + Fieldref [com/cepmuvakkit/a/a/b.a D]
+      [1403] invokestatic #127
         + Methodref [com/cepmuvakkit/a/a/a.h (D)Ljava/lang/String;]
-      [1406] invokevirtual #114
+      [1406] invokevirtual #120
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
       [1409] aload_0 v0
-      [1410] getfield #82
-        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.M Landroid/widget/TextView;]
-      [1413] aload v16
-      [1415] getfield #66
-        + Fieldref [com/cepmuvakkit/a/a/c.b D]
-      [1418] invokestatic #121
+      [1410] getfield #85
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.L Landroid/widget/TextView;]
+      [1413] aload v14
+      [1415] getfield #68
+        + Fieldref [com/cepmuvakkit/a/a/b.b D]
+      [1418] invokestatic #127
         + Methodref [com/cepmuvakkit/a/a/a.h (D)Ljava/lang/String;]
-      [1421] invokevirtual #114
+      [1421] invokevirtual #120
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
       [1424] aload_0 v0
-      [1425] getfield #83
+      [1425] getfield #87
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.N Landroid/widget/TextView;]
-      [1428] aload v17
+      [1428] aload v16
       [1430] getfield #69
-        + Fieldref [com/cepmuvakkit/a/a/d.b D]
-      [1433] invokestatic #121
+        + Fieldref [com/cepmuvakkit/a/a/c.a D]
+      [1433] invokestatic #127
         + Methodref [com/cepmuvakkit/a/a/a.h (D)Ljava/lang/String;]
-      [1436] invokevirtual #114
+      [1436] invokevirtual #120
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
       [1439] aload_0 v0
-      [1440] getfield #84
+      [1440] getfield #88
         + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.O Landroid/widget/TextView;]
-      [1443] aload v17
-      [1445] getfield #68
-        + Fieldref [com/cepmuvakkit/a/a/d.a D]
-      [1448] invokestatic #121
+      [1443] aload v16
+      [1445] getfield #70
+        + Fieldref [com/cepmuvakkit/a/a/c.b D]
+      [1448] invokestatic #127
         + Methodref [com/cepmuvakkit/a/a/a.h (D)Ljava/lang/String;]
-      [1451] invokevirtual #114
+      [1451] invokevirtual #120
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
-      [1454] return
+      [1454] aload_0 v0
+      [1455] getfield #86
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.M Landroid/widget/TextView;]
+      [1458] new #59
+        + Class [java/lang/StringBuilder]
+      [1461] dup
+      [1462] aload_0 v0
+      [1463] getfield #100
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.j Ljava/text/DecimalFormat;]
+      [1466] aload v16
+      [1468] getfield #71
+        + Fieldref [com/cepmuvakkit/a/a/c.c D]
+      [1471] invokevirtual #160
+        + Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
+      [1474] invokestatic #151
+        + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+      [1477] invokespecial #152
+        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+      [1480] ldc #43
+        + String [km]
+      [1482] invokevirtual #153
+        + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
+      [1485] invokevirtual #154
+        + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
+      [1488] invokevirtual #120
+        + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [1491] aload_0 v0
+      [1492] getfield #89
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.P Landroid/widget/TextView;]
+      [1495] aload v17
+      [1497] getfield #73
+        + Fieldref [com/cepmuvakkit/a/a/d.b D]
+      [1500] invokestatic #127
+        + Methodref [com/cepmuvakkit/a/a/a.h (D)Ljava/lang/String;]
+      [1503] invokevirtual #120
+        + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [1506] aload_0 v0
+      [1507] getfield #90
+        + Fieldref [com/cepmuvakkit/conversion/AstronomicalDetail.Q Landroid/widget/TextView;]
+      [1510] aload v17
+      [1512] getfield #72
+        + Fieldref [com/cepmuvakkit/a/a/d.a D]
+      [1515] invokestatic #127
+        + Methodref [com/cepmuvakkit/a/a/a.h (D)Ljava/lang/String;]
+      [1518] invokevirtual #120
+        + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
+      [1521] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
 
@@ -47428,7 +47493,7 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 855):
+Constant Pool (count = 859):
   + Integer [3600000]
   + Integer [17039370]
   + Integer [2130903040]
@@ -47476,12 +47541,12 @@ Constant Pool (count = 855):
   + Integer [2131296319]
   + Integer [2131296320]
   + Integer [2131296323]
-  + Integer [2131296467]
-  + Integer [2131296468]
   + Integer [2131296469]
   + Integer [2131296470]
   + Integer [2131296471]
   + Integer [2131296472]
+  + Integer [2131296473]
+  + Integer [2131296474]
   + String []
   + String [ ]
   + String [#0.0]
@@ -47762,7 +47827,9 @@ Constant Pool (count = 855):
   + Methodref [java/lang/String.valueOf (D)Ljava/lang/String;]
   + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
   + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
+  + Methodref [java/lang/StringBuilder.<init> ()V]
   + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
+  + Methodref [java/lang/StringBuilder.append (D)Ljava/lang/StringBuilder;]
   + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
   + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
   + Methodref [java/text/DateFormat.format (Ljava/util/Date;)Ljava/lang/String;]
@@ -47851,6 +47918,7 @@ Constant Pool (count = 855):
   + NameAndType [addLinks (Landroid/text/Spannable;I)Z]
   + NameAndType [ae Landroid/app/DatePickerDialog$OnDateSetListener;]
   + NameAndType [af Landroid/app/TimePickerDialog$OnTimeSetListener;]
+  + NameAndType [append (D)Ljava/lang/StringBuilder;]
   + NameAndType [append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
   + NameAndType [b ()D]
   + NameAndType [b ()Lcom/cepmuvakkit/a/a/d;]
@@ -48000,6 +48068,7 @@ Constant Pool (count = 855):
   + Utf8 [(B)Ljava/lang/String;]
   + Utf8 [(D)D]
   + Utf8 [(D)Ljava/lang/String;]
+  + Utf8 [(D)Ljava/lang/StringBuilder;]
   + Utf8 [(D)Ljava/util/GregorianCalendar;]
   + Utf8 [(D)V]
   + Utf8 [(D)[I]
@@ -48493,7 +48562,7 @@ Methods (count = 39):
       [0] aload_0 v0
       [1] invokevirtual #282
         + Methodref [com/cepmuvakkit/conversion/HijriCalendarTab.getWindowManager ()Landroid/view/WindowManager;]
-      [4] invokeinterface #354
+      [4] invokeinterface #356
         + InterfaceMethodref [android/view/WindowManager.getDefaultDisplay ()Landroid/view/Display;]
       [9] astore_2 v2
       [10] aload_0 v0
@@ -48514,7 +48583,7 @@ Methods (count = 39):
       [30] dup
       [31] ldc #58
         + String [#0.00°]
-      [33] invokespecial #346
+      [33] invokespecial #348
         + Methodref [java/text/DecimalFormat.<init> (Ljava/lang/String;)V]
       [36] putfield #161
         + Fieldref [com/cepmuvakkit/conversion/HijriCalendarTab.S Ljava/text/DecimalFormat;]
@@ -48524,7 +48593,7 @@ Methods (count = 39):
       [43] dup
       [44] ldc #57
         + String [#0.00]
-      [46] invokespecial #346
+      [46] invokespecial #348
         + Methodref [java/text/DecimalFormat.<init> (Ljava/lang/String;)V]
       [49] putfield #163
         + Fieldref [com/cepmuvakkit/conversion/HijriCalendarTab.U Ljava/text/DecimalFormat;]
@@ -48534,26 +48603,26 @@ Methods (count = 39):
       [56] dup
       [57] ldc #56
         + String [#0.0]
-      [59] invokespecial #346
+      [59] invokespecial #348
         + Methodref [java/text/DecimalFormat.<init> (Ljava/lang/String;)V]
       [62] putfield #162
         + Fieldref [com/cepmuvakkit/conversion/HijriCalendarTab.T Ljava/text/DecimalFormat;]
       [65] aload_0 v0
       [66] iconst_3
       [67] iconst_3
-      [68] invokestatic #344
+      [68] invokestatic #346
         + Methodref [java/text/DateFormat.getDateTimeInstance (II)Ljava/text/DateFormat;]
       [71] putfield #164
         + Fieldref [com/cepmuvakkit/conversion/HijriCalendarTab.V Ljava/text/DateFormat;]
       [74] aload_0 v0
       [75] iconst_3
-      [76] invokestatic #345
+      [76] invokestatic #347
         + Methodref [java/text/DateFormat.getTimeInstance (I)Ljava/text/DateFormat;]
       [79] putfield #165
         + Fieldref [com/cepmuvakkit/conversion/HijriCalendarTab.W Ljava/text/DateFormat;]
       [82] aload_0 v0
       [83] iconst_3
-      [84] invokestatic #343
+      [84] invokestatic #345
         + Methodref [java/text/DateFormat.getDateInstance (I)Ljava/text/DateFormat;]
       [87] putfield #166
         + Fieldref [com/cepmuvakkit/conversion/HijriCalendarTab.X Ljava/text/DateFormat;]
@@ -48972,9 +49041,9 @@ Methods (count = 39):
       [30] dadd
       [31] invokestatic #255
         + Methodref [com/cepmuvakkit/a/a/a.m (D)Ljava/util/GregorianCalendar;]
-      [34] invokevirtual #351
+      [34] invokevirtual #353
         + Methodref [java/util/GregorianCalendar.getTime ()Ljava/util/Date;]
-      [37] invokevirtual #342
+      [37] invokevirtual #344
         + Methodref [java/text/DateFormat.format (Ljava/util/Date;)Ljava/lang/String;]
       [40] invokevirtual #237
         + Methodref [android/widget/Button.setText (Ljava/lang/CharSequence;)V]
@@ -49013,30 +49082,30 @@ Methods (count = 39):
         + Methodref [com/cepmuvakkit/conversion/a/a.a (Landroid/content/Context;)Ljava/lang/String;]
       [33] invokestatic #338
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [36] invokespecial #339
+      [36] invokespecial #340
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [39] ldc #55
         + String [ ]
-      [41] invokevirtual #340
+      [41] invokevirtual #342
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [44] aload_2 v2
       [45] aload_1 v1
       [46] invokevirtual #298
         + Methodref [com/cepmuvakkit/conversion/a/a.c (Landroid/content/Context;)Ljava/lang/String;]
-      [49] invokevirtual #340
+      [49] invokevirtual #342
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [52] ldc #55
         + String [ ]
-      [54] invokevirtual #340
+      [54] invokevirtual #342
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [57] aload_2 v2
       [58] aload_1 v1
       [59] iconst_0
       [60] invokevirtual #296
         + Methodref [com/cepmuvakkit/conversion/a/a.a (Landroid/content/Context;Z)Ljava/lang/String;]
-      [63] invokevirtual #340
+      [63] invokevirtual #342
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [66] invokevirtual #341
+      [66] invokevirtual #343
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [69] astore_3 v3
       [70] aload_0 v0
@@ -49063,17 +49132,17 @@ Methods (count = 39):
       [98] aload_0 v0
       [99] getfield #156
         + Fieldref [com/cepmuvakkit/conversion/HijriCalendarTab.N D]
-      [102] invokevirtual #347
+      [102] invokevirtual #349
         + Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
       [105] invokestatic #338
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [108] invokespecial #339
+      [108] invokespecial #340
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [111] ldc #71
         + String [d]
-      [113] invokevirtual #340
+      [113] invokevirtual #342
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [116] invokevirtual #341
+      [116] invokevirtual #343
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [119] invokevirtual #242
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
@@ -49088,9 +49157,9 @@ Methods (count = 39):
         + Methodref [com/cepmuvakkit/conversion/a/a.c ()I]
       [134] invokestatic #337
         + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
-      [137] invokespecial #339
+      [137] invokespecial #340
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [140] invokevirtual #341
+      [140] invokevirtual #343
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [143] invokevirtual #242
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
@@ -49117,9 +49186,9 @@ Methods (count = 39):
       [16] dadd
       [17] invokestatic #255
         + Methodref [com/cepmuvakkit/a/a/a.m (D)Ljava/util/GregorianCalendar;]
-      [20] invokevirtual #351
+      [20] invokevirtual #353
         + Methodref [java/util/GregorianCalendar.getTime ()Ljava/util/Date;]
-      [23] invokevirtual #342
+      [23] invokevirtual #344
         + Methodref [java/text/DateFormat.format (Ljava/util/Date;)Ljava/lang/String;]
       [26] invokevirtual #237
         + Methodref [android/widget/Button.setText (Ljava/lang/CharSequence;)V]
@@ -49179,9 +49248,9 @@ Methods (count = 39):
       [60] dadd
       [61] invokestatic #255
         + Methodref [com/cepmuvakkit/a/a/a.m (D)Ljava/util/GregorianCalendar;]
-      [64] invokevirtual #351
+      [64] invokevirtual #353
         + Methodref [java/util/GregorianCalendar.getTime ()Ljava/util/Date;]
-      [67] invokevirtual #342
+      [67] invokevirtual #344
         + Methodref [java/text/DateFormat.format (Ljava/util/Date;)Ljava/lang/String;]
       [70] invokevirtual #242
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
@@ -49202,9 +49271,9 @@ Methods (count = 39):
       [91] dadd
       [92] invokestatic #255
         + Methodref [com/cepmuvakkit/a/a/a.m (D)Ljava/util/GregorianCalendar;]
-      [95] invokevirtual #351
+      [95] invokevirtual #353
         + Methodref [java/util/GregorianCalendar.getTime ()Ljava/util/Date;]
-      [98] invokevirtual #342
+      [98] invokevirtual #344
         + Methodref [java/text/DateFormat.format (Ljava/util/Date;)Ljava/lang/String;]
       [101] invokevirtual #242
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
@@ -49225,9 +49294,9 @@ Methods (count = 39):
       [122] dadd
       [123] invokestatic #255
         + Methodref [com/cepmuvakkit/a/a/a.m (D)Ljava/util/GregorianCalendar;]
-      [126] invokevirtual #351
+      [126] invokevirtual #353
         + Methodref [java/util/GregorianCalendar.getTime ()Ljava/util/Date;]
-      [129] invokevirtual #342
+      [129] invokevirtual #344
         + Methodref [java/text/DateFormat.format (Ljava/util/Date;)Ljava/lang/String;]
       [132] invokevirtual #242
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
@@ -49248,9 +49317,9 @@ Methods (count = 39):
       [153] dadd
       [154] invokestatic #255
         + Methodref [com/cepmuvakkit/a/a/a.m (D)Ljava/util/GregorianCalendar;]
-      [157] invokevirtual #351
+      [157] invokevirtual #353
         + Methodref [java/util/GregorianCalendar.getTime ()Ljava/util/Date;]
-      [160] invokevirtual #342
+      [160] invokevirtual #344
         + Methodref [java/text/DateFormat.format (Ljava/util/Date;)Ljava/lang/String;]
       [163] invokevirtual #242
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
@@ -49271,9 +49340,9 @@ Methods (count = 39):
       [184] dadd
       [185] invokestatic #255
         + Methodref [com/cepmuvakkit/a/a/a.m (D)Ljava/util/GregorianCalendar;]
-      [188] invokevirtual #351
+      [188] invokevirtual #353
         + Methodref [java/util/GregorianCalendar.getTime ()Ljava/util/Date;]
-      [191] invokevirtual #342
+      [191] invokevirtual #344
         + Methodref [java/text/DateFormat.format (Ljava/util/Date;)Ljava/lang/String;]
       [194] invokevirtual #242
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
@@ -49380,7 +49449,7 @@ Methods (count = 39):
       = private void e()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 80, locals = 2, stack = 5):
-      [0] invokestatic #348
+      [0] invokestatic #350
         + Methodref [java/util/Calendar.getInstance ()Ljava/util/Calendar;]
       [3] astore_1 v1
       [4] aload_0 v0
@@ -49391,12 +49460,12 @@ Methods (count = 39):
         + Fieldref [com/cepmuvakkit/conversion/HijriCalendarTab.O D]
       [12] aload_0 v0
       [13] aload_1 v1
-      [14] invokevirtual #350
+      [14] invokevirtual #352
         + Methodref [java/util/Calendar.getTimeZone ()Ljava/util/TimeZone;]
       [17] aload_1 v1
-      [18] invokevirtual #349
+      [18] invokevirtual #351
         + Methodref [java/util/Calendar.getTimeInMillis ()J]
-      [21] invokevirtual #352
+      [21] invokevirtual #354
         + Methodref [java/util/TimeZone.getOffset (J)I]
       [24] ldc #1
         + Integer [3600000]
@@ -49521,15 +49590,15 @@ Methods (count = 39):
       [100] aload_0 v0
       [101] getfield #179
         + Fieldref [com/cepmuvakkit/conversion/HijriCalendarTab.e D]
-      [104] invokevirtual #347
+      [104] invokevirtual #349
         + Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
       [107] invokestatic #338
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [110] invokespecial #339
+      [110] invokespecial #340
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [113] ldc #60
         + String [, ]
-      [115] invokevirtual #340
+      [115] invokevirtual #342
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
       [118] aload_0 v0
       [119] getfield #161
@@ -49537,11 +49606,11 @@ Methods (count = 39):
       [122] aload_0 v0
       [123] getfield #180
         + Fieldref [com/cepmuvakkit/conversion/HijriCalendarTab.f D]
-      [126] invokevirtual #347
+      [126] invokevirtual #349
         + Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
-      [129] invokevirtual #340
+      [129] invokevirtual #342
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [132] invokevirtual #341
+      [132] invokevirtual #343
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [135] invokevirtual #242
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
@@ -49732,17 +49801,17 @@ Methods (count = 39):
       [90] ldc2_w #141
         + Double [100.0]
       [93] dmul
-      [94] invokevirtual #347
+      [94] invokevirtual #349
         + Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
       [97] invokestatic #338
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [100] invokespecial #339
+      [100] invokespecial #340
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [103] ldc #59
         + String [%]
-      [105] invokevirtual #340
+      [105] invokevirtual #342
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [108] invokevirtual #341
+      [108] invokevirtual #343
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [111] invokevirtual #242
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
@@ -49762,13 +49831,13 @@ Methods (count = 39):
         + Methodref [com/cepmuvakkit/a/a/h.b ()Lcom/cepmuvakkit/a/a/d;]
       [133] invokevirtual #257
         + Methodref [com/cepmuvakkit/a/a/d.b ()D]
-      [136] invokevirtual #347
+      [136] invokevirtual #349
         + Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
       [139] invokestatic #338
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [142] invokespecial #339
+      [142] invokespecial #340
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [145] invokevirtual #341
+      [145] invokevirtual #343
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [148] invokevirtual #242
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
@@ -49788,13 +49857,13 @@ Methods (count = 39):
         + Methodref [com/cepmuvakkit/a/a/h.b ()Lcom/cepmuvakkit/a/a/d;]
       [170] invokevirtual #256
         + Methodref [com/cepmuvakkit/a/a/d.a ()D]
-      [173] invokevirtual #347
+      [173] invokevirtual #349
         + Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
       [176] invokestatic #338
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [179] invokespecial #339
+      [179] invokespecial #340
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [182] invokevirtual #341
+      [182] invokevirtual #343
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [185] invokevirtual #242
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
@@ -49887,16 +49956,16 @@ Methods (count = 39):
         + Methodref [com/cepmuvakkit/a/a/a.c (DD)Ljava/lang/String;]
       [307] invokestatic #338
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [310] invokespecial #339
+      [310] invokespecial #340
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [313] aload v6
       [315] iconst_0
       [316] baload
       [317] invokestatic #245
         + Methodref [com/cepmuvakkit/a/a/a.a (B)Ljava/lang/String;]
-      [320] invokevirtual #340
+      [320] invokevirtual #342
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [323] invokevirtual #341
+      [323] invokevirtual #343
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [326] invokevirtual #242
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
@@ -49916,16 +49985,16 @@ Methods (count = 39):
         + Methodref [com/cepmuvakkit/a/a/a.c (DD)Ljava/lang/String;]
       [348] invokestatic #338
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [351] invokespecial #339
+      [351] invokespecial #340
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [354] aload v6
       [356] iconst_1
       [357] baload
       [358] invokestatic #245
         + Methodref [com/cepmuvakkit/a/a/a.a (B)Ljava/lang/String;]
-      [361] invokevirtual #340
+      [361] invokevirtual #342
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [364] invokevirtual #341
+      [364] invokevirtual #343
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [367] invokevirtual #242
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
@@ -49951,16 +50020,16 @@ Methods (count = 39):
         + Methodref [com/cepmuvakkit/a/a/a.c (DD)Ljava/lang/String;]
       [396] invokestatic #338
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [399] invokespecial #339
+      [399] invokespecial #340
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [402] aload v6
       [404] iconst_2
       [405] baload
       [406] invokestatic #245
         + Methodref [com/cepmuvakkit/a/a/a.a (B)Ljava/lang/String;]
-      [409] invokevirtual #340
+      [409] invokevirtual #342
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [412] invokevirtual #341
+      [412] invokevirtual #343
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [415] invokevirtual #242
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
@@ -49989,7 +50058,7 @@ Methods (count = 39):
       [448] aload_0 v0
       [449] getfield #157
         + Fieldref [com/cepmuvakkit/conversion/HijriCalendarTab.O D]
-      [452] invokevirtual #347
+      [452] invokevirtual #349
         + Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
       [455] invokevirtual #242
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
@@ -50053,13 +50122,13 @@ Methods (count = 39):
         + Fieldref [com/cepmuvakkit/conversion/HijriCalendarTab.M Lcom/cepmuvakkit/a/a/h;]
       [539] invokevirtual #267
         + Methodref [com/cepmuvakkit/a/a/h.d ()D]
-      [542] invokevirtual #347
+      [542] invokevirtual #349
         + Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
       [545] invokestatic #338
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [548] invokespecial #339
+      [548] invokespecial #340
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [551] invokevirtual #341
+      [551] invokevirtual #343
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [554] invokevirtual #242
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
@@ -50077,17 +50146,17 @@ Methods (count = 39):
         + Fieldref [com/cepmuvakkit/conversion/HijriCalendarTab.M Lcom/cepmuvakkit/a/a/h;]
       [573] invokevirtual #264
         + Methodref [com/cepmuvakkit/a/a/h.a ()D]
-      [576] invokevirtual #347
+      [576] invokevirtual #349
         + Methodref [java/text/DecimalFormat.format (D)Ljava/lang/String;]
       [579] invokestatic #338
         + Methodref [java/lang/String.valueOf (Ljava/lang/Object;)Ljava/lang/String;]
-      [582] invokespecial #339
+      [582] invokespecial #340
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
       [585] ldc #72
         + String [km]
-      [587] invokevirtual #340
+      [587] invokevirtual #342
         + Methodref [java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;]
-      [590] invokevirtual #341
+      [590] invokevirtual #343
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [593] invokevirtual #242
         + Methodref [android/widget/TextView.setText (Ljava/lang/CharSequence;)V]
@@ -50328,12 +50397,12 @@ Methods (count = 39):
         + Methodref [android/location/Geocoder.getFromLocation (DDI)Ljava/util/List;]
       [31] astore v7
       [33] aload v7
-      [35] invokeinterface #356
+      [35] invokeinterface #358
         + InterfaceMethodref [java/util/List.size ()I]
       [40] ifle +38 (target=78)
       [43] aload v7
       [45] iconst_0
-      [46] invokeinterface #355
+      [46] invokeinterface #357
         + InterfaceMethodref [java/util/List.get (I)Ljava/lang/Object;]
       [51] checkcast #84
         + Class [android/location/Address]
@@ -50479,12 +50548,12 @@ Methods (count = 39):
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 394, locals = 7, stack = 5):
       [0] aload_1 v1
-      [1] invokeinterface #353
+      [1] invokeinterface #355
         + InterfaceMethodref [android/view/MenuItem.getItemId ()I]
       [6] istore_3 v3
       [7] iload_3 v3
       [8] ldc #50
-        + Integer [2131296469]
+        + Integer [2131296471]
       [10] ificmpne +34 (target=44)
       [13] aload_0 v0
       [14] invokespecial #274
@@ -50510,7 +50579,7 @@ Methods (count = 39):
       [41] goto +347 (target=388)
       [44] iload_3 v3
       [45] ldc #49
-        + Integer [2131296468]
+        + Integer [2131296470]
       [47] ificmpne +52 (target=99)
       [50] invokestatic #317
         + Methodref [com/cepmuvakkit/conversion/settings/a.b ()Lcom/cepmuvakkit/conversion/settings/a;]
@@ -50549,7 +50618,7 @@ Methods (count = 39):
       [96] goto +292 (target=388)
       [99] iload_3 v3
       [100] ldc #48
-        + Integer [2131296467]
+        + Integer [2131296469]
       [102] ificmpne +26 (target=128)
       [105] new #83
         + Class [android/content/Intent]
@@ -50570,7 +50639,7 @@ Methods (count = 39):
       [125] goto +263 (target=388)
       [128] iload_3 v3
       [129] ldc #51
-        + Integer [2131296470]
+        + Integer [2131296472]
       [131] ificmpne +24 (target=155)
       [134] aload_0 v0
       [135] new #83
@@ -50589,7 +50658,7 @@ Methods (count = 39):
       [152] goto +236 (target=388)
       [155] iload_3 v3
       [156] ldc #52
-        + Integer [2131296471]
+        + Integer [2131296473]
       [158] ificmpne +115 (target=273)
       [161] new #88
         + Class [android/text/SpannableString]
@@ -50671,7 +50740,7 @@ Methods (count = 39):
       [270] goto +118 (target=388)
       [273] iload_3 v3
       [274] ldc #53
-        + Integer [2131296472]
+        + Integer [2131296474]
       [276] ificmpne +112 (target=388)
       [279] new #88
         + Class [android/text/SpannableString]
@@ -50789,9 +50858,9 @@ Methods (count = 39):
         + Fieldref [com/cepmuvakkit/conversion/HijriCalendarTab.O D]
       [22] invokestatic #336
         + Methodref [java/lang/String.valueOf (D)Ljava/lang/String;]
-      [25] invokespecial #339
+      [25] invokespecial #340
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [28] invokevirtual #341
+      [28] invokevirtual #343
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [31] invokevirtual #221
         + Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
@@ -50823,14 +50892,14 @@ Methods (count = 39):
       [14] new #125
         + Class [java/lang/StringBuilder]
       [17] dup
-      [18] aload_0 v0
-      [19] getfield #157
+      [18] invokespecial #339
+        + Methodref [java/lang/StringBuilder.<init> ()V]
+      [21] aload_0 v0
+      [22] getfield #157
         + Fieldref [com/cepmuvakkit/conversion/HijriCalendarTab.O D]
-      [22] invokestatic #336
-        + Methodref [java/lang/String.valueOf (D)Ljava/lang/String;]
-      [25] invokespecial #339
-        + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [28] invokevirtual #341
+      [25] invokevirtual #341
+        + Methodref [java/lang/StringBuilder.append (D)Ljava/lang/StringBuilder;]
+      [28] invokevirtual #343
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [31] invokevirtual #221
         + Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
@@ -50847,9 +50916,9 @@ Methods (count = 39):
         + Methodref [com/cepmuvakkit/conversion/settings/a.i ()D]
       [48] invokestatic #336
         + Methodref [java/lang/String.valueOf (D)Ljava/lang/String;]
-      [51] invokespecial #339
+      [51] invokespecial #340
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [54] invokevirtual #341
+      [54] invokevirtual #343
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [57] invokevirtual #221
         + Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
@@ -50866,9 +50935,9 @@ Methods (count = 39):
         + Methodref [com/cepmuvakkit/conversion/settings/a.j ()D]
       [74] invokestatic #336
         + Methodref [java/lang/String.valueOf (D)Ljava/lang/String;]
-      [77] invokespecial #339
+      [77] invokespecial #340
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [80] invokevirtual #341
+      [80] invokevirtual #343
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [83] invokevirtual #221
         + Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
@@ -50885,9 +50954,9 @@ Methods (count = 39):
         + Methodref [com/cepmuvakkit/conversion/settings/a.d ()D]
       [100] invokestatic #336
         + Methodref [java/lang/String.valueOf (D)Ljava/lang/String;]
-      [103] invokespecial #339
+      [103] invokespecial #340
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [106] invokevirtual #341
+      [106] invokevirtual #343
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [109] invokevirtual #221
         + Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
@@ -50904,9 +50973,9 @@ Methods (count = 39):
         + Methodref [com/cepmuvakkit/conversion/settings/a.e ()I]
       [126] invokestatic #337
         + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
-      [129] invokespecial #339
+      [129] invokespecial #340
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [132] invokevirtual #341
+      [132] invokevirtual #343
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [135] invokevirtual #221
         + Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
@@ -50923,9 +50992,9 @@ Methods (count = 39):
         + Methodref [com/cepmuvakkit/conversion/settings/a.f ()I]
       [152] invokestatic #337
         + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
-      [155] invokespecial #339
+      [155] invokespecial #340
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [158] invokevirtual #341
+      [158] invokevirtual #343
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [161] invokevirtual #221
         + Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
@@ -50942,9 +51011,9 @@ Methods (count = 39):
         + Methodref [com/cepmuvakkit/conversion/settings/a.g ()I]
       [178] invokestatic #337
         + Methodref [java/lang/String.valueOf (I)Ljava/lang/String;]
-      [181] invokespecial #339
+      [181] invokespecial #340
         + Methodref [java/lang/StringBuilder.<init> (Ljava/lang/String;)V]
-      [184] invokevirtual #341
+      [184] invokevirtual #343
         + Methodref [java/lang/StringBuilder.toString ()Ljava/lang/String;]
       [187] invokevirtual #221
         + Methodref [android/content/Intent.putExtra (Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;]
@@ -52460,12 +52529,12 @@ Interfaces (count = 0):
 Constant Pool (count = 211):
   + Integer [3600000]
   + Integer [2130903051]
-  + Integer [2131296449]
-  + Integer [2131296450]
   + Integer [2131296451]
   + Integer [2131296452]
   + Integer [2131296453]
   + Integer [2131296454]
+  + Integer [2131296455]
+  + Integer [2131296456]
   + String [EEE]
   + String [MMM]
   + Class [android/app/PendingIntent]
@@ -52904,7 +52973,7 @@ Methods (count = 3):
       [254] astore v13
       [256] aload v13
       [258] ldc #4
-        + Integer [2131296450]
+        + Integer [2131296452]
       [260] aload v12
       [262] aload_1 v1
       [263] invokevirtual #61
@@ -52913,7 +52982,7 @@ Methods (count = 3):
         + Methodref [android/widget/RemoteViews.setTextViewText (ILjava/lang/CharSequence;)V]
       [269] aload v13
       [271] ldc #5
-        + Integer [2131296451]
+        + Integer [2131296453]
       [273] new #25
         + Class [java/lang/StringBuilder]
       [276] dup
@@ -52931,7 +53000,7 @@ Methods (count = 3):
         + Methodref [android/widget/RemoteViews.setTextViewText (ILjava/lang/CharSequence;)V]
       [296] aload v13
       [298] ldc #7
-        + Integer [2131296453]
+        + Integer [2131296455]
       [300] new #25
         + Class [java/lang/StringBuilder]
       [303] dup
@@ -52949,7 +53018,7 @@ Methods (count = 3):
         + Methodref [android/widget/RemoteViews.setTextViewText (ILjava/lang/CharSequence;)V]
       [322] aload v13
       [324] ldc #8
-        + Integer [2131296454]
+        + Integer [2131296456]
       [326] aload v7
       [328] aload v5
       [330] invokevirtual #72
@@ -52958,7 +53027,7 @@ Methods (count = 3):
         + Methodref [android/widget/RemoteViews.setTextViewText (ILjava/lang/CharSequence;)V]
       [336] aload v13
       [338] ldc #6
-        + Integer [2131296452]
+        + Integer [2131296454]
       [340] new #25
         + Class [java/lang/StringBuilder]
       [343] dup
@@ -52995,7 +53064,7 @@ Methods (count = 3):
       [384] astore v14
       [386] aload v13
       [388] ldc #3
-        + Integer [2131296449]
+        + Integer [2131296451]
       [390] aload v14
       [392] invokevirtual #52
         + Methodref [android/widget/RemoteViews.setOnClickPendingIntent (ILandroid/app/PendingIntent;)V]
@@ -53065,13 +53134,13 @@ Constant Pool (count = 209):
   + Integer [3600000]
   + Integer [2130903052]
   + Integer [2131099785]
-  + Integer [2131296450]
   + Integer [2131296452]
-  + Integer [2131296455]
-  + Integer [2131296456]
+  + Integer [2131296454]
   + Integer [2131296457]
   + Integer [2131296458]
   + Integer [2131296459]
+  + Integer [2131296460]
+  + Integer [2131296461]
   + String []
   + Class [[D]
   + Class [[I]
@@ -53425,7 +53494,7 @@ Methods (count = 3):
       [126] astore v9
       [128] aload v9
       [130] ldc #4
-        + Integer [2131296450]
+        + Integer [2131296452]
       [132] aload v8
       [134] aload_1 v1
       [135] invokevirtual #64
@@ -53434,7 +53503,7 @@ Methods (count = 3):
         + Methodref [android/widget/RemoteViews.setTextViewText (ILjava/lang/CharSequence;)V]
       [141] aload v9
       [143] ldc #7
-        + Integer [2131296456]
+        + Integer [2131296458]
       [145] aload v8
       [147] aload_1 v1
       [148] invokevirtual #65
@@ -53443,7 +53512,7 @@ Methods (count = 3):
         + Methodref [android/widget/RemoteViews.setTextViewText (ILjava/lang/CharSequence;)V]
       [154] aload v9
       [156] ldc #5
-        + Integer [2131296452]
+        + Integer [2131296454]
       [158] new #28
         + Class [java/lang/StringBuilder]
       [161] dup
@@ -53460,7 +53529,7 @@ Methods (count = 3):
         + Methodref [android/widget/RemoteViews.setTextViewText (ILjava/lang/CharSequence;)V]
       [179] aload v9
       [181] ldc #8
-        + Integer [2131296457]
+        + Integer [2131296459]
       [183] new #28
         + Class [java/lang/StringBuilder]
       [186] dup
@@ -53477,7 +53546,7 @@ Methods (count = 3):
         + Methodref [android/widget/RemoteViews.setTextViewText (ILjava/lang/CharSequence;)V]
       [204] aload v9
       [206] ldc #10
-        + Integer [2131296459]
+        + Integer [2131296461]
       [208] aload v8
       [210] aload_1 v1
       [211] aload_0 v0
@@ -53489,7 +53558,7 @@ Methods (count = 3):
         + Methodref [android/widget/RemoteViews.setTextViewText (ILjava/lang/CharSequence;)V]
       [221] aload v9
       [223] ldc #9
-        + Integer [2131296458]
+        + Integer [2131296460]
       [225] ldc #11
         + String []
       [227] invokevirtual #54
@@ -53508,7 +53577,7 @@ Methods (count = 3):
       [245] ifne +16 (target=261)
       [248] aload v9
       [250] ldc #9
-        + Integer [2131296458]
+        + Integer [2131296460]
       [252] aload_1 v1
       [253] ldc #3
         + Integer [2131099785]
@@ -53538,7 +53607,7 @@ Methods (count = 3):
       [284] astore v10
       [286] aload v9
       [288] ldc #6
-        + Integer [2131296455]
+        + Integer [2131296457]
       [290] aload v10
       [292] invokevirtual #53
         + Methodref [android/widget/RemoteViews.setOnClickPendingIntent (ILandroid/app/PendingIntent;)V]
@@ -53684,8 +53753,8 @@ Constant Pool (count = 337):
   + Integer [2131296338]
   + Integer [2131296339]
   + Integer [2131296340]
-  + Integer [2131296470]
   + Integer [2131296472]
+  + Integer [2131296474]
   + String [
 ]
   + String [About]
@@ -54468,7 +54537,7 @@ Methods (count = 18):
       [21] istore_3 v3
       [22] iload_3 v3
       [23] ldc #17
-        + Integer [2131296472]
+        + Integer [2131296474]
       [25] ificmpne +100 (target=125)
       [28] new #28
         + Class [android/text/SpannableString]
@@ -54539,7 +54608,7 @@ Methods (count = 18):
       [122] goto +27 (target=149)
       [125] iload_3 v3
       [126] ldc #16
-        + Integer [2131296470]
+        + Integer [2131296472]
       [128] ificmpne +21 (target=149)
       [131] aload_0 v0
       [132] new #26
@@ -55526,8 +55595,8 @@ Constant Pool (count = 276):
   + Integer [2131296276]
   + Integer [2131296280]
   + Integer [2131296287]
-  + Integer [2131296460]
-  + Integer [2131296463]
+  + Integer [2131296462]
+  + Integer [2131296465]
   + String [ %]
   + String [#0.0]
   + String [0]
@@ -56137,7 +56206,7 @@ Methods (count = 4):
       [380] istore v11
       [382] aload v4
       [384] ldc #8
-        + Integer [2131296463]
+        + Integer [2131296465]
       [386] iload v11
       [388] invokevirtual #72
         + Methodref [android/widget/RemoteViews.setImageViewResource (II)V]
@@ -56163,7 +56232,7 @@ Methods (count = 4):
       [414] astore v12
       [416] aload v4
       [418] ldc #7
-        + Integer [2131296460]
+        + Integer [2131296462]
       [420] aload v12
       [422] invokevirtual #73
         + Methodref [android/widget/RemoteViews.setOnClickPendingIntent (ILandroid/app/PendingIntent;)V]
@@ -61084,7 +61153,6 @@ Constant Pool (count = 144):
   + Integer [2131099782]
   + Integer [2131099783]
   + Integer [2131099784]
-  + Integer [2131099806]
   + Integer [2131099807]
   + Integer [2131099808]
   + Integer [2131099809]
@@ -61094,6 +61162,7 @@ Constant Pool (count = 144):
   + Integer [2131099813]
   + Integer [2131099814]
   + Integer [2131099815]
+  + Integer [2131099816]
   + Class [[Lcom/cepmuvakkit/conversion/c/b;]
   + Class [com/cepmuvakkit/a/a/a]
   + Class [com/cepmuvakkit/a/a/b]
@@ -61564,7 +61633,7 @@ Methods (count = 5):
       [52] iload v5
       [54] ifeq +8 (target=62)
       [57] ldc #12
-        + Integer [2131099806]
+        + Integer [2131099807]
       [59] goto +5 (target=64)
       [62] ldc #1
         + Integer [2131099774]
@@ -61577,7 +61646,7 @@ Methods (count = 5):
       [74] iload v5
       [76] ifeq +8 (target=84)
       [79] ldc #13
-        + Integer [2131099807]
+        + Integer [2131099808]
       [81] goto +5 (target=86)
       [84] ldc #2
         + Integer [2131099775]
@@ -61590,7 +61659,7 @@ Methods (count = 5):
       [96] iload v5
       [98] ifeq +8 (target=106)
       [101] ldc #14
-        + Integer [2131099808]
+        + Integer [2131099809]
       [103] goto +5 (target=108)
       [106] ldc #3
         + Integer [2131099776]
@@ -61598,7 +61667,7 @@ Methods (count = 5):
       [109] iload v5
       [111] ifeq +8 (target=119)
       [114] ldc #15
-        + Integer [2131099809]
+        + Integer [2131099810]
       [116] goto +5 (target=121)
       [119] ldc #4
         + Integer [2131099777]
@@ -61659,7 +61728,7 @@ Methods (count = 5):
       [52] iload v5
       [54] ifeq +8 (target=62)
       [57] ldc #16
-        + Integer [2131099810]
+        + Integer [2131099811]
       [59] goto +5 (target=64)
       [62] ldc #5
         + Integer [2131099778]
@@ -61672,7 +61741,7 @@ Methods (count = 5):
       [74] iload v5
       [76] ifeq +8 (target=84)
       [79] ldc #17
-        + Integer [2131099811]
+        + Integer [2131099812]
       [81] goto +5 (target=86)
       [84] ldc #6
         + Integer [2131099779]
@@ -61685,7 +61754,7 @@ Methods (count = 5):
       [96] iload v5
       [98] ifeq +8 (target=106)
       [101] ldc #18
-        + Integer [2131099812]
+        + Integer [2131099813]
       [103] goto +5 (target=108)
       [106] ldc #7
         + Integer [2131099780]
@@ -61698,7 +61767,7 @@ Methods (count = 5):
       [118] iload v5
       [120] ifeq +8 (target=128)
       [123] ldc #19
-        + Integer [2131099813]
+        + Integer [2131099814]
       [125] goto +5 (target=130)
       [128] ldc #8
         + Integer [2131099781]
@@ -61711,7 +61780,7 @@ Methods (count = 5):
       [140] iload v5
       [142] ifeq +8 (target=150)
       [145] ldc #20
-        + Integer [2131099814]
+        + Integer [2131099815]
       [147] goto +5 (target=152)
       [150] ldc #9
         + Integer [2131099782]
@@ -61719,7 +61788,7 @@ Methods (count = 5):
       [153] iload v5
       [155] ifeq +8 (target=163)
       [158] ldc #21
-        + Integer [2131099815]
+        + Integer [2131099816]
       [160] goto +5 (target=165)
       [163] ldc #10
         + Integer [2131099783]
@@ -74062,7 +74131,7 @@ Constant Pool (count = 1278):
   + Double [3.871E7]
   + Double [1.0E8]
   + Double [1.00013989E8]
-  + Double [1.495978875E8]
+  + Double [1.495978707E8]
   + Double [1.75347046E8]
   + Double [6.28331966747E11]
   + Fieldref [com/cepmuvakkit/a/a/b.a D]
@@ -82785,7 +82854,7 @@ Methods (count = 44):
     Access flags: 0x1
       = public com.cepmuvakkit.a.a.c c(double,double)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 206, locals = 40, stack = 8):
+    + Code attribute instructions (code length = 213, locals = 42, stack = 8):
       [0] iconst_5
       [1] newarray 7
       [3] astore v37
@@ -82901,27 +82970,31 @@ Methods (count = 44):
         + Methodref [com/cepmuvakkit/a/a/g.c (DDD)D]
       [185] dstore v35
       [187] ldc2_w #1038
-        + Double [1.495978875E8]
+        + Double [1.495978707E8]
       [190] dstore v38
-      [192] new #15
+      [192] dload v15
+      [194] dload v38
+      [196] dmul
+      [197] dstore v40
+      [199] new #15
         + Class [com/cepmuvakkit/a/a/c]
-      [195] dup
-      [196] dload v33
-      [198] dload v35
-      [200] dload v38
-      [202] invokespecial #1081
+      [202] dup
+      [203] dload v33
+      [205] dload v35
+      [207] dload v40
+      [209] invokespecial #1081
         + Methodref [com/cepmuvakkit/a/a/c.<init> (DDD)V]
-      [205] areturn
+      [212] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       a(Lcom/cepmuvakkit/a/a/b;DD)Lcom/cepmuvakkit/a/a/c;
     Access flags: 0x0
       = com.cepmuvakkit.a.a.c a(com.cepmuvakkit.a.a.b,double,double)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 146, locals = 25, stack = 8):
+    + Code attribute instructions (code length = 161, locals = 29, stack = 8):
       [0] iconst_5
       [1] newarray 7
-      [3] astore v22
+      [3] astore v24
       [5] dload_2 v2
       [6] dload v4
       [8] invokestatic #1076
@@ -82935,31 +83008,31 @@ Methods (count = 44):
       [22] invokestatic #1078
         + Methodref [com/cepmuvakkit/a/a/a.b (D)D]
       [25] dstore v8
-      [27] aload v22
+      [27] aload v24
       [29] iconst_0
       [30] dload v6
       [32] invokestatic #1116
         + Methodref [com/cepmuvakkit/a/a/g.l (D)D]
       [35] dastore
-      [36] aload v22
+      [36] aload v24
       [38] iconst_1
       [39] dload v6
       [41] invokestatic #1117
         + Methodref [com/cepmuvakkit/a/a/g.m (D)D]
       [44] dastore
-      [45] aload v22
+      [45] aload v24
       [47] iconst_2
       [48] dload v6
       [50] invokestatic #1118
         + Methodref [com/cepmuvakkit/a/a/g.n (D)D]
       [53] dastore
-      [54] aload v22
+      [54] aload v24
       [56] iconst_3
       [57] dload v6
       [59] invokestatic #1119
         + Methodref [com/cepmuvakkit/a/a/g.o (D)D]
       [62] dastore
-      [63] aload v22
+      [63] aload v24
       [65] iconst_4
       [66] dload v6
       [68] invokestatic #1120
@@ -82970,7 +83043,7 @@ Methods (count = 44):
         + Methodref [com/cepmuvakkit/a/a/g.g (D)D]
       [77] dstore v16
       [79] dload v6
-      [81] aload v22
+      [81] aload v24
       [83] invokestatic #1089
         + Methodref [com/cepmuvakkit/a/a/g.a (D[D)D]
       [86] dstore v14
@@ -82988,7 +83061,7 @@ Methods (count = 44):
         + Fieldref [com/cepmuvakkit/a/a/b.b D]
       [107] invokestatic #1097
         + Methodref [com/cepmuvakkit/a/a/g.b (DDD)D]
-      [110] dstore v18
+      [110] dstore v20
       [112] aload_1 v1
       [113] getfield #1044
         + Fieldref [com/cepmuvakkit/a/a/b.a D]
@@ -82998,19 +83071,28 @@ Methods (count = 44):
         + Fieldref [com/cepmuvakkit/a/a/b.b D]
       [122] invokestatic #1102
         + Methodref [com/cepmuvakkit/a/a/g.c (DDD)D]
-      [125] dstore v20
-      [127] ldc2_w #1038
-        + Double [1.495978875E8]
-      [130] dstore v23
-      [132] new #15
+      [125] dstore v22
+      [127] aload_0 v0
+      [128] dload v8
+      [130] invokespecial #1114
+        + Methodref [com/cepmuvakkit/a/a/g.j (D)D]
+      [133] dstore v18
+      [135] ldc2_w #1038
+        + Double [1.495978707E8]
+      [138] dstore v25
+      [140] dload v18
+      [142] dload v25
+      [144] dmul
+      [145] dstore v27
+      [147] new #15
         + Class [com/cepmuvakkit/a/a/c]
-      [135] dup
-      [136] dload v18
-      [138] dload v20
-      [140] dload v23
-      [142] invokespecial #1081
+      [150] dup
+      [151] dload v20
+      [153] dload v22
+      [155] dload v27
+      [157] invokespecial #1081
         + Methodref [com/cepmuvakkit/a/a/c.<init> (DDD)V]
-      [145] areturn
+      [160] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 0):
   + Method:       d(DD)Lcom/cepmuvakkit/a/a/b;

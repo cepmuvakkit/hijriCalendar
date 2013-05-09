@@ -37,7 +37,8 @@ public class PhaseMoment {
     	 System.out.println(" NewCrescent      ");
         
     	int Lunation;
-        String eclipse;
+        @SuppressWarnings("unused")
+		String eclipse;
         jd = AstroLib.calculateJulianDay(Year, 1, 1, 0, 0, 0, 0);
         double t0, t1;
         double D0, D1;

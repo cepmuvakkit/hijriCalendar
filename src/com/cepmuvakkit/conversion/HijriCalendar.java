@@ -55,6 +55,7 @@ public class HijriCalendar extends Activity {
 
 		}
 
+		@SuppressWarnings("deprecation")
 		@Override
 		public void dontAllow() {
 			if (isFinishing()) {

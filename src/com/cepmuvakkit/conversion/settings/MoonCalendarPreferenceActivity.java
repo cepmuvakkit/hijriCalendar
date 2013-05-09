@@ -1,13 +1,13 @@
 package com.cepmuvakkit.conversion.settings;
 
 import com.cepmuvakkit.conversion.R;
-import com.cepmuvakkit.conversion.R.xml;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 
 public class MoonCalendarPreferenceActivity extends PreferenceActivity {
 
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

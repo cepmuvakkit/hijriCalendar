@@ -825,8 +825,11 @@ public class SolarPosition {
 		return 8.794 / (3600.0 * r);
 	}
 
+	/**
+	 * @param δPrime  
+	 */
 	void sunRightAscensionParallaxAndTopocentricDec(double latitude,
-			double elevation, double xi, double h, double δ, double δα,
+			double elevation, double xi, double h, double δ, @SuppressWarnings("unused") double δα,
 			double δPrime) {
 		double δαRad;
 		double latRad = Math.toRadians(latitude);
@@ -1327,7 +1330,6 @@ public class SolarPosition {
 		}
 		return kerahatTimes;
 	}
-
 	public Equatorial calculateSunEquatorialCoordinates(double jd, double ΔT) {
 		double jce, jme, jde, Δψ, ε, r, l, β, theta, Δτ, λ, b, Δε, ε0;
 		double α, δ;
@@ -1357,16 +1359,18 @@ public class SolarPosition {
 		β = getGeocentricLatitude(b);
 		α = geocentricRightAscension(λ, ε, β);
 		δ = geocentricDeclination(λ, ε, β);
-		double Δ = 149597887.5;
+		double AU=149597870.700;//Astronomik units in km
+		//double Δ = 149597887.5;
+		double Δ =r*AU;//in km
 		return new Equatorial(α, δ, Δ);
-		// m=sunMeanLongitude(jme);
-		// eot=calculateEquationOfTime(m,α,Δψ,ε);
+		//m=sunMeanLongitude(jme);
+		//eot=calculateEquationOfTime(m,α,Δψ,ε);
 
 	}
 
 	Equatorial calculateSunEquatorialCoordinates(Ecliptic sunPosEc, double jd,
 			double ΔT) {
-		double jce, jme, jde, ε, Δε, ε0;
+		double jce, jme, jde, ε, Δε, ε0,r;
 		double α, δ;
 		double[] x = new double[5];
 
@@ -1385,10 +1389,13 @@ public class SolarPosition {
 
 		α = geocentricRightAscension(sunPosEc.λ, ε, sunPosEc.β);
 		δ = geocentricDeclination(sunPosEc.λ, ε, sunPosEc.β);
-		double Δ = 149597887.5;
+		r = earthRadiusVector(jme);
+		double AU=149597870.700;//Astronomik units in km
+		double Δ =r*AU;//in km
 		return new Equatorial(α, δ, Δ);
 
 	}
+
 
 	public Ecliptic calculateSunEclipticCoordinatesAstronomic(double jd,
 			double ΔT) {

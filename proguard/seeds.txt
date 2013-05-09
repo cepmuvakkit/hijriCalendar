@@ -257,6 +257,7 @@ com.cepmuvakkit.conversion.R$id: int SolarEclipticLatitudeTxtFld
 com.cepmuvakkit.conversion.R$id: int SolarEclipticLongitudeTxtFld
 com.cepmuvakkit.conversion.R$id: int SolarElevationTxtFld
 com.cepmuvakkit.conversion.R$id: int SolarRightAscensionTxtFld
+com.cepmuvakkit.conversion.R$id: int SunDistanceTxtFld
 com.cepmuvakkit.conversion.R$id: int SunRiseTextView
 com.cepmuvakkit.conversion.R$id: int SunRiseTxtFld
 com.cepmuvakkit.conversion.R$id: int SunSetTextView
@@ -277,6 +278,7 @@ com.cepmuvakkit.conversion.R$id: int TextItem1
 com.cepmuvakkit.conversion.R$id: int TextItem10
 com.cepmuvakkit.conversion.R$id: int TextItem11
 com.cepmuvakkit.conversion.R$id: int TextItem12
+com.cepmuvakkit.conversion.R$id: int TextItem124
 com.cepmuvakkit.conversion.R$id: int TextItem13
 com.cepmuvakkit.conversion.R$id: int TextItem2
 com.cepmuvakkit.conversion.R$id: int TextItem4
@@ -471,6 +473,7 @@ com.cepmuvakkit.conversion.R$string: int ecliptic_longitude
 com.cepmuvakkit.conversion.R$string: int elevation
 com.cepmuvakkit.conversion.R$string: int eq_declination
 com.cepmuvakkit.conversion.R$string: int eq_ra
+com.cepmuvakkit.conversion.R$string: int equatorial_distance
 com.cepmuvakkit.conversion.R$string: int first_quarter
 com.cepmuvakkit.conversion.R$string: int following
 com.cepmuvakkit.conversion.R$string: int full_moon

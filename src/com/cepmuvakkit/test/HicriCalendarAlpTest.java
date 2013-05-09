@@ -3,7 +3,6 @@ package com.cepmuvakkit.test;
 import com.cepmuvakkit.conversion.hicricalendar.HicriCalendar;
 import com.cepmuvakkit.conversion.hicricalendar.HicriCalendarAlperen;
 import com.cepmuvakkit.times.posAlgo.AstroLib;
-import com.cepmuvakkit.times.posAlgo.SolarPosition;
 
 /**
  * 
@@ -11,6 +10,7 @@ import com.cepmuvakkit.times.posAlgo.SolarPosition;
  */
 public class HicriCalendarAlpTest {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		System.out
 				.println("  Gregorian to Hijri Converter This program calculates  Hijri date according to the global moonsighting criteria\n"

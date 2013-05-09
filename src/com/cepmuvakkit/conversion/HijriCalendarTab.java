@@ -596,7 +596,7 @@ public class HijriCalendarTab extends Activity {
 	/** Called when the user clicks the Moon Image */
 	public void astronomicalInformation(@SuppressWarnings("unused") View view) {
 		Intent intent = new Intent(this, AstronomicalDetail.class);
-		intent.putExtra(JULIAN_DAY, jd+"");
+		intent.putExtra(JULIAN_DAY, ""+jd);
 		intent.putExtra(LATITUDE, LunarCalendarSettings.getInstance().getLatitude()+"");
 		intent.putExtra(LONGITUDE, LunarCalendarSettings.getInstance().getLongitude()+"");
 		intent.putExtra(TIMEZONE, LunarCalendarSettings.getInstance().getTimezone()+"");

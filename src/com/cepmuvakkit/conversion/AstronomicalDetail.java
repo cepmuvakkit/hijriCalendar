@@ -23,14 +23,14 @@ public class AstronomicalDetail extends Activity {
 	
 	private int temperature, pressure,altitude;// ANKARA position
 	private double ΔT;
-	private DecimalFormat twoDigitFormat, oneDigit, twoDigit;
-	private DateFormat dfTr, dfTime, dfDate;
+	private DecimalFormat  oneDigit, twoDigit;
+	private DateFormat dfTr;
 	private TextView mDate, mTimeDiff, mJulianDay, mEclipticLongitude,
 			mEclipticLatitude, mRightAscension, mDeclination, mDistance,mMoonRise,
 			mMoonTransit, mMoonSet, mAge, mIlluminated, mLunarAzimuth,
 			mLunarElevation, mLunarElevationAtmosphere, mIslamicLunation,
 			mBrownLunation, mSunRise, mZenith, mSunset,
-			mSolarEclipticLongitude, mSolarEclipticLatitude,
+			mSolarEclipticLongitude, mSolarEclipticLatitude,mSolarEquatorialDistance,
 			mSolarRightAscension, mSolarDeclination, mSolarAzimuth,
 			mSolarElevation;
 
@@ -47,17 +47,11 @@ public class AstronomicalDetail extends Activity {
 		String temperatureStr = intent.getStringExtra(HijriCalendarTab.TEMPERATURE);
 		String pressureStr = intent.getStringExtra(HijriCalendarTab.PRESSURE);
 		String altitudeStr = intent.getStringExtra(HijriCalendarTab.ALTITUDE);
-
-		twoDigitFormat = new DecimalFormat("#0.00°");
 		twoDigit = new DecimalFormat("#0.00");
 		oneDigit = new DecimalFormat("#0.0");
 		dfTr = DateFormat.getDateTimeInstance(DateFormat.MEDIUM,
 				DateFormat.MEDIUM);
-		dfTime = DateFormat.getTimeInstance(DateFormat.LONG);
-		dfDate = DateFormat.getDateInstance(DateFormat.LONG);
-
-		
-		
+			
 		jd = Double.parseDouble(jdString);
 		latitude = Double.parseDouble(latitudeStr);
 		longitude = Double.parseDouble(longitudeStr);
@@ -120,13 +114,14 @@ public class AstronomicalDetail extends Activity {
 		mSolarEclipticLatitude = (TextView) findViewById(R.id.SolarEclipticLatitudeTxtFld);
 		mSolarRightAscension = (TextView) findViewById(R.id.SolarRightAscensionTxtFld);
 		mSolarDeclination = (TextView) findViewById(R.id.SolarDeclinationTxtFld);
+		mSolarEquatorialDistance = (TextView) findViewById(R.id.SunDistanceTxtFld);
 		mSolarAzimuth = (TextView) findViewById(R.id.SolarAzimuthTxtFld);
 		mSolarElevation = (TextView) findViewById(R.id.SolarElevationTxtFld);
 //		mSolarElevationAtmoshpere = (TextView) findViewById(R.id.SolarElevationAtmoshpereTxtFld);
 		mSolarRightAscension = (TextView) findViewById(R.id.SolarRightAscensionTxtFld);
 
 		mDate.setText(dfTr.format(AstroLib.convertJulian2Gregorian(
-				jd+timezone).getTime()));
+				jd+timezone/24).getTime()));
 		mTimeDiff.setText(twoDigit.format(ΔT)+"''");
 		mJulianDay.setText(twoDigit.format(jd));
 		mEclipticLongitude.setText(AstroLib.getSexagesimalStr(moonPosEc.λ));
@@ -163,8 +158,10 @@ public class AstronomicalDetail extends Activity {
 		mSunset.setText( AstroLib.getStringHHMMSSS( sunRS[2]));
 		mSolarEclipticLongitude.setText(AstroLib.getSexagesimalStr(sunPosEc.λ));
 		mSolarEclipticLatitude.setText(AstroLib.getSexagesimalStr(sunPosEc.β));
+	//	mSolarEclipticDistance.setText(sunPosEc.Δ+"");
 		mSolarRightAscension.setText(AstroLib.getSexagesimalStr(sunEq.α));
 		mSolarDeclination.setText(AstroLib.getSexagesimalStr(sunEq.δ));
+		mSolarEquatorialDistance.setText(oneDigit.format(sunEq.Δ)+"km");
 		//mSolarDeclination.setText(sunEq.δ+"");
 		mSolarAzimuth.setText(AstroLib.getSexagesimalStr(horizontalSun.Az));
 		mSolarElevation.setText(AstroLib.getSexagesimalStr(horizontalSun.h));

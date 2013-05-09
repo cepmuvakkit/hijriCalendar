@@ -27,14 +27,17 @@ public class AstronomicalInfoTest  {
     public static void main(String[] args) {
 
         // double L,beta,alpha,epsilon,epsilon0,jme,jce,jd,delta_epsilon,eot,M,del_psi,R,theta,lamda, delta_tau;
-        double[] Salat = new double[6],Salat2 = new double[6],SPA = new double[3], kerahat = new double[8],kerahat1 = new double[8];
+        @SuppressWarnings("unused")
+		double[] Salat = new double[6],Salat2 = new double[6],SPA = new double[3], kerahat = new double[8],kerahat1 = new double[8];
 
-        boolean isValid=true;
+        @SuppressWarnings("unused")
+		boolean isValid=true;
    //    final byte FAJR_ = 0, ISRAK = 1, SUNTRANSIT_ = 2, ASRHANEFI = 3, ISFIRAR = 4, SUNSET_ = 5, KERAHAT_COUNT = 6, DUHA = 7, ISTIVA = 8;
         //double longitude = 16.5, latitude = 69.5,timezone=1, fajrAngle = -18, ishaAngle = -17, israkIsfirarAngle = 5;
         int temperature=10, pressure=1010;
         //int[] offsetSalat = new int[5];
-        byte[] offsetSalat ={-1,-6,7,5,9,2,10};
+        @SuppressWarnings("unused")
+		byte[] offsetSalat ={-1,-6,7,5,9,2,10};
        // double  temkinFajr=-1/60.0, temkinSunrise=-6/60.0, temkinZuhr=7/60.0, temkinAsr=5/60.0,temkinMagrib=9/60.0, temkinIsha=2/60.0, temkinIsrak=10/60.0;
          double longitude = 32.85, latitude = 39.95,timezone=2;//ANKARA position
          double  fajrAngle = -18, ishaAngle = -17, israkIsfirarAngle = 5;

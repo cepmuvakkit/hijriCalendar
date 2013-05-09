@@ -56,7 +56,8 @@ public class Equatorial {
           Horizontal horizontal;
           horizontal= new Horizontal ();
         //  CAA2DCoordinate Topocentric;
-          double αPrime =Math.toRadians(α)+Δα;
+          @SuppressWarnings("unused")
+	      double αPrime =Math.toRadians(α)+Δα;
           double δPrime= MATH.atan2((Math.sin(δrad) - ρsinϕPr*sinπ) * Math.cos(Δα), cosδ - ρCosϕPr*sinπ*cosH);
           double HPrime=H-Δα;
        

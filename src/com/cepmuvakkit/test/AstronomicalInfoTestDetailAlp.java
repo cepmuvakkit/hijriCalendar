@@ -11,7 +11,6 @@ import com.cepmuvakkit.times.posAlgo.Equatorial;
 import com.cepmuvakkit.times.posAlgo.Horizontal;
 import com.cepmuvakkit.times.posAlgo.LunarPosition;
 import com.cepmuvakkit.times.posAlgo.SolarPosition;
-import com.cepmuvakkit.times.posAlgo.SunMoonPosition;
 import com.cepmuvakkit.times.posAlgo.MoonPhaseAngleWithoutDeclination;
 
 public class AstronomicalInfoTestDetailAlp {
@@ -23,6 +22,7 @@ public class AstronomicalInfoTestDetailAlp {
 		int temperature = 10, pressure = 1010;
 		int altitude = 0;
 		// double longitude = 32.85, latitude = 39.95, timezone = 2;// ANKARA
+		@SuppressWarnings("unused")
 		double longitude = 32.85, latitude = 39.95, timezone = 3;// ANKARA
 		// double longitude =-155, latitude =55, timezone =0;// ANKARA
 		SolarPosition solar = new SolarPosition();

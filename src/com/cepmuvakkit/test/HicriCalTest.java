@@ -11,6 +11,7 @@ import com.cepmuvakkit.times.posAlgo.SolarPosition;
  */
 public class HicriCalTest {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		System.out
 				.println("  Gregorian to Hijri Converter This program calculates  Hijri date according to the global moonsighting criteria\n"

@@ -1038,36 +1038,38 @@ com.cepmuvakkit.conversion.AstronomicalDetail -> com.cepmuvakkit.conversion.Astr
     java.text.DecimalFormat twoDigitFormat -> i
     java.text.DecimalFormat oneDigit -> j
     java.text.DecimalFormat twoDigit -> k
-    java.text.DateFormat dfTr -> l
-    java.text.DateFormat dfTime -> m
-    java.text.DateFormat dfDate -> n
-    android.widget.TextView mDate -> o
-    android.widget.TextView mTimeDiff -> p
-    android.widget.TextView mJulianDay -> q
-    android.widget.TextView mEclipticLongitude -> r
-    android.widget.TextView mEclipticLatitude -> s
-    android.widget.TextView mRightAscension -> t
-    android.widget.TextView mDeclination -> u
-    android.widget.TextView mDistance -> v
-    android.widget.TextView mMoonRise -> w
-    android.widget.TextView mMoonTransit -> x
-    android.widget.TextView mMoonSet -> y
-    android.widget.TextView mAge -> z
-    android.widget.TextView mIlluminated -> A
-    android.widget.TextView mLunarAzimuth -> B
-    android.widget.TextView mLunarElevation -> C
-    android.widget.TextView mLunarElevationAtmosphere -> D
-    android.widget.TextView mIslamicLunation -> E
-    android.widget.TextView mBrownLunation -> F
-    android.widget.TextView mSunRise -> G
-    android.widget.TextView mZenith -> H
-    android.widget.TextView mSunset -> I
-    android.widget.TextView mSolarEclipticLongitude -> J
-    android.widget.TextView mSolarEclipticLatitude -> K
-    android.widget.TextView mSolarRightAscension -> L
-    android.widget.TextView mSolarDeclination -> M
-    android.widget.TextView mSolarAzimuth -> N
-    android.widget.TextView mSolarElevation -> O
+    java.text.DecimalFormat moreDigit -> l
+    java.text.DateFormat dfTr -> m
+    java.text.DateFormat dfTime -> n
+    java.text.DateFormat dfDate -> o
+    android.widget.TextView mDate -> p
+    android.widget.TextView mTimeDiff -> q
+    android.widget.TextView mJulianDay -> r
+    android.widget.TextView mEclipticLongitude -> s
+    android.widget.TextView mEclipticLatitude -> t
+    android.widget.TextView mRightAscension -> u
+    android.widget.TextView mDeclination -> v
+    android.widget.TextView mDistance -> w
+    android.widget.TextView mMoonRise -> x
+    android.widget.TextView mMoonTransit -> y
+    android.widget.TextView mMoonSet -> z
+    android.widget.TextView mAge -> A
+    android.widget.TextView mIlluminated -> B
+    android.widget.TextView mLunarAzimuth -> C
+    android.widget.TextView mLunarElevation -> D
+    android.widget.TextView mLunarElevationAtmosphere -> E
+    android.widget.TextView mIslamicLunation -> F
+    android.widget.TextView mBrownLunation -> G
+    android.widget.TextView mSunRise -> H
+    android.widget.TextView mZenith -> I
+    android.widget.TextView mSunset -> J
+    android.widget.TextView mSolarEclipticLongitude -> K
+    android.widget.TextView mSolarEclipticLatitude -> L
+    android.widget.TextView mSolarEquatorialDistance -> M
+    android.widget.TextView mSolarRightAscension -> N
+    android.widget.TextView mSolarDeclination -> O
+    android.widget.TextView mSolarAzimuth -> P
+    android.widget.TextView mSolarElevation -> Q
     void onCreate(android.os.Bundle) -> onCreate
 com.cepmuvakkit.conversion.GPSTracker -> com.cepmuvakkit.conversion.a:
     android.content.Context mContext -> i
