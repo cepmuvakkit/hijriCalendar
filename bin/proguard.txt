@@ -1,28 +1,31 @@
-# view AndroidManifest.xml #generated:43
+# view AndroidManifest.xml #generated:40
 -keep class com.cepmuvakkit.conversion..GPSTracker { <init>(...); }
 
-# view AndroidManifest.xml #generated:38
+# view AndroidManifest.xml #generated:35
 -keep class com.cepmuvakkit.conversion.AstronomicalDetail { <init>(...); }
+
+# view AndroidManifest.xml #generated:18
+-keep class com.cepmuvakkit.conversion.HijriCalendar { <init>(...); }
 
 # view AndroidManifest.xml #generated:15
 -keep class com.cepmuvakkit.conversion.HijriCalendarTab { <init>(...); }
 
-# view AndroidManifest.xml #generated:87
+# view AndroidManifest.xml #generated:84
 -keep class com.cepmuvakkit.conversion.HijriCalendarWidgetGreen { <init>(...); }
 
-# view AndroidManifest.xml #generated:46
+# view AndroidManifest.xml #generated:43
 -keep class com.cepmuvakkit.conversion.HijriCalendarWidgetRL { <init>(...); }
 
-# view AndroidManifest.xml #generated:33
+# view AndroidManifest.xml #generated:30
 -keep class com.cepmuvakkit.conversion.HijriConversion { <init>(...); }
 
-# view AndroidManifest.xml #generated:60
+# view AndroidManifest.xml #generated:57
 -keep class com.cepmuvakkit.conversion.MoonCanvasInfoWidget { <init>(...); }
 
-# view AndroidManifest.xml #generated:74
+# view AndroidManifest.xml #generated:71
 -keep class com.cepmuvakkit.conversion.SunMoonInfoWidget { <init>(...); }
 
-# view AndroidManifest.xml #generated:31
+# view AndroidManifest.xml #generated:28
 -keep class com.cepmuvakkit.conversion.settings.MoonCalendarPreferenceActivity { <init>(...); }
 
 # view res/layout/activity_android_draw.xml #generated:534
