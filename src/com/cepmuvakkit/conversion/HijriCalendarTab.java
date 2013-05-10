@@ -427,7 +427,7 @@ public class HijriCalendarTab extends Activity {
 					LunarCalendarSettings.getInstance().setAltitude(altitude);
 					LunarCalendarSettings.getInstance().setCustomCity(
 							mLocationName);
-					// LunarCalendarSettings.getInstance().setTimezone(mTimezone);
+					LunarCalendarSettings.getInstance().setTimezone(mTimeZone);
 					LunarCalendarSettings.save(preferences);
 
 //					Toast.makeText(
