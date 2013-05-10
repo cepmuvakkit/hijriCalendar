@@ -50,18 +50,29 @@ public class SunMoonInfoWidget extends AppWidgetProvider {
 		pressure = LunarCalendarSettings.getInstance().getPressure();
 		altitude = LunarCalendarSettings.getInstance().getAltitude();
 			
-		double[] moonRiseSet = lunar.calculateMoonRiseTransitSet(jd, mLatitude,
-				mLongitude, mTimeZone, temperature, pressure, altitude);
 		double[] sunRiseSet = solar.calculateSunRiseTransitSet(jd, mLatitude,
 				mLongitude, mTimeZone, ΔT);
 		sunMoonPosition = new SunMoonPosition(jd, mLatitude, mLongitude,
 				altitude, ΔT);
 		double moonPhase = sunMoonPosition.getMoonIllimunated();
 		
-		updateViews.setTextViewText(R.id.moonRiseTxtView, AstroLib.getStringHHMM(moonRiseSet[0]));
-		updateViews.setTextViewText(R.id.moonSetTxtView, AstroLib.getStringHHMM(moonRiseSet[2]));
+		
+
+		double[] monRiseSetJdFrac = lunar.calculateMoonRiseTransitSetJulian(jd,
+				mLatitude, mLongitude, temperature, pressure, altitude);
+		byte[] isPOR = AstroLib.isPreceedingOrFollowingDay(monRiseSetJdFrac,
+				mTimeZone);
+		
+		updateViews.setTextViewText(
+				R.id.moonRiseTxtView,
+				AstroLib.getStringHHMMfromDayFrac(monRiseSetJdFrac[0],
+						mTimeZone)
+						+ AstroLib.PrecedOrFollowStr(context, isPOR[0]));
+		updateViews.setTextViewText(R.id.moonSetTxtView, AstroLib.getStringHHMMfromDayFrac(monRiseSetJdFrac[2],
+				mTimeZone)
+				+ AstroLib.PrecedOrFollowStr(context, isPOR[2]));
 		updateViews.setTextViewText(R.id.litTxtView,oneDigit.format(moonPhase*100)+" %");
-		updateViews.setTextViewText(R.id.SunRiseTextView, AstroLib.getStringHHMM(sunRiseSet[0]));
+		updateViews.setTextViewText(R.id.SunRiseTextView, AstroLib.getStringHHMM(sunRiseSet[1]));
 		updateViews.setTextViewText(R.id.SunSetTextView , AstroLib.getStringHHMM(sunRiseSet[2]));
 		moonCanvasView = new MoonCanvasView(context);
 		double moonAgeConjuction=moonAgeConjuction();
