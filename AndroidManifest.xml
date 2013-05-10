@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cepmuvakkit.conversion"
-    android:versionCode="49"
-    android:versionName="11" >
+    android:versionCode="51"
+    android:versionName="12" >
 
     <uses-sdk
         android:minSdkVersion="7"
@@ -15,10 +15,13 @@
         <activity
             android:name="com.cepmuvakkit.conversion.HijriCalendarTab"
             android:label="@string/app_name" >
-       <!--  <activity
+
+            <!--
+             <activity
             android:name="com.cepmuvakkit.conversion.HijriCalendar"
             android:label="@string/app_name"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" > -->
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -42,6 +45,7 @@
 
         <receiver
             android:name="HijriCalendarWidgetRL"
+            android:icon="@drawable/hijri_full"
             android:label="@string/widget_name" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" >
@@ -54,21 +58,8 @@
             </meta-data>
         </receiver>
         <receiver
-            android:name="MoonInfoWidget"
-            android:label="@string/widget_moon" >
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" >
-                </action>
-            </intent-filter>
-
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/widget_moon_pref" >
-            </meta-data>
-        </receiver>
-        
-         <receiver
             android:name="MoonCanvasInfoWidget"
+            android:icon="@drawable/moon_canvas"
             android:label="@string/widget_moon_live" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" >
@@ -80,10 +71,8 @@
                 android:resource="@xml/widget_moon_live_pref" >
             </meta-data>
         </receiver>
-        
-         
-          <receiver
-            android:name="SunMoonInfoWidget"
+        <receiver
+            android:name="SunMoonInfoWidget"         
             android:label="@string/widget_sun_moon_info" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" >
@@ -95,11 +84,9 @@
                 android:resource="@xml/widget_sun_moon_pref" >
             </meta-data>
         </receiver>
-         
-        
-        
         <receiver
             android:name="HijriCalendarWidgetGreen"
+               android:icon="@drawable/hijri_compact"
             android:label="@string/widget_name_compact" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" >
