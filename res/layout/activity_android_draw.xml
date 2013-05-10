@@ -185,8 +185,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                      android:onClick="astronomicalInformation"
-                    android:minHeight="100.0dp"
-                    android:minWidth="100.0dp" />
+                    android:minHeight="150.0dp"
+                    android:minWidth="150.0dp" />
 
                 <LinearLayout
                     android:id="@+id/LinearLayoutLit"

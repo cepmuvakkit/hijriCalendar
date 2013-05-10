@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/solarmoonFrameLayout"
-    android:layout_width="160.0dip"
+       android:layout_width="160.0dip"
     android:layout_height="100.0dip"
     android:background="@drawable/appwidget_bg" >
 
@@ -51,12 +51,12 @@
                 android:shadowDx="1.0"
                 android:shadowDy="1.0"
                 android:shadowRadius="1.0"
-                android:text="8:21"
+                android:text="8:21>"
                 android:textColor="#ffffffff"
                 android:textSize="9.0dip" />
 
             <TextView
-                 android:id="@+id/moonSetTxtView"
+                android:id="@+id/moonSetTxtView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|left|center"
@@ -67,9 +67,10 @@
                 android:shadowDx="1.0"
                 android:shadowDy="1.0"
                 android:shadowRadius="1.0"
-                android:text="16:34"
+                android:text="16:34&lt;"
                 android:textColor="#ffffffff"
                 android:textSize="9.0dip" />
+
         </FrameLayout>
 
         <FrameLayout

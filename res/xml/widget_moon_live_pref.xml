@@ -5,4 +5,4 @@
     android:minHeight="120dip"
     android:updatePeriodMillis="1800000"
     android:initialLayout="@layout/widget_moon_revised"
-    />
+    android:previewImage="@drawable/moon_canvas"/>

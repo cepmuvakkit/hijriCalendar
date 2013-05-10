@@ -213,7 +213,7 @@
     <string name="buy_button">Buy app</string>
     <string name="quit_button">Exit</string>
     <string name="pos_angle_axis">Pos.Angel Axis</string>
-    <string name="real_time">Real Time</string>
+    <string name="real_time"> Real Time</string>
     <string name="sun_elevation">Sun Elevation</string>
     <string name="last_good_known">Using the Last good known location or default values</string>
     <string name="no_location">No location data gathered from GPS, You should input location from Settings Menu</string>

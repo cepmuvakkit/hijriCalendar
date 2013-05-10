@@ -2,15 +2,16 @@
 <resources>
 
     <string name="app_name">Hicri Takvim Pro</string>
-
-    <string name="about_text"><u>Hicri Gün Çevirici</u>		\n
-		Bu program Hicri Takvim değerlerini Beynelmilel ay rasat kriterlerine göre hesaplamaktadır.
+    <string name="about_text"><b>Hicri Gün Çevirici</b>        \nBu program Hicri Takvim değerlerini Beynelmilel ay rasat kriterlerine göre hesaplamaktadır.
 		Verilen değerler sadece bilgi amaçlıdır bütün sorumluluklar kullanıcıya aittir.</string>
-    <string name="loc_info">4Konum Bilgisi</string>
+    <string name="loc_info">Konum Bilgisi</string>
     <string name="widget_name">Hicri Takvim</string>
     <string name="widget_name_compact">Hicri Takvim Ufak</string>
     <string name="conversion">Miladiden Hicri Takvime Çevirici</string>
     <string name="widget_moon">Ay Bilgisi</string>
+    <string name="widget_name">Hijri Date</string>
+    <string name="widget_moon_live">Gerçek Zamanlı Ay</string>
+    <string name="widget_sun_moon_info">Güneş Ay Bilgisi</string>
     <string name="mooninfo">Ay Bilgisi</string>
     <string name="calendar">15 Ramazan 1431 </string>
     <string name="NEWYEAR">Hicri Yeni Yıl</string>
@@ -63,7 +64,6 @@
     <string name="elevation">Yükselme</string>
     <string name="declination">Sapma</string>
     <string name="lunation">Ay sayısı*</string>
-
     <string name="julian_day">Julyan Günü</string>
     <string name="new_moon">Yeni Ay</string>
     <string name="new_crescent">Yeni Hilal</string>
@@ -97,63 +97,61 @@
     <string name="altitude">İrtifa</string>
     <string name="altitude_summary">m biriminden deniz Seviyesinden yükseklik</string>
     <string name="prefs_altitude">savedAltitude</string>
-    <string name="help_text">		\n - Hicri Takvim:
-		\n Hicri Takvim Beynelmilel ay rasat kriterlerini öğrenmek için:
+    <string name="help_text">\nHicri Takvim: Beynelmilel ay rasat kriterlerini öğrenmek için:
 		http://www.cepmuvakkit.com/en/ruyetihilal\n
-		\n-<u> Lunation</u>		:
-		\n Lunation sayısı
-	
-		   Sıfır Hicri takvimin başlangıç günü olarak 24/07/621 15:05:00 AM UTC kullanılmıştır.
-
-		\n -<u> Işık </u>		:
-		\n 	Ayın yüzde kaçının güneş tarafında aydınlatıldığını belirtir.
+		\n<b><u>Lunation</u></b> :
+		\n Lunation sayısı Hicri takvimin başlangıcından itibaren gelip geçen kameri ay sayısını belirtir. 
+		 Hicri takvimin başlangıç günü olarak 24/07/621 15:05:00 AM UTC kullanılmıştır.
 		
-		\n -<u> Yaş</u>		:
-		\n Son içtimadan itibaren geçen gün sayısı.
-		\n -<u> > </u>		:
-		\n > büyüktür  işareti ayın doğma batma ve zeval vakitlerinin bir sonraki gün olduğunu belirtir.
-		\n -<u> &lt; </u>		:
-		\n &lt; küçüktür  işareti ayın doğma batma ve zeval vakitlerinin bir önceki gün olduğunu belirtir.</string>
-     <string name="moon_transit_2">Ay Tepe Nokta</string>
+		
+		\n<b><u>Işık</u></b>		:
+		\nAyın yüzde kaçının güneş tarafından aydınlatıldığını belirtir.
+		\n<b><u>Yaş</u></b>		:
+		\nSon içtimadan itibaren geçen gün sayısı
+		\n<b><u>></u></b>		:
+		\n>büyüktür  işareti ayın doğma batma ve zeval vakitlerinin bir sonraki gün olduğunu belirtir.
+		\n<b><u>&lt;</u></b>		:
+		\n&lt; küçüktür  işareti ayın doğma batma ve zeval vakitlerinin bir önceki gün olduğunu belirtir.
+		
+		\n<i>Ay Tutulmaları</i>		\n <b>t </b>: Kesin olan Ay Tutulması
+		\n <b>t?</b>: Muhtemel Ay Tutulması
+		\n <b>p </b>: Kesin olan Parçalı Ay Tutulması
+		\n <b>p?</b>: Muhtemel Parçalı Ay Tutulması
+		\n <b>P </b>: Maskeli Kesin olan Ay tutulması
+		\n <b>P?</b>: Maskeli Muhtemel Ay tutulması
+		\n <i>Güneş Tutulmaları</i>		\n <b>c </b>: Kesin olan Merkezi Güneş Tutulması
+		\n <b>c?</b>: Muhtemel, Merkezi Güneş Tutulması
+		\n <b>p </b>:Kesin olan Parçalı Güneş Tutulması
+		\n <b>p?</b>: Possible partial solar eclipse Muhtemel, Parçalı Güneş Tutulması</string>
+    <string name="moon_transit_2">Ay Tepe Nokta</string>
     <string name="moon_set">Ay Batma</string>
     <string name="moon_age">Yaş</string>
     <string name="moon_age_2">Yaş (Gün olarak)</string>
-  
     <string name="topo_azimuth">Dünya Yüzeyli Azimut Açı</string>
     <string name="sunrise">Güneş Doğma</string>
-
-     <string name="zenith">Zenit (Tepe nokta)</string>
+    <string name="zenith">Zenit (Tepe nokta)</string>
     <string name="topo_elevation">Dünya Yüzeyli İrtifa Açısı</string>
     <string name="topo_elevation_athmosphere">Atmosferik etkileriyle İrtifa</string>
-    
     <string name="ra">Sağ Açıklık Açısı</string>
     <string name="eq_ra">Ekvatoral Sağ Açıklık Açısı α</string>
     <string name="declination_2">Dik açıklık δ</string>
     <string name="eq_declination">Ekvatoral Dik açıklık δ</string>
     <string name="islamic_lunation">İslami Ay Sayısı ¶</string>
     <string name="islamic_lunation_0">İslami Ay sayısı (-12)</string>
-     <string name="brown_lunation_number">Brown Ay Sayısı</string>
+    <string name="brown_lunation_number">Brown Ay Sayısı</string>
     <string name="ecliptic_latitude">Tutulum Enlemi β</string>
     <string name="ecliptic_longitude">Tutulum Boylamı λ</string>
     <string name="ecliptic_distance">Tutulum Uzaklığı Δ</string>
-   <string name="right_ascension">Right Ascension α</string>
-     <string name="topocentric_azimuth">Topocentric Pos. Azimut</string>
+    <string name="right_ascension">Right Ascension α</string>
+    <string name="topocentric_azimuth">Topocentric Pos. Azimut</string>
     <string name="centric_elevation">Topocentric Elevation</string>
     <string name="moon_illuminated">Ay Parlaklığı</string>
-    
     <string name="preceed"> Önceki Gün</string>
     <string name="following"> Sonraki Gün</string>
-    
-    
     <string name="date">Tarih (UTC olarak)</string>
-    
-    
-    
     <string name="delta_t">Time Difference ΔT</string>
-    
-    <string name="astro_info">Astronomik Bilgiler</string>    
+    <string name="astro_info">Astronomik Bilgiler</string>
     <string name="delta_t">Zaman Farkı ΔT</string>
-	
     <string name="julian_date">Julyan Günü</string>
     <string name="buy_pro">Pro Sürüm Al</string>
     <string name="timezone_summary">Saat Dilimi Girin[-11,+13]</string>
@@ -193,7 +191,8 @@
     <string name="quit_button">Exit</string>
     <string name="real_time">Gerçek Zaman</string>
     <string name="sun_elevation">Güneş İrtifası</string>
-      <string name="last_good_known">En son atanan değerleri yada varsayılan değerleri kullanmaktadır</string>
+    <string name="last_good_known">En son atanan değerleri yada varsayılan değerleri kullanmaktadır</string>
     <string name="no_location">GPS sisteminden  bir konum bilgisi alınamadı, o yüzden Menu kısmından Ayarlayınız</string>
-     <string name="about">Hakkında</string>
+    <string name="about">Hakkında</string>
+
 </resources>
