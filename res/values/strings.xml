@@ -128,6 +128,10 @@
     <string name="prefs_temperature">prefTemperature</string>
     <string name="temperature">Air Temperature</string>
     <string name="temperature_summary">Air Temperature in Celcius</string>
+    <string name="hijri_date_adjust_summary">Hijri Date Adjustment Only 
+	    -1 and -2 is advised. </string>	
+    <string name="hijri_date_adjust">Hijri Date Adjustment</string>	
+    
     <string name="pressure_summary">Air Pressure of Location in hPA</string>
     <string name="pressure">Air Pressure</string>
     <string name="prefs_pressure">savedPressure</string>

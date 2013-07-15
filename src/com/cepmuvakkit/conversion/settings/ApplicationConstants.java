@@ -26,6 +26,7 @@ public class ApplicationConstants {
 	public static final String PREF_TEMPERATURE="prefs_temperature";
 	public static final String PREF_PRESSURE="prefs_pressure";
 	public static final String PREF_ALTITUDE="prefs_altitude";
+	public static final String PREF_ADJUSTMENT="prefs_adjustment";
 	public static final double synmonth = 29.530588861;
 	public static final int DATE_DIALOG_ID = 0;
 	public static final int TIME_DIALOG_ID = 1;

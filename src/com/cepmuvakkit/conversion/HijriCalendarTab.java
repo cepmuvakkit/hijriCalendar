@@ -52,7 +52,7 @@ import android.widget.Toast;
 public class HijriCalendarTab extends Activity {
 	private MoonCanvasView moonCanvasView;
 	private int temperature, pressure, altitude;
-	private double mLatitude, mLongitude, mTimeZone, moonPhase, timezoneinDay;;
+	private double mLatitude, mLongitude, mTimeZone, moonPhase, timezoneinDay;
 	private String mLocationName;
 	private Button mPickDate, mPickTime, mPreviousButton, mNextButton;
 	private TextView mDateHijri, mPositionValues, mCityName, mMoonRise,
@@ -201,7 +201,7 @@ public class HijriCalendarTab extends Activity {
 	protected void updateHijriDisplay(Context context) {
 
 		HicriCalendar hicriCalendar = new HicriCalendar(jd, mTimeZone,
-				mSunsetHour, ΔT);
+				mSunsetHour, ΔT,LunarCalendarSettings.getInstance().getAdjusment());
 
 		String hijriDate = hicriCalendar.getHicriTakvim(context) + " "
 				+ hicriCalendar.getDay(context) + " "
@@ -501,6 +501,8 @@ public class HijriCalendarTab extends Activity {
 		getLocation();
 		updateLocationInfo();
 		updateMoonInformation();
+		updateHijriDisplay(getBaseContext());
+
 		// Toast.makeText(this, " onRestart()", Toast.LENGTH_SHORT).show();
 	}
 
@@ -596,13 +598,13 @@ public class HijriCalendarTab extends Activity {
 	/** Called when the user clicks the Moon Image */
 	public void astronomicalInformation(@SuppressWarnings("unused") View view) {
 		Intent intent = new Intent(this, AstronomicalDetail.class);
-		intent.putExtra(JULIAN_DAY, ""+jd);
-		intent.putExtra(LATITUDE, LunarCalendarSettings.getInstance().getLatitude()+"");
-		intent.putExtra(LONGITUDE, LunarCalendarSettings.getInstance().getLongitude()+"");
-		intent.putExtra(TIMEZONE, LunarCalendarSettings.getInstance().getTimezone()+"");
-		intent.putExtra(TEMPERATURE, LunarCalendarSettings.getInstance().getTemperature()+"");
-		intent.putExtra(PRESSURE, LunarCalendarSettings.getInstance().getPressure()+"");
-		intent.putExtra(ALTITUDE, LunarCalendarSettings.getInstance().getAltitude()+"");
+		intent.putExtra(JULIAN_DAY, jd);
+		intent.putExtra(LATITUDE, LunarCalendarSettings.getInstance().getLatitude());
+		intent.putExtra(LONGITUDE, LunarCalendarSettings.getInstance().getLongitude());
+		intent.putExtra(TIMEZONE, LunarCalendarSettings.getInstance().getTimezone());
+		intent.putExtra(TEMPERATURE, LunarCalendarSettings.getInstance().getTemperature());
+		intent.putExtra(PRESSURE, LunarCalendarSettings.getInstance().getPressure());
+		intent.putExtra(ALTITUDE, LunarCalendarSettings.getInstance().getAltitude());
 
 		startActivity(intent);
 	}

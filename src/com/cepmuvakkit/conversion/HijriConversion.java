@@ -16,6 +16,7 @@ package com.cepmuvakkit.conversion;
 
 import java.util.Calendar;
 import com.cepmuvakkit.conversion.hicricalendar.HicriCalendar;
+import com.cepmuvakkit.conversion.settings.LunarCalendarSettings;
 import com.cepmuvakkit.times.posAlgo.AstroLib;
 import com.cepmuvakkit.conversion.R;
 import android.app.Activity;
@@ -180,9 +181,9 @@ public class HijriConversion extends Activity {
 		double ΔT = AstroLib.calculateTimeDifference(jd);
 		HicriCalendar hicriCalendar;
 		if (isAfterMagrib)
-			hicriCalendar = new HicriCalendar(jd + 1, 2, 17, ΔT);
+			hicriCalendar = new HicriCalendar(jd + 1, 2, 17, ΔT,LunarCalendarSettings.getInstance().getAdjusment());
 		else
-			hicriCalendar = new HicriCalendar(jd, 2, 17, ΔT);
+			hicriCalendar = new HicriCalendar(jd, 2, 17, ΔT,LunarCalendarSettings.getInstance().getAdjusment());
 
 		String hijriDate = hicriCalendar.getHicriTakvim(context) + "\n"
 				+ hicriCalendar.getDay(context) + "\n"

@@ -65,7 +65,7 @@ public class HijriCalendarWidgetGreen extends AppWidgetProvider {
 
 //		HegiraCalendar hicriCalendar = new HegiraCalendar(
 //				Math.floor(jd + 0.5) - 0.5, isAfterMagrib);
-		HicriCalendar hicriCalendar = new HicriCalendar(jd, mTimeZone, mSunsetHour, ΔT);
+		HicriCalendar hicriCalendar = new HicriCalendar(jd, mTimeZone, mSunsetHour, ΔT,LunarCalendarSettings.getInstance().getAdjusment());
 
 		RemoteViews updateViews = new RemoteViews(context.getPackageName(),
 				R.layout.widget_hijri_green);

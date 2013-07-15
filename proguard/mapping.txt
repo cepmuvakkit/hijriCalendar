@@ -1035,43 +1035,39 @@ com.cepmuvakkit.conversion.AstronomicalDetail -> com.cepmuvakkit.conversion.Astr
     int pressure -> f
     int altitude -> g
     double ?T -> h
-    java.text.DecimalFormat twoDigitFormat -> i
-    java.text.DecimalFormat oneDigit -> j
-    java.text.DecimalFormat twoDigit -> k
-    java.text.DecimalFormat moreDigit -> l
-    java.text.DateFormat dfTr -> m
-    java.text.DateFormat dfTime -> n
-    java.text.DateFormat dfDate -> o
-    android.widget.TextView mDate -> p
-    android.widget.TextView mTimeDiff -> q
-    android.widget.TextView mJulianDay -> r
-    android.widget.TextView mEclipticLongitude -> s
-    android.widget.TextView mEclipticLatitude -> t
-    android.widget.TextView mRightAscension -> u
-    android.widget.TextView mDeclination -> v
-    android.widget.TextView mDistance -> w
-    android.widget.TextView mMoonRise -> x
-    android.widget.TextView mMoonTransit -> y
-    android.widget.TextView mMoonSet -> z
-    android.widget.TextView mAge -> A
-    android.widget.TextView mIlluminated -> B
-    android.widget.TextView mLunarAzimuth -> C
-    android.widget.TextView mLunarElevation -> D
-    android.widget.TextView mLunarElevationAtmosphere -> E
-    android.widget.TextView mIslamicLunation -> F
-    android.widget.TextView mBrownLunation -> G
-    android.widget.TextView mSunRise -> H
-    android.widget.TextView mZenith -> I
-    android.widget.TextView mSunset -> J
-    android.widget.TextView mSolarEclipticLongitude -> K
-    android.widget.TextView mSolarEclipticLatitude -> L
-    android.widget.TextView mSolarEquatorialDistance -> M
-    android.widget.TextView mSolarRightAscension -> N
-    android.widget.TextView mSolarDeclination -> O
-    android.widget.TextView mSolarAzimuth -> P
-    android.widget.TextView mSolarElevation -> Q
+    java.text.DecimalFormat oneDigit -> i
+    java.text.DecimalFormat twoDigit -> j
+    java.text.DateFormat dfTr -> k
+    android.widget.TextView mDate -> l
+    android.widget.TextView mTimeDiff -> m
+    android.widget.TextView mJulianDay -> n
+    android.widget.TextView mEclipticLongitude -> o
+    android.widget.TextView mEclipticLatitude -> p
+    android.widget.TextView mRightAscension -> q
+    android.widget.TextView mDeclination -> r
+    android.widget.TextView mDistance -> s
+    android.widget.TextView mMoonRise -> t
+    android.widget.TextView mMoonTransit -> u
+    android.widget.TextView mMoonSet -> v
+    android.widget.TextView mAge -> w
+    android.widget.TextView mIlluminated -> x
+    android.widget.TextView mLunarAzimuth -> y
+    android.widget.TextView mLunarElevation -> z
+    android.widget.TextView mLunarElevationAtmosphere -> A
+    android.widget.TextView mIslamicLunation -> B
+    android.widget.TextView mBrownLunation -> C
+    android.widget.TextView mSunRise -> D
+    android.widget.TextView mZenith -> E
+    android.widget.TextView mSunset -> F
+    android.widget.TextView mSolarEclipticLongitude -> G
+    android.widget.TextView mSolarEclipticLatitude -> H
+    android.widget.TextView mSolarEquatorialDistance -> I
+    android.widget.TextView mSolarRightAscension -> J
+    android.widget.TextView mSolarDeclination -> K
+    android.widget.TextView mSolarAzimuth -> L
+    android.widget.TextView mSolarElevation -> M
     void onCreate(android.os.Bundle) -> onCreate
-com.cepmuvakkit.conversion.GPSTracker -> com.cepmuvakkit.conversion.a:
+com.cepmuvakkit.conversion.GPSTracker -> com.cepmuvakkit.conversion.GPSTracker:
     android.content.Context mContext -> i
     boolean isGPSEnabled -> a
     boolean isNetworkEnabled -> b
@@ -1094,10 +1090,10 @@ com.cepmuvakkit.conversion.GPSTracker -> com.cepmuvakkit.conversion.a:
     void onStatusChanged(java.lang.String,int,android.os.Bundle) -> onStatusChanged
     android.os.IBinder onBind(android.content.Intent) -> onBind
     android.content.Context access$0(com.cepmuvakkit.conversion.GPSTracker) -> a
-com.cepmuvakkit.conversion.GPSTracker$1 -> com.cepmuvakkit.conversion.b:
+com.cepmuvakkit.conversion.GPSTracker$1 -> com.cepmuvakkit.conversion.a:
     com.cepmuvakkit.conversion.GPSTracker this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.cepmuvakkit.conversion.GPSTracker$2 -> com.cepmuvakkit.conversion.c:
+com.cepmuvakkit.conversion.GPSTracker$2 -> com.cepmuvakkit.conversion.b:
     com.cepmuvakkit.conversion.GPSTracker this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
 com.cepmuvakkit.conversion.HijriCalendar -> com.cepmuvakkit.conversion.HijriCalendar:
@@ -1111,13 +1107,13 @@ com.cepmuvakkit.conversion.HijriCalendar -> com.cepmuvakkit.conversion.HijriCale
     void startMainActivity() -> b
     void toast(java.lang.String) -> a
     void access$0(com.cepmuvakkit.conversion.HijriCalendar) -> a
-com.cepmuvakkit.conversion.HijriCalendar$1 -> com.cepmuvakkit.conversion.d:
+com.cepmuvakkit.conversion.HijriCalendar$1 -> com.cepmuvakkit.conversion.c:
     com.cepmuvakkit.conversion.HijriCalendar this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.cepmuvakkit.conversion.HijriCalendar$2 -> com.cepmuvakkit.conversion.e:
+com.cepmuvakkit.conversion.HijriCalendar$2 -> com.cepmuvakkit.conversion.d:
     com.cepmuvakkit.conversion.HijriCalendar this$0 -> a
     void onClick(android.content.DialogInterface,int) -> onClick
-com.cepmuvakkit.conversion.HijriCalendar$MyLicenseCheckerCallback -> com.cepmuvakkit.conversion.f:
+com.cepmuvakkit.conversion.HijriCalendar$MyLicenseCheckerCallback -> com.cepmuvakkit.conversion.e:
     com.cepmuvakkit.conversion.HijriCalendar this$0 -> a
     void allow() -> a
     void applicationError(com.android.vending.licensing.LicenseCheckerCallback$ApplicationErrorCode) -> a
@@ -1219,22 +1215,22 @@ com.cepmuvakkit.conversion.HijriCalendarTab -> com.cepmuvakkit.conversion.HijriC
     double[] access$5(com.cepmuvakkit.conversion.HijriCalendarTab) -> e
     void access$6(com.cepmuvakkit.conversion.HijriCalendarTab) -> f
     void access$7(com.cepmuvakkit.conversion.HijriCalendarTab) -> g
-com.cepmuvakkit.conversion.HijriCalendarTab$1 -> com.cepmuvakkit.conversion.g:
+com.cepmuvakkit.conversion.HijriCalendarTab$1 -> com.cepmuvakkit.conversion.f:
     com.cepmuvakkit.conversion.HijriCalendarTab this$0 -> a
     void onDateSet(android.widget.DatePicker,int,int,int) -> onDateSet
-com.cepmuvakkit.conversion.HijriCalendarTab$2 -> com.cepmuvakkit.conversion.h:
+com.cepmuvakkit.conversion.HijriCalendarTab$2 -> com.cepmuvakkit.conversion.g:
     com.cepmuvakkit.conversion.HijriCalendarTab this$0 -> a
     void onTimeSet(android.widget.TimePicker,int,int) -> onTimeSet
-com.cepmuvakkit.conversion.HijriCalendarTab$3 -> com.cepmuvakkit.conversion.i:
+com.cepmuvakkit.conversion.HijriCalendarTab$3 -> com.cepmuvakkit.conversion.h:
     com.cepmuvakkit.conversion.HijriCalendarTab this$0 -> a
     void onClick(android.view.View) -> onClick
-com.cepmuvakkit.conversion.HijriCalendarTab$4 -> com.cepmuvakkit.conversion.j:
+com.cepmuvakkit.conversion.HijriCalendarTab$4 -> com.cepmuvakkit.conversion.i:
     com.cepmuvakkit.conversion.HijriCalendarTab this$0 -> a
     void onClick(android.view.View) -> onClick
-com.cepmuvakkit.conversion.HijriCalendarTab$5 -> com.cepmuvakkit.conversion.k:
+com.cepmuvakkit.conversion.HijriCalendarTab$5 -> com.cepmuvakkit.conversion.j:
     com.cepmuvakkit.conversion.HijriCalendarTab this$0 -> a
     void onClick(android.view.View) -> onClick
-com.cepmuvakkit.conversion.HijriCalendarTab$6 -> com.cepmuvakkit.conversion.l:
+com.cepmuvakkit.conversion.HijriCalendarTab$6 -> com.cepmuvakkit.conversion.k:
     com.cepmuvakkit.conversion.HijriCalendarTab this$0 -> a
     void onClick(android.view.View) -> onClick
 com.cepmuvakkit.conversion.HijriCalendarWidgetGreen -> com.cepmuvakkit.conversion.HijriCalendarWidgetGreen:
@@ -1299,47 +1295,70 @@ com.cepmuvakkit.conversion.HijriConversion -> com.cepmuvakkit.conversion.HijriCo
     android.widget.EditText access$8(com.cepmuvakkit.conversion.HijriConversion) -> c
     android.widget.Spinner access$9(com.cepmuvakkit.conversion.HijriConversion) -> d
     android.widget.EditText access$10(com.cepmuvakkit.conversion.HijriConversion) -> e
-com.cepmuvakkit.conversion.HijriConversion$1 -> com.cepmuvakkit.conversion.m:
+com.cepmuvakkit.conversion.HijriConversion$1 -> com.cepmuvakkit.conversion.l:
     com.cepmuvakkit.conversion.HijriConversion this$0 -> a
     void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
-com.cepmuvakkit.conversion.HijriConversion$2 -> com.cepmuvakkit.conversion.n:
+com.cepmuvakkit.conversion.HijriConversion$2 -> com.cepmuvakkit.conversion.m:
     com.cepmuvakkit.conversion.HijriConversion this$0 -> a
     android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
     android.view.View getDropDownView(int,android.view.View,android.view.ViewGroup) -> getDropDownView
-com.cepmuvakkit.conversion.HijriConversion$3 -> com.cepmuvakkit.conversion.o:
+com.cepmuvakkit.conversion.HijriConversion$3 -> com.cepmuvakkit.conversion.n:
     com.cepmuvakkit.conversion.HijriConversion this$0 -> a
     void onClick(android.view.View) -> onClick
-com.cepmuvakkit.conversion.HijriConversion$4 -> com.cepmuvakkit.conversion.p:
+com.cepmuvakkit.conversion.HijriConversion$4 -> com.cepmuvakkit.conversion.o:
     com.cepmuvakkit.conversion.HijriConversion this$0 -> a
     void onClick(android.view.View) -> onClick
-com.cepmuvakkit.conversion.HijriConversion$5 -> com.cepmuvakkit.conversion.q:
+com.cepmuvakkit.conversion.HijriConversion$5 -> com.cepmuvakkit.conversion.p:
     com.cepmuvakkit.conversion.HijriConversion this$0 -> a
     void onClick(android.view.View) -> onClick
-com.cepmuvakkit.conversion.MoonInfoWidget -> com.cepmuvakkit.conversion.MoonInfoWidget:
-    int mYear -> a
-    int mMonth -> b
-    int mDay -> c
-    int mHour -> d
-    int mMinute -> e
-    int mSecond -> f
-    int temperature -> g
-    int pressure -> h
-    int altitude -> i
-    double mLatitude -> j
-    double mLongitude -> k
-    double mTimeZone -> l
-    double moonAge -> m
+com.cepmuvakkit.conversion.MoonCanvasInfoWidget -> com.cepmuvakkit.conversion.MoonCanvasInfoWidget:
+    com.cepmuvakkit.conversion.views.MoonCanvasView moonCanvasView -> a
+    int mYear -> b
+    int mMonth -> c
+    int mDay -> d
+    int mHour -> e
+    int mMinute -> f
+    int mSecond -> g
+    int temperature -> h
+    int pressure -> i
+    int altitude -> j
+    double mLatitude -> k
+    double mLongitude -> l
+    double mTimeZone -> m
     double jd -> n
-    com.cepmuvakkit.times.posAlgo.SunMoonPosition sunMoonPosition -> o
-    java.text.DecimalFormat oneDigit -> p
-    android.content.SharedPreferences preferences -> q
+    double ?T -> o
+    com.cepmuvakkit.times.posAlgo.SunMoonPosition sunMoonPosition -> p
+    java.text.DecimalFormat oneDigit -> q
+    android.content.SharedPreferences preferences -> r
     void onUpdate(android.content.Context,android.appwidget.AppWidgetManager,int[]) -> onUpdate
     void returnCurrentJulianDay() -> a
-    java.lang.String pad(int) -> a
-com.cepmuvakkit.conversion.R -> com.cepmuvakkit.conversion.r:
-com.cepmuvakkit.conversion.R$styleable -> com.cepmuvakkit.conversion.s:
+    double moonAgeConjuction() -> b
+com.cepmuvakkit.conversion.R -> com.cepmuvakkit.conversion.q:
+com.cepmuvakkit.conversion.R$styleable -> com.cepmuvakkit.conversion.r:
     int[] LunarPhaseIcons -> LunarPhaseIcons
     int LunarPhaseIcons_phase -> LunarPhaseIcons_phase
+com.cepmuvakkit.conversion.SunMoonInfoWidget -> com.cepmuvakkit.conversion.SunMoonInfoWidget:
+    com.cepmuvakkit.conversion.views.MoonCanvasView moonCanvasView -> a
+    int mYear -> b
+    int mMonth -> c
+    int mDay -> d
+    int mHour -> e
+    int mMinute -> f
+    int mSecond -> g
+    int temperature -> h
+    int pressure -> i
+    int altitude -> j
+    double mLatitude -> k
+    double mLongitude -> l
+    double mTimeZone -> m
+    double jd -> n
+    double ?T -> o
+    com.cepmuvakkit.times.posAlgo.SunMoonPosition sunMoonPosition -> p
+    java.text.DecimalFormat oneDigit -> q
+    android.content.SharedPreferences preferences -> r
+    void onUpdate(android.content.Context,android.appwidget.AppWidgetManager,int[]) -> onUpdate
+    void returnCurrentJulianDay() -> a
+    double moonAgeConjuction() -> b
 com.cepmuvakkit.conversion.hicricalendar.HicriCalendar -> com.cepmuvakkit.conversion.a.a:
     byte dayOfWeek -> f
     java.lang.String[] ismiSuhiri -> g
@@ -1663,7 +1682,6 @@ com.cepmuvakkit.times.posAlgo.SolarPosition -> com.cepmuvakkit.a.a.g:
     double Interpolate(double,double[]) -> c
     double rtsSunAltitude(double,double,double) -> f
     double sunRiseAndSet(double[],double[],double[],double,double[],double,int) -> a
-    void calculateSunRiseTransitSet(double[],double) -> c
     double[] calculateSunRiseTransitSet(double,double,double,double,double) -> a
     com.cepmuvakkit.times.posAlgo.Equatorial calculateSunEquatorialCoordinates(double,double) -> c
     com.cepmuvakkit.times.posAlgo.Equatorial calculateSunEquatorialCoordinates(com.cepmuvakkit.times.posAlgo.Ecliptic,double,double) -> a

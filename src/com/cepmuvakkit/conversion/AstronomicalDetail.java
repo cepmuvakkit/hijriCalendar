@@ -5,6 +5,7 @@ import java.text.DecimalFormat;
 
 import com.cepmuvakkit.conversion.R;
 import com.cepmuvakkit.conversion.hicricalendar.HicriCalendar;
+import com.cepmuvakkit.conversion.settings.LunarCalendarSettings;
 import com.cepmuvakkit.times.posAlgo.AstroLib;
 import com.cepmuvakkit.times.posAlgo.Ecliptic;
 import com.cepmuvakkit.times.posAlgo.Equatorial;
@@ -14,7 +15,6 @@ import com.cepmuvakkit.times.posAlgo.SolarPosition;
 import com.cepmuvakkit.times.posAlgo.SunMoonPosition;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -39,27 +39,38 @@ public class AstronomicalDetail extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		Intent intent = getIntent();
-		String jdString = intent.getStringExtra(HijriCalendarTab.JULIAN_DAY);
-		String latitudeStr = intent.getStringExtra(HijriCalendarTab.LATITUDE);
-		String longitudeStr = intent.getStringExtra(HijriCalendarTab.LONGITUDE);
-		String timezoneStr = intent.getStringExtra(HijriCalendarTab.TIMEZONE);
-		String temperatureStr = intent
-				.getStringExtra(HijriCalendarTab.TEMPERATURE);
-		String pressureStr = intent.getStringExtra(HijriCalendarTab.PRESSURE);
-		String altitudeStr = intent.getStringExtra(HijriCalendarTab.ALTITUDE);
+//		Intent intent = getIntent();
+			Bundle extras = getIntent().getExtras();
+			// String jdString = intent.getStringExtra(HijriCalendarTab.JULIAN_DAY);
+			// String latitudeStr =
+			// intent.getStringExtra(HijriCalendarTab.LATITUDE);
+			// String longitudeStr =
+			// intent.getStringExtra(HijriCalendarTab.LONGITUDE);
+			// String timezoneStr =
+			// intent.getStringExtra(HijriCalendarTab.TIMEZONE);
+			// String temperatureStr =
+			// intent.getStringExtra(HijriCalendarTab.TEMPERATURE);
+			// String pressureStr =
+			// intent.getStringExtra(HijriCalendarTab.PRESSURE);
+			jd=extras.getDouble(HijriCalendarTab.JULIAN_DAY);
+			latitude=extras.getDouble(HijriCalendarTab.LATITUDE);
+			longitude=extras.getDouble(HijriCalendarTab.LONGITUDE);
+			timezone=extras.getDouble(HijriCalendarTab.TIMEZONE);
+			temperature=extras.getInt(HijriCalendarTab.TEMPERATURE);
+			pressure=extras.getInt(HijriCalendarTab.PRESSURE);
+			altitude= extras.getInt(HijriCalendarTab.ALTITUDE);
 		twoDigit = new DecimalFormat("#0.00");
 		oneDigit = new DecimalFormat("#0.0");
 		dfTr = DateFormat.getDateTimeInstance(DateFormat.MEDIUM,
 				DateFormat.MEDIUM);
-
+/*
 		jd = Double.parseDouble(jdString);
 		latitude = Double.parseDouble(latitudeStr);
 		longitude = Double.parseDouble(longitudeStr);
 		timezone = Double.parseDouble(timezoneStr);
 		temperature = Integer.parseInt(temperatureStr);
 		pressure = Integer.parseInt(pressureStr);
-		altitude = Integer.parseInt(altitudeStr);
+		altitude = Integer.parseInt(altitudeStr);*/
 		ΔT = AstroLib.calculateTimeDifference(jd);
 
 		SolarPosition solar = new SolarPosition();
@@ -153,7 +164,7 @@ public class AstronomicalDetail extends Activity {
 				longitude, timezone, ΔT);
 
 		HicriCalendar hicriCalendar = new HicriCalendar(jd, timezone,
-				sunRiseSet[2], ΔT);
+				sunRiseSet[2], ΔT,LunarCalendarSettings.getInstance().getAdjusment());
 
 		double moonAgeConjuction = hicriCalendar.getMoonAge();
 		mAge.setText(oneDigit.format(moonAgeConjuction));

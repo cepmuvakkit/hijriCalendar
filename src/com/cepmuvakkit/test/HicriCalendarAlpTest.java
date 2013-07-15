@@ -38,7 +38,7 @@ public class HicriCalendarAlpTest {
 			jdnew = jd + i;
 			hc_alp = new HicriCalendarAlperen(jdnew);
 			ΔT = AstroLib.calculateTimeDifference(jdnew);
-			HicriCalendar hc_my = new HicriCalendar(jdnew, 0, 18.0, ΔT);
+			HicriCalendar hc_my = new HicriCalendar(jdnew, 0, 18.0, ΔT,0);
 			ht_alp = hc_alp.getHicriTakvim() + " " + hc_alp.getDay();
      		ht_my = hc_my.getHicriTakvim() + " " + hc_my.getDay();
 			System.out.println(AstroLib.fromJulianToCalendarStr(jdnew)

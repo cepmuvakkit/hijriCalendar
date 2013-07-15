@@ -37,7 +37,7 @@ public class HicriCalendar {
 	 * 20:25:25 Moon Visibility time )
 	 */
 
-	public HicriCalendar(double jd, double timezone, double sunset, double ΔT) {
+	public HicriCalendar(double jd, double timezone, double sunset, double ΔT, int adjust) {
 
 		double jdShifted = jd + (timezone + 24 - sunset) / 24.0;
 		int jdShifted0h = (int) Math.round(jdShifted);
@@ -88,6 +88,24 @@ public class HicriCalendar {
 			if (hijriMonth == 0)
 				hijriMonth = 12;
 
+		}
+
+		/*For adjustment purposes*/
+		//int adjust=-1;
+		hijriDay=hijriDay+adjust;
+		if (hijriDay == 0) {
+			tCrescent = AstroLib.Pegasus(phases, tNewMoon - synmonth, tNewMoon
+					- synmonth + dtc, ΔT, acc, isFound, 8);
+			tCrescentRound = (int) Math.round(tCrescent - 0.2208333333333);
+			hijriDay = jdShifted0h+adjust-tCrescentRound;
+			if (hijriMonth == 0)
+				hijriMonth = 12;
+			hijriMonth--;
+			
+		};
+		if (hijriMonth == 0) {
+			hijriMonth=12;
+			hijriYear--;
 		}
 
 	}

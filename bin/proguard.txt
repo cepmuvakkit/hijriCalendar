@@ -1,8 +1,8 @@
-# view AndroidManifest.xml #generated:40
--keep class com.cepmuvakkit.conversion..GPSTracker { <init>(...); }
-
 # view AndroidManifest.xml #generated:35
 -keep class com.cepmuvakkit.conversion.AstronomicalDetail { <init>(...); }
+
+# view AndroidManifest.xml #generated:40
+-keep class com.cepmuvakkit.conversion.GPSTracker { <init>(...); }
 
 # view AndroidManifest.xml #generated:18
 -keep class com.cepmuvakkit.conversion.HijriCalendar { <init>(...); }

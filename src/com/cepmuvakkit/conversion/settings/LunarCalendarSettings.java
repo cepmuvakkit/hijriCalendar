@@ -12,7 +12,8 @@ public class LunarCalendarSettings {
 	//private boolean isLastGoodKnownLocation;
 	private String customCity;
 	private double longitude,latitude,timezone,julianDay;
-	private int temperature,elongation,pressure,altitude;
+	private int temperature,elongation,pressure,altitude,adjusment;
+
 	
 	public LunarCalendarSettings() {
 	}
@@ -113,6 +114,12 @@ public class LunarCalendarSettings {
 		this.latitude = latitude;
 	}
 
+	public int getAdjusment() {
+		return adjusment;
+	}
+	public void setAdjusment(int adjusment) {
+		this.adjusment = adjusment;
+	}
 
 	
 	public static void load(SharedPreferences preferences) {
@@ -128,6 +135,7 @@ public class LunarCalendarSettings {
 		instance.pressure=Integer.parseInt(preferences.getString(ApplicationConstants.PREF_PRESSURE,"1010"));
 		instance.altitude=Integer.parseInt(preferences.getString(ApplicationConstants.PREF_ALTITUDE,"0"));
 		instance.isDataFromGPS=preferences.getBoolean(ApplicationConstants.PREF_IS_GPS_DATA, instance.customCity.equals("DefCustomCity")?false:true);
+		instance.adjusment=Integer.parseInt(preferences.getString(ApplicationConstants.PREF_ADJUSTMENT,"0"));
 
 		}
 
@@ -140,9 +148,9 @@ public class LunarCalendarSettings {
 		editor.putString(ApplicationConstants.PREF_LATITUDE,instance.latitude+"");
 		editor.putString(ApplicationConstants.PREF_LONGITUDE,instance.longitude+"");
 		editor.putString(ApplicationConstants.PREF_TIMEZONE,instance.timezone+"");
-		editor.putString(ApplicationConstants.PREF_ELONGATION, instance.elongation+"");
-		editor.putString(ApplicationConstants.PREF_TEMPERATURE, instance.temperature+"");
-		editor.putString(ApplicationConstants.PREF_PRESSURE, instance.pressure+"");
+		//editor.putString(ApplicationConstants.PREF_ELONGATION, instance.elongation+"");
+		//editor.putString(ApplicationConstants.PREF_TEMPERATURE, instance.temperature+"");
+		//editor.putString(ApplicationConstants.PREF_PRESSURE, instance.pressure+"");
 		editor.putString(ApplicationConstants.PREF_ALTITUDE, instance.altitude+"");
 		instance.isDataFromGPS=instance.customCity.equals("DefCustomCity")?false:true;
 		editor.putBoolean(ApplicationConstants.PREF_IS_GPS_DATA,instance.isDataFromGPS);

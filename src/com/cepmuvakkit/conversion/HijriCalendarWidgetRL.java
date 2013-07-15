@@ -47,7 +47,8 @@ public class HijriCalendarWidgetRL extends AppWidgetProvider {
 //		if (currentTimeHour > mSunsetHour) {
 //			isAfterMagrib = true;
 //		}
-		HicriCalendar hicriCalendar = new HicriCalendar(jd, mTimeZone, mSunsetHour, ΔT);
+		
+		HicriCalendar hicriCalendar = new HicriCalendar(jd, mTimeZone, mSunsetHour, ΔT,LunarCalendarSettings.getInstance().getAdjusment());
 //		HegiraCalendar hicriCalendar = new HegiraCalendar(
 //				Math.floor(jd + 0.5) - 0.5, isAfterMagrib);
 

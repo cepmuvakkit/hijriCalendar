@@ -35,7 +35,7 @@ public class HicriCalTest {
 //		// 47°36′35″N 122°19′59″W
 
 //
-				hc = new HicriCalendar(jd, mTimeZone, mSunsetHour, ΔT);
+				hc = new HicriCalendar(jd, mTimeZone, mSunsetHour, ΔT,0);
 				hd = hc.getHicriTakvim() + " " + hc.getDay();
 				System.out.println(hd);
 	

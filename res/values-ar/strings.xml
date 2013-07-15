@@ -87,6 +87,9 @@
     <string name="prefs_temperature">prefTemperature</string>
     <string name="temperature">درجة حرارة الهواء</string>
     <string name="temperature_summary">درجة الحرارة في الهواء مئوية</string>
+        <string name="hijri_date_adjust_summary">المقالات تاريخ التعديل الوحيد -1 و -2 وينصح. </string>	
+    <string name="hijri_date_adjust">المقالات ضبط التاريخ</string>	
+    
     <string name="pressure_summary">hPA ضغط جوي من الموقع  في </string>
     <string name="pressure">ضغط جوي</string>
     <string name="prefs_pressure">savedPressure</string>
@@ -114,7 +117,8 @@
       <string name="eq_ra">مطلع مستقيم α</string>
     <string name="declination_2">δ ميل (فلك)</string>
     <string name="eq_declination">الميل الاستوائيةδ</string>
-
+    <string name="equatorial_distance">Ekvatoral Uzaklık Δ</string>
+    
     
      <string name="lunation">عدد الشهر القمري*</string>
     <string name="islamic_lunation">لشهر القمري الإسلامي عدد ¶</string>
@@ -138,7 +142,6 @@
     <string name="distance">مسافة</string>
     <string name="azimuth">السمت</string>
     <string name="topo_azimuth">مقاس من سطح الأرض الوظيفة السمت</string>
-    <string name="height">Height</string>
     <string name="sunrise">شروق الشمس</string>
     <string name="sunset">غروب</string>
      <string name="zenith">ذروة</string>

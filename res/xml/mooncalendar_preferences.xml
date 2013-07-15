@@ -52,6 +52,14 @@
             android:numeric="integer"
             android:summary="@string/moon_elongation_summary"
             android:title="@string/moon_elongation" />
+        <ListPreference
+            android:defaultValue="0"
+            android:dialogTitle="Hijri Date Adjustment"
+            android:entries="@array/Offset"
+            android:entryValues="@array/Offset_Value"
+            android:key="prefs_adjustment"
+            android:summary="@string/hijri_date_adjust_summary"
+            android:title="@string/hijri_date_adjust" />
         <EditTextPreference
             android:name="Temperature"
             android:defaultValue="10"

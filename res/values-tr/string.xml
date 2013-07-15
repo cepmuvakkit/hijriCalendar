@@ -9,7 +9,6 @@
     <string name="widget_name_compact">Hicri Takvim Ufak</string>
     <string name="conversion">Miladiden Hicri Takvime Çevirici</string>
     <string name="widget_moon">Ay Bilgisi</string>
-    <string name="widget_name">Hijri Date</string>
     <string name="widget_moon_live">Gerçek Zamanlı Ay</string>
     <string name="widget_sun_moon_info">Güneş Ay Bilgisi</string>
     <string name="mooninfo">Ay Bilgisi</string>
@@ -91,6 +90,9 @@
     <string name="prefs_temperature">prefTemperature</string>
     <string name="temperature">Hava Sıcaklığı</string>
     <string name="temperature_summary">Derece cinsinden Hava Sıcaklığı girin</string>
+        <string name="hijri_date_adjust_summary">Hicri Takvim Düzeltme için  -1 yada -2 değerleri dışındaki düzeltmeler çok tavsiye edilmiyor.</string>	
+    <string name="hijri_date_adjust">Hicri Takvim Düzeltme</string>	
+    
     <string name="pressure_summary">hPA biriminden Hava Basıncı</string>
     <string name="pressure">Hava Basıncı</string>
     <string name="prefs_pressure">savedPressure</string>
@@ -128,6 +130,7 @@
     <string name="moon_age">Yaş</string>
     <string name="moon_age_2">Yaş (Gün olarak)</string>
     <string name="topo_azimuth">Dünya Yüzeyli Azimut Açı</string>
+    <string name="equatorial_distance">Ekvatoral Uzaklık Δ</string>
     <string name="sunrise">Güneş Doğma</string>
     <string name="zenith">Zenit (Tepe nokta)</string>
     <string name="topo_elevation">Dünya Yüzeyli İrtifa Açısı</string>
@@ -149,7 +152,6 @@
     <string name="preceed"> Önceki Gün</string>
     <string name="following"> Sonraki Gün</string>
     <string name="date">Tarih (UTC olarak)</string>
-    <string name="delta_t">Time Difference ΔT</string>
     <string name="astro_info">Astronomik Bilgiler</string>
     <string name="delta_t">Zaman Farkı ΔT</string>
     <string name="julian_date">Julyan Günü</string>
